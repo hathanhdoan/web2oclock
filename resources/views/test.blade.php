@@ -25,7 +25,7 @@
 <script>
     var customLabel = {
         restaurant: {
-            label: 'R'
+            label: 'Res'
         },
         bar: {
             label: 'B'
@@ -40,13 +40,15 @@
         var infoWindow = new google.maps.InfoWindow;
 
         // Change this depending on the name of your PHP or XML file
-        downloadUrl('res.xml', function(data) {
+        downloadUrl('resources/views/res.xml', function(data) {
+            console.log(data);
             var xml = data.responseXML;
             var markers = xml.documentElement.getElementsByTagName('resraurant');
             Array.prototype.forEach.call(markers, function(markerElem) {
                 var id = markerElem.getAttribute('Id');
                 var name = markerElem.getAttribute('Name');
                 var address = markerElem.getAttribute('Address');
+                var type = markerElem.getAttribute('Type');
                 var point = new google.maps.LatLng(
                     parseFloat(markerElem.getAttribute('Latitude')),
                     parseFloat(markerElem.getAttribute('Longitude')));
@@ -60,7 +62,7 @@
                 var text = document.createElement('text');
                 text.textContent = address
                 infowincontent.appendChild(text);
-                var icon = customLabel['restaurant'];
+                var icon = customLabel[type] || {};
                 var marker = new google.maps.Marker({
                     map: map,
                     position: point,
@@ -96,7 +98,7 @@
     function doNothing() {}
 </script>
 <script defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_HvUCqrF05U7_Vm42RJnJcHNuL6lSYAk&callback=initMap">
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzlVX517mZWArHv4Dt3_JVG0aPmbSE5mE&callback=initMap">
 </script>
 </body>
 </html>
