@@ -25,7 +25,7 @@
 <script>
     var customLabel = {
         restaurant: {
-            label: 'R'
+            label: ''
         },
         bar: {
             label: 'B'
@@ -34,13 +34,13 @@
 
     function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-            center: new google.maps.LatLng(-33.863276, 151.207977),
+            center: new google.maps.LatLng(10.8139, 106.717),
             zoom: 12
         });
         var infoWindow = new google.maps.InfoWindow;
 
         // Change this depending on the name of your PHP or XML file
-        downloadUrl('https://storage.googleapis.com/mapsdevsite/json/mapmarkers2.xml', function(data) {
+        downloadUrl('ggmap.xml', function(data) {
             var xml = data.responseXML;
             console.log(xml);
             var markers = xml.documentElement.getElementsByTagName('marker');
@@ -57,7 +57,7 @@
                 var strong = document.createElement('strong');
                 strong.textContent = name
                 infowincontent.appendChild(strong);
-                infowincontent.appendChild( document.createElement('br'));
+                infowincontent.appendChild(document.createElement('br'));
 
                 var text = document.createElement('text');
                 text.textContent = address
