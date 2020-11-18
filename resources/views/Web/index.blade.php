@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row">
                 <!-- Begin Slider Area -->
-                <div class="col-lg-8 col-md-8">
+                <div class="col-lg-12 col-md-12">
                     <div class="slider-area">
                         <div class="slider-active owl-carousel">
                             <!-- Begin Single Slide Area -->
@@ -51,21 +51,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Slider Area End Here -->
-                <!-- Begin Li Banner Area -->
-                <div class="col-lg-4 col-md-4 text-center pt-xs-30">
-                    <div class="li-banner">
-                        <a href="#">
-                            <img src="images/banner/1_1.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="li-banner mt-15 mt-sm-30 mt-xs-30">
-                        <a href="#">
-                            <img src="images/banner/1_2.jpg" alt="">
-                        </a>
-                    </div>
-                </div>
-                <!-- Li Banner Area End Here -->
             </div>
         </div>
     </div>
