@@ -20,7 +20,7 @@ class CreateXmlController extends Controller
         header("Content-type: text/xml");
         $xmlStr = '';
         $xmlStr.= '<markers>';
-        $res = Restaurant::take(10)->get()->toArray();
+        $res = Restaurant::all()->toArray();
         foreach ($res as $value){
             $xmlStr.= '<marker ';
             $xmlStr.= 'id="' . parseToXML( $value['Id']) . '" ';
