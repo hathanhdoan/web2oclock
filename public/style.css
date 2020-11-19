@@ -462,11 +462,11 @@ textarea:focus {
 	background-image: url(images/slider/foody-slider2.jpg);
 }
 .bg-3 {
-	background-image: url(images/slider/3.jpg);
+	background-image: url(images/slider/foody-slider3.jpg);
 }
 /*Home Two | Slider Background Image*/
 .bg-4, .bg-5, .bg-6 {
-	background-image: url(images/slider/4.jpg);
+	background-image: url(foody-slider4.jpg);
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -474,10 +474,10 @@ textarea:focus {
 	width: 100%;
 }
 .bg-5 {
-	background-image: url(images/slider/5.jpg);
+	background-image: url(foody-slider5.jpg);
 }
 .bg-6 {
-	background-image: url(images/slider/6.jpg);
+	background-image: url(foody-slider6.jpg);
 }
 /*Home Three | Slider Background Image*/
 .bg-7, .bg-8, .bg-9 {
@@ -2270,7 +2270,7 @@ textarea:focus {
 .product_desc .product_desc_info .product_name {
 	color: #0363cd;
 	display: block;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 500;
 	line-height: 18px;
 	text-transform: capitalize;
@@ -2292,7 +2292,7 @@ textarea:focus {
 .featured-price-box .new-price,
 .featured-price-box .new-price-2{
   color: #2f333a;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   padding-right: 10px;
 }
@@ -5434,3 +5434,6 @@ span.required {
 /*----------------------------------------------------------------------------------------------------*/
 /*------------------------------------------> The End <-----------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------*/
+.slider-content h2 {
+    color: #f8f9fa
+}
