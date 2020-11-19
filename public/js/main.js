@@ -46,6 +46,7 @@ Note: main.js, All Default Scripting Languages For This Theme Included In This F
         meanMenuContainer: '.mobile-menu',
         meanScreenWidth: "991"
     })
+    $('[data-toggle="tooltip"]').tooltip();
  /*----------------------------------------*/
  /*  02. Header Dropdown
  /*----------------------------------------*/
@@ -90,13 +91,40 @@ Note: main.js, All Default Scripting Languages For This Theme Included In This F
 /*----------------------------------------*/
 /* 06. Li's Product Activision
 /*----------------------------------------*/
+    $(".recommend-product-active").owlCarousel({
+        loop: true,
+        nav: true,
+        dots: false,
+        autoplay: false,
+        autoplayTimeout: 5000,
+        navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+        item: 5,
+        responsive: {
+            0: {
+                items: 1
+            },
+            480: {
+                items: 2
+            },
+            768: {
+                items: 3
+            },
+            992: {
+                items: 4
+            },
+            1200: {
+                items: 5
+            }
+        }
+    });
+
 	$(".product-active").owlCarousel({
 		loop: true,
 		nav: true,
 		dots: false,
 		autoplay: false,
 		autoplayTimeout: 5000,
-		navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+		navText: [""],
 		item: 5,
 		responsive: {
 			0: {
@@ -116,6 +144,8 @@ Note: main.js, All Default Scripting Languages For This Theme Included In This F
 			}
 		}
 	});
+
+
 /*----------------------------------------*/
 /* 07. Li's Product Activision
 /*----------------------------------------*/
@@ -180,7 +210,7 @@ Note: main.js, All Default Scripting Languages For This Theme Included In This F
 	//    category heading
 	$('.category-heading').on('click', function(){
 	    $('.category-menu-list').slideToggle(300);
-	});	
+	});
 	/*-- Category Menu Toggles --*/
 	function categorySubMenuToggle() {
 	    var screenSize = $(window).width();
@@ -267,7 +297,7 @@ Note: main.js, All Default Scripting Languages For This Theme Included In This F
 	});
 /*----------------------------------------*/
 /* 14. Toggle Function Active
-/*----------------------------------------*/ 
+/*----------------------------------------*/
 	// showlogin toggle
 		$('#showlogin').on('click', function() {
 				$('#checkout-login').slideToggle(900);
@@ -287,7 +317,7 @@ Note: main.js, All Default Scripting Languages For This Theme Included In This F
 		});
 /*----------------------------------------*/
 /* 15. Li's Blog Gallery Slider
-/*----------------------------------------*/ 
+/*----------------------------------------*/
 	var gallery = $('.li-blog-gallery-slider');
 	gallery.slick({
 		arrows: false,
@@ -410,7 +440,7 @@ Note: main.js, All Default Scripting Languages For This Theme Included In This F
  })
  /*----------------------------------------*/
  /* 21. Modal Menu Active
- /*----------------------------------------*/ 
+ /*----------------------------------------*/
  $('.product-details-images').each(function(){
      var $this = $(this);
      var $thumb = $this.siblings('.product-details-thumbs, .tab-style-left');
