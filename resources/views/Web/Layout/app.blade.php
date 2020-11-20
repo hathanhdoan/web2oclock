@@ -172,6 +172,8 @@
 <script src={{asset("js/scrollUp.min.js")}}></script>
 <!-- Main/Activator js -->
 <script src={{asset("js/main.js")}}></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.js"></script>
 </body>
 @yield('script')
 <!-- index30:23-->

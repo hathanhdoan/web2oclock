@@ -1,0 +1,30 @@
+@media (max-width:768px) {
+    .booking-card-custom {
+        max-width: 10rem !important
+    }
+
+    .booking-card-custom {
+        margin-top: 10px !important
+    }
+    .group-two-product {
+        margin: 0px 0px 0px 0px!important
+    }
+    .product-container {
+        margin-left: 20px !important
+    }
+}
+
+
+.booking-card-custom, .booking-card {
+    margin-right: 10px !important;
+    -webkit-box-shadow: -1px 1px 18px -10px rgba(0,0,0,0.78);
+    -moz-box-shadow: -1px 1px 18px -10px rgba(0,0,0,0.78);
+    box-shadow: -1px 1px 18px -10px rgba(0,0,0,0.78);
+}
+
+.group-two-product {
+    margin-right: 10px
+}
+.product-container {
+    margin-left: 60px;
+}
