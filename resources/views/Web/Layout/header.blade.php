@@ -4,6 +4,16 @@
     <title>Home Version One || limupa - Digital Products Store eCommerce Bootstrap 4 Template</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- MDB -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="MDB/css/mdb.css">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="MDB/css/style.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href={{asset("images/favicon.png")}}>
     <!-- Material Design Iconic Font-V2.2.0 -->
@@ -34,8 +44,10 @@
     <link rel="stylesheet" href={{asset("css/helper.css")}}>
     <!-- Main Style CSS -->
     <link rel="stylesheet" href={{asset("style.css")}}>
+    <link rel="stylesheet" href={{asset("my-style.css")}}>
     <!-- Responsive CSS -->
     <link rel="stylesheet" href={{asset("css/responsive.css")}}>
     <!-- Modernizr js -->
+    <script src={{asset("js/vendor/modernizr-2.8.3.min.js")}}></script>
     <script src={{asset("js/vendor/modernizr-2.8.3.min.js")}}></script>
 </head>
