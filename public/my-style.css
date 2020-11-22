@@ -12,6 +12,12 @@
     .product-container {
         margin-left: 20px !important
     }
+    h4 {
+        font-size: 18px;
+    }
+    p.card-text-custom {
+        display: none;
+    }
 }
 
 
@@ -27,4 +33,9 @@
 }
 .product-container {
     margin-left: 60px;
+}
+
+.item-text:hover {
+    color: #5431ff;
+    content: 'hehe';
 }

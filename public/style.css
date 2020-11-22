@@ -1525,7 +1525,7 @@ textarea:focus {
 }
 .hm-minicart-trigger {
 		border-radius: 2px;
-		background: #e80f0f;
+		background: #fff;
 		color: #fff;
 		height: 45px;
 		cursor: pointer;
@@ -1533,16 +1533,24 @@ textarea:focus {
 		position: relative;
 		padding: 0 15px 0 55px;
 }
-.item-icon::before {
-		content: "\f291";
+.item-icon {
+		background-image: url("images/menu/logo/avatar.jpg");
 		position: absolute;
-		font-family: fontawesome;
 		left: 10px;
 		top: 6px;
 		display: block;
 		font-size: 20px;
 }
+#avatar {
+    height: 35px;
+    width: 35px;
+    left: 10px;
+    top: 6px;
+    display: block;
+    font-size: 20px;
+}
 .item-text {
+        color: #0b0b0b;
 		position: relative;
 		line-height: 45px;
 		font-weight: 500;
@@ -1724,11 +1732,11 @@ textarea:focus {
 	width: 100%;
 	display: block;
 }
-.li-button-dark {
-	background: #242424;
+.li-button-red {
+	background: red;
 	color: #ffffff;
 }
-.li-button-dark:hover {
+.li-button-red:hover {
 	background: #fed700;
 	color: #ffffff;
 }
@@ -1787,6 +1795,7 @@ textarea:focus {
 .ht-menu > li .ht-currency-trigger span::after,
 .ht-menu > li .ht-language-trigger span::after,
 .hm-minicart-trigger .item-text::after {
+    border: #0b51c5;
 	content: "\f106";
 	float: right;
 	font-weight: 400;
@@ -2655,7 +2664,7 @@ textarea:focus {
 /*  2.7 Li's Static Home Banner
 /*----------------------------------------*/
 .li-static-home-image {
-	background-image: url(images/bg-banner/1.jpg);
+	background-image: url(images/slider/foody-slider1.jpg);
 	background-size: cover;
 	height: 400px;
 	background-repeat: no-repeat;
@@ -2668,7 +2677,7 @@ textarea:focus {
 }
 .li-static-home-content > p {
 	margin: 0;
-	color: #242424;
+	color: #faf9f9;
 	font-size: 14px;
 	margin-bottom: 20px;
 	font-weight: 400;
@@ -2684,7 +2693,7 @@ textarea:focus {
 	letter-spacing: -.025em;
 }
 .li-static-home-content > h2 {
-	color: #242424;
+	color: #f8f9fa;
 	font-weight: 400;
 	font-size: 36px;
 	line-height: 30px;
@@ -2692,7 +2701,7 @@ textarea:focus {
 }
 .li-static-home-content > p.schedule{
 	font-size: 14px;
-	color: #242424;
+	color: #fafafa;
 	margin-top: 20px;
 	margin-bottom: 53px;
 }
