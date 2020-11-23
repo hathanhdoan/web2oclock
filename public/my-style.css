@@ -18,15 +18,14 @@
     p.card-text-custom {
         display: none;
     }
-    #menu-left {
-        z-index:11
-    }
+}
+@media (max-width: 1366px) {
     #menu-left section{
         visibility: hidden !important;
     }
-    #menu-left section .booking-card .card-body{
-        display: none;
-    }
+    /*#menu-left section .booking-card .card-body{*/
+    /*    display: none;*/
+    /*}*/
 }
 
 
@@ -38,7 +37,8 @@
 }
 
 .group-two-product {
-    margin-right: 10px
+    margin-right: 10px;
+    margin-bottom: 10px
 }
 .product-container {
     margin-left: 60px;
@@ -50,6 +50,7 @@
 }
 
 #menu-left {
+    z-index: 100;
     position : fixed;
     margin-left: 20px;
 }
