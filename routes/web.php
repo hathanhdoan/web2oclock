@@ -24,3 +24,5 @@ Route::get('/', function () {
 Route::get('/single-product', function () {
     return view('Web.Pages.single-product');
 });
+
+Route::get('/admin/addproduct','AdminController@test');
