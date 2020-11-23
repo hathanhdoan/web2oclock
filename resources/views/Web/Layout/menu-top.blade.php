@@ -6,8 +6,8 @@
                 <!-- Begin Header Logo Area -->
                 <div class="col-lg-3">
                     <div class="logo pb-sm-30 pb-xs-30">
-                        <a href="index.html">
-                            <img src="images/menu/logo/1.jpg" alt="">
+                        <a href="#">
+                            <img src={{asset("images/logo.png")}} alt="">
                         </a>
                     </div>
                 </div>
@@ -105,7 +105,7 @@
                             <!-- Begin Header Mini Cart Area -->
                             <li class="hm-minicart">
                                 <div class="hm-minicart-trigger">
-                                    <div class="item-icon"><img id="avatar" src="images/menu/logo/avatar.jpg"></div>
+                                    <div class="item-icon"><img id="avatar" src="{{asset('images/menu/logo/avatar.jpg')}}"></div>
                                     <span class="item-text">Đoàn &nbsp;<i class="fas fa-angle-down"></i></span>
                                 </div>
                                 <span></span>
