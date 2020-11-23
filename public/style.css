@@ -1293,10 +1293,25 @@ textarea:focus {
 	-webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
-#scrollUp:hover {
+#scrollUp-custom {
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    border-radius: 100%;
+    text-align: center;
+    background: #f10635 none repeat scroll 0 0;
+    border: 1px solid #fff;
+    -webkit-animation: liSlideInUp 0.8s ease-in-out 1 both;
+    animation: liSlideInUp 0.8s ease-in-out 1 both;
+    z-index: 1000 !important;
+    overflow: hidden;
+    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+#scrollUp:hover, #scrollUp-custom:hover {
 	background: #fed700 none repeat scroll 0 0;
 }
-#scrollUp i {
+#scrollUp,#scrollUp-custom i {
 	color: #ffffff;
 	font-size: 20px;
 	line-height: 50px;
@@ -2346,7 +2361,7 @@ textarea:focus {
 .add-actions-link {
 	display: inline-block;
 	margin-top: 24px;
-	padding-top: 20px;
+	padding-top: 0px;
 	-webkit-transition: all 300ms ease-in 0s;
 	transition: all 300ms ease-in 0s;
 	width: 100%;

@@ -18,6 +18,15 @@
     p.card-text-custom {
         display: none;
     }
+    #menu-left {
+        z-index:11
+    }
+    #menu-left section{
+        visibility: hidden !important;
+    }
+    #menu-left section .booking-card .card-body{
+        display: none;
+    }
 }
 
 
@@ -38,4 +47,26 @@
 .item-text:hover {
     color: #5431ff;
     content: 'hehe';
+}
+
+#menu-left {
+    position : fixed;
+    margin-left: 20px;
+}
+#menu-left section .booking-card {
+    border-radius:  10px;
+    -webkit-box-shadow: -1px 2px 21px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 2px 21px 0px rgba(0,0,0,0.75);
+    box-shadow: -1px 2px 21px 0px rgba(0,0,0,0.75);
+}
+i.arrow-menu-left {
+    position: absolute;
+    right: 15px;
+}
+ul.menu-sidebar-custom li{
+    padding: 10px;
+    border-bottom : #e0dddd 1px solid
+}
+ul.menu-sidebar-custom li:hover{
+    color: red;
 }

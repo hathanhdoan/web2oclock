@@ -2,6 +2,35 @@
 @section('content')
     <!-- Header Area End Here -->
     <!-- Begin Slider With Banner Area -->
+{{--    Menu Left--}}
+    <div id="menu-left">
+        <a id="scrollUp-custom" href="#top" style="position: absolute; bottom:207px;right:268px; z-index: 2147483647;"><i class="fas fa-bars"></i></a>
+        <section>
+
+            <!-- Card -->
+            <div class="card booking-card" style="width: 18rem;">
+                <!-- Card content -->
+                <div class="card-body">
+
+                    <!-- Title -->
+                    <h4 style="margin-left: 40px"  class="card-title font-weight-bold"><a>Khám phá</a></h4>
+                    <!-- Data -->
+                    <ul class="menu-sidebar-custom">
+                        <li><a class="mb-2">55 Đặng Thùy Trâm<i class="fas fa-angle-right arrow-menu-left"></i></a></li>
+                        <li><a class="mb-2">55 Đặng Thùy Trâm<i class="fas fa-angle-right arrow-menu-left"></i></a></li>
+                        <li><a class="mb-2">55 Đặng Thùy Trâm<i class="fas fa-angle-right arrow-menu-left"></i></a></li>
+                        <li><a class="mb-2">55 Đặng Thùy Trâm<i class="fas fa-angle-right arrow-menu-left"></i></a></li>
+                    </ul>
+
+                    <!-- Text -->
+                </div>
+
+            </div>
+            <!-- Card -->
+
+        </section>
+    </div>
+{{--    End menu left--}}
     <div class="slider-with-banner">
         <div class="container">
             <div class="row">
@@ -120,7 +149,7 @@
                                                     <i class="fa fa-heart-o"></i>
                                                 </a>
                                             </li>
-                                            <li><a data-toggle="tooltip" data-placement="top" title="Xem nhanh"
+                                            <li><a data-toggle="modal" data-target="#exampleModalCenter"  data-placement="top" title="Xem nhanh"
                                                    class="links-details" href="wishlist.html">
                                                     <i class="fa fa-eye"></i>
                                                 </a>
