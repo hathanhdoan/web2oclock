@@ -7,7 +7,7 @@
                 <div class="col-lg-3">
                     <div class="logo pb-sm-30 pb-xs-30">
                         <a href="#">
-                            <img src={{asset("images/logo.png")}} alt="">
+                            <img src={{asset("images/new_logo2.png")}}  alt="">
                         </a>
                     </div>
                 </div>
