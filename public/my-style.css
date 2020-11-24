@@ -44,6 +44,10 @@
     margin-left: 60px;
 }
 
+#map {
+    height: 100%;
+}
+
 .item-text:hover {
     color: #5431ff;
     content: 'hehe';

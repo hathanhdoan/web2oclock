@@ -2,9 +2,10 @@
 @section('content')
     <!-- Header Area End Here -->
     <!-- Begin Slider With Banner Area -->
-{{--    Menu Left--}}
+    {{--    Menu Left--}}
     <div id="menu-left">
-        <a id="scrollUp-custom" href="#top" style="position: absolute; bottom:207px;right:268px; z-index: 2147483647;"><i class="fas fa-bars"></i></a>
+        <a id="scrollUp-custom" href="#top"
+           style="position: absolute; bottom:207px;right:268px; z-index: 2147483647;"><i class="fas fa-bars"></i></a>
         <section>
 
             <!-- Card -->
@@ -13,7 +14,7 @@
                 <div class="card-body">
 
                     <!-- Title -->
-                    <h4 style="margin-left: 40px"  class="card-title font-weight-bold"><a>Khám phá</a></h4>
+                    <h4 style="margin-left: 40px" class="card-title font-weight-bold"><a>Khám phá</a></h4>
                     <!-- Data -->
                     <ul class="menu-sidebar-custom">
                         <li><a class="mb-2">55 Đặng Thùy Trâm<i class="fas fa-angle-right arrow-menu-left"></i></a></li>
@@ -30,7 +31,7 @@
 
         </section>
     </div>
-{{--    End menu left--}}
+    {{--    End menu left--}}
     <div class="slider-with-banner">
         <div class="container">
             <div class="row">
@@ -149,7 +150,8 @@
                                                     <i class="fa fa-heart-o"></i>
                                                 </a>
                                             </li>
-                                            <li><a data-toggle="modal" data-target="#exampleModalCenter"  data-placement="top" title="Xem nhanh"
+                                            <li><a data-toggle="modal" data-target="#exampleModalCenter"
+                                                   data-placement="top" title="Xem nhanh"
                                                    class="links-details" href="wishlist.html">
                                                     <i class="fa fa-eye"></i>
                                                 </a>
@@ -1084,19 +1086,26 @@
                                                 <h4 class="card-title font-weight-bold"><a>Texas Chicken 1</a></h4>
                                                 <!-- Data -->
                                                 <ul class="list-unstyled list-inline rating mb-0">
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"> </i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                    <li class="list-inline-item"><i
+                                                            class="fas fa-star-half-alt amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p>
+                                                    </li>
                                                 </ul>
-                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
+                                                    Trâm,
                                                     quận....</a>
                                                 <p class="card-text card-text-custom">Đoàn: Đồ ăn rất ngon, nên thử</p>
                                                 <!-- Text -->
@@ -1146,19 +1155,26 @@
                                                 <h4 class="card-title font-weight-bold"><a>Texas Chicken 2</a></h4>
                                                 <!-- Data -->
                                                 <ul class="list-unstyled list-inline rating mb-0">
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"> </i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                    <li class="list-inline-item"><i
+                                                            class="fas fa-star-half-alt amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p>
+                                                    </li>
                                                 </ul>
-                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
+                                                    Trâm,
                                                     quận....</a>
                                                 <p class="card-text card-text-custom">Đoàn: Đồ ăn rất ngon, nên thử</p>
                                                 <!-- Text -->
@@ -1190,7 +1206,7 @@
                                 </div>
                                 <!-- single-product-wrap end -->
                             </div>
-                            <div class="owl-item active" >
+                            <div class="owl-item active">
                                 <div class="row group-two-product">
                                     <section>
                                         <!-- Card -->
@@ -1213,19 +1229,26 @@
                                                 <h4 class="card-title font-weight-bold"><a>Texas Chicken</a></h4>
                                                 <!-- Data -->
                                                 <ul class="list-unstyled list-inline rating mb-0">
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"> </i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                    <li class="list-inline-item"><i
+                                                            class="fas fa-star-half-alt amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p>
+                                                    </li>
                                                 </ul>
-                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
+                                                    Trâm,
                                                     quận....</a>
                                                 <p class="card-text card-text-custom">Đoàn: Đồ ăn rất ngon, nên thử</p>
                                                 <!-- Text -->
@@ -1275,19 +1298,26 @@
                                                 <h4 class="card-title font-weight-bold"><a>Texas Chicken</a></h4>
                                                 <!-- Data -->
                                                 <ul class="list-unstyled list-inline rating mb-0">
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"> </i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                    <li class="list-inline-item"><i
+                                                            class="fas fa-star-half-alt amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p>
+                                                    </li>
                                                 </ul>
-                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
+                                                    Trâm,
                                                     quận....</a>
                                                 <p class="card-text card-text-custom">Đoàn: Đồ ăn rất ngon, nên thử</p>
                                                 <!-- Text -->
@@ -1344,19 +1374,26 @@
                                                 <h4 class="card-title font-weight-bold"><a>Texas Chicken 1</a></h4>
                                                 <!-- Data -->
                                                 <ul class="list-unstyled list-inline rating mb-0">
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"> </i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                    <li class="list-inline-item"><i
+                                                            class="fas fa-star-half-alt amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p>
+                                                    </li>
                                                 </ul>
-                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
+                                                    Trâm,
                                                     quận....</a>
                                                 <p class="card-text card-text-custom">Đoàn: Đồ ăn rất ngon, nên thử</p>
                                                 <!-- Text -->
@@ -1406,19 +1443,26 @@
                                                 <h4 class="card-title font-weight-bold"><a>Texas Chicken 2</a></h4>
                                                 <!-- Data -->
                                                 <ul class="list-unstyled list-inline rating mb-0">
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"> </i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                    <li class="list-inline-item"><i
+                                                            class="fas fa-star-half-alt amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p>
+                                                    </li>
                                                 </ul>
-                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
+                                                    Trâm,
                                                     quận....</a>
                                                 <p class="card-text card-text-custom">Đoàn: Đồ ăn rất ngon, nên thử</p>
                                                 <!-- Text -->
@@ -1450,7 +1494,7 @@
                                 </div>
                                 <!-- single-product-wrap end -->
                             </div>
-                            <div class="owl-item active" >
+                            <div class="owl-item active">
                                 <div class="row group-two-product">
                                     <section>
                                         <!-- Card -->
@@ -1473,19 +1517,26 @@
                                                 <h4 class="card-title font-weight-bold"><a>Texas Chicken</a></h4>
                                                 <!-- Data -->
                                                 <ul class="list-unstyled list-inline rating mb-0">
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"> </i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                    <li class="list-inline-item"><i
+                                                            class="fas fa-star-half-alt amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p>
+                                                    </li>
                                                 </ul>
-                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
+                                                    Trâm,
                                                     quận....</a>
                                                 <p class="card-text card-text-custom">Đoàn: Đồ ăn rất ngon, nên thử</p>
                                                 <!-- Text -->
@@ -1535,19 +1586,26 @@
                                                 <h4 class="card-title font-weight-bold"><a>Texas Chicken</a></h4>
                                                 <!-- Data -->
                                                 <ul class="list-unstyled list-inline rating mb-0">
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"> </i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                    <li class="list-inline-item"><i
+                                                            class="fas fa-star-half-alt amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p>
+                                                    </li>
                                                 </ul>
-                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
+                                                    Trâm,
                                                     quận....</a>
                                                 <p class="card-text card-text-custom">Đoàn: Đồ ăn rất ngon, nên thử</p>
                                                 <!-- Text -->
@@ -2620,19 +2678,26 @@
                                                 <h4 class="card-title font-weight-bold"><a>Texas Chicken 1</a></h4>
                                                 <!-- Data -->
                                                 <ul class="list-unstyled list-inline rating mb-0">
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"> </i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                    <li class="list-inline-item"><i
+                                                            class="fas fa-star-half-alt amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p>
+                                                    </li>
                                                 </ul>
-                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
+                                                    Trâm,
                                                     quận....</a>
                                                 <p class="card-text card-text-custom">Đoàn: Đồ ăn rất ngon, nên thử</p>
                                                 <!-- Text -->
@@ -2682,19 +2747,26 @@
                                                 <h4 class="card-title font-weight-bold"><a>Texas Chicken 2</a></h4>
                                                 <!-- Data -->
                                                 <ul class="list-unstyled list-inline rating mb-0">
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"> </i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                    <li class="list-inline-item"><i
+                                                            class="fas fa-star-half-alt amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p>
+                                                    </li>
                                                 </ul>
-                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
+                                                    Trâm,
                                                     quận....</a>
                                                 <p class="card-text card-text-custom">Đoàn: Đồ ăn rất ngon, nên thử</p>
                                                 <!-- Text -->
@@ -2726,7 +2798,7 @@
                                 </div>
                                 <!-- single-product-wrap end -->
                             </div>
-                            <div class="owl-item active" >
+                            <div class="owl-item active">
                                 <div class="row group-two-product">
                                     <section>
                                         <!-- Card -->
@@ -2749,21 +2821,28 @@
                                                 <h4 class="card-title font-weight-bold"><a>Texas Chicken</a></h4>
                                                 <!-- Data -->
                                                 <ul class="list-unstyled list-inline rating mb-0">
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"> </i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                    <li class="list-inline-item"><i
+                                                            class="fas fa-star-half-alt amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p>
+                                                    </li>
                                                 </ul>
-                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
+                                                    Trâm,
                                                     quận....</a>
-                                                <p class="card-text card-text-custom" >Đoàn: Đồ ăn rất ngon, nên thử</p>
+                                                <p class="card-text card-text-custom">Đoàn: Đồ ăn rất ngon, nên thử</p>
                                                 <!-- Text -->
                                                 <p class="card-text"></p>
                                                 <hr class="my-1">
@@ -2811,19 +2890,26 @@
                                                 <h4 class="card-title font-weight-bold"><a>Texas Chicken</a></h4>
                                                 <!-- Data -->
                                                 <ul class="list-unstyled list-inline rating mb-0">
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"> </i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                    <li class="list-inline-item"><i
+                                                            class="fas fa-star-half-alt amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p>
+                                                    </li>
                                                 </ul>
-                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
+                                                    Trâm,
                                                     quận....</a>
                                                 <p class="card-text card-text-custom">Đoàn: Đồ ăn rất ngon, nên thử</p>
                                                 <!-- Text -->
@@ -2880,19 +2966,26 @@
                                                 <h4 class="card-title font-weight-bold"><a>Texas Chicken 1</a></h4>
                                                 <!-- Data -->
                                                 <ul class="list-unstyled list-inline rating mb-0">
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"> </i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                    <li class="list-inline-item"><i
+                                                            class="fas fa-star-half-alt amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p>
+                                                    </li>
                                                 </ul>
-                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
+                                                    Trâm,
                                                     quận....</a>
                                                 <p class="card-text card-text-custom">Đoàn: Đồ ăn rất ngon, nên thử</p>
                                                 <!-- Text -->
@@ -2942,19 +3035,26 @@
                                                 <h4 class="card-title font-weight-bold"><a>Texas Chicken 2</a></h4>
                                                 <!-- Data -->
                                                 <ul class="list-unstyled list-inline rating mb-0">
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"> </i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                    <li class="list-inline-item"><i
+                                                            class="fas fa-star-half-alt amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p>
+                                                    </li>
                                                 </ul>
-                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
+                                                    Trâm,
                                                     quận....</a>
                                                 <p class="card-text card-text-custom">Đoàn: Đồ ăn rất ngon, nên thử</p>
                                                 <!-- Text -->
@@ -2986,7 +3086,7 @@
                                 </div>
                                 <!-- single-product-wrap end -->
                             </div>
-                            <div class="owl-item active" >
+                            <div class="owl-item active">
                                 <div class="row group-two-product">
                                     <section>
                                         <!-- Card -->
@@ -3009,19 +3109,26 @@
                                                 <h4 class="card-title font-weight-bold"><a>Texas Chicken</a></h4>
                                                 <!-- Data -->
                                                 <ul class="list-unstyled list-inline rating mb-0">
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"> </i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                    <li class="list-inline-item"><i
+                                                            class="fas fa-star-half-alt amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p>
+                                                    </li>
                                                 </ul>
-                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
+                                                    Trâm,
                                                     quận....</a>
                                                 <p class="card-text card-text-custom">Đoàn: Đồ ăn rất ngon, nên thử</p>
                                                 <!-- Text -->
@@ -3071,19 +3178,26 @@
                                                 <h4 class="card-title font-weight-bold"><a>Texas Chicken</a></h4>
                                                 <!-- Data -->
                                                 <ul class="list-unstyled list-inline rating mb-0">
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"> </i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                    <li class="list-inline-item mr-0"><i
+                                                            class="fas fa-star amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                    <li class="list-inline-item"><i
+                                                            class="fas fa-star-half-alt amber-text"></i>
                                                     </li>
-                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p>
+                                                    </li>
                                                 </ul>
-                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
+                                                    Trâm,
                                                     quận....</a>
                                                 <p class="card-text card-text-custom">Đoàn: Đồ ăn rất ngon, nên thử</p>
                                                 <!-- Text -->
@@ -3123,4 +3237,83 @@
             </div>
         </div>
     </section>
+@endsection
+@section('script')
+    <script>
+        var customLabel = {
+            restaurant: {
+                label: ''
+            },
+            bar: {
+                label: 'B'
+            }
+        };
+
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: new google.maps.LatLng(10.8139, 106.717),
+                zoom: 12
+            });
+            var infoWindow = new google.maps.InfoWindow;
+
+            // Change this depending on the name of your PHP or XML file
+            downloadUrl('ggmap.xml', function(data) {
+                var xml = data.responseXML;
+                console.log(xml);
+                var markers = xml.documentElement.getElementsByTagName('marker');
+                Array.prototype.forEach.call(markers, function(markerElem) {
+                    var id = markerElem.getAttribute('id');
+                    var name = markerElem.getAttribute('name');
+                    var address = markerElem.getAttribute('address');
+                    var type = markerElem.getAttribute('type');
+                    var point = new google.maps.LatLng(
+                        parseFloat(markerElem.getAttribute('lat')),
+                        parseFloat(markerElem.getAttribute('lng')));
+
+                    var infowincontent = document.createElement('div');
+                    var strong = document.createElement('strong');
+                    strong.textContent = name
+                    infowincontent.appendChild(strong);
+                    infowincontent.appendChild(document.createElement('br'));
+
+                    var text = document.createElement('text');
+                    text.textContent = address
+                    infowincontent.appendChild(text);
+                    var icon = customLabel[type] || {};
+                    var marker = new google.maps.Marker({
+                        map: map,
+                        position: point,
+                        label: icon.label
+                    });
+                    marker.addListener('click', function() {
+                        infoWindow.setContent(infowincontent);
+                        infoWindow.open(map, marker);
+                    });
+                });
+            });
+        }
+
+
+
+        function downloadUrl(url, callback) {
+            var request = window.ActiveXObject ?
+                new ActiveXObject('Microsoft.XMLHTTP') :
+                new XMLHttpRequest;
+
+            request.onreadystatechange = function() {
+                if (request.readyState == 4) {
+                    request.onreadystatechange = doNothing;
+                    callback(request, request.status);
+                }
+            };
+
+            request.open('GET', url, true);
+            request.send(null);
+        }
+
+        function doNothing() {}
+    </script>
+    <script defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzlVX517mZWArHv4Dt3_JVG0aPmbSE5mE&callback=initMap">
+    </script>
 @endsection
