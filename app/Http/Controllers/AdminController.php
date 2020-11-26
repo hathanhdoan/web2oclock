@@ -11,8 +11,13 @@ class AdminController extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function test()
+    public function add_location()
     {
-        return view('admin.product');
+        return view('admin.location');
+    }
+
+    public function list_location()
+    {
+        return view('admin.list_location');
     }
 }
