@@ -75,3 +75,7 @@ ul.menu-sidebar-custom li{
 ul.menu-sidebar-custom li:hover{
     color: red;
 }
+
+.icon-menu-user {
+    margin-right: 10px;
+}

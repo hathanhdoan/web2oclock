@@ -8,6 +8,13 @@ use DOMDocument;
 class CreateXmlController extends Controller
 {
     public function create(){
+        $res  = Restaurant::first();
+        $res->name = 'hehe';
+        $res->save();
+
+
+
+
         function parseToXML($htmlStr)
         {
             $xmlStr=str_replace('<','&lt;',$htmlStr);
@@ -34,5 +41,10 @@ class CreateXmlController extends Controller
         $xmlStr.= '</markers>';
         file_put_contents(public_path('ggmap.xml'),$xmlStr);
         echo 111;
+    }
+
+    public function hehe(Request $request){
+        $data = \request()->all();
+        return $data;
     }
 }

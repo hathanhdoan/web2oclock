@@ -112,28 +112,14 @@
                                 <div class="minicart">
                                     <ul class="minicart-product-list">
                                         <li>
-                                            <a href="single-product.html" class="minicart-product-image">
-                                                <img src="images/product/small-size/5.jpg" alt="cart products">
-                                            </a>
                                             <div class="minicart-product-details">
-                                                <h6><a href="single-product.html">Aenean eu tristique</a></h6>
-                                                <span>£40 x 1</span>
+                                                <h6><a href="single-product.html"><i style="color: blue" class="icon-menu-user fas fa-chalkboard-teacher"></i>Hồ sơ cá nhân</a></h6>
                                             </div>
-                                            <button class="close" title="Remove">
-                                                <i class="fa fa-close"></i>
-                                            </button>
                                         </li>
                                         <li>
-                                            <a href="single-product.html" class="minicart-product-image">
-                                                <img src="images/product/small-size/6.jpg" alt="cart products">
-                                            </a>
                                             <div class="minicart-product-details">
-                                                <h6><a href="single-product.html">Aenean eu tristique</a></h6>
-                                                <span>£40 x 1</span>
+                                                <h6><a href="single-product.html"><i style="color: greenyellow" class="icon-menu-user far fa-calendar-minus"></i>Hoạt động cá nhân</a></h6>
                                             </div>
-                                            <button class="close" title="Remove">
-                                                <i class="fa fa-close"></i>
-                                            </button>
                                         </li>
                                     </ul>
                                     <div class="minicart-button">
