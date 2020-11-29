@@ -8,5 +8,6 @@ class Restaurant extends Model
 {
     protected $table = 'restaurants';
     public $timestamps = true;
+    protected $fillable = ['name', 'address'];
 
 }

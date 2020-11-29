@@ -15,8 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 Route::group(['namespace'=>'Admin'],function (){
     //// RES
-    Route::post('add_location','RestaurantController@add_location')->name("admin.add_location");
-    Route::get('/','RestaurantController@list_location')->name("admin.list_location");
-
+    Route::group(['prefix'=>'res'],function (){
+        Route::get('add_location','RestaurantController@add_location')->name("admin.add_location");
+        Route::post('add_location_post','RestaurantController@add_location_post')->name("admin.add_location_post");
+        Route::get('/','RestaurantController@list_location')->name("admin.list_location");
+    });
     ////
 });

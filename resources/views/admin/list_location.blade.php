@@ -90,7 +90,12 @@
                         {{--</div>--}}
                         <div class="table-responsive table table-bordered table-striped" >
                             <table style="height: auto" class="table table-hover">
-                                <div id="list"></div>
+                                <th></th>
+                                @if(isset($res_list))
+                                    @foreach($res_list as $item)
+                                        <div id="list">{{$item['Name']}}</div>
+                                    @endforeach
+                                @endif
                             </table>
                         </div>
                     </div>
