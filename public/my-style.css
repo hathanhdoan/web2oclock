@@ -21,7 +21,7 @@
 }
 @media (max-width: 1366px) {
     #menu-left section{
-        visibility: hidden !important;
+        visibility: hidden;
     }
     /*#menu-left section .booking-card .card-body{*/
     /*    display: none;*/
@@ -78,4 +78,8 @@ ul.menu-sidebar-custom li:hover{
 
 .icon-menu-user {
     margin-right: 10px;
+}
+
+.active-menu {
+    visibility: unset;
 }

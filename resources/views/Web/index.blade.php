@@ -2,36 +2,6 @@
 @section('content')
     <!-- Header Area End Here -->
     <!-- Begin Slider With Banner Area -->
-    {{--    Menu Left--}}
-    <div id="menu-left">
-        <a id="scrollUp-custom" href="#top"
-           style="position: absolute; bottom:207px;right:268px; z-index: 2147483647;"><i class="fas fa-bars"></i></a>
-        <section>
-
-            <!-- Card -->
-            <div class="card booking-card" style="width: 18rem;">
-                <!-- Card content -->
-                <div class="card-body">
-
-                    <!-- Title -->
-                    <h4 style="margin-left: 40px" class="card-title font-weight-bold"><a>Khám phá</a></h4>
-                    <!-- Data -->
-                    <ul class="menu-sidebar-custom">
-                        <li><a class="mb-2">55 Đặng Thùy Trâm<i class="fas fa-angle-right arrow-menu-left"></i></a></li>
-                        <li><a class="mb-2">55 Đặng Thùy Trâm<i class="fas fa-angle-right arrow-menu-left"></i></a></li>
-                        <li><a class="mb-2">55 Đặng Thùy Trâm<i class="fas fa-angle-right arrow-menu-left"></i></a></li>
-                        <li><a class="mb-2">55 Đặng Thùy Trâm<i class="fas fa-angle-right arrow-menu-left"></i></a></li>
-                    </ul>
-
-                    <!-- Text -->
-                </div>
-
-            </div>
-            <!-- Card -->
-
-        </section>
-    </div>
-    {{--    End menu left--}}
     <div class="slider-with-banner">
         <div class="container">
             <div class="row">
@@ -3237,6 +3207,8 @@
             </div>
         </div>
     </section>
+
+    <div id="map"></div>
 @endsection
 @section('script')
     <script>
@@ -3257,11 +3229,11 @@
             var infoWindow = new google.maps.InfoWindow;
 
             // Change this depending on the name of your PHP or XML file
-            downloadUrl('ggmap.xml', function(data) {
+            downloadUrl('ggmap.xml', function (data) {
                 var xml = data.responseXML;
                 console.log(xml);
                 var markers = xml.documentElement.getElementsByTagName('marker');
-                Array.prototype.forEach.call(markers, function(markerElem) {
+                Array.prototype.forEach.call(markers, function (markerElem) {
                     var id = markerElem.getAttribute('id');
                     var name = markerElem.getAttribute('name');
                     var address = markerElem.getAttribute('address');
@@ -3285,7 +3257,7 @@
                         position: point,
                         label: icon.label
                     });
-                    marker.addListener('click', function() {
+                    marker.addListener('click', function () {
                         infoWindow.setContent(infowincontent);
                         infoWindow.open(map, marker);
                     });
@@ -3294,13 +3266,12 @@
         }
 
 
-
         function downloadUrl(url, callback) {
             var request = window.ActiveXObject ?
                 new ActiveXObject('Microsoft.XMLHTTP') :
                 new XMLHttpRequest;
 
-            request.onreadystatechange = function() {
+            request.onreadystatechange = function () {
                 if (request.readyState == 4) {
                     request.onreadystatechange = doNothing;
                     callback(request, request.status);
@@ -3311,9 +3282,11 @@
             request.send(null);
         }
 
-        function doNothing() {}
+        function doNothing() {
+        }
     </script>
     <script defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzlVX517mZWArHv4Dt3_JVG0aPmbSE5mE&callback=initMap">
     </script>
+
 @endsection

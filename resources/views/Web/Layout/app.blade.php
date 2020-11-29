@@ -8,9 +8,39 @@
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 <!-- Begin Body Wrapper -->
-<div class="body-wrapper">
+<div class="body-wrapper" id="main">
     <!-- Begin Header Area -->
     @include('Web.Layout.menu-top')
+    {{--    Menu Left--}}
+    <div id="menu-left">
+        <a id="scrollUp-custom" @click.stop.prevent="showMenuLeft()"
+           style="position: absolute; bottom:207px;right:268px; z-index: 2147483647;"><i class="fas fa-bars"></i></a>
+        <section id="menu-left-panel" is-hidden="yes">
+
+            <!-- Card -->
+            <div class="card booking-card card-menu-left" style="width: 18rem;">
+                <!-- Card content -->
+                <div class="card-body">
+
+                    <!-- Title -->
+                    <h4 style="margin-left: 40px" class="card-title font-weight-bold"><a>Khám phá</a></h4>
+                    <!-- Data -->
+                    <ul class="menu-sidebar-custom">
+                        <li><a class="mb-2">55 Đặng Thùy Trâm<i class="fas fa-angle-right arrow-menu-left"></i></a></li>
+                        <li><a class="mb-2">55 Đặng Thùy Trâm<i class="fas fa-angle-right arrow-menu-left"></i></a></li>
+                        <li><a class="mb-2">55 Đặng Thùy Trâm<i class="fas fa-angle-right arrow-menu-left"></i></a></li>
+                        <li><a class="mb-2">55 Đặng Thùy Trâm<i class="fas fa-angle-right arrow-menu-left"></i></a></li>
+                    </ul>
+
+                    <!-- Text -->
+                </div>
+
+            </div>
+            <!-- Card -->
+
+        </section>
+    </div>
+{{--    End menu left--}}
     @yield('content')
     <!-- Li's Trendding Products Area End Here -->
     <!-- Begin Footer Area -->
@@ -172,7 +202,87 @@
 <script src={{asset("js/scrollUp.min.js")}}></script>
 <!-- Main/Activator js -->
 <script src={{asset("js/main.js")}}></script>
-</body>
+<script src={{asset("js/vue.js")}}></script>
+<script src={{asset("js/axios.min.js")}}></script>
 @yield('script')
+</body>
+<script>
+    $.holdReady(true);
+    axios.defaults.timeout = 1200000;
+    var navbarNav = new objectMain('#main');
+
+    function objectMain(element) {
+        if (!$(element).length) {
+            return;
+        }
+        var timeout = null;
+        // Vue.config.devtools = true;
+        this.vm = new Vue({
+            el: element,
+            data: {
+                // loading: false,
+                // api_logout: $(element).attr('api-logout'),
+                // token: '',
+                // count_cart: 0,
+                // user: JSON.parse(localStorage.getItem('user'))
+            },
+            methods: {
+                showMenuLeft:function (){
+                    let is_hidden = $('#menu-left-panel').attr('is-hidden');
+                    if(is_hidden == 'yes'){
+                        $('#menu-left-panel').css('visibility','unset');
+                        $('.card-menu-left').css('visibility','unset');
+                        $('#menu-left-panel').attr('is-hidden','no')
+                    }else {
+                        $('.card-menu-left').css('visibility','hidden');
+                        $('#menu-left-panel').css('visibility','hidden !i');
+                        $('#menu-left-panel').attr('is-hidden','yes')
+                    }
+
+                }
+                // getLocal:function(){
+                //     $.get("https://ipinfo.io/json", function (response) {
+                //         if(response.hasOwnProperty('country')){
+                //             localStorage.setItem('location',JSON.stringify(response))
+                //         }
+                //     }, "jsonp");
+                // },
+                // logout: function () {
+                //     var vm = this;
+                //     vm.loading = true;
+                //     if (!localStorage.getItem("token") || !localStorage.getItem("user")) {
+                //         window.location = '/login';
+                //     }
+                //     var token = 'Bearer ' + localStorage.getItem('token').replace(/['"]+/g, '');
+                //     this.token = token;
+                //     var config = {
+                //         headers: {
+                //             Authorization: this.token,
+                //             'Content-Type': 'application/json;charset=UTF-8',
+                //         }
+                //     };
+                //     axios.get(vm.api_logout, config).then(function (response) {
+                //         vm.loading = false;
+                //         var data = response.data;
+                //         localStorage.removeItem('user');
+                //         localStorage.removeItem('token');
+                //         if (localStorage.getItem('expiresIn')) {
+                //             localStorage.removeItem('expiresIn');
+                //             localStorage.removeItem('login_time');
+                //         }
+                //         window.location = '/login';
+                //     })
+                //
+                // }
+            },
+            created: function () {
+                console.log(222);
+            },
+            mounted: function () {
+                $(document).trigger('vue-loaded');
+            }
+        });
+    }
+</script>
 <!-- index30:23-->
 </html>
