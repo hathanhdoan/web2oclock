@@ -12,34 +12,34 @@
     <!-- Begin Header Area -->
     @include('Web.Layout.menu-top')
     {{--    Menu Left--}}
-    <div id="menu-left">
-        <a id="scrollUp-custom" @click.stop.prevent="showMenuLeft()"
-           style="position: absolute; bottom:207px;right:268px; z-index: 2147483647;"><i class="fas fa-bars"></i></a>
-        <section id="menu-left-panel" is-hidden="yes">
+{{--    <div id="menu-left">--}}
+{{--        <a id="scrollUp-custom" @click.stop.prevent="showMenuLeft()"--}}
+{{--           style="position: absolute; bottom:207px;right:268px; z-index: 2147483647;"><i class="fas fa-bars"></i></a>--}}
+{{--        <section id="menu-left-panel" is-hidden="yes">--}}
 
-            <!-- Card -->
-            <div class="card booking-card card-menu-left" style="width: 18rem;">
-                <!-- Card content -->
-                <div class="card-body">
+{{--            <!-- Card -->--}}
+{{--            <div class="card booking-card card-menu-left" style="width: 18rem;">--}}
+{{--                <!-- Card content -->--}}
+{{--                <div class="card-body">--}}
 
-                    <!-- Title -->
-                    <h4 style="margin-left: 40px" class="card-title font-weight-bold"><a>Khám phá</a></h4>
-                    <!-- Data -->
-                    <ul class="menu-sidebar-custom">
-                        <li><a class="mb-2">55 Đặng Thùy Trâm<i class="fas fa-angle-right arrow-menu-left"></i></a></li>
-                        <li><a class="mb-2">55 Đặng Thùy Trâm<i class="fas fa-angle-right arrow-menu-left"></i></a></li>
-                        <li><a class="mb-2">55 Đặng Thùy Trâm<i class="fas fa-angle-right arrow-menu-left"></i></a></li>
-                        <li><a class="mb-2">55 Đặng Thùy Trâm<i class="fas fa-angle-right arrow-menu-left"></i></a></li>
-                    </ul>
+{{--                    <!-- Title -->--}}
+{{--                    <h4 style="margin-left: 40px" class="card-title font-weight-bold"><a>Khám phá</a></h4>--}}
+{{--                    <!-- Data -->--}}
+{{--                    <ul class="menu-sidebar-custom">--}}
+{{--                        <li><a class="mb-2">55 Đặng Thùy Trâm<i class="fas fa-angle-right arrow-menu-left"></i></a></li>--}}
+{{--                        <li><a class="mb-2">55 Đặng Thùy Trâm<i class="fas fa-angle-right arrow-menu-left"></i></a></li>--}}
+{{--                        <li><a class="mb-2">55 Đặng Thùy Trâm<i class="fas fa-angle-right arrow-menu-left"></i></a></li>--}}
+{{--                        <li><a class="mb-2">55 Đặng Thùy Trâm<i class="fas fa-angle-right arrow-menu-left"></i></a></li>--}}
+{{--                    </ul>--}}
 
-                    <!-- Text -->
-                </div>
+{{--                    <!-- Text -->--}}
+{{--                </div>--}}
 
-            </div>
-            <!-- Card -->
+{{--            </div>--}}
+{{--            <!-- Card -->--}}
 
-        </section>
-    </div>
+{{--        </section>--}}
+{{--    </div>--}}
 {{--    End menu left--}}
     @yield('content')
     <!-- Li's Trendding Products Area End Here -->

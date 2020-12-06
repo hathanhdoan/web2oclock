@@ -3208,7 +3208,11 @@
         </div>
     </section>
 
-    <div id="map"></div>
+    <div id="map" style="overflow: hidden;height: 300px;width: 1170px;margin-top: 150px;margin: auto;
+    border-radius: 10px;border: 5px solid; @media screen and (min-width: 360px) {
+   padding: 10px;height: 200px;width:80%;
+
+} "></div>
 @endsection
 @section('script')
     <script>

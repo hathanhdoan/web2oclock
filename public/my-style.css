@@ -36,6 +36,12 @@
     box-shadow: -1px 1px 18px -10px rgba(0,0,0,0.78);
 }
 
+.my-card {
+    -webkit-box-shadow: -1px 1px 18px -10px rgba(0,0,0,0.78);
+    -moz-box-shadow: -1px 1px 18px -10px rgba(0,0,0,0.78);
+    box-shadow: -1px 1px 18px -10px rgba(0,0,0,0.78);
+}
+
 .group-two-product {
     margin-right: 10px;
     margin-bottom: 10px
@@ -83,3 +89,108 @@ ul.menu-sidebar-custom li:hover{
 .active-menu {
     visibility: unset;
 }
+ /*DETAIL*/
+#detail-product-img {
+    max-width: 450px;
+    max-height: 300px;
+    margin-top: 20px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+}
+
+.comment-user {
+    color: black;
+    font-weight: bold;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.rating-point{
+    margin-top: 10px;
+    position: absolute;
+    color: white;
+    background: red;
+    text-align: center;
+    border-radius: 100px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+    line-height: 32px;
+    overflow: hidden;
+    right: 20px;
+}
+
+.comment-panel {
+    position: relative;
+    padding-bottom: 10px;
+    margin: 0px 130px 20px;
+}
+
+@media (max-width: 800px) {
+    .comment-panel {
+        position: relative;
+        margin: 0px;
+    }
+}
+
+@media (max-width: 800px) {
+    #detail-product-img {
+        width: 372px;
+        height: 300px;
+        margin-top: 20px;
+    }
+}
+
+
+@media (max-width: 400px) {
+    #detail-product-img {
+        width: 347px;
+        height: 300px;
+        margin-top: 20px;
+    }
+    .comment-panel {
+        position: relative;
+        margin: -15px 0px 0px;
+    }
+}
+
+@media (max-width: 330px) {
+    #detail-product-img {
+        width: 290px;
+        height: 250px;
+        margin-top: 20px;
+    }
+}
+
+.comment-content {
+    margin: 0px 10px 0px;
+}
+.comment-image {
+    object-fit: cover; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+    height: 270px;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.comment-footer {
+    margin : 0px 35px 0px;
+}
+
+.sub-comment {
+    margin: -15px 0px 0px !important;
+}
+
