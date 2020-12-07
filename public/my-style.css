@@ -137,6 +137,7 @@ ul.menu-sidebar-custom li:hover{
     margin: 0px 130px 20px;
 }
 
+
 @media (max-width: 800px) {
     .comment-panel {
         position: relative;
@@ -163,6 +164,10 @@ ul.menu-sidebar-custom li:hover{
         position: relative;
         margin: -15px 0px 0px;
     }
+    .comment-panel:nth-child(n+2) {
+        position: relative;
+        margin: 18px 0px 0px !important;
+    }
 }
 
 @media (max-width: 330px) {
@@ -174,7 +179,7 @@ ul.menu-sidebar-custom li:hover{
 }
 
 .comment-content {
-    margin: 0px 10px 0px;
+    margin: 0px 20px 0px;
 }
 .comment-image {
     object-fit: cover; /* Do not scale the image */
@@ -193,4 +198,10 @@ ul.menu-sidebar-custom li:hover{
 .sub-comment {
     margin: -15px 0px 0px !important;
 }
-
+.see-more {
+    color: #8ec0d0;
+}
+.my-comment{
+    position: absolute;
+    width: 100%;
+}

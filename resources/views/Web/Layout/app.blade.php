@@ -158,6 +158,55 @@
         </div>
     </div>
     <!-- Quick View | Modal Area End Here -->
+
+    <!-- Model more comment picture -->
+    <div class="modal fade modal-wrapper" id="commentPictureModel" >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="modal-inner-area row">
+                        <div class="row" style="padding: 20px 20px 0px 20px">
+                            <div class="col-sm-4" style="text-align: center; padding: 2px !important; ">
+                                <img class="comment-image" style="text-align: center" src="images/slider/foody-slider1.jpg">
+                            </div>
+                            <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
+                                <img class="comment-image"  src="images/slider/foody-slider1.jpg">
+                            </div>
+                            <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
+                                <img class="comment-image" src="images/slider/foody-slider1.jpg">
+                            </div>
+                            <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
+                                <img class="comment-image" src="images/slider/foody-slider1.jpg">
+                            </div>
+                            <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
+                                <img class="comment-image" src="images/slider/foody-slider1.jpg">
+                            </div>
+                            <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
+                                <img class="comment-image" src="images/slider/foody-slider1.jpg">
+                            </div>
+                            <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
+                                <img class="comment-image" src="images/slider/foody-slider1.jpg">
+                            </div>
+                            <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
+                                <img class="comment-image" src="images/slider/foody-slider1.jpg">
+                            </div>
+                            <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
+                                <img class="comment-image" src="images/slider/foody-slider1.jpg">
+                            </div>
+
+                            {{--                                            <div class="col-md-4" style="text-align: center; padding: 2px !important;">--}}
+                            {{--                                                <img class="comment-image" src="images/slider/foody-slider1.jpg">--}}
+                            {{--                                            </div>--}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quick View | Modal Area End Here -->
 </div>
 <!-- Body Wrapper End Here -->
 <!-- jQuery-V1.12.4 -->
