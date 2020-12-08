@@ -26,21 +26,22 @@
                 <div class="col-lg-7 col-md-6">
                     <div class="product-details-view-content pt-20">
                         <div class="product-info">
-                            <h2>Today is a good day Framed poster</h2>
-                            <span class="product-details-ref">Reference: demo_15</span>
-                            <div class="rating-box pt-10">
-                                <ul class="rating rating-with-review-item">
-                                    <li><i class="fa fa-star-o"></i></li>
-                                    <li><i class="fa fa-star-o"></i></li>
-                                    <li><i class="fa fa-star-o"></i></li>
-                                    <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                    <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                    <li class="review-item"><a href="#">Read Review</a></li>
-                                    <li class="review-item"><a href="#">Write Review</a></li>
-                                </ul>
+                            <div class="row">
+                                <h2 style="font-size: 25px !important;">Ahihi - Fruit & Yogurt - Shop Online</h2>
+                                <p class="rating-point-main">5</p>
                             </div>
+                            <span class="product-details-ref">Nhà hàng</span>
+
                             <div class="price-box pt-20">
-                                <span class="new-price new-price-2">$57.98</span>
+                                <div class="row">
+                                    <div class="col-sm-2">
+
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <span class="new-price new-price-2">$57.98</span>
+                                        <span class="new-price new-price-2">$57.98</span>
+                                    </div>
+                                </div>
                             </div>
                             <div class="product-desc">
                                 <p>
@@ -81,84 +82,26 @@
                     <!-- Begin Li's Tab Menu Content Area -->
                 </div>
             </div>
-            <div class="tab-content">
-                <div id="description" class="tab-pane" role="tabpanel">
-                    <div class="product-description">
-                        <span>The best is yet to come! Give your walls a voice with a framed poster. This aesthethic, optimistic poster will look great in your desk or in an open-space office. Painted wooden frame with passe-partout for more depth.</span>
+            <div class="tab-content row">
+                <div class="col-lg-9">
+                    <div id="description" class="tab-pane" role="tabpanel">
+                        <div class="product-description">
+                            <span>The best is yet to come! Give your walls a voice with a framed poster. This aesthethic, optimistic poster will look great in your desk or in an open-space office. Painted wooden frame with passe-partout for more depth.</span>
+                        </div>
                     </div>
-                </div>
-                <div id="product-details" class="tab-pane" role="tabpanel">
-                    <div class="product-details-manufacturer">
-                        <a href="#">
-                            <img src="images/product-details/1.jpg" alt="Product Manufacturer Image">
-                        </a>
-                        <p><span>Reference</span> demo_7</p>
-                        <p><span>Reference</span> demo_7</p>
+                    <div id="product-details" class="tab-pane" role="tabpanel">
+                        <div class="product-details-manufacturer">
+                            <a href="#">
+                                <img src="images/product-details/1.jpg" alt="Product Manufacturer Image">
+                            </a>
+                            <p><span>Reference</span> demo_7</p>
+                            <p><span>Reference</span> demo_7</p>
+                        </div>
                     </div>
-                </div>
-                <div id="reviews" class="tab-pane active show" role="tabpanel">
-                    <div class="product-reviews">
-                        <div class="my-card comment-panel">
-                            <div class="comment-header">
-                                <div class="row">
-                                    <div class="mt-10 mb-10 ml-20 mr-10">
-                                        <img class="avatar" src="images/Screenshot_50.png">
-                                    </div>
-                                    <div class="mt-10">
-                                        <p class="comment-user" style="margin-bottom: -5px !important;">Hà Thanh Đoàn</p>
-                                        <p style="margin-bottom: -5px !important; font-size: 12px !important;">12/01/2021 10:20:21</p>
-                                    </div>
-                                    <p class="rating-point">5</p>
-                                </div>
-                            </div>
-                            <div class="my-comment-body">
-                                <div class="comment-content">
-                                    <p style="color: black; margin-bottom: 0px !important;">sjflksd lkdsjfkl  jflksdkf jfklsdjf lsfjkdjl sjdflk
-                                        sjflksd lkdsjfkl  jflksdkf jfklsdjf lsfjkdjl sjdflk
-                                        sjflksd lkdsjfkl  jflksdkf jfklsdjf lsfjkdjl
-                                        sjflksd lkdsjfkl  jflksdkf jfklsdjf lsfjkdjl
-                                        sjflksd lkdsjfkl  jflksdkf jfklsdjf lsfjkdjl
-                                        sjflksd lkdsjfkl  jflksdkf jfklsdjf lsfjkdjl
-                                        sjflksd lkdsjfkl  jflksdkf jfklsdjf lsfjkdjl</p>
-                                    <a href="#">See more</a>
-                                </div>
-                                <div class="comment-picture">
-                                    <div class="row" style="padding: 20px">
-                                        <div class="col-sm-4" style="text-align: center; padding: 2px !important; ">
-                                            <img class="comment-image" style="text-align: center" src="images/slider/foody-slider1.jpg">
-                                        </div>
-                                        <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
-                                            <img class="comment-image"  src="images/slider/foody-slider1.jpg">
-                                        </div>
-                                        <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
-                                            <img class="comment-image" src="images/slider/foody-slider1.jpg">
-                                        </div>
-                                        {{--                                            <div class="col-md-4" style="text-align: center; padding: 2px !important;">--}}
-                                        {{--                                                <img class="comment-image" src="images/slider/foody-slider1.jpg">--}}
-                                        {{--                                            </div>--}}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="comment-footer">
-                                <div class="row mb-5">
-                                    <div class="mr-20">
-                                        <i style="color: blue" class="fa fa-heart mr-5"></i><span>van A và 10 người khác</span>
-                                    </div>
-                                </div>
-                                <hr class="my-hr">
-                                <div class="row mb-5">
-                                    <div class="mr-20">
-                                        <i class="fa fa-heart mr-5"></i><span>Like</span>
-                                    </div>
-                                    <div class="mr-20">
-                                        <i class="fa fa-comment mr-5" ></i><span>Comment</span>
-                                    </div>
-                                    <div  class="mr-20">
-                                        <i class="fa fa-exclamation-triangle report-btn mr-5"></i><span>Rort</span>
-                                    </div>
-                                </div>
-                                <hr class="my-hr">
-                                <div class="pb-5 sub-comment" >
+                    <div id="reviews" class="tab-pane active show" role="tabpanel">
+                        <div class="product-reviews">
+                            <div class="my-card comment-panel">
+                                <div class="comment-header">
                                     <div class="row">
                                         <div class="mt-10 mb-10 ml-20 mr-10">
                                             <img class="avatar" src="images/Screenshot_50.png">
@@ -167,13 +110,94 @@
                                             <p class="comment-user" style="margin-bottom: -5px !important;">Hà Thanh Đoàn</p>
                                             <p style="margin-bottom: -5px !important; font-size: 12px !important;">12/01/2021 10:20:21</p>
                                         </div>
-                                    </div>
-                                    <div class="comment-content" style="margin: -7px 10px 0px 52px">
-                                        <p>Quán phục vụ tốt Quán phục vụ tốt Quán phục vụ tốt Quán phục vụ tốt</p>
+                                        <p class="rating-point">5</p>
                                     </div>
                                 </div>
-                                <hr class="my-hr">
-                                <div class="pb-5 sub-comment" >
+                                <div class="my-comment-body">
+                                    <div class="comment-content">
+                                        <p style="color: black; margin-bottom: 0px !important;">sjflksd lkdsjfkl  jflksdkf jfklsdjf lsfjkdjl sjdflk
+                                            sjflksd lkdsjfkl  jflksdkf jfklsdjf lsfjkdjl sjdflk
+                                            sjflksd lkdsjfkl  jflksdkf jfklsdjf lsfjkdjl
+                                            sjflksd lkdsjfkl  jflksdkf jfklsdjf lsfjkdjl
+                                            sjflksd lkdsjfkl  jflksdkf jfklsdjf lsfjkdjl
+                                            sjflksd lkdsjfkl  jflksdkf jfklsdjf lsfjkdjl
+                                            sjflksd lkdsjfkl  jflksdkf jfklsdjf lsfjkdjl</p>
+                                        <a href="#">See more</a>
+                                    </div>
+                                    <div class="comment-picture">
+                                        <div class="row" style="padding: 20px">
+                                            <div class="col-sm-4" style="text-align: center; padding: 2px !important; ">
+                                                <img class="comment-image" style="text-align: center" src="images/slider/foody-slider1.jpg">
+                                            </div>
+                                            <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
+                                                <img class="comment-image"  src="images/slider/foody-slider1.jpg">
+                                            </div>
+                                            <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
+                                                <img class="comment-image" src="images/slider/foody-slider1.jpg">
+                                            </div>
+                                            {{--                                            <div class="col-md-4" style="text-align: center; padding: 2px !important;">--}}
+                                            {{--                                                <img class="comment-image" src="images/slider/foody-slider1.jpg">--}}
+                                            {{--                                            </div>--}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comment-footer">
+                                    <div class="row mb-5">
+                                        <div class="mr-20">
+                                            <i style="color: blue" class="fa fa-heart mr-5"></i><span>van A và 10 người khác</span>
+                                        </div>
+                                    </div>
+                                    <hr class="my-hr">
+                                    <div class="row mb-5">
+                                        <div class="mr-20">
+                                            <i class="fa fa-heart mr-5"></i><span>Like</span>
+                                        </div>
+                                        <div class="mr-20">
+                                            <i class="fa fa-comment mr-5" ></i><span>Comment</span>
+                                        </div>
+                                        <div  class="mr-20">
+                                            <i class="fa fa-exclamation-triangle report-btn mr-5"></i><span>Rort</span>
+                                        </div>
+                                    </div>
+                                    <hr class="my-hr">
+                                    <div class="pb-5 sub-comment" >
+                                        <div class="row">
+                                            <div class="mt-10 mb-10 ml-20 mr-10">
+                                                <img class="avatar" src="images/Screenshot_50.png">
+                                            </div>
+                                            <div class="mt-10">
+                                                <p class="comment-user" style="margin-bottom: -5px !important;">Hà Thanh Đoàn</p>
+                                                <p style="margin-bottom: -5px !important; font-size: 12px !important;">12/01/2021 10:20:21</p>
+                                            </div>
+                                        </div>
+                                        <div class="comment-content" style="margin: -7px 10px 0px 52px">
+                                            <p>Quán phục vụ tốt Quán phục vụ tốt Quán phục vụ tốt Quán phục vụ tốt</p>
+                                        </div>
+                                    </div>
+                                    <hr class="my-hr">
+                                    <div class="pb-5 sub-comment" >
+                                        <div class="row">
+                                            <div class="mt-10 mb-10 ml-20 mr-10">
+                                                <img class="avatar" src="images/Screenshot_50.png">
+                                            </div>
+                                            <div class="mt-10">
+                                                <p class="comment-user" style="margin-bottom: -5px !important;">Hà Thanh Đoàn</p>
+                                                <p style="margin-bottom: -5px !important; font-size: 12px !important;">12/01/2021 10:20:21</p>
+                                            </div>
+                                        </div>
+                                        <div class="comment-content" style="margin: -7px 10px 0px 52px">
+                                            <p>Quán phục vụ tốt <a href="#">...See more</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="see-more"><a style="color: #8ec0d0;" href="#">See more<i class="ml-5 fas fa-angle-double-down"></i></a></div>
+                                    <div class="form-inline">
+                                        <img class="avatar" src="images/Screenshot_50.png">
+                                        <textarea placeholder="Viết bình luận..." class="ml-10 my-comment"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="my-card comment-panel">
+                                <div class="comment-header">
                                     <div class="row">
                                         <div class="mt-10 mb-10 ml-20 mr-10">
                                             <img class="avatar" src="images/Screenshot_50.png">
@@ -182,90 +206,210 @@
                                             <p class="comment-user" style="margin-bottom: -5px !important;">Hà Thanh Đoàn</p>
                                             <p style="margin-bottom: -5px !important; font-size: 12px !important;">12/01/2021 10:20:21</p>
                                         </div>
-                                    </div>
-                                    <div class="comment-content" style="margin: -7px 10px 0px 52px">
-                                        <p>Quán phục vụ tốt <a href="#">...See more</a></p>
+                                        <p class="rating-point">5</p>
                                     </div>
                                 </div>
-                                <div style="text-align: center; "><a class="see-more" href="#">See more<i class="ml-5 fas fa-angle-double-down"></i></a></div>
-                                <div class="row">
-                                    <div style="display: inline-flex;">
+                                <div class="my-comment-body">
+                                    <div class="comment-content">
+                                        <p style="color: black; margin-bottom: 0px !important;">Quán phục vụ tốt Quán phục vụ tốt </p>
+                                        <a href="#">See more</a>
+                                    </div>
+                                    <div class="comment-picture">
+                                        <div class="row" style="padding: 20px">
+                                            <div class="col-sm-4" style="text-align: center; padding: 2px !important; ">
+                                                <img class="comment-image" style="text-align: center" src="images/slider/foody-slider1.jpg">
+                                            </div>
+                                            <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
+                                                <img class="comment-image"  src="images/slider/foody-slider1.jpg">
+                                            </div>
+                                            <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
+                                                <img class="comment-image" src="images/slider/foody-slider1.jpg">
+                                            </div>
+                                            {{--                                            <div class="col-md-4" style="text-align: center; padding: 2px !important;">--}}
+                                            {{--                                                <img class="comment-image" src="images/slider/foody-slider1.jpg">--}}
+                                            {{--                                            </div>--}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comment-footer">
+                                    <div class="row mb-5">
+                                        <div class="mr-20">
+                                            <i style="color: blue" class="fa fa-heart mr-5"></i><span>van A và 10 người khác</span>
+                                        </div>
+                                    </div>
+                                    <hr class="my-hr">
+                                    <div class="row mb-5">
+                                        <div class="mr-20">
+                                            <i class="fa fa-heart mr-5"></i><span>Like</span>
+                                        </div>
+                                        <div class="mr-20">
+                                            <i class="fa fa-comment mr-5" ></i><span>Comment</span>
+                                        </div>
+                                        <div  class="mr-20">
+                                            <i class="fa fa-exclamation-triangle report-btn mr-5"></i><span>Rort</span>
+                                        </div>
+                                    </div>
+                                    <hr class="my-hr">
+                                    <div class="pb-5 sub-comment" >
+                                        <div class="row">
+                                            <div class="mt-10 mb-10 ml-20 mr-10">
+                                                <img class="avatar" src="images/Screenshot_50.png">
+                                            </div>
+                                            <div class="mt-10">
+                                                <p class="comment-user" style="margin-bottom: -5px !important;">Hà Thanh Đoàn</p>
+                                                <p style="margin-bottom: -5px !important; font-size: 12px !important;">12/01/2021 10:20:21</p>
+                                            </div>
+                                        </div>
+                                        <div class="comment-content" style="margin: -7px 10px 0px 52px">
+                                            <p>dasdsa</p>
+                                        </div>
+                                    </div>
+                                    <div class="see-more"><a style="color: #8ec0d0;" href="#">See more<i class="ml-5 fas fa-angle-double-down"></i></a></div>
+                                    <div class="form-inline">
                                         <img class="avatar" src="images/Screenshot_50.png">
-                                        <textarea class="ml-10 my-comment"></textarea>
+                                        <textarea placeholder="Viết bình luận..." class="ml-10 my-comment"></textarea>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="my-card comment-panel">
-                            <div class="comment-header">
-                                <div class="row">
-                                    <div class="mt-10 mb-10 ml-20 mr-10">
-                                        <img class="avatar" src="images/Screenshot_50.png">
-                                    </div>
-                                    <div class="mt-10">
-                                        <p class="comment-user" style="margin-bottom: -5px !important;">Hà Thanh Đoàn</p>
-                                        <p style="margin-bottom: -5px !important; font-size: 12px !important;">12/01/2021 10:20:21</p>
-                                    </div>
-                                    <p class="rating-point">5</p>
-                                </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="my-card mt-25 rating-card">
+                        <div>
+                            <p style="color: black!important; text-align: center; font-size: initial"><b>45 </b>người dùng đã chia sẻ</p>
+                        </div>
+                        <hr style="margin: 10px 0px">
+                        <div class="row">
+                            <div class="col-6" style="padding-right: 5px !important; text-align: right">
+                                <p class="point_rating_detail" style="color: #9c25b9!important;">25</p>
+                                <p class="point_rating_detail" style="color: #00c851 !important;">7</p>
+                                <p class="point_rating_detail" style="color: black!important;">7</p>
+                                <p class="point_rating_detail" style="color: red!important;">2</p>
                             </div>
-                            <div class="my-comment-body">
-                                <div class="comment-content">
-                                    <p style="color: black; margin-bottom: 0px !important;">Quán phục vụ tốt Quán phục vụ tốt </p>
-                                    <a href="#">See more</a>
-                                </div>
-                                <div class="comment-picture">
-                                    <div class="row" style="padding: 20px">
-                                        <div class="col-sm-4" style="text-align: center; padding: 2px !important; ">
-                                            <img class="comment-image" style="text-align: center" src="images/slider/foody-slider1.jpg">
-                                        </div>
-                                        <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
-                                            <img class="comment-image"  src="images/slider/foody-slider1.jpg">
-                                        </div>
-                                        <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
-                                            <img class="comment-image" src="images/slider/foody-slider1.jpg">
-                                        </div>
-                                        {{--                                            <div class="col-md-4" style="text-align: center; padding: 2px !important;">--}}
-                                        {{--                                                <img class="comment-image" src="images/slider/foody-slider1.jpg">--}}
-                                        {{--                                            </div>--}}
-                                    </div>
-                                </div>
+                            <div class="col-6" style=" padding-left: 5px !important; text-align: left">
+                                <p style="color: black!important;">Tuyệt vời</p>
+                                <p style="color: black!important;">Khá tốt</p>
+                                <p style="color: black!important;">Trung bình</p>
+                                <p style="color: black!important;">Kém</p>
                             </div>
-                            <div class="comment-footer">
-                                <div class="row mb-5">
-                                    <div class="mr-20">
-                                        <i style="color: blue" class="fa fa-heart mr-5"></i><span>van A và 10 người khác</span>
-                                    </div>
+                        </div>
+                        <hr style="margin: 10px 0px">
+                        <div>
+                            <div class="row">
+                                <div class="col-4" style="padding-right: 5px !important; text-align: right">
+                                    <p class="mbI-0" style="color: black!important;">Vị trí</p>
                                 </div>
-                                <hr class="my-hr">
-                                <div class="row mb-5">
-                                    <div class="mr-20">
-                                        <i class="fa fa-heart mr-5"></i><span>Like</span>
-                                    </div>
-                                    <div class="mr-20">
-                                        <i class="fa fa-comment mr-5" ></i><span>Comment</span>
-                                    </div>
-                                    <div  class="mr-20">
-                                        <i class="fa fa-exclamation-triangle report-btn mr-5"></i><span>Rort</span>
-                                    </div>
-                                </div>
-                                <hr class="my-hr">
-                                <div class="pb-5 sub-comment" >
-                                    <div class="row">
-                                        <div class="mt-10 mb-10 ml-20 mr-10">
-                                            <img class="avatar" src="images/Screenshot_50.png">
-                                        </div>
-                                        <div class="mt-10">
-                                            <p class="comment-user" style="margin-bottom: -5px !important;">Hà Thanh Đoàn</p>
-                                            <p style="margin-bottom: -5px !important; font-size: 12px !important;">12/01/2021 10:20:21</p>
+                                <div class="col-7" style=" padding-left: 5px !important; text-align: left">
+                                    <div class="progress" style="border-radius: 0; height: 15px; margin-top: 3px">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                             aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                            <span class="sr-only">70% Complete</span>
                                         </div>
                                     </div>
-                                    <div class="comment-content" style="margin: -7px 10px 0px 52px">
-                                        <p>dasdsa</p>
-                                    </div>
                                 </div>
-                                <div style="text-align: center; "><a class="see-more" href="#">See more<i class="ml-5 fas fa-angle-double-down"></i></a></div>
+                                <div class="col-1 plI-0 prI-0">7</div>
                             </div>
+                            <div class="row">
+                                <div class="col-4" style="padding-right: 5px !important; text-align: right">
+                                    <p class="mbI-0" style="color: black!important;">Giá cả</p>
+                                </div>
+                                <div class="col-7" style=" padding-left: 5px !important; text-align: left">
+                                    <div class="progress" style="border-radius: 0; height: 15px; margin-top: 3px">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                             aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                            <span class="sr-only">70% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-1 plI-0 prI-0">7</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4" style="padding-right: 5px !important; text-align: right">
+                                    <p class="mbI-0" style="color: black!important;">Chất lượng</p>
+                                </div>
+                                <div class="col-7" style=" padding-left: 5px !important; text-align: left">
+                                    <div class="progress" style="border-radius: 0; height: 15px; margin-top: 3px">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                             aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                            <span class="sr-only">70% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-1 plI-0 prI-0">7</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4" style="padding-right: 5px !important; text-align: right">
+                                    <p class="mbI-0" style="color: black!important;">Phục vụ</p>
+                                </div>
+                                <div class="col-7" style=" padding-left: 5px !important; text-align: left">
+                                    <div class="progress" style="border-radius: 0; height: 15px; margin-top: 3px">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                             aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                            <span class="sr-only">70% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-1 plI-0 prI-0">7</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4" style="padding-right: 5px !important; text-align: right">
+                                    <p class="mbI-0" style="color: black!important;">Không gian</p>
+                                </div>
+                                <div class="col-7" style=" padding-left: 5px !important; text-align: left">
+                                    <div class="progress" style="border-radius: 0; height: 15px; margin-top: 3px">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                             aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                            <span class="sr-only">70% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-1 plI-0 prI-0">7</div>
+                            </div>
+                            {{--                            <div class="col-6" style="padding-right: 5px !important; text-align: right">--}}
+{{--                                <p class="mbI-0" style="color: black!important;">Vị trí</p>--}}
+{{--                                <p class="mbI-0" style="color: black !important;">Giá cả</p>--}}
+{{--                                <p class="mbI-0"style="color: black!important;">Chất lượng</p>--}}
+{{--                                <p class="mbI-0" style="color: black!important;">Phục vụ</p>--}}
+{{--                                <p class="mbI-0" style="color: black!important;">Không gian</p>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-6" style=" padding-left: 5px !important; text-align: left">--}}
+{{--                                <div class="progress" style="border-radius: 0; height: 15px; margin-top: 3px">--}}
+{{--                                    <div class="progress-bar" role="progressbar" aria-valuenow="70"--}}
+{{--                                         aria-valuemin="0" aria-valuemax="100" style="width:70%">--}}
+{{--                                        <span class="sr-only">70% Complete</span>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                                <div class="progress" style="border-radius: 0; height: 15px; margin-top: 3px">--}}
+{{--                                    <div class="progress-bar" role="progressbar" aria-valuenow="70"--}}
+{{--                                         aria-valuemin="0" aria-valuemax="100" style="width:70%">--}}
+{{--                                        <span class="sr-only">70% Complete</span>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                                <div class="progress" style="border-radius: 0; height: 15px; margin-top: 3px">--}}
+{{--                                    <div class="progress-bar" role="progressbar" aria-valuenow="70"--}}
+{{--                                         aria-valuemin="0" aria-valuemax="100" style="width:70%">--}}
+{{--                                        <span class="sr-only">70% Complete</span>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                                <div class="progress" style="border-radius: 0; height: 15px; margin-top: 3px">--}}
+{{--                                    <div class="progress-bar" role="progressbar" aria-valuenow="70"--}}
+{{--                                         aria-valuemin="0" aria-valuemax="100" style="width:70%">--}}
+{{--                                        <span class="sr-only">70% Complete</span>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                                <div class="progress" style="border-radius: 0; height: 15px; margin-top: 3px">--}}
+{{--                                    <div class="progress-bar" role="progressbar" aria-valuenow="70"--}}
+{{--                                         aria-valuemin="0" aria-valuemax="100" style="width:70%">--}}
+{{--                                        <span class="sr-only">70% Complete</span>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+                        </div>
+                        <hr style="margin: 10px 0px">
+                        <div style="text-align: center">
+                            <b style="font-size: x-large; color: #03ae03">8.6</b> điểm
                         </div>
                     </div>
                 </div>

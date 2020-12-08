@@ -1,4 +1,24 @@
-@media (max-width:768px) {
+b {
+    margin-right: 2px;
+}
+
+.mbI-0 {
+    margin-bottom: 0px !important;
+}
+
+.mtI-3 {
+    margin-top: 3px !important;
+}
+
+.plI-0 {
+    padding-left: 0px !important;
+}
+
+.prI-0 {
+    padding-right: 0px !important;
+}
+
+@media (max-width: 768px) {
     .booking-card-custom {
         max-width: 10rem !important
     }
@@ -6,23 +26,29 @@
     .booking-card-custom {
         margin-top: 10px !important
     }
+
     .group-two-product {
-        margin: 0px 0px 0px 0px!important
+        margin: 0px 0px 0px 0px !important
     }
+
     .product-container {
         margin-left: 20px !important
     }
+
     h4 {
         font-size: 18px;
     }
+
     p.card-text-custom {
         display: none;
     }
 }
+
 @media (max-width: 1366px) {
-    #menu-left section{
+    #menu-left section {
         visibility: hidden;
     }
+
     /*#menu-left section .booking-card .card-body{*/
     /*    display: none;*/
     /*}*/
@@ -31,21 +57,22 @@
 
 .booking-card-custom, .booking-card {
     margin-right: 10px !important;
-    -webkit-box-shadow: -1px 1px 18px -10px rgba(0,0,0,0.78);
-    -moz-box-shadow: -1px 1px 18px -10px rgba(0,0,0,0.78);
-    box-shadow: -1px 1px 18px -10px rgba(0,0,0,0.78);
+    -webkit-box-shadow: -1px 1px 18px -10px rgba(0, 0, 0, 0.78);
+    -moz-box-shadow: -1px 1px 18px -10px rgba(0, 0, 0, 0.78);
+    box-shadow: -1px 1px 18px -10px rgba(0, 0, 0, 0.78);
 }
 
 .my-card {
-    -webkit-box-shadow: -1px 1px 18px -10px rgba(0,0,0,0.78);
-    -moz-box-shadow: -1px 1px 18px -10px rgba(0,0,0,0.78);
-    box-shadow: -1px 1px 18px -10px rgba(0,0,0,0.78);
+    -webkit-box-shadow: -1px 1px 18px -10px rgba(0, 0, 0, 0.78);
+    -moz-box-shadow: -1px 1px 18px -10px rgba(0, 0, 0, 0.78);
+    box-shadow: -1px 1px 18px -10px rgba(0, 0, 0, 0.78);
 }
 
 .group-two-product {
     margin-right: 10px;
     margin-bottom: 10px
 }
+
 .product-container {
     margin-left: 60px;
 }
@@ -61,24 +88,28 @@
 
 #menu-left {
     z-index: 100;
-    position : fixed;
+    position: fixed;
     margin-left: 20px;
 }
+
 #menu-left section .booking-card {
-    border-radius:  10px;
-    -webkit-box-shadow: -1px 2px 21px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: -1px 2px 21px 0px rgba(0,0,0,0.75);
-    box-shadow: -1px 2px 21px 0px rgba(0,0,0,0.75);
+    border-radius: 10px;
+    -webkit-box-shadow: -1px 2px 21px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 2px 21px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 2px 21px 0px rgba(0, 0, 0, 0.75);
 }
+
 i.arrow-menu-left {
     position: absolute;
     right: 15px;
 }
-ul.menu-sidebar-custom li{
+
+ul.menu-sidebar-custom li {
     padding: 10px;
-    border-bottom : #e0dddd 1px solid
+    border-bottom: #e0dddd 1px solid
 }
-ul.menu-sidebar-custom li:hover{
+
+ul.menu-sidebar-custom li:hover {
     color: red;
 }
 
@@ -89,7 +120,8 @@ ul.menu-sidebar-custom li:hover{
 .active-menu {
     visibility: unset;
 }
- /*DETAIL*/
+
+/*DETAIL*/
 #detail-product-img {
     max-width: 450px;
     max-height: 300px;
@@ -99,9 +131,9 @@ ul.menu-sidebar-custom li:hover{
 .avatar {
     width: 40px;
     height: 40px;
-    border-radius:50%;
-    -moz-border-radius:50%;
-    -webkit-border-radius:50%;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
 }
 
 .comment-user {
@@ -115,11 +147,11 @@ ul.menu-sidebar-custom li:hover{
     display: table;
 }
 
-.rating-point{
+.rating-point {
     margin-top: 10px;
     position: absolute;
     color: white;
-    background: red;
+    background: #03ae03;
     text-align: center;
     border-radius: 100px;
     display: block;
@@ -130,11 +162,24 @@ ul.menu-sidebar-custom li:hover{
     overflow: hidden;
     right: 20px;
 }
+.rating-point-main  {
+    color: white;
+    background: #03ae03;
+    text-align: center;
+    border-radius: 100px;
+    display: block;
+    width: 36px;
+    height: 36px;
+    font-size: 22px;
+    line-height: 37px;
+    overflow: hidden;
+    right: 20px;
+}
 
 .comment-panel {
     position: relative;
     padding-bottom: 10px;
-    margin: 0px 130px 20px;
+    margin: 0px 10px 20px 0px;
 }
 
 
@@ -145,7 +190,7 @@ ul.menu-sidebar-custom li:hover{
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 935px) {
     #detail-product-img {
         width: 372px;
         height: 300px;
@@ -160,13 +205,26 @@ ul.menu-sidebar-custom li:hover{
         height: 300px;
         margin-top: 20px;
     }
+
     .comment-panel {
         position: relative;
         margin: -15px 0px 0px;
     }
+
     .comment-panel:nth-child(n+2) {
         position: relative;
         margin: 18px 0px 0px !important;
+    }
+
+    .my-comment {
+        width: 79% !important;
+    }
+    .sub-comment {
+        margin: -15px -30px 0px !important;
+    }
+
+    .form-inline {
+        margin-left: -24px !important;
     }
 }
 
@@ -181,6 +239,7 @@ ul.menu-sidebar-custom li:hover{
 .comment-content {
     margin: 0px 20px 0px;
 }
+
 .comment-image {
     object-fit: cover; /* Do not scale the image */
     object-position: center; /* Center the image within the element */
@@ -191,17 +250,38 @@ ul.menu-sidebar-custom li:hover{
     margin-right: auto;
 
 }
+
 .comment-footer {
-    margin : 0px 35px 0px;
+    margin: 0px 35px 0px;
 }
 
 .sub-comment {
-    margin: -15px 0px 0px !important;
+    margin: -15px -15px 0px;
 }
+
 .see-more {
-    color: #8ec0d0;
+    text-align: center;
+    margin-top: -15px;
 }
-.my-comment{
-    position: absolute;
-    width: 100%;
+
+.my-comment {
+    height: 40px;
+    width: 90%;
+    margin: 10px 0px 7px;
+}
+
+.sub-comment:last-child {
+    padding-bottom: 0px !important;
+}
+
+.point_rating_detail {
+    font-size: large;
+    font-weight: bolder;
+}
+
+.rating-card {
+    padding: 10px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.78) !important;
+    position: sticky !important;
+    top: 80px
 }
