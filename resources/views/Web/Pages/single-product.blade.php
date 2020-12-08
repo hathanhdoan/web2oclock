@@ -17,7 +17,8 @@
             <div class="row single-product-area">
                 <div class="col-lg-5 col-md-6">
                     <div class="lg-image">
-                        <a class="popup-img venobox vbox-item" href="images/product/large-size/1.jpg" data-gall="myGallery">
+                        <a class="popup-img venobox vbox-item" href="images/product/large-size/1.jpg"
+                           data-gall="myGallery">
                             <img id="detail-product-img" src="images/slider/foody-slider1.jpg" alt="product image">
                         </a>
                     </div>
@@ -26,20 +27,35 @@
                 <div class="col-lg-7 col-md-6">
                     <div class="product-details-view-content pt-20">
                         <div class="product-info">
-                            <div class="row">
-                                <h2 style="font-size: 25px !important;">Ahihi - Fruit & Yogurt - Shop Online</h2>
-                                <p class="rating-point-main">5</p>
-                            </div>
                             <span class="product-details-ref">Nhà hàng</span>
-
+                            <h2 class="pl-15" style="font-size: 25px !important; margin: 7px 0px 0px -17px;">Ahihi -
+                                Fruit & Yogurt - Shop Online</h2>
                             <div class="price-box pt-20">
                                 <div class="row">
-                                    <div class="col-sm-2">
-
+                                    <div class="col-sm-1 haha-custom">
+                                        <span class="rating-point-main">5</span>
                                     </div>
-                                    <div class="col-sm-10">
-                                        <span class="new-price new-price-2">$57.98</span>
-                                        <span class="new-price new-price-2">$57.98</span>
+                                    <div class="col-sm-11 form-inline">
+                                        <div class="mr-20">
+                                            <p class="point-rating-header">8.6</p>
+                                            <p style="margin-top: -14px; color: #898989">Chất lượng</p>
+                                        </div>
+                                        <div class="mr-20" style="width: 58px">
+                                            <p class="point-rating-header">8.6</p>
+                                            <p style="margin-top: -14px; color: #898989">Dịch vụ</p>
+                                        </div>
+                                        <div class="mr-20" style="width: 58px">
+                                            <p class="point-rating-header">8.6</p>
+                                            <p style="margin-top: -14px; color: #898989">Giá cả</p>
+                                        </div>
+                                        <div class="mr-20" style="width: 58px">
+                                            <p class="point-rating-header">8.6</p>
+                                            <p style="margin-top: -14px; color: #898989">Vị trí</p>
+                                        </div>
+                                        <div class="mr-20" style="width: 72px">
+                                            <p class="point-rating-header">8.6</p>
+                                            <p style="margin-top: -14px; color: #898989">Không gian</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -50,13 +66,16 @@
                                 </p>
                             </div>
                             <div class="product-additional-info mb-20">
-                                <a class="wishlist-btn" href="wishlist.html"><i class="fa fa-heart-o"></i>Add to wishlist</a>
+                                <a class="wishlist-btn" href="wishlist.html"><i class="fa fa-heart-o"></i>Add to
+                                    wishlist</a>
                                 <div class="product-social-sharing pt-15">
                                     <ul>
                                         <li class="facebook"><a href="#"><i class="fa fa-facebook"></i>Facebook</a></li>
                                         <li class="twitter"><a href="#"><i class="fa fa-twitter"></i>Twitter</a></li>
-                                        <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i>Google +</a></li>
-                                        <li class="instagram"><a href="#"><i class="fa fa-instagram"></i>Instagram</a></li>
+                                        <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i>Google
+                                                +</a></li>
+                                        <li class="instagram"><a href="#"><i class="fa fa-instagram"></i>Instagram</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -74,7 +93,8 @@
                 <div class="col-lg-12">
                     <div class="li-product-tab">
                         <ul class="nav li-product-menu">
-                            <li><a class="active" data-toggle="tab" href="#description"><span>Description</span></a></li>
+                            <li><a class="active" data-toggle="tab" href="#description"><span>Description</span></a>
+                            </li>
                             <li><a data-toggle="tab" href="#product-details"><span>Product Details</span></a></li>
                             <li><a data-toggle="tab" href="#reviews"><span>Reviews</span></a></li>
                         </ul>
@@ -107,30 +127,33 @@
                                             <img class="avatar" src="images/Screenshot_50.png">
                                         </div>
                                         <div class="mt-10">
-                                            <p class="comment-user" style="margin-bottom: -5px !important;">Hà Thanh Đoàn</p>
-                                            <p style="margin-bottom: -5px !important; font-size: 12px !important;">12/01/2021 10:20:21</p>
+                                            <p class="comment-user" style="margin-bottom: -5px !important;">Hà Thanh
+                                                Đoàn</p>
+                                            <p class="comment-time">12/01/2021 10:20:21</p>
                                         </div>
                                         <p class="rating-point">5</p>
                                     </div>
                                 </div>
                                 <div class="my-comment-body">
                                     <div class="comment-content">
-                                        <p style="color: black; margin-bottom: 0px !important;">sjflksd lkdsjfkl  jflksdkf jfklsdjf lsfjkdjl sjdflk
-                                            sjflksd lkdsjfkl  jflksdkf jfklsdjf lsfjkdjl sjdflk
-                                            sjflksd lkdsjfkl  jflksdkf jfklsdjf lsfjkdjl
-                                            sjflksd lkdsjfkl  jflksdkf jfklsdjf lsfjkdjl
-                                            sjflksd lkdsjfkl  jflksdkf jfklsdjf lsfjkdjl
-                                            sjflksd lkdsjfkl  jflksdkf jfklsdjf lsfjkdjl
-                                            sjflksd lkdsjfkl  jflksdkf jfklsdjf lsfjkdjl</p>
+                                        <p style="color: black; margin-bottom: 0px !important;">sjflksd lkdsjfkl
+                                            jflksdkf jfklsdjf lsfjkdjl sjdflk
+                                            sjflksd lkdsjfkl jflksdkf jfklsdjf lsfjkdjl sjdflk
+                                            sjflksd lkdsjfkl jflksdkf jfklsdjf lsfjkdjl
+                                            sjflksd lkdsjfkl jflksdkf jfklsdjf lsfjkdjl
+                                            sjflksd lkdsjfkl jflksdkf jfklsdjf lsfjkdjl
+                                            sjflksd lkdsjfkl jflksdkf jfklsdjf lsfjkdjl
+                                            sjflksd lkdsjfkl jflksdkf jfklsdjf lsfjkdjl</p>
                                         <a href="#">See more</a>
                                     </div>
                                     <div class="comment-picture">
                                         <div class="row" style="padding: 20px">
                                             <div class="col-sm-4" style="text-align: center; padding: 2px !important; ">
-                                                <img class="comment-image" style="text-align: center" src="images/slider/foody-slider1.jpg">
+                                                <img class="comment-image" style="text-align: center"
+                                                     src="images/slider/foody-slider1.jpg">
                                             </div>
                                             <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
-                                                <img class="comment-image"  src="images/slider/foody-slider1.jpg">
+                                                <img class="comment-image" src="images/slider/foody-slider1.jpg">
                                             </div>
                                             <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
                                                 <img class="comment-image" src="images/slider/foody-slider1.jpg">
@@ -153,21 +176,22 @@
                                             <i class="fa fa-heart mr-5"></i><span>Like</span>
                                         </div>
                                         <div class="mr-20">
-                                            <i class="fa fa-comment mr-5" ></i><span>Comment</span>
+                                            <i class="fa fa-comment mr-5"></i><span>Comment</span>
                                         </div>
-                                        <div  class="mr-20">
+                                        <div class="mr-20">
                                             <i class="fa fa-exclamation-triangle report-btn mr-5"></i><span>Rort</span>
                                         </div>
                                     </div>
                                     <hr class="my-hr">
-                                    <div class="pb-5 sub-comment" >
+                                    <div class="pb-5 sub-comment">
                                         <div class="row">
                                             <div class="mt-10 mb-10 ml-20 mr-10">
                                                 <img class="avatar" src="images/Screenshot_50.png">
                                             </div>
                                             <div class="mt-10">
-                                                <p class="comment-user" style="margin-bottom: -5px !important;">Hà Thanh Đoàn</p>
-                                                <p style="margin-bottom: -5px !important; font-size: 12px !important;">12/01/2021 10:20:21</p>
+                                                <p class="comment-user" style="margin-bottom: -5px !important;">Hà Thanh
+                                                    Đoàn</p>
+                                                <p class="comment-time">12/01/2021 10:20:21</p>
                                             </div>
                                         </div>
                                         <div class="comment-content" style="margin: -7px 10px 0px 52px">
@@ -175,22 +199,24 @@
                                         </div>
                                     </div>
                                     <hr class="my-hr">
-                                    <div class="pb-5 sub-comment" >
+                                    <div class="pb-5 sub-comment">
                                         <div class="row">
                                             <div class="mt-10 mb-10 ml-20 mr-10">
                                                 <img class="avatar" src="images/Screenshot_50.png">
                                             </div>
                                             <div class="mt-10">
-                                                <p class="comment-user" style="margin-bottom: -5px !important;">Hà Thanh Đoàn</p>
-                                                <p style="margin-bottom: -5px !important; font-size: 12px !important;">12/01/2021 10:20:21</p>
+                                                <p class="comment-user" style="margin-bottom: -5px !important;">Hà Thanh
+                                                    Đoàn</p>
+                                                <p class="comment-time">12/01/2021 10:20:21</p>
                                             </div>
                                         </div>
                                         <div class="comment-content" style="margin: -7px 10px 0px 52px">
                                             <p>Quán phục vụ tốt <a href="#">...See more</a></p>
                                         </div>
                                     </div>
-                                    <div class="see-more"><a style="color: #8ec0d0;" href="#">See more<i class="ml-5 fas fa-angle-double-down"></i></a></div>
-                                    <div class="form-inline">
+                                    <div class="see-more"><a style="color: #8ec0d0;" href="#">See more<i
+                                                class="ml-5 fas fa-angle-double-down"></i></a></div>
+                                    <div class="form-inline form-inline-custom">
                                         <img class="avatar" src="images/Screenshot_50.png">
                                         <textarea placeholder="Viết bình luận..." class="ml-10 my-comment"></textarea>
                                     </div>
@@ -203,24 +229,27 @@
                                             <img class="avatar" src="images/Screenshot_50.png">
                                         </div>
                                         <div class="mt-10">
-                                            <p class="comment-user" style="margin-bottom: -5px !important;">Hà Thanh Đoàn</p>
-                                            <p style="margin-bottom: -5px !important; font-size: 12px !important;">12/01/2021 10:20:21</p>
+                                            <p class="comment-user" style="margin-bottom: -5px !important;">Hà Thanh
+                                                Đoàn</p>
+                                            <p class="comment-time">12/01/2021 10:20:21</p>
                                         </div>
                                         <p class="rating-point">5</p>
                                     </div>
                                 </div>
                                 <div class="my-comment-body">
                                     <div class="comment-content">
-                                        <p style="color: black; margin-bottom: 0px !important;">Quán phục vụ tốt Quán phục vụ tốt </p>
+                                        <p style="color: black; margin-bottom: 0px !important;">Quán phục vụ tốt Quán
+                                            phục vụ tốt </p>
                                         <a href="#">See more</a>
                                     </div>
                                     <div class="comment-picture">
                                         <div class="row" style="padding: 20px">
                                             <div class="col-sm-4" style="text-align: center; padding: 2px !important; ">
-                                                <img class="comment-image" style="text-align: center" src="images/slider/foody-slider1.jpg">
+                                                <img class="comment-image" style="text-align: center"
+                                                     src="images/slider/foody-slider1.jpg">
                                             </div>
                                             <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
-                                                <img class="comment-image"  src="images/slider/foody-slider1.jpg">
+                                                <img class="comment-image" src="images/slider/foody-slider1.jpg">
                                             </div>
                                             <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
                                                 <img class="comment-image" src="images/slider/foody-slider1.jpg">
@@ -243,29 +272,31 @@
                                             <i class="fa fa-heart mr-5"></i><span>Like</span>
                                         </div>
                                         <div class="mr-20">
-                                            <i class="fa fa-comment mr-5" ></i><span>Comment</span>
+                                            <i class="fa fa-comment mr-5"></i><span>Comment</span>
                                         </div>
-                                        <div  class="mr-20">
+                                        <div class="mr-20">
                                             <i class="fa fa-exclamation-triangle report-btn mr-5"></i><span>Rort</span>
                                         </div>
                                     </div>
                                     <hr class="my-hr">
-                                    <div class="pb-5 sub-comment" >
+                                    <div class="pb-5 sub-comment">
                                         <div class="row">
                                             <div class="mt-10 mb-10 ml-20 mr-10">
                                                 <img class="avatar" src="images/Screenshot_50.png">
                                             </div>
                                             <div class="mt-10">
-                                                <p class="comment-user" style="margin-bottom: -5px !important;">Hà Thanh Đoàn</p>
-                                                <p style="margin-bottom: -5px !important; font-size: 12px !important;">12/01/2021 10:20:21</p>
+                                                <p class="comment-user" style="margin-bottom: -5px !important;">Hà Thanh
+                                                    Đoàn</p>
+                                                <p class="comment-time">12/01/2021 10:20:21</p>
                                             </div>
                                         </div>
                                         <div class="comment-content" style="margin: -7px 10px 0px 52px">
                                             <p>dasdsa</p>
                                         </div>
                                     </div>
-                                    <div class="see-more"><a style="color: #8ec0d0;" href="#">See more<i class="ml-5 fas fa-angle-double-down"></i></a></div>
-                                    <div class="form-inline">
+                                    <div class="see-more"><a style="color: #8ec0d0;" href="#">See more<i
+                                                class="ml-5 fas fa-angle-double-down"></i></a></div>
+                                    <div class="form-inline form-inline-custom">
                                         <img class="avatar" src="images/Screenshot_50.png">
                                         <textarea placeholder="Viết bình luận..." class="ml-10 my-comment"></textarea>
                                     </div>
@@ -278,7 +309,8 @@
                 <div class="col-lg-3">
                     <div class="my-card mt-25 rating-card">
                         <div>
-                            <p style="color: black!important; text-align: center; font-size: initial"><b>45 </b>người dùng đã chia sẻ</p>
+                            <p style="color: black!important; text-align: center; font-size: initial"><b>45 </b>người
+                                dùng đã chia sẻ</p>
                         </div>
                         <hr style="margin: 10px 0px">
                         <div class="row">
@@ -368,44 +400,44 @@
                                 <div class="col-1 plI-0 prI-0">7</div>
                             </div>
                             {{--                            <div class="col-6" style="padding-right: 5px !important; text-align: right">--}}
-{{--                                <p class="mbI-0" style="color: black!important;">Vị trí</p>--}}
-{{--                                <p class="mbI-0" style="color: black !important;">Giá cả</p>--}}
-{{--                                <p class="mbI-0"style="color: black!important;">Chất lượng</p>--}}
-{{--                                <p class="mbI-0" style="color: black!important;">Phục vụ</p>--}}
-{{--                                <p class="mbI-0" style="color: black!important;">Không gian</p>--}}
-{{--                            </div>--}}
-{{--                            <div class="col-6" style=" padding-left: 5px !important; text-align: left">--}}
-{{--                                <div class="progress" style="border-radius: 0; height: 15px; margin-top: 3px">--}}
-{{--                                    <div class="progress-bar" role="progressbar" aria-valuenow="70"--}}
-{{--                                         aria-valuemin="0" aria-valuemax="100" style="width:70%">--}}
-{{--                                        <span class="sr-only">70% Complete</span>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="progress" style="border-radius: 0; height: 15px; margin-top: 3px">--}}
-{{--                                    <div class="progress-bar" role="progressbar" aria-valuenow="70"--}}
-{{--                                         aria-valuemin="0" aria-valuemax="100" style="width:70%">--}}
-{{--                                        <span class="sr-only">70% Complete</span>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="progress" style="border-radius: 0; height: 15px; margin-top: 3px">--}}
-{{--                                    <div class="progress-bar" role="progressbar" aria-valuenow="70"--}}
-{{--                                         aria-valuemin="0" aria-valuemax="100" style="width:70%">--}}
-{{--                                        <span class="sr-only">70% Complete</span>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="progress" style="border-radius: 0; height: 15px; margin-top: 3px">--}}
-{{--                                    <div class="progress-bar" role="progressbar" aria-valuenow="70"--}}
-{{--                                         aria-valuemin="0" aria-valuemax="100" style="width:70%">--}}
-{{--                                        <span class="sr-only">70% Complete</span>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="progress" style="border-radius: 0; height: 15px; margin-top: 3px">--}}
-{{--                                    <div class="progress-bar" role="progressbar" aria-valuenow="70"--}}
-{{--                                         aria-valuemin="0" aria-valuemax="100" style="width:70%">--}}
-{{--                                        <span class="sr-only">70% Complete</span>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
+                            {{--                                <p class="mbI-0" style="color: black!important;">Vị trí</p>--}}
+                            {{--                                <p class="mbI-0" style="color: black !important;">Giá cả</p>--}}
+                            {{--                                <p class="mbI-0"style="color: black!important;">Chất lượng</p>--}}
+                            {{--                                <p class="mbI-0" style="color: black!important;">Phục vụ</p>--}}
+                            {{--                                <p class="mbI-0" style="color: black!important;">Không gian</p>--}}
+                            {{--                            </div>--}}
+                            {{--                            <div class="col-6" style=" padding-left: 5px !important; text-align: left">--}}
+                            {{--                                <div class="progress" style="border-radius: 0; height: 15px; margin-top: 3px">--}}
+                            {{--                                    <div class="progress-bar" role="progressbar" aria-valuenow="70"--}}
+                            {{--                                         aria-valuemin="0" aria-valuemax="100" style="width:70%">--}}
+                            {{--                                        <span class="sr-only">70% Complete</span>--}}
+                            {{--                                    </div>--}}
+                            {{--                                </div>--}}
+                            {{--                                <div class="progress" style="border-radius: 0; height: 15px; margin-top: 3px">--}}
+                            {{--                                    <div class="progress-bar" role="progressbar" aria-valuenow="70"--}}
+                            {{--                                         aria-valuemin="0" aria-valuemax="100" style="width:70%">--}}
+                            {{--                                        <span class="sr-only">70% Complete</span>--}}
+                            {{--                                    </div>--}}
+                            {{--                                </div>--}}
+                            {{--                                <div class="progress" style="border-radius: 0; height: 15px; margin-top: 3px">--}}
+                            {{--                                    <div class="progress-bar" role="progressbar" aria-valuenow="70"--}}
+                            {{--                                         aria-valuemin="0" aria-valuemax="100" style="width:70%">--}}
+                            {{--                                        <span class="sr-only">70% Complete</span>--}}
+                            {{--                                    </div>--}}
+                            {{--                                </div>--}}
+                            {{--                                <div class="progress" style="border-radius: 0; height: 15px; margin-top: 3px">--}}
+                            {{--                                    <div class="progress-bar" role="progressbar" aria-valuenow="70"--}}
+                            {{--                                         aria-valuemin="0" aria-valuemax="100" style="width:70%">--}}
+                            {{--                                        <span class="sr-only">70% Complete</span>--}}
+                            {{--                                    </div>--}}
+                            {{--                                </div>--}}
+                            {{--                                <div class="progress" style="border-radius: 0; height: 15px; margin-top: 3px">--}}
+                            {{--                                    <div class="progress-bar" role="progressbar" aria-valuenow="70"--}}
+                            {{--                                         aria-valuemin="0" aria-valuemax="100" style="width:70%">--}}
+                            {{--                                        <span class="sr-only">70% Complete</span>--}}
+                            {{--                                    </div>--}}
+                            {{--                                </div>--}}
+                            {{--                            </div>--}}
                         </div>
                         <hr style="margin: 10px 0px">
                         <div style="text-align: center">
