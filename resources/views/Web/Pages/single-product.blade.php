@@ -139,11 +139,7 @@
                                         <p style="color: black; margin-bottom: 0px !important;">sjflksd lkdsjfkl
                                             jflksdkf jfklsdjf lsfjkdjl sjdflk
                                             sjflksd lkdsjfkl jflksdkf jfklsdjf lsfjkdjl sjdflk
-                                            sjflksd lkdsjfkl jflksdkf jfklsdjf lsfjkdjl
-                                            sjflksd lkdsjfkl jflksdkf jfklsdjf lsfjkdjl
-                                            sjflksd lkdsjfkl jflksdkf jfklsdjf lsfjkdjl
-                                            sjflksd lkdsjfkl jflksdkf jfklsdjf lsfjkdjl
-                                            sjflksd lkdsjfkl jflksdkf jfklsdjf lsfjkdjl</p>
+                                          </p>
                                         <a href="#">See more</a>
                                     </div>
                                     <div class="comment-picture">
