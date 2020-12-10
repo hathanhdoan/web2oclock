@@ -310,10 +310,10 @@
                         <hr style="margin: 10px 0px">
                         <div class="row">
                             <div class="col-6" style="padding-right: 5px !important; text-align: right">
-                                <p class="point_rating_detail" style="color: #9c25b9!important;">25</p>
-                                <p class="point_rating_detail" style="color: #00c851 !important;">7</p>
-                                <p class="point_rating_detail" style="color: black!important;">7</p>
-                                <p class="point_rating_detail" style="color: red!important;">2</p>
+                                <p class="point_rating_detail">25</p>
+                                <p class="point_rating_detail">7</p>
+                                <p class="point_rating_detail">7</p>
+                                <p class="point_rating_detail">2</p>
                             </div>
                             <div class="col-6" style=" padding-left: 5px !important; text-align: left">
                                 <p style="color: black!important;">Tuyệt vời</p>
@@ -540,8 +540,9 @@
                                                     <i class="fa fa-heart-o"></i>
                                                 </a>
                                             </li>
-                                            <li><a data-toggle="tooltip" data-placement="top" title="Xem nhanh"
-                                                   class="links-details" href="wishlist.html">
+                                            <li><a data-toggle="modal" data-target="#comment"
+                                                   data-placement="top" title="Xem nhanh"
+                                                   class="links-details">
                                                     <i class="fa fa-eye"></i>
                                                 </a>
                                             </li>

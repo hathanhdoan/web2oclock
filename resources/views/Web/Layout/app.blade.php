@@ -160,20 +160,19 @@
     <!-- Quick View | Modal Area End Here -->
 
     <!-- Model more comment picture -->
-    <div id="commentPictureModel" class="modal fade" role="dialog">
+    <div style="margin-top: 100px" id="commentPictureModel" class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
                 <div class="modal-body">
-                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img class="d-block w-100" src="images/slider/foody-slider1.jpg" alt="First slide">
+                                <img class="d-block w-100" src="images/new_logo.png" alt="First slide">
                             </div>
                             <div class="carousel-item">
                                 <img class="d-block w-100" src="images/slider/foody-slider1.jpg" alt="Second slide">
@@ -182,24 +181,119 @@
                                 <img class="d-block w-100" src="images/slider/foody-slider1.jpg" alt="Third slide">
                             </div>
                         </div>
-                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                            <i id="arrow-left" style="font-size: 50px; margin-right: 30px" class="fas fa-angle-left"></i>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <i style="font-size: x-large" class="fas fa-angle-left"></i>
                             <span class="sr-only">Previous</span>
                         </a>
-                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                            <i id="arrow-right" style="font-size: 50px; margin-left: 30px" class="fas fa-angle-right"></i>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <i style="font-size: x-large" class="fas fa-angle-right"></i>
                             <span class="sr-only">Next</span>
                         </a>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
     <!-- Quick View | Modal Area End Here -->
+
+    <!-- Model comment -->
+    <div class="modal fade modal-wrapper" id="comment" >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="modal-inner-area row">
+                        <div class="col-lg-5 col-md-6 col-sm-6">
+                            <!-- Product Details Left -->
+                            <div class="product-details-left">
+                                <div class="product-details-images slider-navigation-1">
+                                    <div class="lg-image">
+                                        <img src="images/product/large-size/1.jpg" alt="product image">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4" style="padding-right: 5px !important; text-align: right">
+                                        <p>Vị trí</p>
+                                        <p>Giá cả</p>
+                                        <p>Chất lượng</p>
+                                        <p>Dịch vụ</p>
+                                        <p>Không gian</p>
+                                    </div>
+                                    <div class="col-6" style=" padding-left: 5px !important; text-align: left">
+                                        <input class="custom-range" type="range" min="0" max="10">
+                                        <input class="custom-range" type="range" min="0" max="10">
+                                        <input class="custom-range" type="range" min="0" max="10">
+                                        <input class="custom-range" type="range" min="0" max="10">
+                                        <input class="custom-range" type="range" min="0" max="10">
+                                    </div>
+                                    <div class="col-2" style="padding-left: 5px !important; text-align: left">
+                                        <p style="color: #9c25b9!important;">25</p>
+                                        <p style="color: #00c851 !important;">7</p>
+                                        <p style="color: black!important;">7</p>
+                                        <p style="color: red!important;">2</p>
+                                        <p style="color: red!important;">2</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--// Product Details Left -->
+                        </div>
+
+                        <div class="col-lg-7 col-md-6 col-sm-6">
+                            <div class="product-details-view-content pt-60">
+                                <div class="product-info">
+                                    <h2>Ahihi - Fruit & Yogurt - Shop Online</h2>
+                                    <span class="product-details-ref">55 Đặng Thùy Trâm, BÌnh Thạnh</span>
+                                    <div class="product-desc">
+                                        <textarea   >
+                                                    100% cotton double printed dress. Black and white striped top and orange high waisted skater skirt bottom. Lorem ipsum dolor sit amet, consectetur adipisicing elit. quibusdam corporis, earum facilis et nostrum dolorum accusamus similique eveniet quia pariatur.
+                                        </textarea>
+                                    </div>
+                                    <div class="product-variants">
+                                        <div class="produt-variants-size">
+                                            <label>Dimension</label>
+                                            <select class="nice-select">
+                                                <option value="1" title="S" selected="selected">40x60cm</option>
+                                                <option value="2" title="M">60x90cm</option>
+                                                <option value="3" title="L">80x120cm</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="single-add-to-cart">
+                                        <form action="#" class="cart-quantity">
+                                            <div class="quantity">
+                                                <label>Quantity</label>
+                                                <div class="cart-plus-minus">
+                                                    <input class="cart-plus-minus-box" value="1" type="text">
+                                                    <div class="dec qtybutton"><i class="fa fa-angle-down"></i></div>
+                                                    <div class="inc qtybutton"><i class="fa fa-angle-up"></i></div>
+                                                </div>
+                                            </div>
+                                            <button class="add-to-cart" type="submit">Add to cart</button>
+                                        </form>
+                                    </div>
+                                    <div class="product-additional-info pt-25">
+                                        <a class="wishlist-btn" href="wishlist.html"><i class="fa fa-heart-o"></i>Add to wishlist</a>
+                                        <div class="product-social-sharing pt-25">
+                                            <ul>
+                                                <li class="facebook"><a href="#"><i class="fa fa-facebook"></i>Facebook</a></li>
+                                                <li class="twitter"><a href="#"><i class="fa fa-twitter"></i>Twitter</a></li>
+                                                <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i>Google +</a></li>
+                                                <li class="instagram"><a href="#"><i class="fa fa-instagram"></i>Instagram</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quick View | Modal Area End Here -->
+
 </div>
 <!-- Body Wrapper End Here -->
 <!-- jQuery-V1.12.4 -->

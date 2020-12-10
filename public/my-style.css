@@ -338,3 +338,6 @@ ul.menu-sidebar-custom li:hover {
     cursor: pointer;
 }
 
+.custom-range {
+    height: 32px;
+}
