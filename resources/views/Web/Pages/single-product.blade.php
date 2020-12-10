@@ -214,11 +214,10 @@
                                             <p>Quán phục vụ tốt <a href="#">...See more</a></p>
                                         </div>
                                     </div>
-                                    <div class="see-more"><a style="color: #8ec0d0;" href="#">See more<i
-                                                class="ml-5 fas fa-angle-double-down"></i></a></div>
+                                    <div class="see-more"><a href="#">See more</a></div>
                                     <div class="form-inline form-inline-custom">
                                         <img class="avatar" src="images/Screenshot_50.png">
-                                        <textarea placeholder="Viết bình luận..." class="ml-10 my-comment"></textarea>
+                                        <input type="text" placeholder="Viết bình luận..." class="ml-10 my-comment"></input>
                                     </div>
                                 </div>
                             </div>
@@ -294,14 +293,14 @@
                                             <p>dasdsa</p>
                                         </div>
                                     </div>
-                                    <div class="see-more"><a style="color: #8ec0d0;" href="#">See more<i
-                                                class="ml-5 fas fa-angle-double-down"></i></a></div>
+                                    <div class="see-more"><a href="#">See more</a></div>
                                     <div class="form-inline form-inline-custom">
                                         <img class="avatar" src="images/Screenshot_50.png">
-                                        <textarea placeholder="Viết bình luận..." class="ml-10 my-comment"></textarea>
+                                        <input type="text" placeholder="Viết bình luận..." class="ml-10 my-comment"></input>
                                     </div>
                                 </div>
                             </div>
+                            <div class="see-more"><a href="#">See more<i class="ml-5 fas fa-angle-double-down"></i></a></div>
                         </div>
 
                     </div>

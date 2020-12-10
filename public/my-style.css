@@ -265,8 +265,25 @@ ul.menu-sidebar-custom li:hover {
 }
 
 .see-more {
-    text-align: center;
     margin-top: -15px;
+}
+
+.see-more a{
+    color: rgb(62 191 232);
+    text-decoration: revert;
+}
+.see-more a:hover{
+    color: rgb(15 155 199);
+}
+.see-more:last-child {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.see-more a{
+    font-size: large;
+    margin-top: 10px;
+    text-decoration: none;
 }
 
 .my-comment {
