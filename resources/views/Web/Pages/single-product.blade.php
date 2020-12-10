@@ -171,7 +171,7 @@
                                         </div>
                                     </div>
                                     <hr class="my-hr">
-                                    <div class="row mb-5">
+                                    <div class="row mb-5 action">
                                         <div class="mr-20">
                                             <i class="fa fa-heart mr-5"></i><span>Like</span>
                                         </div>
@@ -179,7 +179,7 @@
                                             <i class="fa fa-comment mr-5"></i><span>Comment</span>
                                         </div>
                                         <div class="mr-20">
-                                            <i class="fa fa-exclamation-triangle report-btn mr-5"></i><span>Rort</span>
+                                            <i class="fa fa-exclamation-triangle report-btn mr-5"></i><span>Report</span>
                                         </div>
                                     </div>
                                     <hr class="my-hr">
@@ -266,7 +266,7 @@
                                         </div>
                                     </div>
                                     <hr class="my-hr">
-                                    <div class="row mb-5">
+                                    <div class="row mb-5 action">
                                         <div class="mr-20">
                                             <i class="fa fa-heart mr-5"></i><span>Like</span>
                                         </div>
@@ -274,7 +274,7 @@
                                             <i class="fa fa-comment mr-5"></i><span>Comment</span>
                                         </div>
                                         <div class="mr-20">
-                                            <i class="fa fa-exclamation-triangle report-btn mr-5"></i><span>Rort</span>
+                                            <i class="fa fa-exclamation-triangle report-btn mr-5"></i><span>Report</span>
                                         </div>
                                     </div>
                                     <hr class="my-hr">
