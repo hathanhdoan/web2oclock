@@ -299,3 +299,42 @@ ul.menu-sidebar-custom li:hover {
     color: green;
     font-weight: bold;
 }
+
+.see-more:last-child {
+    padding: 5px;
+    font-size: large;
+    margin-top: 10px;
+}
+
+.see-more:last-child:hover {
+    background-color: #bbaaaa;
+
+}
+.see-more a{
+    color: rgb(142, 192, 208);
+}
+.see-more:hover a{
+    color: rgb(25 142 179)
+}
+
+.see-more:last-child a{
+    color: #8ec0d0
+}
+.see-more:last-child:hover a{
+    cursor: pointer;
+    color: white;
+}
+.see-more:last-child:hover{
+    cursor: pointer;
+}
+
+.action div:hover i{
+    color: blue;
+    cursor: pointer;
+}
+
+.action div:hover span{
+    color: blue;
+    cursor: pointer;
+}
+

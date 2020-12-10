@@ -167,7 +167,7 @@
                                         </div>
                                     </div>
                                     <hr class="my-hr">
-                                    <div class="row mb-5">
+                                    <div class="row mb-5 action">
                                         <div class="mr-20">
                                             <i class="fa fa-heart mr-5"></i><span>Like</span>
                                         </div>
@@ -210,11 +210,10 @@
                                             <p>Quán phục vụ tốt <a href="#">...See more</a></p>
                                         </div>
                                     </div>
-                                    <div class="see-more"><a style="color: #8ec0d0;" href="#">See more<i
-                                                class="ml-5 fas fa-angle-double-down"></i></a></div>
+                                    <div class="see-more"><a href="#">Xem thêm<i style="margin-left: 3px" class="fas fa-angle-down"></i></a></div>
                                     <div class="form-inline form-inline-custom">
                                         <img class="avatar" src="images/Screenshot_50.png">
-                                        <textarea placeholder="Viết bình luận..." class="ml-10 my-comment"></textarea>
+                                        <input type="text" placeholder="Viết bình luận..." class="ml-10 my-comment"></input>
                                     </div>
                                 </div>
                             </div>
@@ -263,7 +262,7 @@
                                         </div>
                                     </div>
                                     <hr class="my-hr">
-                                    <div class="row mb-5">
+                                    <div class="row mb-5 action">
                                         <div class="mr-20">
                                             <i class="fa fa-heart mr-5"></i><span>Like</span>
                                         </div>
@@ -290,16 +289,16 @@
                                             <p>dasdsa</p>
                                         </div>
                                     </div>
-                                    <div class="see-more"><a style="color: #8ec0d0;" href="#">See more<i
-                                                class="ml-5 fas fa-angle-double-down"></i></a></div>
+                                    <div class="see-more"><a href="#">Xem thêm<i style="margin-left: 3px" class="fas fa-angle-down"></i></a></div>
                                     <div class="form-inline form-inline-custom">
                                         <img class="avatar" src="images/Screenshot_50.png">
-                                        <textarea placeholder="Viết bình luận..." class="ml-10 my-comment"></textarea>
+                                        <input type="text" placeholder="Viết bình luận..." class="ml-10 my-comment"></input>
                                     </div>
                                 </div>
                             </div>
+                            <div class="see-more"><a  href="#">Tải nhiều hơn<i
+                                        class="ml-5 fas fa-angle-double-down"></i></a></div>
                         </div>
-
                     </div>
                 </div>
                 <div class="col-lg-3">
@@ -395,45 +394,6 @@
                                 </div>
                                 <div class="col-1 plI-0 prI-0">7</div>
                             </div>
-                            {{--                            <div class="col-6" style="padding-right: 5px !important; text-align: right">--}}
-                            {{--                                <p class="mbI-0" style="color: black!important;">Vị trí</p>--}}
-                            {{--                                <p class="mbI-0" style="color: black !important;">Giá cả</p>--}}
-                            {{--                                <p class="mbI-0"style="color: black!important;">Chất lượng</p>--}}
-                            {{--                                <p class="mbI-0" style="color: black!important;">Phục vụ</p>--}}
-                            {{--                                <p class="mbI-0" style="color: black!important;">Không gian</p>--}}
-                            {{--                            </div>--}}
-                            {{--                            <div class="col-6" style=" padding-left: 5px !important; text-align: left">--}}
-                            {{--                                <div class="progress" style="border-radius: 0; height: 15px; margin-top: 3px">--}}
-                            {{--                                    <div class="progress-bar" role="progressbar" aria-valuenow="70"--}}
-                            {{--                                         aria-valuemin="0" aria-valuemax="100" style="width:70%">--}}
-                            {{--                                        <span class="sr-only">70% Complete</span>--}}
-                            {{--                                    </div>--}}
-                            {{--                                </div>--}}
-                            {{--                                <div class="progress" style="border-radius: 0; height: 15px; margin-top: 3px">--}}
-                            {{--                                    <div class="progress-bar" role="progressbar" aria-valuenow="70"--}}
-                            {{--                                         aria-valuemin="0" aria-valuemax="100" style="width:70%">--}}
-                            {{--                                        <span class="sr-only">70% Complete</span>--}}
-                            {{--                                    </div>--}}
-                            {{--                                </div>--}}
-                            {{--                                <div class="progress" style="border-radius: 0; height: 15px; margin-top: 3px">--}}
-                            {{--                                    <div class="progress-bar" role="progressbar" aria-valuenow="70"--}}
-                            {{--                                         aria-valuemin="0" aria-valuemax="100" style="width:70%">--}}
-                            {{--                                        <span class="sr-only">70% Complete</span>--}}
-                            {{--                                    </div>--}}
-                            {{--                                </div>--}}
-                            {{--                                <div class="progress" style="border-radius: 0; height: 15px; margin-top: 3px">--}}
-                            {{--                                    <div class="progress-bar" role="progressbar" aria-valuenow="70"--}}
-                            {{--                                         aria-valuemin="0" aria-valuemax="100" style="width:70%">--}}
-                            {{--                                        <span class="sr-only">70% Complete</span>--}}
-                            {{--                                    </div>--}}
-                            {{--                                </div>--}}
-                            {{--                                <div class="progress" style="border-radius: 0; height: 15px; margin-top: 3px">--}}
-                            {{--                                    <div class="progress-bar" role="progressbar" aria-valuenow="70"--}}
-                            {{--                                         aria-valuemin="0" aria-valuemax="100" style="width:70%">--}}
-                            {{--                                        <span class="sr-only">70% Complete</span>--}}
-                            {{--                                    </div>--}}
-                            {{--                                </div>--}}
-                            {{--                            </div>--}}
                         </div>
                         <hr style="margin: 10px 0px">
                         <div style="text-align: center">
