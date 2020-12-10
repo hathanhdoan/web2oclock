@@ -160,48 +160,41 @@
     <!-- Quick View | Modal Area End Here -->
 
     <!-- Model more comment picture -->
-    <div class="modal fade modal-wrapper" id="commentPictureModel" >
-        <div class="modal-dialog modal-dialog-centered" role="document">
+    <div id="commentPictureModel" class="modal fade" role="dialog">
+        <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-body">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    <div class="modal-inner-area row">
-                        <div class="row" style="padding: 20px 20px 0px 20px">
-                            <div class="col-sm-4" style="text-align: center; padding: 2px !important; ">
-                                <img class="comment-image" style="text-align: center" src="images/slider/foody-slider1.jpg">
+                </div>
+                <div class="modal-body">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="images/slider/foody-slider1.jpg" alt="First slide">
                             </div>
-                            <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
-                                <img class="comment-image"  src="images/slider/foody-slider1.jpg">
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="images/slider/foody-slider1.jpg" alt="Second slide">
                             </div>
-                            <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
-                                <img class="comment-image" src="images/slider/foody-slider1.jpg">
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="images/slider/foody-slider1.jpg" alt="Third slide">
                             </div>
-                            <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
-                                <img class="comment-image" src="images/slider/foody-slider1.jpg">
-                            </div>
-                            <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
-                                <img class="comment-image" src="images/slider/foody-slider1.jpg">
-                            </div>
-                            <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
-                                <img class="comment-image" src="images/slider/foody-slider1.jpg">
-                            </div>
-                            <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
-                                <img class="comment-image" src="images/slider/foody-slider1.jpg">
-                            </div>
-                            <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
-                                <img class="comment-image" src="images/slider/foody-slider1.jpg">
-                            </div>
-                            <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
-                                <img class="comment-image" src="images/slider/foody-slider1.jpg">
-                            </div>
-
-                            {{--                                            <div class="col-md-4" style="text-align: center; padding: 2px !important;">--}}
-                            {{--                                                <img class="comment-image" src="images/slider/foody-slider1.jpg">--}}
-                            {{--                                            </div>--}}
                         </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <i id="arrow-left" style="font-size: 50px; margin-right: 30px" class="fas fa-angle-left"></i>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <i id="arrow-right" style="font-size: 50px; margin-left: 30px" class="fas fa-angle-right"></i>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>

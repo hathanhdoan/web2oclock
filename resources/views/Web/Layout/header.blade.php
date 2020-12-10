@@ -50,4 +50,5 @@
     <!-- Modernizr js -->
     <script src={{asset("js/vendor/modernizr-2.8.3.min.js")}}></script>
     <script src={{asset("js/vendor/modernizr-2.8.3.min.js")}}></script>
+
 </head>

@@ -175,7 +175,7 @@
                                             <i class="fa fa-comment mr-5"></i><span>Comment</span>
                                         </div>
                                         <div class="mr-20">
-                                            <i class="fa fa-exclamation-triangle report-btn mr-5"></i><span>Rort</span>
+                                            <i class="fa fa-exclamation-triangle report-btn mr-5"></i><span>Report</span>
                                         </div>
                                     </div>
                                     <hr class="my-hr">
@@ -210,7 +210,11 @@
                                             <p>Quán phục vụ tốt <a href="#">...See more</a></p>
                                         </div>
                                     </div>
+<<<<<<< HEAD
                                     <div class="see-more"><a href="#">Xem thêm<i style="margin-left: 3px" class="fas fa-angle-down"></i></a></div>
+=======
+                                    <div class="see-more"><a href="#">See more</a></div>
+>>>>>>> d70905cdb8de7850e2254a08901d1ac1ae1c4b80
                                     <div class="form-inline form-inline-custom">
                                         <img class="avatar" src="images/Screenshot_50.png">
                                         <input type="text" placeholder="Viết bình luận..." class="ml-10 my-comment"></input>
@@ -270,7 +274,7 @@
                                             <i class="fa fa-comment mr-5"></i><span>Comment</span>
                                         </div>
                                         <div class="mr-20">
-                                            <i class="fa fa-exclamation-triangle report-btn mr-5"></i><span>Rort</span>
+                                            <i class="fa fa-exclamation-triangle report-btn mr-5"></i><span>Report</span>
                                         </div>
                                     </div>
                                     <hr class="my-hr">
@@ -289,15 +293,23 @@
                                             <p>dasdsa</p>
                                         </div>
                                     </div>
+<<<<<<< HEAD
                                     <div class="see-more"><a href="#">Xem thêm<i style="margin-left: 3px" class="fas fa-angle-down"></i></a></div>
+=======
+                                    <div class="see-more"><a href="#">See more</a></div>
+>>>>>>> d70905cdb8de7850e2254a08901d1ac1ae1c4b80
                                     <div class="form-inline form-inline-custom">
                                         <img class="avatar" src="images/Screenshot_50.png">
                                         <input type="text" placeholder="Viết bình luận..." class="ml-10 my-comment"></input>
                                     </div>
                                 </div>
                             </div>
+<<<<<<< HEAD
                             <div class="see-more"><a  href="#">Tải nhiều hơn<i
                                         class="ml-5 fas fa-angle-double-down"></i></a></div>
+=======
+                            <div class="see-more"><a href="#">See more<i class="ml-5 fas fa-angle-double-down"></i></a></div>
+>>>>>>> d70905cdb8de7850e2254a08901d1ac1ae1c4b80
                         </div>
                     </div>
                 </div>
