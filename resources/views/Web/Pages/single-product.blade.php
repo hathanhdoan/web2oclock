@@ -61,10 +61,15 @@
                                     </div>
                                 </div>
                                 <div class="product-desc">
-                                    <p>
-                                            <span>100% cotton double printed dress. Black and white striped top and orange high waisted skater skirt bottom. Lorem ipsum dolor sit amet, consectetur adipisicing elit. quibusdam corporis, earum facilis et nostrum dolorum accusamus similique eveniet quia pariatur.
-                                            </span>
-                                    </p>
+                                   <div class="mb-5">
+                                       <i class="mr-10 fas fa-location-arrow"></i>55 Đặng Thùy Trầm, P.13, Q.Bình Thạnh
+                                   </div>
+                                   <div class="mb-5">
+                                       <i class="mr-10 fas fa-clock"></i>7:00 - 20:00
+                                   </div>
+                                    <div class="mb-5">
+                                        <i class=" mr-10 fas fa-tags"></i>20.000 - 100.000
+                                    </div>
                                 </div>
                                 <div class="product-additional-info mb-20">
                                     <a class="wishlist-btn" href="wishlist.html"><i class="fa fa-heart-o"></i>Add to
