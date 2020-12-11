@@ -341,3 +341,52 @@ ul.menu-sidebar-custom li:hover {
 .custom-range {
     height: 32px;
 }
+.product-desc {
+    margin-top: 10px;
+}
+.product-desc textarea{
+    height: 150px;
+}
+.select-img-comment{
+    position: relative;
+    text-align: center;
+    margin: 5px;
+    background-color: aliceblue;
+    width: 140px;
+    height: 140px;
+}
+
+.select-img-comment i {
+    font-size: large;
+}
+
+#add-img-comment {
+    top: 40%;
+    position: absolute;
+    left: 62px;
+}
+
+.select-img-comment:hover{
+    cursor: pointer;
+    background-color: #c6dbec;
+}
+.select-img-comment:hover input{
+    cursor: pointer;
+}
+.cancel {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: red;
+}
+.img-comment{
+    top: 0px;
+    object-fit: cover;
+    object-position: center;
+    height: 140px;
+    width: 140px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position : absolute;
+}

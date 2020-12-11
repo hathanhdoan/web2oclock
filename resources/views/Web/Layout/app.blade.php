@@ -246,44 +246,19 @@
                                     <h2>Ahihi - Fruit & Yogurt - Shop Online</h2>
                                     <span class="product-details-ref">55 Đặng Thùy Trâm, BÌnh Thạnh</span>
                                     <div class="product-desc">
-                                        <textarea   >
+                                        <textarea>
                                                     100% cotton double printed dress. Black and white striped top and orange high waisted skater skirt bottom. Lorem ipsum dolor sit amet, consectetur adipisicing elit. quibusdam corporis, earum facilis et nostrum dolorum accusamus similique eveniet quia pariatur.
                                         </textarea>
                                     </div>
-                                    <div class="product-variants">
-                                        <div class="produt-variants-size">
-                                            <label>Dimension</label>
-                                            <select class="nice-select">
-                                                <option value="1" title="S" selected="selected">40x60cm</option>
-                                                <option value="2" title="M">60x90cm</option>
-                                                <option value="3" title="L">80x120cm</option>
-                                            </select>
-                                        </div>
+                                    <p>Chọn hình</p>
+                                    <div class="row">
+                                        <div class="select-img-comment"><img class="img-comment" src="images/slider/foody-slider1.jpg"><i class="cancel far fa-times-circle"></i></div>
+                                        <div class="select-img-comment"><img class="img-comment" src="images/slider/foody-slider1.jpg"><i class="cancel far fa-times-circle"></i></div>
+                                        <div class="select-img-comment"><img class="img-comment" src="images/slider/foody-slider1.jpg"><i class="cancel far fa-times-circle"></i></div>
+                                        <div class="select-img-comment"><img class="img-comment" src="images/slider/foody-slider1.jpg"><i class="cancel far fa-times-circle"></i></div>
+                                        <div class="select-img-comment"> <input style="margin-top: -5px; opacity: 0; height: 140px" type="file"><i id="add-img-comment" class="fas fa-plus"></i></div>
                                     </div>
-                                    <div class="single-add-to-cart">
-                                        <form action="#" class="cart-quantity">
-                                            <div class="quantity">
-                                                <label>Quantity</label>
-                                                <div class="cart-plus-minus">
-                                                    <input class="cart-plus-minus-box" value="1" type="text">
-                                                    <div class="dec qtybutton"><i class="fa fa-angle-down"></i></div>
-                                                    <div class="inc qtybutton"><i class="fa fa-angle-up"></i></div>
-                                                </div>
-                                            </div>
-                                            <button class="add-to-cart" type="submit">Add to cart</button>
-                                        </form>
-                                    </div>
-                                    <div class="product-additional-info pt-25">
-                                        <a class="wishlist-btn" href="wishlist.html"><i class="fa fa-heart-o"></i>Add to wishlist</a>
-                                        <div class="product-social-sharing pt-25">
-                                            <ul>
-                                                <li class="facebook"><a href="#"><i class="fa fa-facebook"></i>Facebook</a></li>
-                                                <li class="twitter"><a href="#"><i class="fa fa-twitter"></i>Twitter</a></li>
-                                                <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i>Google +</a></li>
-                                                <li class="instagram"><a href="#"><i class="fa fa-instagram"></i>Instagram</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
