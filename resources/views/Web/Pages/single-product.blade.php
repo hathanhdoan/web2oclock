@@ -158,11 +158,9 @@
                                                     <img class="comment-image" src="images/slider/foody-slider1.jpg">
                                                 </div>
                                                 <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
+                                                    <p>+6</p>
                                                     <img class="comment-image" src="images/slider/foody-slider1.jpg">
                                                 </div>
-                                                {{--                                            <div class="col-md-4" style="text-align: center; padding: 2px !important;">--}}
-                                                {{--                                                <img class="comment-image" src="images/slider/foody-slider1.jpg">--}}
-                                                {{--                                            </div>--}}
                                             </div>
                                         </div>
                                     </div>
@@ -253,11 +251,9 @@
                                                     <img class="comment-image" src="images/slider/foody-slider1.jpg">
                                                 </div>
                                                 <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
+                                                    <p>+6</p>
                                                     <img class="comment-image" src="images/slider/foody-slider1.jpg">
                                                 </div>
-                                                {{--                                            <div class="col-md-4" style="text-align: center; padding: 2px !important;">--}}
-                                                {{--                                                <img class="comment-image" src="images/slider/foody-slider1.jpg">--}}
-                                                {{--                                            </div>--}}
                                             </div>
                                         </div>
                                     </div>
@@ -322,10 +318,10 @@
                                     <p class="point_rating_detail">2</p>
                                 </div>
                                 <div class="col-6" style=" padding-left: 5px !important; text-align: left">
-                                    <p style="color: black!important;">Tuyệt vời</p>
-                                    <p style="color: black!important;">Khá tốt</p>
-                                    <p style="color: black!important;">Trung bình</p>
-                                    <p style="color: black!important;">Kém</p>
+                                    <p>Tuyệt vời</p>
+                                    <p>Khá tốt</p>
+                                    <p>Trung bình</p>
+                                    <p>Kém</p>
                                 </div>
                             </div>
                             <hr style="margin: 10px 0px">
@@ -1399,6 +1395,9 @@
                                             <img src="images/product/large-size/1.jpg" alt="product image">
                                         </div>
                                     </div>
+                                    <div style="text-align: center;">
+                                        <p style="font-size: large; font-weight: bold; color: chocolate">Đánh giá</p>
+                                    </div>
                                     <div class="row">
                                         <div class="col-4" style="padding-right: 5px !important; text-align: right">
                                             <p>Vị trí</p>
@@ -1422,6 +1421,11 @@
                                             <p style="color: red!important;">2</p>
                                         </div>
                                     </div>
+                                    <div style="text-align: center;">
+                                        <p style="font-size: large; font-weight: bold">Trung bình:
+                                            <span style="margin-left:5px; font-size: large; font-weight: bold; color: red">8</span>
+                                        </p>
+                                    </div>
                                 </div>
                                 <!--// Product Details Left -->
                             </div>
@@ -1430,9 +1434,9 @@
                                 <div class="product-details-view-content pt-60">
                                     <div class="product-info">
                                         <h2>Ahihi - Fruit & Yogurt - Shop Online</h2>
-                                        <span class="product-details-ref">55 Đặng Thùy Trâm, BÌnh Thạnh</span>
+                                        <span class="product-details-ref"><i class="mr-10 fas fa-location-arrow"></i>55 Đặng Thùy Trâm, BÌnh Thạnh</span>
                                         <div class="product-desc">
-                                        <textarea>
+                                        <textarea placeholder="Nhập bình luận">
                                                     100% cotton double printed dress. Black and white striped top and orange high waisted skater skirt bottom. Lorem ipsum dolor sit amet, consectetur adipisicing elit. quibusdam corporis, earum facilis et nostrum dolorum accusamus similique eveniet quia pariatur.
                                         </textarea>
                                         </div>
@@ -1444,7 +1448,7 @@
                                             <div class="select-img-comment"><img class="img-comment" src="images/slider/foody-slider1.jpg"><i class="cancel far fa-times-circle"></i></div>
                                             <div class="select-img-comment"> <input style="margin-top: -5px; opacity: 0; height: 140px" type="file"><i id="add-img-comment" class="fas fa-plus"></i></div>
                                         </div>
-                                        <div><button @click.stop.prevent="cancelImage"></button></div>
+                                        <div><button class="btn btn-success" @click.stop.prevent="cancelImage">Gửi</button></div>
                                     </div>
                                 </div>
                             </div>

@@ -25,3 +25,7 @@ Route::get('/single-product', function () {
     return view('Web.Pages.single-product');
 });
 
+Route::get('/profile', function () {
+    return view('Web.Pages.profile');
+});
+

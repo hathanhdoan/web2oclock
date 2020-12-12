@@ -1,6 +1,11 @@
 b {
     margin-right: 2px;
 }
+.saved-res {
+    position: relative;
+    width: 245px;
+    margin-bottom: 10px;
+}
 
 .mbI-0 {
     margin-bottom: 0px !important;
@@ -45,10 +50,6 @@ b {
 }
 
 @media (max-width: 1366px) {
-    #menu-left section {
-        visibility: hidden;
-    }
-
     /*#menu-left section .booking-card .card-body{*/
     /*    display: none;*/
     /*}*/
@@ -56,6 +57,14 @@ b {
 @media (max-width: 800px) {
     .haha-custom {
         max-width: 100% !important;
+    }
+
+    .card-menu-left{
+        width: 14rem !important;
+
+    }
+    #menu-left-panel {
+        margin-left: 12px;
     }
 }
 
@@ -70,6 +79,22 @@ b {
     -webkit-box-shadow: -1px 1px 18px -10px rgba(0, 0, 0, 0.78);
     -moz-box-shadow: -1px 1px 18px -10px rgba(0, 0, 0, 0.78);
     box-shadow: -1px 1px 18px -10px rgba(0, 0, 0, 0.78);
+}
+
+.history-card {
+    -webkit-box-shadow: -1px 1px 18px -10px rgba(0, 0, 0, 0.78);
+    -moz-box-shadow: -1px 1px 18px -10px rgba(0, 0, 0, 0.78);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.78);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.history-card:hover{
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.78);
+}
+
+.history-card div img {
+    width: 50px; height: 50px; margin-left: 10px
 }
 
 .group-two-product {
@@ -90,10 +115,10 @@ b {
     content: 'hehe';
 }
 
-#menu-left {
+#menu-left-panel {
     z-index: 100;
-    position: fixed;
-    margin-left: 20px;
+    top : 45px;
+    position: sticky;
 }
 
 #menu-left section .booking-card {
@@ -193,6 +218,9 @@ ul.menu-sidebar-custom li:hover {
         position: relative;
         margin: 0px;
     }
+    .saved-res {
+        width: 245px;
+    }
 }
 
 @media (max-width: 935px) {
@@ -203,6 +231,11 @@ ul.menu-sidebar-custom li:hover {
     }
 }
 
+@media (max-width: 450px) {
+    .saved-res {
+        width: 197px;
+    }
+}
 
 @media (max-width: 400px) {
     #detail-product-img {
@@ -231,6 +264,9 @@ ul.menu-sidebar-custom li:hover {
     .form-inline-custom {
         margin-left: -24px !important;
     }
+    .saved-res {
+        width: 175px;
+    }
 }
 
 @media (max-width: 330px) {
@@ -238,6 +274,10 @@ ul.menu-sidebar-custom li:hover {
         width: 290px;
         height: 250px;
         margin-top: 20px;
+    }
+
+    .saved-res {
+        width: 150px;
     }
 }
 
@@ -248,7 +288,7 @@ ul.menu-sidebar-custom li:hover {
 .comment-image {
     object-fit: cover; /* Do not scale the image */
     object-position: center; /* Center the image within the element */
-    height: 270px;
+    height: 100%;
     width: 100%;
     display: block;
     margin-left: auto;
@@ -389,4 +429,26 @@ ul.menu-sidebar-custom li:hover {
     margin-left: auto;
     margin-right: auto;
     position : absolute;
+}
+.comment-picture div div:last-child img {
+    opacity: 0.3;
+}
+
+.comment-picture div:hover {
+   cursor: pointer;
+}
+
+.comment-picture div div:last-child p {
+    top: 45%;
+    position: absolute;
+    left: 39%;
+    font-size: 3em;
+}
+.wait-for-accept{
+    position: absolute;
+    z-index: 1;
+    top: 47%;
+    left: 20%;
+    color: red;
+    font-size: large;
 }
