@@ -452,3 +452,30 @@ ul.menu-sidebar-custom li:hover {
     color: red;
     font-size: large;
 }
+@media (min-width: 500px) {
+    #accordion{
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    #menu-left{
+        display: none;
+    }
+}
+.menu-collap li {
+    margin-left: 5px;
+    padding: 10px;
+}
+
+.menu-collap li a{
+    color: black;
+}
+
+.menu-collap li a:hover{
+    font-weight: bold;
+}
+
+.menu-collap li:nth-child(odd){
+    background-color: #ecebeb;
+}

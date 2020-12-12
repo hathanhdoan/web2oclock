@@ -1,10 +1,35 @@
 @extends('Web.Layout.app')
 @section('content')
     <div>
+        <div id="accordion" style="margin:0px 12px 20px 12px">
+            <div class="card">
+                <div id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body" style="padding: 0.25px">
+                        <ul class="menu-collap">
+                            <li><a href="#history" data-toggle="tab" class="mb-2">Nhật ký hoạt động<i
+                                        class="fas fa-angle-right arrow-menu-left"></i></a></li>
+                            <li><a href="#saved" data-toggle="tab" class="mb-2">Nhà hàng đã lưu<i
+                                        class="fas fa-angle-right arrow-menu-left"></i></a></li>
+                            <li><a href="#owner-res" data-toggle="tab" class="mb-2">Địa điểm của bạn<i
+                                        class="fas fa-angle-right arrow-menu-left"></i></a></li>
+                            <li><a class="mb-2">55 Đặng Thùy Trâm<i class="fas fa-angle-right arrow-menu-left"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="row" style="padding: 0px 20px">
             <div id="menu-left" class="col-md-4 col-lg-3">
                 <section id="menu-left-panel" is-hidden="yes">
-
                     <!-- Card -->
                     <div class="card booking-card card-menu-left" style="width: 18rem;">
                         <!-- Card content -->
@@ -82,7 +107,8 @@
                                             alt="Card image cap" class="card-img-top"> <a href="#!">
                                             <div class="mask rgba-white-slight waves-effect waves-light"></div>
                                         </a></div>
-                                    <div class="card-body"><h4 class="card-title font-weight-bold"><a href="#">Texas Chicken</a>
+                                    <div class="card-body"><h4 class="card-title font-weight-bold"><a href="#">Texas
+                                                Chicken</a>
                                         </h4>
                                         <ul class="list-unstyled list-inline rating mb-0">
                                             <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
@@ -206,7 +232,8 @@
                                             alt="Card image cap" class="card-img-top"> <a href="#!">
                                             <div class="mask rgba-white-slight waves-effect waves-light"></div>
                                         </a></div>
-                                    <div class="card-body"><h4 class="card-title font-weight-bold"><a href="#">Texas Chicken</a>
+                                    <div class="card-body"><h4 class="card-title font-weight-bold"><a href="#">Texas
+                                                Chicken</a>
                                         </h4>
                                         <ul class="list-unstyled list-inline rating mb-0">
                                             <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
@@ -290,7 +317,7 @@
                         </div>
                         <div class="saved-res">
                             <p class="wait-for-accept"><i class="fas fa-clock"></i>Đang chờ duyệt</p>
-                            <section style="opacity: 0.5">
+                            <section style="opacity: 0.3">
                                 <div class="card booking-card" style="max-width: 22rem;">
                                     <div class="view overlay"><img
                                             src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg"
