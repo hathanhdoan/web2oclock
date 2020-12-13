@@ -14,13 +14,20 @@
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body" style="padding: 0.25px">
                         <ul class="menu-collap">
-                            <li><a href="#history" data-toggle="tab" class="mb-2">Nhật ký hoạt động<i
-                                        class="fas fa-angle-right arrow-menu-left"></i></a></li>
-                            <li><a href="#saved" data-toggle="tab" class="mb-2">Nhà hàng đã lưu<i
-                                        class="fas fa-angle-right arrow-menu-left"></i></a></li>
-                            <li><a href="#owner-res" data-toggle="tab" class="mb-2">Địa điểm của bạn<i
-                                        class="fas fa-angle-right arrow-menu-left"></i></a></li>
-                            <li><a class="mb-2">55 Đặng Thùy Trâm<i class="fas fa-angle-right arrow-menu-left"></i></a>
+                            <li><a href="#history" data-toggle="tab" class="mb-2">
+                                    <i style="color: blue" class="mr-10 fa fa-history" aria-hidden="true"></i>Nhật ký hoạt động
+                                    <i class="fas fa-angle-right arrow-menu-left"></i>
+                                </a>
+                            </li>
+                            <li><a href="#saved" data-toggle="tab" class="mb-2">
+                                    <i style="color: red" class="mr-10 fas fa-save"></i>Nhà hàng đã lưu
+                                    <i class="fas fa-angle-right arrow-menu-left"></i></a></li>
+                            <li><a href="#owner-res" data-toggle="tab" class="mb-2">
+                                    <i style="color: lawngreen" class="mr-10 fas fa-location-arrow"></i>Địa điểm của bạn
+                                    <i class="fas fa-angle-right arrow-menu-left"></i></a></li>
+                            <li><a href="#profile" data-toggle="tab" class="mb-2">
+                                    <i style="color: purple" class="mr-10 fas fa-user"></i>55 Đặng Thùy Trâm
+                                    <i class="fas fa-angle-right arrow-menu-left"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -45,14 +52,21 @@
                                 </div>
                             </div>
                             <!-- Data -->
-                            <ul class="menu-sidebar-custom nav nav-tabs">
-                                <li><a href="#history" data-toggle="tab" class="mb-2">Nhật ký hoạt động<i
-                                            class="fas fa-angle-right arrow-menu-left"></i></a></li>
-                                <li><a href="#saved" data-toggle="tab" class="mb-2">Nhà hàng đã lưu<i
-                                            class="fas fa-angle-right arrow-menu-left"></i></a></li>
-                                <li><a href="#owner-res" data-toggle="tab" class="mb-2">Địa điểm của bạn<i
-                                            class="fas fa-angle-right arrow-menu-left"></i></a></li>
-                                <li><a class="mb-2">55 Đặng Thùy Trâm<i class="fas fa-angle-right arrow-menu-left"></i></a>
+                            <ul class="menu-sidebar-custom nav nav-tabs" style="border-bottom: none">
+                                <li><a href="#history" data-toggle="tab" class="mb-2">
+                                        <i style="color: blue" class="mr-10 fa fa-history" aria-hidden="true"></i>Nhật ký hoạt động
+                                        <i class="fas fa-angle-right arrow-menu-left"></i>
+                                    </a>
+                                </li>
+                                <li><a href="#saved" data-toggle="tab" class="mb-2">
+                                        <i style="color: red" class="mr-10 fas fa-save"></i>Nhà hàng đã lưu
+                                        <i class="fas fa-angle-right arrow-menu-left"></i></a></li>
+                                <li><a href="#owner-res" data-toggle="tab" class="mb-2">
+                                        <i style="color: lawngreen" class="mr-10 fas fa-location-arrow"></i>Địa điểm của bạn
+                                        <i class="fas fa-angle-right arrow-menu-left"></i></a></li>
+                                <li><a href="#profile" data-toggle="tab" class="mb-2">
+                                        <i style="color: purple" class="mr-10 fas fa-user"></i>55 Đặng Thùy Trâm
+                                        <i class="fas fa-angle-right arrow-menu-left"></i></a>
                                 </li>
                             </ul>
 
@@ -345,6 +359,80 @@
                                     </div>
                                 </div>
                             </section>
+                        </div>
+                    </div>
+                </div>
+                <div id="profile" style="padding-left: 10px" class="tab-pane fade">
+                    <div class="mb-20">
+                        <h4>THÔNG TIN CÁ NHÂN</h4>
+                    </div>
+                    <div class="user-info">
+                        <div class="row  mb-20">
+                            <div class="col-md-3 input-name">
+                                <b style="font-size: initial"></b>
+                            </div>
+                            <div class="col-md-9">
+                                <img style="width: 150px; height: 150px" class="avatar mb-10" src="images/Screenshot_50.png">
+                                <input type="file" class="m" style="border: unset !important; background: white">
+                            </div>
+                        </div>
+                        <div class="row  mb-15">
+                            <div class="col-md-3 input-name">
+                                <b style="font-size: initial">Tên</b>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" placeholder="Tên" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row  mb-15">
+                            <div class="col-md-3 input-name"   >
+                                <b style="font-size: initial">Email</b>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="email" placeholder="Email"   class="form-control">
+                            </div>
+                        </div>
+                        <div class="row  mb-15">
+                            <div class="col-md-3 input-name"   >
+                                <b style="font-size: initial">Giới tính</b>
+                            </div>
+                            <div class="col-md-9">
+                                <form>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="optradio" checked>Nam
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="optradio">Nữ
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="optradio">Khác
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row  mb-15">
+                            <div class="col-md-3 input-name"   >
+                                <b style="font-size: initial">Mật khẩu mới</b>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="password" placeholder="Mật khẩu mới"   class="form-control">
+                            </div>
+                        </div>
+                        <div class="row mb-15">
+                            <div class="col-md-3 input-name"   >
+                                <b style="font-size: initial">Mật khẩu cũ</b>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="password" placeholder="Mật khẩu cũ"   class="form-control">
+                            </div>
+                        </div>
+                        <div class="row mb-15">
+                            <div class="col-md-3 input-name">
+                                <b style="font-size: initial"></b>
+                            </div>
+                            <div class="col-md-9">
+                                <button class="btn btn-success">Lưu</button>
+                            </div>
                         </div>
                     </div>
                 </div>

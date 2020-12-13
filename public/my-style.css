@@ -130,7 +130,7 @@ b {
 
 i.arrow-menu-left {
     position: absolute;
-    right: 15px;
+    right: 25px;
 }
 
 ul.menu-sidebar-custom li {
@@ -478,4 +478,35 @@ ul.menu-sidebar-custom li:hover {
 
 .menu-collap li:nth-child(odd){
     background-color: #ecebeb;
+}
+.menu-sidebar-custom li:nth-child(odd){
+    background-color: #ecebeb;
+}
+.menu-sidebar-custom li{
+    width: 100%;
+}
+.menu-sidebar-custom li a{
+    color: black;
+}
+.menu-sidebar-custom li a:hover{
+    font-weight: bold;
+}
+.radio-inline {
+    padding: 5px 0px;
+    margin-right: 10px;
+}
+.radio-inline input{
+    width: unset;
+    height: 15px;
+    margin-right: 5px;
+}
+.input-name{
+    text-align: right; padding: 5px
+}
+
+@media (max-width: 500px) {
+    .input-name{
+        margin-left: 10px;
+        text-align: left;
+    }
 }

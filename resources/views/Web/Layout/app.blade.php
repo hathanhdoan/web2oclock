@@ -160,8 +160,8 @@
     <!-- Quick View | Modal Area End Here -->
 
     <!-- Model more comment picture -->
-    <div style="margin-top: 100px" id="commentPictureModel" class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
+    <div style="margin-top: 100px" id="commentPictureModel" class="modal fade modal-wrapper" tabindex="-1" role="dialog">
+        <div class="modal-dialog  modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-body">
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -195,7 +195,6 @@
         </div>
     </div>
     <!-- Quick View | Modal Area End Here -->
-
     <!-- Model comment -->
     <div class="modal fade modal-wrapper" id="comment" >
         <div class="modal-dialog modal-dialog-centered" role="document">
