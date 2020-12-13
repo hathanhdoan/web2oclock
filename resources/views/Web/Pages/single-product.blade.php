@@ -180,7 +180,10 @@
                                                 <i class="fa fa-comment mr-5"></i><span>Comment</span>
                                             </div>
                                             <div class="mr-20">
-                                                <i class="fa fa-exclamation-triangle report-btn mr-5"></i><span>Rort</span>
+                                                <a data-toggle="modal" data-target="#report">
+                                                    <i class="fa fa-exclamation-triangle report-btn mr-5"></i>
+                                                    <span>report</span>
+                                                </a>
                                             </div>
                                         </div>
                                         <hr class="my-hr">
@@ -273,7 +276,10 @@
                                                 <i class="fa fa-comment mr-5"></i><span>Comment</span>
                                             </div>
                                             <div class="mr-20">
-                                                <i class="fa fa-exclamation-triangle report-btn mr-5"></i><span>Rort</span>
+                                                <a data-toggle="modal" data-target="#report">
+                                                    <i class="fa fa-exclamation-triangle report-btn mr-5"></i>
+                                                    <span>report</span>
+                                                </a>
                                             </div>
                                         </div>
                                         <hr class="my-hr">
@@ -898,6 +904,23 @@
             </div>
         </div>
         <!-- Quick View | Modal Area End Here -->
+    </div>
+    <div style="margin-top: 100px" id="report" class="modal fade modal-wrapper" tabindex="-1" role="dialog">
+        <div class="modal-dialog  modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Báo cáo <i style="color: red" class="fa fa-exclamation-triangle"></i></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <b>Nội dung: </b>
+                    <textarea placeholder="Nhập nội dung"></textarea>
+                    <button class="btn btn-success">Gửi</button>
+                </div>
+            </div>
+        </div>
     </div>
 @endsection
 @section('script')

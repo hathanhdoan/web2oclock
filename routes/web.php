@@ -29,3 +29,6 @@ Route::get('/profile', function () {
     return view('Web.Pages.profile');
 });
 
+Route::get('/new-res', function () {
+    return view('Web.Pages.new-res');
+});
