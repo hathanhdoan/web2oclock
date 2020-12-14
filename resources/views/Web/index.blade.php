@@ -1018,6 +1018,7 @@
             </div>
         </div>
     </div>
+
     <!-- suggested Product End Here -->
     <!-- Li's Static Banner Area End Here -->
     <!-- Begin nearest Product Area -->
@@ -1033,579 +1034,125 @@
                     </div>
                     <div class="product-container">
                         <div class="row">
-                            <div class="owl-item active">
-                                <div class="row group-two-product">
-                                    <section>
-                                        <!-- Card -->
-                                        <div class="card booking-card booking-card-custom" style="max-width: 16rem;">
-
-                                            <!-- Card image -->
-                                            <div class="view overlay">
-                                                <img class="card-img-top"
-                                                     src="images/slider/foody-slider1.jpg"
-                                                     alt="Card image cap">
-                                                <a href="#!">
-                                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                                </a>
-                                            </div>
-
-                                            <!-- Card content -->
-                                            <div class="card-body">
-
-                                                <!-- Title -->
-                                                <h4 class="card-title font-weight-bold"><a>Texas Chicken 1</a></h4>
-                                                <!-- Data -->
-                                                <ul class="list-unstyled list-inline rating mb-0">
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"> </i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><i
-                                                            class="fas fa-star-half-alt amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p>
-                                                    </li>
-                                                </ul>
-                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
-                                                    Trâm,
-                                                    quận....</a>
-                                                <p class="card-text card-text-custom">Đoàn: Đồ ăn rất ngon, nên thử</p>
-                                                <!-- Text -->
-                                                <p class="card-text"></p>
-                                                <hr class="my-1">
-                                                <ul class="add-actions-link">
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Lưu"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-bookmark"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Thích"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-heart-o"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Xem nhanh"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-eye"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
+                            <div  >
+                                <section>
+                                    <div class="card booking-card" style="max-width: 22rem;">
+                                        <div class="view overlay"><img
+                                                src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg"
+                                                alt="Card image cap" class="card-img-top"> <a href="#!">
+                                                <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                                            </a></div>
+                                        <div class="card-body"><h4 class="card-title font-weight-bold"><a>Texas Chicken</a>
+                                            </h4>
+                                            <ul class="list-unstyled list-inline rating mb-0">
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                                            </ul>
+                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                                quận....</a>
+                                            <p class="card-text"></p>
                                         </div>
-                                        <!-- Card -->
-
-                                    </section>
-                                    <section>
-                                        <!-- Card -->
-                                        <div class="card booking-card booking-card-custom" style="max-width: 16rem;">
-
-                                            <!-- Card image -->
-                                            <div class="view overlay">
-                                                <img class="card-img-top"
-                                                     src="images/slider/foody-slider1.jpg"
-                                                     alt="Card image cap">
-                                                <a href="#!">
-                                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                                </a>
-                                            </div>
-
-                                            <!-- Card content -->
-                                            <div class="card-body">
-
-                                                <!-- Title -->
-                                                <h4 class="card-title font-weight-bold"><a>Texas Chicken 2</a></h4>
-                                                <!-- Data -->
-                                                <ul class="list-unstyled list-inline rating mb-0">
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"> </i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><i
-                                                            class="fas fa-star-half-alt amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p>
-                                                    </li>
-                                                </ul>
-                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
-                                                    Trâm,
-                                                    quận....</a>
-                                                <p class="card-text card-text-custom">Đoàn: Đồ ăn rất ngon, nên thử</p>
-                                                <!-- Text -->
-                                                <p class="card-text"></p>
-                                                <hr class="my-1">
-                                                <ul class="add-actions-link">
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Lưu"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-bookmark"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Thích"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-heart-o"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Xem nhanh"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-eye"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                        </div>
-                                        <!-- Card -->
-
-                                    </section>
-                                </div>
-                                <!-- single-product-wrap end -->
+                                    </div>
+                                </section>
                             </div>
-                            <div class="owl-item active">
-                                <div class="row group-two-product">
-                                    <section>
-                                        <!-- Card -->
-                                        <div class="card booking-card booking-card-custom" style="max-width: 16rem;">
-
-                                            <!-- Card image -->
-                                            <div class="view overlay">
-                                                <img class="card-img-top"
-                                                     src="images/slider/foody-slider1.jpg"
-                                                     alt="Card image cap">
-                                                <a href="#!">
-                                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                                </a>
-                                            </div>
-
-                                            <!-- Card content -->
-                                            <div class="card-body">
-
-                                                <!-- Title -->
-                                                <h4 class="card-title font-weight-bold"><a>Texas Chicken</a></h4>
-                                                <!-- Data -->
-                                                <ul class="list-unstyled list-inline rating mb-0">
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"> </i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><i
-                                                            class="fas fa-star-half-alt amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p>
-                                                    </li>
-                                                </ul>
-                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
-                                                    Trâm,
-                                                    quận....</a>
-                                                <p class="card-text card-text-custom">Đoàn: Đồ ăn rất ngon, nên thử</p>
-                                                <!-- Text -->
-                                                <p class="card-text"></p>
-                                                <hr class="my-1">
-                                                <ul class="add-actions-link">
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Lưu"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-bookmark"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Thích"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-heart-o"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Xem nhanh"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-eye"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
+                            <div  >
+                                <section>
+                                    <div class="card booking-card" style="max-width: 22rem;">
+                                        <div class="view overlay"><img
+                                                src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg"
+                                                alt="Card image cap" class="card-img-top"> <a href="#!">
+                                                <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                                            </a></div>
+                                        <div class="card-body"><h4 class="card-title font-weight-bold"><a>Texas Chicken</a>
+                                            </h4>
+                                            <ul class="list-unstyled list-inline rating mb-0">
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                                            </ul>
+                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                                quận....</a>
+                                            <p class="card-text"></p>
                                         </div>
-                                        <!-- Card -->
-
-                                    </section>
-                                    <section>
-                                        <!-- Card -->
-                                        <div class="card booking-card booking-card-custom" style="max-width: 16rem;">
-
-                                            <!-- Card image -->
-                                            <div class="view overlay">
-                                                <img class="card-img-top"
-                                                     src="images/slider/foody-slider1.jpg"
-                                                     alt="Card image cap">
-                                                <a href="#!">
-                                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                                </a>
-                                            </div>
-
-                                            <!-- Card content -->
-                                            <div class="card-body">
-
-                                                <!-- Title -->
-                                                <h4 class="card-title font-weight-bold"><a>Texas Chicken</a></h4>
-                                                <!-- Data -->
-                                                <ul class="list-unstyled list-inline rating mb-0">
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"> </i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><i
-                                                            class="fas fa-star-half-alt amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p>
-                                                    </li>
-                                                </ul>
-                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
-                                                    Trâm,
-                                                    quận....</a>
-                                                <p class="card-text card-text-custom">Đoàn: Đồ ăn rất ngon, nên thử</p>
-                                                <!-- Text -->
-                                                <p class="card-text"></p>
-                                                <hr class="my-1">
-                                                <ul class="add-actions-link">
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Lưu"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-bookmark"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Thích"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-heart-o"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Xem nhanh"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-eye"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                        </div>
-                                        <!-- Card -->
-
-                                    </section>
-                                </div>
-                                <!-- single-product-wrap end -->
+                                    </div>
+                                </section>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="owl-item active">
-                                <div class="row group-two-product">
-                                    <section>
-                                        <!-- Card -->
-                                        <div class="card booking-card booking-card-custom" style="max-width: 16rem;">
-
-                                            <!-- Card image -->
-                                            <div class="view overlay">
-                                                <img class="card-img-top"
-                                                     src="images/slider/foody-slider1.jpg"
-                                                     alt="Card image cap">
-                                                <a href="#!">
-                                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                                </a>
-                                            </div>
-
-                                            <!-- Card content -->
-                                            <div class="card-body">
-
-                                                <!-- Title -->
-                                                <h4 class="card-title font-weight-bold"><a>Texas Chicken 1</a></h4>
-                                                <!-- Data -->
-                                                <ul class="list-unstyled list-inline rating mb-0">
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"> </i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><i
-                                                            class="fas fa-star-half-alt amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p>
-                                                    </li>
-                                                </ul>
-                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
-                                                    Trâm,
-                                                    quận....</a>
-                                                <p class="card-text card-text-custom">Đoàn: Đồ ăn rất ngon, nên thử</p>
-                                                <!-- Text -->
-                                                <p class="card-text"></p>
-                                                <hr class="my-1">
-                                                <ul class="add-actions-link">
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Lưu"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-bookmark"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Thích"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-heart-o"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Xem nhanh"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-eye"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
+                            <div  >
+                                <section>
+                                    <div class="card booking-card" style="max-width: 22rem;">
+                                        <div class="view overlay"><img
+                                                src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg"
+                                                alt="Card image cap" class="card-img-top"> <a href="#!">
+                                                <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                                            </a></div>
+                                        <div class="card-body"><h4 class="card-title font-weight-bold"><a>Texas Chicken</a>
+                                            </h4>
+                                            <ul class="list-unstyled list-inline rating mb-0">
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                                            </ul>
+                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                                quận....</a>
+                                            <p class="card-text"></p>
                                         </div>
-                                        <!-- Card -->
-
-                                    </section>
-                                    <section>
-                                        <!-- Card -->
-                                        <div class="card booking-card booking-card-custom" style="max-width: 16rem;">
-
-                                            <!-- Card image -->
-                                            <div class="view overlay">
-                                                <img class="card-img-top"
-                                                     src="images/slider/foody-slider1.jpg"
-                                                     alt="Card image cap">
-                                                <a href="#!">
-                                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                                </a>
-                                            </div>
-
-                                            <!-- Card content -->
-                                            <div class="card-body">
-
-                                                <!-- Title -->
-                                                <h4 class="card-title font-weight-bold"><a>Texas Chicken 2</a></h4>
-                                                <!-- Data -->
-                                                <ul class="list-unstyled list-inline rating mb-0">
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"> </i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><i
-                                                            class="fas fa-star-half-alt amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p>
-                                                    </li>
-                                                </ul>
-                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
-                                                    Trâm,
-                                                    quận....</a>
-                                                <p class="card-text card-text-custom">Đoàn: Đồ ăn rất ngon, nên thử</p>
-                                                <!-- Text -->
-                                                <p class="card-text"></p>
-                                                <hr class="my-1">
-                                                <ul class="add-actions-link">
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Lưu"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-bookmark"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Thích"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-heart-o"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Xem nhanh"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-eye"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                        </div>
-                                        <!-- Card -->
-
-                                    </section>
-                                </div>
-                                <!-- single-product-wrap end -->
+                                    </div>
+                                </section>
                             </div>
-                            <div class="owl-item active">
-                                <div class="row group-two-product">
-                                    <section>
-                                        <!-- Card -->
-                                        <div class="card booking-card booking-card-custom" style="max-width: 16rem;">
-
-                                            <!-- Card image -->
-                                            <div class="view overlay">
-                                                <img class="card-img-top"
-                                                     src="images/slider/foody-slider1.jpg"
-                                                     alt="Card image cap">
-                                                <a href="#!">
-                                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                                </a>
-                                            </div>
-
-                                            <!-- Card content -->
-                                            <div class="card-body">
-
-                                                <!-- Title -->
-                                                <h4 class="card-title font-weight-bold"><a>Texas Chicken</a></h4>
-                                                <!-- Data -->
-                                                <ul class="list-unstyled list-inline rating mb-0">
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"> </i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><i
-                                                            class="fas fa-star-half-alt amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p>
-                                                    </li>
-                                                </ul>
-                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
-                                                    Trâm,
-                                                    quận....</a>
-                                                <p class="card-text card-text-custom">Đoàn: Đồ ăn rất ngon, nên thử</p>
-                                                <!-- Text -->
-                                                <p class="card-text"></p>
-                                                <hr class="my-1">
-                                                <ul class="add-actions-link">
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Lưu"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-bookmark"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Thích"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-heart-o"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Xem nhanh"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-eye"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
+                            <div  >
+                                <section>
+                                    <div class="card booking-card" style="max-width: 22rem;">
+                                        <div class="view overlay"><img
+                                                src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg"
+                                                alt="Card image cap" class="card-img-top"> <a href="#!">
+                                                <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                                            </a></div>
+                                        <div class="card-body"><h4 class="card-title font-weight-bold"><a>Texas Chicken</a>
+                                            </h4>
+                                            <ul class="list-unstyled list-inline rating mb-0">
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                                            </ul>
+                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                                quận....</a>
+                                            <p class="card-text"></p>
                                         </div>
-                                        <!-- Card -->
-
-                                    </section>
-                                    <section>
-                                        <!-- Card -->
-                                        <div class="card booking-card booking-card-custom" style="max-width: 16rem;">
-
-                                            <!-- Card image -->
-                                            <div class="view overlay">
-                                                <img class="card-img-top"
-                                                     src="images/slider/foody-slider1.jpg"
-                                                     alt="Card image cap">
-                                                <a href="#!">
-                                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                                </a>
-                                            </div>
-
-                                            <!-- Card content -->
-                                            <div class="card-body">
-
-                                                <!-- Title -->
-                                                <h4 class="card-title font-weight-bold"><a>Texas Chicken</a></h4>
-                                                <!-- Data -->
-                                                <ul class="list-unstyled list-inline rating mb-0">
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"> </i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><i
-                                                            class="fas fa-star-half-alt amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p>
-                                                    </li>
-                                                </ul>
-                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
-                                                    Trâm,
-                                                    quận....</a>
-                                                <p class="card-text card-text-custom">Đoàn: Đồ ăn rất ngon, nên thử</p>
-                                                <!-- Text -->
-                                                <p class="card-text"></p>
-                                                <hr class="my-1">
-                                                <ul class="add-actions-link">
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Lưu"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-bookmark"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Thích"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-heart-o"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Xem nhanh"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-eye"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                        </div>
-                                        <!-- Card -->
-
-                                    </section>
-                                </div>
-                                <!-- single-product-wrap end -->
+                                    </div>
+                                </section>
                             </div>
                         </div>
                     </div>
@@ -1615,9 +1162,11 @@
             </div>
         </div>
     </section>
+    <div id="map" style="overflow: hidden;height: 275px;max-width: 1135px; margin-top: 150px;margin: auto;
+    border-radius: 10px;"></div>
     <!-- nearest Product End Here -->
     <!-- Begin banner -->
-    <div class="li-static-home">
+    <div class="li-static-home" style="margin-top: 20px">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -2625,579 +2174,155 @@
                     </div>
                     <div class="product-container">
                         <div class="row">
-                            <div class="owl-item active">
-                                <div class="row group-two-product">
-                                    <section>
-                                        <!-- Card -->
-                                        <div class="card booking-card booking-card-custom" style="max-width: 16rem;">
-
-                                            <!-- Card image -->
-                                            <div class="view overlay">
-                                                <img class="card-img-top"
-                                                     src="images/slider/foody-slider1.jpg"
-                                                     alt="Card image cap">
-                                                <a href="#!">
-                                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                                </a>
-                                            </div>
-
-                                            <!-- Card content -->
-                                            <div class="card-body">
-
-                                                <!-- Title -->
-                                                <h4 class="card-title font-weight-bold"><a>Texas Chicken 1</a></h4>
-                                                <!-- Data -->
-                                                <ul class="list-unstyled list-inline rating mb-0">
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"> </i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><i
-                                                            class="fas fa-star-half-alt amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p>
-                                                    </li>
-                                                </ul>
-                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
-                                                    Trâm,
-                                                    quận....</a>
-                                                <p class="card-text card-text-custom">Đoàn: Đồ ăn rất ngon, nên thử</p>
-                                                <!-- Text -->
-                                                <p class="card-text"></p>
-                                                <hr class="my-1">
-                                                <ul class="add-actions-link">
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Lưu"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-bookmark"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Thích"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-heart-o"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Xem nhanh"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-eye"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
+                            <div>
+                                <section>
+                                    <div class="card booking-card" style="max-width: 22rem;">
+                                        <div class="view overlay"><img
+                                                src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg"
+                                                alt="Card image cap" class="card-img-top"> <a href="#!">
+                                                <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                                            </a></div>
+                                        <div class="card-body"><h4 class="card-title font-weight-bold"><a>Texas Chicken</a>
+                                            </h4>
+                                            <ul class="list-unstyled list-inline rating mb-0">
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                                            </ul>
+                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                                quận....</a>
+                                            <p class="card-text"></p>
                                         </div>
-                                        <!-- Card -->
-
-                                    </section>
-                                    <section>
-                                        <!-- Card -->
-                                        <div class="card booking-card booking-card-custom" style="max-width: 16rem;">
-
-                                            <!-- Card image -->
-                                            <div class="view overlay">
-                                                <img class="card-img-top"
-                                                     src="images/slider/foody-slider1.jpg"
-                                                     alt="Card image cap">
-                                                <a href="#!">
-                                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                                </a>
-                                            </div>
-
-                                            <!-- Card content -->
-                                            <div class="card-body">
-
-                                                <!-- Title -->
-                                                <h4 class="card-title font-weight-bold"><a>Texas Chicken 2</a></h4>
-                                                <!-- Data -->
-                                                <ul class="list-unstyled list-inline rating mb-0">
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"> </i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><i
-                                                            class="fas fa-star-half-alt amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p>
-                                                    </li>
-                                                </ul>
-                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
-                                                    Trâm,
-                                                    quận....</a>
-                                                <p class="card-text card-text-custom">Đoàn: Đồ ăn rất ngon, nên thử</p>
-                                                <!-- Text -->
-                                                <p class="card-text"></p>
-                                                <hr class="my-1">
-                                                <ul class="add-actions-link">
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Lưu"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-bookmark"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Thích"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-heart-o"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Xem nhanh"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-eye"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                        </div>
-                                        <!-- Card -->
-
-                                    </section>
-                                </div>
-                                <!-- single-product-wrap end -->
+                                    </div>
+                                </section>
                             </div>
-                            <div class="owl-item active">
-                                <div class="row group-two-product">
-                                    <section>
-                                        <!-- Card -->
-                                        <div class="card booking-card booking-card-custom" style="max-width: 16rem;">
-
-                                            <!-- Card image -->
-                                            <div class="view overlay">
-                                                <img class="card-img-top"
-                                                     src="images/slider/foody-slider1.jpg"
-                                                     alt="Card image cap">
-                                                <a href="#!">
-                                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                                </a>
-                                            </div>
-
-                                            <!-- Card content -->
-                                            <div class="card-body">
-
-                                                <!-- Title -->
-                                                <h4 class="card-title font-weight-bold"><a>Texas Chicken</a></h4>
-                                                <!-- Data -->
-                                                <ul class="list-unstyled list-inline rating mb-0">
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"> </i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><i
-                                                            class="fas fa-star-half-alt amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p>
-                                                    </li>
-                                                </ul>
-                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
-                                                    Trâm,
-                                                    quận....</a>
-                                                <p class="card-text card-text-custom">Đoàn: Đồ ăn rất ngon, nên thử</p>
-                                                <!-- Text -->
-                                                <p class="card-text"></p>
-                                                <hr class="my-1">
-                                                <ul class="add-actions-link">
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Lưu"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-bookmark"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Thích"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-heart-o"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Xem nhanh"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-eye"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
+                            <div  >
+                                <section>
+                                    <div class="card booking-card" style="max-width: 22rem;">
+                                        <div class="view overlay"><img
+                                                src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg"
+                                                alt="Card image cap" class="card-img-top"> <a href="#!">
+                                                <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                                            </a></div>
+                                        <div class="card-body"><h4 class="card-title font-weight-bold"><a>Texas Chicken</a>
+                                            </h4>
+                                            <ul class="list-unstyled list-inline rating mb-0">
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                                            </ul>
+                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                                quận....</a>
+                                            <p class="card-text"></p>
                                         </div>
-                                        <!-- Card -->
-
-                                    </section>
-                                    <section>
-                                        <!-- Card -->
-                                        <div class="card booking-card booking-card-custom" style="max-width: 16rem;">
-
-                                            <!-- Card image -->
-                                            <div class="view overlay">
-                                                <img class="card-img-top"
-                                                     src="images/slider/foody-slider1.jpg"
-                                                     alt="Card image cap">
-                                                <a href="#!">
-                                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                                </a>
-                                            </div>
-
-                                            <!-- Card content -->
-                                            <div class="card-body">
-
-                                                <!-- Title -->
-                                                <h4 class="card-title font-weight-bold"><a>Texas Chicken</a></h4>
-                                                <!-- Data -->
-                                                <ul class="list-unstyled list-inline rating mb-0">
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"> </i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><i
-                                                            class="fas fa-star-half-alt amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p>
-                                                    </li>
-                                                </ul>
-                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
-                                                    Trâm,
-                                                    quận....</a>
-                                                <p class="card-text card-text-custom">Đoàn: Đồ ăn rất ngon, nên thử</p>
-                                                <!-- Text -->
-                                                <p class="card-text"></p>
-                                                <hr class="my-1">
-                                                <ul class="add-actions-link">
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Lưu"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-bookmark"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Thích"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-heart-o"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Xem nhanh"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-eye"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                        </div>
-                                        <!-- Card -->
-
-                                    </section>
-                                </div>
-                                <!-- single-product-wrap end -->
+                                    </div>
+                                </section>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="owl-item active">
-                                <div class="row group-two-product">
-                                    <section>
-                                        <!-- Card -->
-                                        <div class="card booking-card booking-card-custom" style="max-width: 16rem;">
-
-                                            <!-- Card image -->
-                                            <div class="view overlay">
-                                                <img class="card-img-top"
-                                                     src="images/slider/foody-slider1.jpg"
-                                                     alt="Card image cap">
-                                                <a href="#!">
-                                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                                </a>
-                                            </div>
-
-                                            <!-- Card content -->
-                                            <div class="card-body">
-
-                                                <!-- Title -->
-                                                <h4 class="card-title font-weight-bold"><a>Texas Chicken 1</a></h4>
-                                                <!-- Data -->
-                                                <ul class="list-unstyled list-inline rating mb-0">
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"> </i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><i
-                                                            class="fas fa-star-half-alt amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p>
-                                                    </li>
-                                                </ul>
-                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
-                                                    Trâm,
-                                                    quận....</a>
-                                                <p class="card-text card-text-custom">Đoàn: Đồ ăn rất ngon, nên thử</p>
-                                                <!-- Text -->
-                                                <p class="card-text"></p>
-                                                <hr class="my-1">
-                                                <ul class="add-actions-link">
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Lưu"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-bookmark"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Thích"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-heart-o"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Xem nhanh"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-eye"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
+                            <div  >
+                                <section>
+                                    <div class="card booking-card" style="max-width: 22rem;">
+                                        <div class="view overlay"><img
+                                                src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg"
+                                                alt="Card image cap" class="card-img-top"> <a href="#!">
+                                                <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                                            </a></div>
+                                        <div class="card-body"><h4 class="card-title font-weight-bold"><a>Texas Chicken</a>
+                                            </h4>
+                                            <ul class="list-unstyled list-inline rating mb-0">
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                                            </ul>
+                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                                quận....</a>
+                                            <p class="card-text"></p>
                                         </div>
-                                        <!-- Card -->
-
-                                    </section>
-                                    <section>
-                                        <!-- Card -->
-                                        <div class="card booking-card booking-card-custom" style="max-width: 16rem;">
-
-                                            <!-- Card image -->
-                                            <div class="view overlay">
-                                                <img class="card-img-top"
-                                                     src="images/slider/foody-slider1.jpg"
-                                                     alt="Card image cap">
-                                                <a href="#!">
-                                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                                </a>
-                                            </div>
-
-                                            <!-- Card content -->
-                                            <div class="card-body">
-
-                                                <!-- Title -->
-                                                <h4 class="card-title font-weight-bold"><a>Texas Chicken 2</a></h4>
-                                                <!-- Data -->
-                                                <ul class="list-unstyled list-inline rating mb-0">
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"> </i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><i
-                                                            class="fas fa-star-half-alt amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p>
-                                                    </li>
-                                                </ul>
-                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
-                                                    Trâm,
-                                                    quận....</a>
-                                                <p class="card-text card-text-custom">Đoàn: Đồ ăn rất ngon, nên thử</p>
-                                                <!-- Text -->
-                                                <p class="card-text"></p>
-                                                <hr class="my-1">
-                                                <ul class="add-actions-link">
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Lưu"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-bookmark"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Thích"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-heart-o"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Xem nhanh"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-eye"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                        </div>
-                                        <!-- Card -->
-
-                                    </section>
-                                </div>
-                                <!-- single-product-wrap end -->
+                                    </div>
+                                </section>
                             </div>
-                            <div class="owl-item active">
-                                <div class="row group-two-product">
-                                    <section>
-                                        <!-- Card -->
-                                        <div class="card booking-card booking-card-custom" style="max-width: 16rem;">
-
-                                            <!-- Card image -->
-                                            <div class="view overlay">
-                                                <img class="card-img-top"
-                                                     src="images/slider/foody-slider1.jpg"
-                                                     alt="Card image cap">
-                                                <a href="#!">
-                                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                                </a>
-                                            </div>
-
-                                            <!-- Card content -->
-                                            <div class="card-body">
-
-                                                <!-- Title -->
-                                                <h4 class="card-title font-weight-bold"><a>Texas Chicken</a></h4>
-                                                <!-- Data -->
-                                                <ul class="list-unstyled list-inline rating mb-0">
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"> </i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><i
-                                                            class="fas fa-star-half-alt amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p>
-                                                    </li>
-                                                </ul>
-                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
-                                                    Trâm,
-                                                    quận....</a>
-                                                <p class="card-text card-text-custom">Đoàn: Đồ ăn rất ngon, nên thử</p>
-                                                <!-- Text -->
-                                                <p class="card-text"></p>
-                                                <hr class="my-1">
-                                                <ul class="add-actions-link">
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Lưu"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-bookmark"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Thích"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-heart-o"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Xem nhanh"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-eye"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
+                            <div  >
+                                <section>
+                                    <div class="card booking-card" style="max-width: 22rem;">
+                                        <div class="view overlay"><img
+                                                src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg"
+                                                alt="Card image cap" class="card-img-top"> <a href="#!">
+                                                <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                                            </a></div>
+                                        <div class="card-body"><h4 class="card-title font-weight-bold"><a>Texas Chicken</a>
+                                            </h4>
+                                            <ul class="list-unstyled list-inline rating mb-0">
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                                            </ul>
+                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                                quận....</a>
+                                            <p class="card-text"></p>
                                         </div>
-                                        <!-- Card -->
-
-                                    </section>
-                                    <section>
-                                        <!-- Card -->
-                                        <div class="card booking-card booking-card-custom" style="max-width: 16rem;">
-
-                                            <!-- Card image -->
-                                            <div class="view overlay">
-                                                <img class="card-img-top"
-                                                     src="images/slider/foody-slider1.jpg"
-                                                     alt="Card image cap">
-                                                <a href="#!">
-                                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                                </a>
-                                            </div>
-
-                                            <!-- Card content -->
-                                            <div class="card-body">
-
-                                                <!-- Title -->
-                                                <h4 class="card-title font-weight-bold"><a>Texas Chicken</a></h4>
-                                                <!-- Data -->
-                                                <ul class="list-unstyled list-inline rating mb-0">
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"> </i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item mr-0"><i
-                                                            class="fas fa-star amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><i
-                                                            class="fas fa-star-half-alt amber-text"></i>
-                                                    </li>
-                                                    <li class="list-inline-item"><p class="text-muted">4.5 (413)</p>
-                                                    </li>
-                                                </ul>
-                                                <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
-                                                    Trâm,
-                                                    quận....</a>
-                                                <p class="card-text card-text-custom">Đoàn: Đồ ăn rất ngon, nên thử</p>
-                                                <!-- Text -->
-                                                <p class="card-text"></p>
-                                                <hr class="my-1">
-                                                <ul class="add-actions-link">
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Lưu"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-bookmark"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Thích"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-heart-o"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li><a data-toggle="tooltip" data-placement="top" title="Xem nhanh"
-                                                           class="links-details" href="wishlist.html">
-                                                            <i class="fa fa-eye"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
+                                    </div>
+                                </section>
+                            </div>
+                            <div  >
+                                <section>
+                                    <div class="card booking-card" style="max-width: 22rem;">
+                                        <div class="view overlay"><img
+                                                src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg"
+                                                alt="Card image cap" class="card-img-top"> <a href="#!">
+                                                <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                                            </a></div>
+                                        <div class="card-body"><h4 class="card-title font-weight-bold"><a>Texas Chicken</a>
+                                            </h4>
+                                            <ul class="list-unstyled list-inline rating mb-0">
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                </li>
+                                                <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
+                                            </ul>
+                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                                quận....</a>
+                                            <p class="card-text"></p>
                                         </div>
-                                        <!-- Card -->
-
-                                    </section>
-                                </div>
-                                <!-- single-product-wrap end -->
+                                    </div>
+                                </section>
                             </div>
                         </div>
                     </div>
@@ -3208,11 +2333,8 @@
         </div>
     </section>
 
-    <div id="map" style="overflow: hidden;height: 300px;width: 1170px;margin-top: 150px;margin: auto;
-    border-radius: 10px;border: 5px solid; @media screen and (min-width: 360px) {
-   padding: 10px;height: 200px;width:80%;
-
-} "></div>
+{{--    <div id="map" style="overflow: hidden;height: 275px;max-width: 1135px; margin-top: 150px;margin: auto;--}}
+{{--    border-radius: 10px;"></div>--}}
 @endsection
 @section('script')
     <script>

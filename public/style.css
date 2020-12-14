@@ -1793,7 +1793,7 @@ textarea:focus {
 		color: #ffffff;
 }
 .hb-menu nav > ul > li > a::after {
-	content: "\f107";
+	content: unset;
 	position: absolute;
 	top: 8px;
 	right: 15px;

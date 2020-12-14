@@ -32,3 +32,6 @@ Route::get('/profile', function () {
 Route::get('/new-res', function () {
     return view('Web.Pages.new-res');
 });
+Route::get('/more-res', function () {
+    return view('Web.Pages.more-res');
+});

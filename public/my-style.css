@@ -6,6 +6,12 @@ b {
     width: 245px;
     margin-bottom: 10px;
 }
+.product-container div div  {
+    position: relative;
+    width: 225px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
 
 .mbI-0 {
     margin-bottom: 0px !important;
@@ -34,10 +40,6 @@ b {
 
     .group-two-product {
         margin: 0px 0px 0px 0px !important
-    }
-
-    .product-container {
-        margin-left: 20px !important
     }
 
     h4 {
@@ -102,9 +104,6 @@ b {
     margin-bottom: 10px
 }
 
-.product-container {
-    margin-left: 60px;
-}
 
 #map {
     height: 100%;
@@ -212,13 +211,18 @@ ul.menu-sidebar-custom li:hover {
     margin: 0px 10px 20px 0px;
 }
 
-
+.product-container {
+    margin-left: 10px;
+}
 @media (max-width: 800px) {
     .comment-panel {
         position: relative;
         margin: 0px;
     }
     .saved-res {
+        width: 245px;
+    }
+    .product-container div div {
         width: 245px;
     }
 }
@@ -234,6 +238,9 @@ ul.menu-sidebar-custom li:hover {
 @media (max-width: 450px) {
     .saved-res {
         width: 197px;
+    }
+    .product-container div div  {
+        width: 190px;
     }
 }
 
@@ -267,6 +274,9 @@ ul.menu-sidebar-custom li:hover {
     .saved-res {
         width: 175px;
     }
+    .product-container div div  {
+        width: 170px;
+    }
 }
 
 @media (max-width: 330px) {
@@ -278,6 +288,9 @@ ul.menu-sidebar-custom li:hover {
 
     .saved-res {
         width: 150px;
+    }
+    .product-container div div  {
+        width: 145px;
     }
 }
 
