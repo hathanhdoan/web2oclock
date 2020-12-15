@@ -82,12 +82,16 @@
                                 </li>
                                 <li><a href="blog-left-sidebar.html">Mới nhất</a>
                                 </li>
-                                <li><a href="index.html">Pages</a>
+                                <li style="position: absolute;right: 40px; top: 2px">
+                                    <a data-toggle="tooltip" data-placement="top" data-original-title="Việt Nam" href="#">
+                                        <img style="width: 34px; height: 34px" src="{{asset('images/vietnam.png')}}">
+                                    </a>
                                 </li>
-                                <li><a href="about-us.html">About Us</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                                <li><a href="shop-left-sidebar.html">Smartwatch</a></li>
-                                <li><a href="shop-left-sidebar.html">Accessories</a></li>
+                                <li style="position: absolute;right: 0px; top: 4px">
+                                    <a data-toggle="tooltip" data-placement="top" data-original-title="English" href="#">
+                                        <img style="width: 30px; height: 30px" src="{{asset('images/united-kingdom.png')}}">
+                                    </a>
+                                </li>
                             </ul>
                         </nav>
                     </div>

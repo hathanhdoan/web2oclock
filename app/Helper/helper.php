@@ -1,4 +1,6 @@
 <?php
+use Illuminate\Support\Facades\Mail;
+
 function normalizing($owner_row = null){
     $array_filter = array_filter($owner_row,function($rating){
         return $rating != '-';
@@ -34,4 +36,53 @@ function calculateDistance($destinations = '', $origin = ''){
     var_dump($weather);
 
     curl_close($curl);
+}
+function sendEmail($data = [])
+{
+    try {
+        $data['from'] = config('mail.from.address');
+        if (isset($data['cc']) && !empty($data['cc'])) {
+            Mail::send($data['view'], $data['information'], function ($messages) use ($data) {
+                $messages->from($data['from'], config('mail.from.name'));
+                $messages->to($data['to'])
+                    ->bcc($data['cc'])
+                    ->subject($data['subject']);
+            });
+        } else {
+            Mail::send($data['view'], $data['information'], function ($messages) use ($data) {
+                $messages->from($data['from'], config('mail.from.name'));
+                $messages->to($data['to'])
+                    ->subject($data['subject']);
+            });
+        }
+        return [
+            'success' => true,
+            'message' => __('please_check_email_at', ['email' => $data['to']])
+        ];
+    } catch (\Exception $exception) {
+
+        return [
+            'success' => false,
+            'message' => $exception->getMessage(),
+        ];
+    }
+
+}
+if (!function_exists('_trans')) {
+    /**
+     * Translate the given message.
+     *
+     * @param string|null $key
+     * @param array $replace
+     * @param string|null $locale
+     * @return string|array|null
+     */
+    function _trans($default = null, $key = null, $replace = [], $locale = null)
+    {
+        if (is_null($key)) {
+            return $default;
+        }
+
+        return trans($key, $replace, $locale);
+    }
 }

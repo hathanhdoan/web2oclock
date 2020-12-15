@@ -29,5 +29,9 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
-
+    'google' => [
+        'client_id' => '134243171665-dk78i1urlusb58h9pvoln513s7lavnqs.apps.googleusercontent.com',
+        'client_secret' => '42GhZh8WCF5tzULSRrFfU2Nq',
+        'redirect' => 'http://dev.toang.com/auth/google/callback',
+    ],
 ];
