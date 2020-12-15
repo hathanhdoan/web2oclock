@@ -317,7 +317,7 @@
 @yield('script')
 </body>
 <script>
-    $.holdReady(true);
+    // $.holdReady(true);
     axios.defaults.timeout = 1200000;
     var navbarNav = new objectMain('#main');
 

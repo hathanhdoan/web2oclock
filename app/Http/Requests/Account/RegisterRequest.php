@@ -30,7 +30,7 @@ class RegisterRequest extends FormRequest
     {
         return [
             'email' => 'bail|required|email|unique:customers',
-//            'password' =>'bail|required|min:6'
+            'password' =>'bail|required|min:6'
         ];
     }
 
@@ -41,7 +41,7 @@ class RegisterRequest extends FormRequest
             'email.email' => __('email_is_invalid_formart'),
             'email.unique' => __('email_is_exist'),
             'password.required' => __('is_required',['name'=>'password']),
-//            'password.min' => __('password_must_be_at_least',['number'=>'6']),
+            'password.min' => __('password_must_be_at_least',['number'=>'6']),
         ];
     }
 

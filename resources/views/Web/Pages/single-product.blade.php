@@ -311,7 +311,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="my-card mt-25 rating-card">
+                        <div class="my-card mt-25 rating-card" style="box-shadow: 0px 0px 10px 0px #4285f4 !important;">
                             <div>
                                 <p style="color: black!important; text-align: center; font-size: initial"><b>45 </b>người
                                     dùng đã chia sẻ</p>
@@ -319,10 +319,10 @@
                             <hr style="margin: 10px 0px">
                             <div class="row">
                                 <div class="col-6" style="padding-right: 5px !important; text-align: right">
-                                    <p class="point_rating_detail">25</p>
-                                    <p class="point_rating_detail">7</p>
-                                    <p class="point_rating_detail">7</p>
-                                    <p class="point_rating_detail">2</p>
+                                    <p style="color: green" class="point_rating_detail">25</p>
+                                    <p style="color: red" class="point_rating_detail">7</p>
+                                    <p style="color: blue" class="point_rating_detail">7</p>
+                                    <p style="color: purple"  class="point_rating_detail">2</p>
                                 </div>
                                 <div class="col-6" style=" padding-left: 5px !important; text-align: left">
                                     <p>Tuyệt vời</p>

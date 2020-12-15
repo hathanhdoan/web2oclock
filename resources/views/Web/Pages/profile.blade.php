@@ -94,6 +94,56 @@
                         <div class="row" style="padding: 5px">
                             <img class="avatar" src="images/Screenshot_50.png">
                             <div style="margin-left: 10px">
+                                <p style="margin-bottom: 0px">Ban đã tạo nhà hàng <b>TEXAS CHICKEN</b> vào lúc <b>12/01/2021
+                                        10:00:51</b></p>
+                                <a href="#">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="history-card">
+                        <div class="row" style="padding: 5px">
+                            <img class="avatar" src="images/Screenshot_50.png">
+                            <div style="margin-left: 10px">
+                                <p style="margin-bottom: 0px">Ban đã tạo nhà hàng <b>TEXAS CHICKEN</b> vào lúc <b>12/01/2021
+                                        10:00:51</b></p>
+                                <a href="#">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="history-card">
+                        <div class="row" style="padding: 5px">
+                            <img class="avatar" src="images/Screenshot_50.png">
+                            <div style="margin-left: 10px">
+                                <p style="margin-bottom: 0px">Ban đã tạo nhà hàng <b>TEXAS CHICKEN</b> vào lúc <b>12/01/2021
+                                        10:00:51</b></p>
+                                <a href="#">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="history-card">
+                        <div class="row" style="padding: 5px">
+                            <img class="avatar" src="images/Screenshot_50.png">
+                            <div style="margin-left: 10px">
+                                <p style="margin-bottom: 0px">Ban đã tạo nhà hàng <b>TEXAS CHICKEN</b> vào lúc <b>12/01/2021
+                                        10:00:51</b></p>
+                                <a href="#">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="history-card">
+                        <div class="row" style="padding: 5px">
+                            <img class="avatar" src="images/Screenshot_50.png">
+                            <div style="margin-left: 10px">
+                                <p style="margin-bottom: 0px">Ban đã tạo nhà hàng <b>TEXAS CHICKEN</b> vào lúc <b>12/01/2021
+                                        10:00:51</b></p>
+                                <a href="#">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="history-card">
+                        <div class="row" style="padding: 5px">
+                            <img class="avatar" src="images/Screenshot_50.png">
+                            <div style="margin-left: 10px">
                                 <p style="margin-bottom: 0px">Ban đã lưu <b>TEXAS CHICKEN</b> vào lúc <b>12/01/2021
                                         10:00:51</b></p>
                                 <a href="#">Xem chi tiết</a>

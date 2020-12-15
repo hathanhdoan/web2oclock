@@ -22,10 +22,9 @@ class AccountController extends Controller
     public function register(RegisterRequest $request)
     {
         $data = $request->all();
-        $data['Email'] = $data['email'];
         $data['CreateAt'] = $data['UpdateAt'] = time();
         $data['Status'] = 'publish';
-        $data['Password'] = Hash::make($data['password']);
+        $data['password'] = Hash::make($data['password']);
 
         $customer = Customer::create($data);
 

@@ -18,9 +18,14 @@ Route::get('/test', function (){
     return view('test');
 });
 
+Route::get('/login', function () {
+    return view('Web.Account.login');
+});
+
 Route::get('/', function () {
     return view('Web.index');
 });
+
 Route::get('/single-product', function () {
     return view('Web.Pages.single-product');
 });
