@@ -23,7 +23,7 @@
                     <div class="login-form-group">
                         <button id="btn-login" type="submit" class="btn btn-primary">Đăng nhập</button>
 
-                        <button class="loginBtn loginBtn--google ">
+                        <button id="btn-login-gg" class="loginBtn loginBtn--google ">
                             Login with Google
                         </button>
                     </div>
@@ -82,6 +82,9 @@
             });
             $("#btn-login").click(function () {
                 loginObj.login()
+            });
+            $("#btn-login-gg").click(function () {
+                window.location.href = 'auth/google'
             });
         });
         function initial(){

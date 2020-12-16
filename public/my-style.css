@@ -636,3 +636,9 @@ ul.menu-sidebar-custom li:hover {
 .error {
     color: red;
 }
+.show-elm {
+    display: block;
+}
+.hide-elm {
+    display: none ;
+}

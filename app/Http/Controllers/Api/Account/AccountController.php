@@ -276,7 +276,7 @@ class AccountController extends Controller
                 $finduser = Customer::where('email', $customer->email)->first();
                 if (!$finduser) {
                     $finduser = Customer::create([
-                        'Username' => $customer->name,
+                        'DisplayName' => $customer->name,
                         'email' => $customer->email,
                         'Google_Id' => $customer->id,
                         'Status' => 'publish',

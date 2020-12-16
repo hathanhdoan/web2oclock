@@ -321,82 +321,28 @@
 @yield('script')
 </body>
 <script>
-    // $.holdReady(true);
-    axios.defaults.timeout = 1200000;
-    var navbarNav = new objectMain('#main');
+    function App(){
+        this.initial = function (){
+            var user = localStorage.getItem('user');
+            if(user){
+                user = JSON.parse(user);
+                var avatar = user['Avatar'] ? user['Avatar'] : 'images/menu/logo/avatar.jpg'
+                var name = user['DisplayName'] ? user['DisplayName'] : user['email'];
+                $('#avatar').attr('src',avatar);
+                $('#display-name').text(name);
+                $('#login-info').removeClass('hide-elm');
 
-    function objectMain(element) {
-        if (!$(element).length) {
-            return;
-        }
-        var timeout = null;
-        // Vue.config.devtools = true;
-        this.vm = new Vue({
-            el: element,
-            data: {
-                // loading: false,
-                // api_logout: $(element).attr('api-logout'),
-                // token: '',
-                // count_cart: 0,
-                // user: JSON.parse(localStorage.getItem('user'))
-            },
-            methods: {
-                showMenuLeft:function (){
-                    let is_hidden = $('#menu-left-panel').attr('is-hidden');
-                    if(is_hidden == 'yes'){
-                        $('#menu-left-panel').css('visibility','unset');
-                        $('.card-menu-left').css('visibility','unset');
-                        $('#menu-left-panel').attr('is-hidden','no')
-                    }else {
-                        $('.card-menu-left').css('visibility','hidden');
-                        $('#menu-left-panel').css('visibility','hidden !i');
-                        $('#menu-left-panel').attr('is-hidden','yes')
-                    }
-
-                }
-                // getLocal:function(){
-                //     $.get("https://ipinfo.io/json", function (response) {
-                //         if(response.hasOwnProperty('country')){
-                //             localStorage.setItem('location',JSON.stringify(response))
-                //         }
-                //     }, "jsonp");
-                // },
-                // logout: function () {
-                //     var vm = this;
-                //     vm.loading = true;
-                //     if (!localStorage.getItem("token") || !localStorage.getItem("user")) {
-                //         window.location = '/login';
-                //     }
-                //     var token = 'Bearer ' + localStorage.getItem('token').replace(/['"]+/g, '');
-                //     this.token = token;
-                //     var config = {
-                //         headers: {
-                //             Authorization: this.token,
-                //             'Content-Type': 'application/json;charset=UTF-8',
-                //         }
-                //     };
-                //     axios.get(vm.api_logout, config).then(function (response) {
-                //         vm.loading = false;
-                //         var data = response.data;
-                //         localStorage.removeItem('user');
-                //         localStorage.removeItem('token');
-                //         if (localStorage.getItem('expiresIn')) {
-                //             localStorage.removeItem('expiresIn');
-                //             localStorage.removeItem('login_time');
-                //         }
-                //         window.location = '/login';
-                //     })
-                //
-                // }
-            },
-            created: function () {
-                console.log(222);
-            },
-            mounted: function () {
-                $(document).trigger('vue-loaded');
+            }else{
+                $('#btn-login-index').removeClass('hide-elm');
             }
-        });
+        }
+        return this;
     }
+    $(document).ready(function (){
+        $(document).trigger('vue-loaded');
+        var app = new App();
+        app.initial();
+    });
 </script>
 <!-- index30:23-->
 </html>
