@@ -25,40 +25,41 @@
                         <ul class="hm-menu">
                             <!-- Begin Header Middle Wishlist Area -->
                             <li class="hm-wishlist">
-                                <a  data-toggle="tooltip" data-placement="top" title="Tạo địa điểm " href="wishlist.html">
+                                <a style="border-radius: 55px" data-toggle="tooltip" data-placement="top" title="Tạo địa điểm " href="wishlist.html">
                                     <i class="fas fa-plus"></i>
                                 </a>
                             </li>
                             <!-- Header Middle Wishlist Area End Here -->
                             <!-- Begin Header Mini Cart Area -->
-                            <li class="hm-minicart">
-                                <div class="hm-minicart-trigger">
-                                    <div class="item-icon"><img id="avatar" src="{{asset('images/menu/logo/avatar.jpg')}}"></div>
-                                    <span class="item-text">Đoàn &nbsp;<i class="fas fa-angle-down"></i></span>
-                                </div>
-                                <span></span>
-                                <div class="minicart">
-                                    <ul class="minicart-product-list">
-                                        <li>
-                                            <div class="minicart-product-details">
-                                                <h6><a href="single-product.html"><i style="color: blue" class="icon-menu-user fas fa-chalkboard-teacher"></i>Hồ sơ cá nhân</a></h6>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="minicart-product-details">
-                                                <h6><a href="single-product.html"><i style="color: greenyellow" class="icon-menu-user far fa-calendar-minus"></i>Hoạt động cá nhân</a></h6>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class="minicart-button">
-                                        <a href="shopping-cart.html" class="li-button li-button-fullwidth li-button-red">
-                                            <span>Đăng xuất</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </li>
+{{--                            <li class="hm-minicart">--}}
+{{--                                <div class="hm-minicart-trigger">--}}
+{{--                                    <div class="item-icon"><img id="avatar" src="{{asset('images/menu/logo/avatar.jpg')}}"></div>--}}
+{{--                                    <span class="item-text">Đoàn &nbsp;<i class="fas fa-angle-down"></i></span>--}}
+{{--                                </div>--}}
+{{--                                <span></span>--}}
+{{--                                <div class="minicart">--}}
+{{--                                    <ul class="minicart-product-list">--}}
+{{--                                        <li>--}}
+{{--                                            <div class="minicart-product-details">--}}
+{{--                                                <h6><a href="single-product.html"><i style="color: blue" class="icon-menu-user fas fa-chalkboard-teacher"></i>Hồ sơ cá nhân</a></h6>--}}
+{{--                                            </div>--}}
+{{--                                        </li>--}}
+{{--                                        <li>--}}
+{{--                                            <div class="minicart-product-details">--}}
+{{--                                                <h6><a href="single-product.html"><i style="color: greenyellow" class="icon-menu-user far fa-calendar-minus"></i>Hoạt động cá nhân</a></h6>--}}
+{{--                                            </div>--}}
+{{--                                        </li>--}}
+{{--                                    </ul>--}}
+{{--                                    <div class="minicart-button">--}}
+{{--                                        <a href="shopping-cart.html" class="li-button li-button-fullwidth li-button-red">--}}
+{{--                                            <span>Đăng xuất</span>--}}
+{{--                                        </a>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </li>--}}
                             <!-- Header Mini Cart Area End Here -->
                         </ul>
+                        <button class="btn btn-primary">Đăng nhâp</button>
                     </div>
                     <!-- Header Middle Right Area End Here -->
                 </div>
@@ -112,3 +113,6 @@
     </div>
     <!-- Mobile Menu Area End Here -->
 </header>
+@section('script')
+
+@endsection

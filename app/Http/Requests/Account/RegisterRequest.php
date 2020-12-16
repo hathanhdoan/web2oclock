@@ -53,9 +53,10 @@ class RegisterRequest extends FormRequest
             $message[] = $errors[$key][0];
         }
         throw new HttpResponseException(response()->json([
-            'error' => true,
-            'message' => $message,
+            'status'=>  200,
+            'message' => $message[0],
+            'data' =>[],
+            'success' => false,
         ], 200));
-
     }
 }

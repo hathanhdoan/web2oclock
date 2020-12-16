@@ -40,3 +40,5 @@ Route::get('/new-res', function () {
 Route::get('/more-res', function () {
     return view('Web.Pages.more-res');
 });
+Route::get('auth/google', 'Api\Account\AccountController@redirectToGoogle');
+Route::get('auth/google/callback', 'Api\Account\AccountController@handleGoogleCallback');

@@ -9,6 +9,7 @@
 <![endif]-->
 <!-- Begin Body Wrapper -->
 <div class="body-wrapper" id="main">
+
     <!-- Begin Header Area -->
     @include('Web.Layout.menu-top')
     {{--    Menu Left--}}
@@ -45,6 +46,9 @@
     <!-- Li's Trendding Products Area End Here -->
     <!-- Begin Footer Area -->
     @include('Web.Layout.footer')
+    <div class="system_message">
+        <div class="title"></div>
+    </div>
     <!-- Footer Area End Here -->
     <!-- Begin Quick View | Modal Area -->
     <div class="modal fade modal-wrapper" id="exampleModalCenter" >

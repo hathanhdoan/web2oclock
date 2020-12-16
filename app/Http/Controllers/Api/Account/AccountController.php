@@ -35,7 +35,7 @@ class AccountController extends Controller
             'data' => $customer
         ], 200);
     }
-    public function login(Request $request)
+    public function login(LoginRequest $request)
     {
         $credentials = $request->only('email', 'password');
 //        return $credentials;
@@ -270,29 +270,21 @@ class AccountController extends Controller
 
     public function handleGoogleCallback()
     {
-        $this->setGoogleAuthConfig();
         try {
             $customer = Socialite::driver('google')->user();
             if (isset($customer->email)) {
                 $finduser = Customer::where('email', $customer->email)->first();
                 if (!$finduser) {
                     $finduser = Customer::create([
-                        'name' => $customer->name,
+                        'Username' => $customer->name,
                         'email' => $customer->email,
-                        'avatar' => [
-                            'css' => '',
-                            'url' => ''
-                        ],
-                        'google_id' => $customer->id,
-                        'status' => 'publish'
+                        'Google_Id' => $customer->id,
+                        'Status' => 'publish',
+                        'CreateAt' => time(),
+                        'UpdateAt' => time(),
                     ]);
                 }
                 if ($finduser['email']) {
-                    $group = Group::where('customer_id', $finduser['_id'])->first();
-                    if (!$group) {
-                        Account::createDefaultGroup($finduser['_id']);
-                    }
-
                     $jwt_token = Auth::guard('api')->login($finduser);
                     $data_login_google = [
                         'token' => $jwt_token,

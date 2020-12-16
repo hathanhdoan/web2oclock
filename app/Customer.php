@@ -25,7 +25,8 @@ class Customer extends Model implements
     protected $fillable = [
         'Avatar',
         'DisplayName',
-        'DisplayName',
+        'Username',
+        'Google_Id',
         'Status',
         'email',
         'password',
@@ -40,7 +41,7 @@ class Customer extends Model implements
         'password','token'
     ];
 
-    public $timestamps = true;
+    public $timestamps = false;
 
 
     public function getJWTIdentifier()
