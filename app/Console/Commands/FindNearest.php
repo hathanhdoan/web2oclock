@@ -38,6 +38,8 @@ class FindNearest extends Command
      */
     public function handle()
     {
+        echo route('api.res.nearest');
+        exit();
         $a =['red','blue','yellow','black'];
         print_r(array_slice($a, 9, 2));
         exit();
