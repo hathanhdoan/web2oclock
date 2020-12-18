@@ -1035,7 +1035,7 @@
                     </div>
                     <div class="product-container">
                         <div class="row">
-                            <div  >
+                            <div>
                                 <section>
                                     <div class="card booking-card" style="max-width: 22rem;">
                                         <div class="view overlay"><img
@@ -1043,7 +1043,8 @@
                                                 alt="Card image cap" class="card-img-top"> <a href="#!">
                                                 <div class="mask rgba-white-slight waves-effect waves-light"></div>
                                             </a></div>
-                                        <div class="card-body"><h4 class="card-title font-weight-bold"><a>Texas Chicken</a>
+                                        <div class="card-body"><h4 class="card-title font-weight-bold"><a>Texas
+                                                    Chicken</a>
                                             </h4>
                                             <ul class="list-unstyled list-inline rating mb-0">
                                                 <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
@@ -1054,18 +1055,20 @@
                                                 </li>
                                                 <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
                                                 </li>
-                                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                <li class="list-inline-item"><i
+                                                        class="fas fa-star-half-alt amber-text"></i>
                                                 </li>
                                                 <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
                                             </ul>
-                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
+                                                Trâm,
                                                 quận....</a>
                                             <p class="card-text"></p>
                                         </div>
                                     </div>
                                 </section>
                             </div>
-                            <div  >
+                            <div>
                                 <section>
                                     <div class="card booking-card" style="max-width: 22rem;">
                                         <div class="view overlay"><img
@@ -1073,7 +1076,8 @@
                                                 alt="Card image cap" class="card-img-top"> <a href="#!">
                                                 <div class="mask rgba-white-slight waves-effect waves-light"></div>
                                             </a></div>
-                                        <div class="card-body"><h4 class="card-title font-weight-bold"><a>Texas Chicken</a>
+                                        <div class="card-body"><h4 class="card-title font-weight-bold"><a>Texas
+                                                    Chicken</a>
                                             </h4>
                                             <ul class="list-unstyled list-inline rating mb-0">
                                                 <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
@@ -1084,18 +1088,20 @@
                                                 </li>
                                                 <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
                                                 </li>
-                                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                <li class="list-inline-item"><i
+                                                        class="fas fa-star-half-alt amber-text"></i>
                                                 </li>
                                                 <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
                                             </ul>
-                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
+                                                Trâm,
                                                 quận....</a>
                                             <p class="card-text"></p>
                                         </div>
                                     </div>
                                 </section>
                             </div>
-                            <div  >
+                            <div>
                                 <section>
                                     <div class="card booking-card" style="max-width: 22rem;">
                                         <div class="view overlay"><img
@@ -1103,7 +1109,8 @@
                                                 alt="Card image cap" class="card-img-top"> <a href="#!">
                                                 <div class="mask rgba-white-slight waves-effect waves-light"></div>
                                             </a></div>
-                                        <div class="card-body"><h4 class="card-title font-weight-bold"><a>Texas Chicken</a>
+                                        <div class="card-body"><h4 class="card-title font-weight-bold"><a>Texas
+                                                    Chicken</a>
                                             </h4>
                                             <ul class="list-unstyled list-inline rating mb-0">
                                                 <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
@@ -1114,18 +1121,20 @@
                                                 </li>
                                                 <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
                                                 </li>
-                                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                <li class="list-inline-item"><i
+                                                        class="fas fa-star-half-alt amber-text"></i>
                                                 </li>
                                                 <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
                                             </ul>
-                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
+                                                Trâm,
                                                 quận....</a>
                                             <p class="card-text"></p>
                                         </div>
                                     </div>
                                 </section>
                             </div>
-                            <div  >
+                            <div>
                                 <section>
                                     <div class="card booking-card" style="max-width: 22rem;">
                                         <div class="view overlay"><img
@@ -1133,7 +1142,8 @@
                                                 alt="Card image cap" class="card-img-top"> <a href="#!">
                                                 <div class="mask rgba-white-slight waves-effect waves-light"></div>
                                             </a></div>
-                                        <div class="card-body"><h4 class="card-title font-weight-bold"><a>Texas Chicken</a>
+                                        <div class="card-body"><h4 class="card-title font-weight-bold"><a>Texas
+                                                    Chicken</a>
                                             </h4>
                                             <ul class="list-unstyled list-inline rating mb-0">
                                                 <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
@@ -1144,11 +1154,13 @@
                                                 </li>
                                                 <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
                                                 </li>
-                                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                <li class="list-inline-item"><i
+                                                        class="fas fa-star-half-alt amber-text"></i>
                                                 </li>
                                                 <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
                                             </ul>
-                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
+                                                Trâm,
                                                 quận....</a>
                                             <p class="card-text"></p>
                                         </div>
@@ -2183,7 +2195,8 @@
                                                 alt="Card image cap" class="card-img-top"> <a href="#!">
                                                 <div class="mask rgba-white-slight waves-effect waves-light"></div>
                                             </a></div>
-                                        <div class="card-body"><h4 class="card-title font-weight-bold"><a>Texas Chicken</a>
+                                        <div class="card-body"><h4 class="card-title font-weight-bold"><a>Texas
+                                                    Chicken</a>
                                             </h4>
                                             <ul class="list-unstyled list-inline rating mb-0">
                                                 <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
@@ -2194,18 +2207,20 @@
                                                 </li>
                                                 <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
                                                 </li>
-                                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                <li class="list-inline-item"><i
+                                                        class="fas fa-star-half-alt amber-text"></i>
                                                 </li>
                                                 <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
                                             </ul>
-                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
+                                                Trâm,
                                                 quận....</a>
                                             <p class="card-text"></p>
                                         </div>
                                     </div>
                                 </section>
                             </div>
-                            <div  >
+                            <div>
                                 <section>
                                     <div class="card booking-card" style="max-width: 22rem;">
                                         <div class="view overlay"><img
@@ -2213,7 +2228,8 @@
                                                 alt="Card image cap" class="card-img-top"> <a href="#!">
                                                 <div class="mask rgba-white-slight waves-effect waves-light"></div>
                                             </a></div>
-                                        <div class="card-body"><h4 class="card-title font-weight-bold"><a>Texas Chicken</a>
+                                        <div class="card-body"><h4 class="card-title font-weight-bold"><a>Texas
+                                                    Chicken</a>
                                             </h4>
                                             <ul class="list-unstyled list-inline rating mb-0">
                                                 <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
@@ -2224,18 +2240,20 @@
                                                 </li>
                                                 <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
                                                 </li>
-                                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                <li class="list-inline-item"><i
+                                                        class="fas fa-star-half-alt amber-text"></i>
                                                 </li>
                                                 <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
                                             </ul>
-                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
+                                                Trâm,
                                                 quận....</a>
                                             <p class="card-text"></p>
                                         </div>
                                     </div>
                                 </section>
                             </div>
-                            <div  >
+                            <div>
                                 <section>
                                     <div class="card booking-card" style="max-width: 22rem;">
                                         <div class="view overlay"><img
@@ -2243,7 +2261,8 @@
                                                 alt="Card image cap" class="card-img-top"> <a href="#!">
                                                 <div class="mask rgba-white-slight waves-effect waves-light"></div>
                                             </a></div>
-                                        <div class="card-body"><h4 class="card-title font-weight-bold"><a>Texas Chicken</a>
+                                        <div class="card-body"><h4 class="card-title font-weight-bold"><a>Texas
+                                                    Chicken</a>
                                             </h4>
                                             <ul class="list-unstyled list-inline rating mb-0">
                                                 <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
@@ -2254,18 +2273,20 @@
                                                 </li>
                                                 <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
                                                 </li>
-                                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                <li class="list-inline-item"><i
+                                                        class="fas fa-star-half-alt amber-text"></i>
                                                 </li>
                                                 <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
                                             </ul>
-                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
+                                                Trâm,
                                                 quận....</a>
                                             <p class="card-text"></p>
                                         </div>
                                     </div>
                                 </section>
                             </div>
-                            <div  >
+                            <div>
                                 <section>
                                     <div class="card booking-card" style="max-width: 22rem;">
                                         <div class="view overlay"><img
@@ -2273,7 +2294,8 @@
                                                 alt="Card image cap" class="card-img-top"> <a href="#!">
                                                 <div class="mask rgba-white-slight waves-effect waves-light"></div>
                                             </a></div>
-                                        <div class="card-body"><h4 class="card-title font-weight-bold"><a>Texas Chicken</a>
+                                        <div class="card-body"><h4 class="card-title font-weight-bold"><a>Texas
+                                                    Chicken</a>
                                             </h4>
                                             <ul class="list-unstyled list-inline rating mb-0">
                                                 <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
@@ -2284,18 +2306,20 @@
                                                 </li>
                                                 <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
                                                 </li>
-                                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                <li class="list-inline-item"><i
+                                                        class="fas fa-star-half-alt amber-text"></i>
                                                 </li>
                                                 <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
                                             </ul>
-                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
+                                                Trâm,
                                                 quận....</a>
                                             <p class="card-text"></p>
                                         </div>
                                     </div>
                                 </section>
                             </div>
-                            <div  >
+                            <div>
                                 <section>
                                     <div class="card booking-card" style="max-width: 22rem;">
                                         <div class="view overlay"><img
@@ -2303,7 +2327,8 @@
                                                 alt="Card image cap" class="card-img-top"> <a href="#!">
                                                 <div class="mask rgba-white-slight waves-effect waves-light"></div>
                                             </a></div>
-                                        <div class="card-body"><h4 class="card-title font-weight-bold"><a>Texas Chicken</a>
+                                        <div class="card-body"><h4 class="card-title font-weight-bold"><a>Texas
+                                                    Chicken</a>
                                             </h4>
                                             <ul class="list-unstyled list-inline rating mb-0">
                                                 <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
@@ -2314,11 +2339,13 @@
                                                 </li>
                                                 <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
                                                 </li>
-                                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                <li class="list-inline-item"><i
+                                                        class="fas fa-star-half-alt amber-text"></i>
                                                 </li>
                                                 <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
                                             </ul>
-                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
+                                                Trâm,
                                                 quận....</a>
                                             <p class="card-text"></p>
                                         </div>
@@ -2334,39 +2361,63 @@
         </div>
     </section>
 
-{{--    <div id="map" style="overflow: hidden;height: 275px;max-width: 1135px; margin-top: 150px;margin: auto;--}}
-{{--    border-radius: 10px;"></div>--}}
+    {{--    <div id="map" style="overflow: hidden;height: 275px;max-width: 1135px; margin-top: 150px;margin: auto;--}}
+    {{--    border-radius: 10px;"></div>--}}
 @endsection
 @section('script')
     <script>
-        function getLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
-            } else {
-                console.log("Geolocation is not supported by this browser.");
-            }
-        }
-
-        function showPosition(position) {
-            console.log('hehe');
-            console.log('Lat: '+ position.coords.latitude+ ' Lng: '+ position.coords.longitude);
-        }
-        function IndexObj(){
+        // function getLocation() {
+        //     if (navigator.geolocation) {
+        //         console.log('HERE');
+        //         navigator.geolocation.getCurrentPosition(showPosition);
+        //     } else {
+        //         console.log("Geolocation is not supported by this browser.");
+        //     }
+        // }
+        //
+        // function showPosition(position) {
+        //     console.log('hehe');
+        //     console.log('Lat: '+ position.coords.latitude+ ' Lng: '+ position.coords.longitude);
+        // }
+        function IndexObj() {
+            this.Latitude = '';
+            this.Longitude = '';
             this.api_get_nearest = $('#index-obj').attr('api-get-nearest');
-            this.getLocation = function (){
-                if (navigator.geolocation){
-                    navigator.geolocation.getCurrentPosition(showPosition);
+
+            this.showPosition = function (position) {
+                console.log('Lat: ' + position.coords.latitude + ' Lng: ' + position.coords.longitude);
+                this.Latitude = position.coords.latitude;
+                this.Longitude = position.coords.longitude;
+            }
+            this.getLocation = function () {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(this.showPosition);
                 }
             }
             return this;
         }
-        $(document).ready(function (){
+
+        $(document).ready(function () {
             var indexObj = new IndexObj();
             indexObj.getLocation();
         })
 
     </script>
     <script>
+        function createElement(name, text = '', css_string = null, attr_list = null) {
+            var elm = document.createElement(name);
+            elm.textContent = text
+            if (css_string) {
+                elm.style.cssText = css_string;
+            }
+            if (attr_list) {
+                for (var attribute in attr_list) {
+                    elm.setAttribute(attribute, attr_list[attribute]);
+                }
+            }
+            return elm;
+        }
+
         var customLabel = {
             restaurant: {
                 label: ''
@@ -2377,68 +2428,151 @@
         };
 
         function initMap() {
-            var map = new google.maps.Map(document.getElementById('map'), {
-                center: new google.maps.LatLng(10.8139, 106.717),
-                zoom: 12
-            });
-            var infoWindow = new google.maps.InfoWindow;
+            if (navigator.geolocation) {
+                console.log('HEHEHE');
+                navigator.geolocation.getCurrentPosition(function (position){
+                    console.log('Lat: '+ position.coords.latitude+ ' Lng: '+ position.coords.longitude);
+                    $.ajax({
+                        method: 'POST',
+                        data: {
+                            user_location: {
+                                Latitude : position.coords.latitude,
+                                Longitude: position.coords.longitude
+                            }
+                        },
+                        url : $('#index-obj').attr('api-get-nearest');
+                    }).done(function (data){
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            center: new google.maps.LatLng(10.8139, 106.717),
+                            // center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+                            zoom: 12
+                        });
+                        var infoWindow = new google.maps.InfoWindow;
 
-            // Change this depending on the name of your PHP or XML file
-            downloadUrl('ggmap.xml', function (data) {
-                var xml = data.responseXML;
-                console.log(xml);
-                var markers = xml.documentElement.getElementsByTagName('marker');
-                Array.prototype.forEach.call(markers, function (markerElem) {
-                    var id = markerElem.getAttribute('id');
-                    var name = markerElem.getAttribute('name');
-                    var address = markerElem.getAttribute('address');
-                    var type = markerElem.getAttribute('type');
-                    var point = new google.maps.LatLng(
-                        parseFloat(markerElem.getAttribute('lat')),
-                        parseFloat(markerElem.getAttribute('lng')));
+                        // Change this depending on the name of your PHP or XML file
+                        var res_list = [
+                            {
+                                "id": "640",
+                                "name": "Cháo Vịt Thanh Đa (Gốc Nhà Lá) - Bình Quới",
+                                "address": "118 Bình Qưới, P. 27, Quận Bình Thạnh, TP. HCM",
+                                "lat": "10.8139",
+                                "lng": "106.717",
+                                "type": "restaurant"
+                            },
+                            {
+                                id: "643",
+                                name: "Buffet Atrium Cafe - Lotte Legend Saigon Hotel",
+                                address: "2A - 4A Tôn Đức Thắng, P. Bến Nghé, Quận 1, Quận 1, TP. HCM",
+                                lat: "10.7782",
+                                lng: "106.707",
+                                type: "restaurant"
+                            },
+                            {
+                                id: "687",
+                                name: "Buffet Thanh Niên",
+                                address: "11 Nguyễn Văn Chiêm, Quận 1, TP. HCM",
+                                lat: "10.7817",
+                                lng: "106.699",
+                                type: "restaurant",
+                            },
+                            {
+                                id: "1024",
+                                name: "Tuệ Mẫn Cafe - Êm Đềm Một Không Gian",
+                                address: "452 Cây Trâm, P.9, Quận Gò Vấp, TP. HCM",
+                                lat: "10.8437",
+                                lng: "106.648",
+                                type: "restaurant"
+                            },
+                            {
+                                id: "1043",
+                                name: "Khu Ăn Vặt An Dương Vương",
+                                address: "An Dương Vương , Quận 5, TP. HCM",
+                                lat: "10.7607",
+                                lng: "106.682",
+                                type: "restaurant"
+                            },
+                            {
+                                id: "1256",
+                                name: "Đất Cafe - Phong Cách Nhà Vườn",
+                                address: "343/5 Tô Hiến Thành, P. 12, Quận 10, TP. HCM",
+                                lat: "10.7764",
+                                lng: "106.665",
+                                type: "restaurant"
+                            },
+                            {
+                                id: "1259",
+                                name: "Khúc Mùa Thu Cafe",
+                                address: "22/3 Đường Số 21, P. 8, Quận Gò Vấp, TP. HCM",
+                                lat: "10.8407",
+                                lng: "106.651",
+                                type: "restaurant"
+                            },
+                            {
+                                id: "1393",
+                                name: "Bánh Canh Cua Hoàng Lan - Vĩnh Viễn",
+                                address: "484 Vĩnh Viễn, Quận 10, TP. HCM",
+                                lat: "10.7633",
+                                lng: "106.665",
+                                type: "restaurant"
+                            },
+                            {
+                                id: "1399",
+                                name: "Pasha - Ẩm Thực Thổ Nhĩ Kỳ",
+                                address: "25 Đông Du, P. Bến Nghé, Quận 1, TP. HCM",
+                                lat: "10.7761",
+                                lng: "106.705",
+                                type: "restaurant",
+                            },
+                            {
+                                id: "1422", name: "Quán Ăn Chay Thuyền Viên - Nguyễn Văn Đậu",
+                                address: "11 - 13 Nguyễn Văn Đậu, P. 5, Quận Phú Nhuận, TP. HCM", lat: "10.8044", lng: "106.687",
+                                type: "restaurant"
+                            }
+                        ];
+                        Array.prototype.forEach.call(res_list, function (res) {
+                            var id = res['id'];
+                            var name = res['name'];
+                            var address = res['address'];
+                            var type = 'restaurant';
+                            var point = new google.maps.LatLng(
+                                parseFloat(res['lat']),
+                                parseFloat(res['lng']));
 
-                    var infowincontent = document.createElement('div');
-                    var strong = document.createElement('strong');
-                    strong.textContent = name
-                    infowincontent.appendChild(strong);
-                    infowincontent.appendChild(document.createElement('br'));
+                            var infowincontent = document.createElement('div');
+                            var res_name = createElement('a', name, null, {
+                                'id': 'res_name_gg_map',
+                                'href': '#',
+                                'target': '_blank'
+                            });
+                            infowincontent.appendChild(res_name);
+                            infowincontent.appendChild(document.createElement('br'));
 
-                    var text = document.createElement('text');
-                    text.textContent = address
-                    infowincontent.appendChild(text);
-                    var icon = customLabel[type] || {};
-                    var marker = new google.maps.Marker({
-                        map: map,
-                        position: point,
-                        label: icon.label
-                    });
-                    marker.addListener('click', function () {
-                        infoWindow.setContent(infowincontent);
-                        infoWindow.open(map, marker);
-                    });
+                            var text = createElement('text', address, null, null, null);
+                            infowincontent.appendChild(text);
+                            infowincontent.appendChild(document.createElement('br'));
+
+                            var time_label = createElement('strong', 'Giờ mở cửa: ', 'font-style:italic', null);
+                            infowincontent.appendChild(time_label);
+
+                            var time = createElement('text', '5:00 -16h:00', 'color:green; font-weight:bold', null);
+                            infowincontent.appendChild(time);
+                            var icon = customLabel[type] || {};
+                            var marker = new google.maps.Marker({
+                                map: map,
+                                position: point,
+                                label: icon.label
+                            });
+                            marker.addListener('click', function () {
+                                infoWindow.setContent(infowincontent);
+                                infoWindow.open(map, marker);
+                            });
+                        });
+                    })
+
                 });
-            });
+            }
         }
 
-
-        function downloadUrl(url, callback) {
-            var request = window.ActiveXObject ?
-                new ActiveXObject('Microsoft.XMLHTTP') :
-                new XMLHttpRequest;
-
-            request.onreadystatechange = function () {
-                if (request.readyState == 4) {
-                    request.onreadystatechange = doNothing;
-                    callback(request, request.status);
-                }
-            };
-
-            request.open('GET', url, true);
-            request.send(null);
-        }
-
-        function doNothing() {
-        }
     </script>
     <script defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzlVX517mZWArHv4Dt3_JVG0aPmbSE5mE&callback=initMap">

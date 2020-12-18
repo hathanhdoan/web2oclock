@@ -43,10 +43,6 @@ class RestaurantController extends Controller
        foreach ($res as $key=>$value) {
            $res[$key]['distance'] = haversine($user_location, $value);
        }
-//        $to_location = [
-//            'Latitude' => 10.771514330164717,
-//            'Longitude' => 106.72660190495338
-//        ];
        usort($res,function ($a, $b){
            if ($a['distance'] == $b['distance']) {
                return 0;

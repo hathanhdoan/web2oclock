@@ -642,3 +642,16 @@ ul.menu-sidebar-custom li:hover {
 .hide-elm {
     display: none ;
 }
+#res_name_gg_map {
+    font-size: 1.1em!important;
+    font-weight: bold;
+    color: black!important;
+}
+#res_name_gg_map:hover {
+
+    color: blue!important;
+}
+#time_gg_map {
+    color: green !important;
+    font-weight: bold;
+}

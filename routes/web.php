@@ -18,7 +18,7 @@ Route::group(['middleware'=>'locale'],function (){
     });
     Route::get('/create-xml', 'CreateXmlController@create');
     Route::get('/test', function (){
-        return view('test');
+        return view('Web.Pages.test');
     });
 
     Route::get('/login', function () {
