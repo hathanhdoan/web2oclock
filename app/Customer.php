@@ -22,6 +22,9 @@ class Customer extends Model implements
     use Authenticatable, Authorizable, CanResetPassword;
 
     protected $collection = "customers";
+    protected $primaryKey = 'Id';
+    public $incrementing = true;
+
     protected $fillable = [
         'Avatar',
         'DisplayName',

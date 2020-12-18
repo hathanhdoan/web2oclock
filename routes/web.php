@@ -12,33 +12,38 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(['middleware'=>'locale'],function (){
+    Route::group(['namespace'=>'Web'],function (){
+        Route::get('change-language/{language}', 'WebController@changeLanguage')->name('user.change-language');
+    });
+    Route::get('/create-xml', 'CreateXmlController@create');
+    Route::get('/test', function (){
+        return view('Web.Pages.test');
+    });
 
-Route::get('/create-xml', 'CreateXmlController@create');
-Route::get('/test', function (){
-    return view('test');
+    Route::get('/login', function () {
+        return view('Web.Account.login');
+    });
+
+    Route::get('/', function () {
+        return view('Web.index');
+    });
+
+    Route::get('/single-product', function () {
+        return view('Web.Pages.single-product');
+    });
+
+    Route::get('/profile', function () {
+        return view('Web.Pages.profile');
+    });
+
+    Route::get('/new-res', function () {
+        return view('Web.Pages.new-res');
+    });
+    Route::get('/more-res', function () {
+        return view('Web.Pages.more-res');
+    });
 });
 
-Route::get('/login', function () {
-    return view('Web.Account.login');
-});
-
-Route::get('/', function () {
-    return view('Web.index');
-});
-
-Route::get('/single-product', function () {
-    return view('Web.Pages.single-product');
-});
-
-Route::get('/profile', function () {
-    return view('Web.Pages.profile');
-});
-
-Route::get('/new-res', function () {
-    return view('Web.Pages.new-res');
-});
-Route::get('/more-res', function () {
-    return view('Web.Pages.more-res');
-});
 Route::get('auth/google', 'Api\Account\AccountController@redirectToGoogle');
 Route::get('auth/google/callback', 'Api\Account\AccountController@handleGoogleCallback');

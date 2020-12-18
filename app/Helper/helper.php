@@ -86,3 +86,20 @@ if (!function_exists('_trans')) {
         return trans($key, $replace, $locale);
     }
 }
+function haversine($from_location, $to_location ){
+    $earthRadius = 6371000;
+    $lat1 = deg2rad($from_location['Latitude']);
+    $lon1 = deg2rad($from_location['Longitude']);
+    $lat2 = deg2rad($to_location['Latitude']);
+    $lon2 = deg2rad($to_location['Longitude']);
+
+    $delta_lat = $lat2 - $lat1;
+    $delta_lng = $lon2 - $lon1;
+
+    $hav_lat = (sin($delta_lat / 2))**2;
+    $hav_lng = (sin($delta_lng / 2))**2;
+
+    $distance = 2 * asin(sqrt($hav_lat + cos($lat1) * cos($lat2) * $hav_lng));
+    $distance = ($distance * $earthRadius)/1000;
+    return round($distance,3);
+}
