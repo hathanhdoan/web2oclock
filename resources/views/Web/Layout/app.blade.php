@@ -8,7 +8,7 @@
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 <!-- Begin Body Wrapper -->
-<div class="body-wrapper" id="main">
+<div class="body-wrapper" id="app" api-logout="{{route('api.account.logout')}}">
 
     <!-- Begin Header Area -->
     @include('Web.Layout.menu-top')
@@ -322,6 +322,28 @@
 </body>
 <script>
     function App(){
+        this.api_logout = $('#app').attr('api-logout');
+
+        this.logout = function (){
+            var token = localStorage.getItem('token');
+            $.ajax({
+                method: "GET",
+                headers : {
+                    "Authorization" : "Bearer " + token
+                },
+                url : this.api_logout
+            }).done(function (data,error){
+                if(data.success){
+                    localStorage.removeItem('user');
+                    localStorage.removeItem('token');
+                    window.location.href = '/login'
+                }else{
+                    helper.showNotification(data.message,'danger');
+                }
+            }).fail(function (data){
+                helper.showNotification(data.responseJSON.message, 'danger');
+            });
+        }
         this.initial = function (){
             var user = localStorage.getItem('user');
             if(user){
@@ -342,6 +364,12 @@
         $(document).trigger('vue-loaded');
         var app = new App();
         app.initial();
+        $('#btn-logout').click(function (){
+            app.logout();
+        });
+        $('#btn-login-index').click(function (){
+            window.location.href = 'login';
+        });
     });
 </script>
 <!-- index30:23-->

@@ -50,8 +50,8 @@
                                             </div>
                                         </li>
                                     </ul>
-                                    <div class="minicart-button">
-                                        <a href="shopping-cart.html" class="li-button li-button-fullwidth li-button-red">
+                                    <div class="minicart-button" id="btn-logout">
+                                        <a class="li-button li-button-fullwidth li-button-red">
                                             <span>Đăng xuất</span>
                                         </a>
                                     </div>
@@ -59,7 +59,7 @@
                             </li>
                             <!-- Header Mini Cart Area End Here -->
                         </ul>
-                        <button class="btn btn-primary  hide-elm" id="btn-login-index">Đăng nhâp</button>
+                        <button class="btn btn-primary hide-elm" id="btn-login-index">Đăng nhâp</button>
                     </div>
                     <!-- Header Middle Right Area End Here -->
                 </div>
@@ -78,18 +78,18 @@
                         <nav>
                             <ul>
                                 <li><a href="index.html">Đề xuất</a></li>
-                                <li><a href="index.html">Gần nhất</a></li>
+                                <li><a href="index.html">{{__('nearest')}}</a></li>
                                 <li><a href="shop-left-sidebar.html">Đã lưu</a>
                                 </li>
                                 <li><a href="blog-left-sidebar.html">Mới nhất</a>
                                 </li>
                                 <li style="position: absolute;right: 40px; top: 2px">
-                                    <a data-toggle="tooltip" data-placement="top" data-original-title="Việt Nam" href="#">
+                                    <a data-toggle="tooltip" data-placement="top" data-original-title="Việt Nam" href="{!! route('user.change-language', ['vi']) !!}">
                                         <img style="width: 34px; height: 34px" src="{{asset('images/vietnam.png')}}">
                                     </a>
                                 </li>
                                 <li style="position: absolute;right: 0px; top: 4px">
-                                    <a data-toggle="tooltip" data-placement="top" data-original-title="English" href="#">
+                                    <a data-toggle="tooltip" data-placement="top" data-original-title="English" href="{!! route('user.change-language', ['en']) !!}">
                                         <img style="width: 30px; height: 30px" src="{{asset('images/united-kingdom.png')}}">
                                     </a>
                                 </li>

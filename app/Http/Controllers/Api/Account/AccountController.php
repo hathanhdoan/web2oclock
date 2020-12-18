@@ -7,10 +7,12 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Account\ChangePasswordRequest;
 use App\Http\Requests\Account\LoginRequest;
 use App\Http\Requests\Account\RegisterRequest;
+use App\Restaurant;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Laravel\Socialite\Facades\Socialite;
@@ -141,6 +143,7 @@ class AccountController extends Controller
     public function sendResetPasswordMail(Request $request)
     {
         try {
+            DB::beginTransaction();
             if (!isset($request->email)) {
                 return response()->json([
                     'status' => 200,
@@ -150,7 +153,6 @@ class AccountController extends Controller
                 ]);
             }
             $customer = Customer::where('email', $request->email)->first();
-//        $setting = Setting::where('type', 'admin')->first();
 
             if (!$customer) {
                 return response()->json([
@@ -160,14 +162,11 @@ class AccountController extends Controller
                     'success' => false
                 ]);
             }
-            $token = Str::random(60) . time();
-            $customerUpdate = $customer->update(['token' => $token]);
-            $url = '/reset-password/?token=' . $token;
+            $new_password = Str::random(6);
+            $customer->update(['password' => Hash::make($new_password)]);
             $data = [];
-            $data['url'] = $url;
             $data['view'] = 'Mail.resetPasswordMail';
             $data['subject'] = '2OCLOCK- RESET PASSWORD';
-            $data['from'] = env('MAIL_USERNAME', 'hathanhdoan98@gmail.com');
 //            $data['from'] = $setting['setting']['mail_username'];
 //            $data['to'] = $request->email;
             $data['to'] = 'thanhdoan1411998@gmail.com';
@@ -175,10 +174,11 @@ class AccountController extends Controller
 //            $data['bcc'] = [];
 //            $sendMail = sendEmail('thanhdoan1411998@gmail.com', $data);
             $data['information'] = [
-                'url' => $url,
+                'password' => $new_password,
             ];
             $sendMail = sendEmail($data);
             if($sendMail['success']){
+                DB::commit();
                 return response()->json([
                     'status' => 200,
                     'data' => [],
@@ -186,13 +186,15 @@ class AccountController extends Controller
                     'success' => true
                 ]);
             }
+            DB::rollBack();
             return response()->json([
                 'status' => 200,
                 'data' => [],
-                'message' => __('fail'),
+                'message' => $sendMail['message'],
                 'success' => false
             ]);
         } catch (\Exception $e) {
+            DB::rollBack();
             return response()->json([
                 'status' => 200,
                 'data' => [],

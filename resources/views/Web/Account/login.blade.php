@@ -1,6 +1,7 @@
 @extends('Web.Layout.app')
 @section('content')
-    <div class="row" id="loginObj" api-login="{{route('api.account.login')}}" data-login-google = "{{$data_login_google ?? null}}">
+    <div class="row" id="loginObj" api-login="{{route('api.account.login')}}"
+         data-login-google = "{{$data_login_google ?? null}}">
         <div class="col-md-6">
             <img id="img-login" style="width: 100%" src="{{asset('images/background/hihihi-1.jpg')}}">
         </div>
@@ -41,7 +42,7 @@
         function LoginObject() {
             this.email = $('#txb-email').val();
             this.password = $('#txb-password').val();
-            var api_login = $('#loginObj').attr('api-login');
+            this.api_login = $('#loginObj').attr('api-login');
 
             this.login = function () {
                 $.ajax({
@@ -50,7 +51,7 @@
                         email : this.email,
                         password : this.password
                     },
-                    url:  api_login,
+                    url:  this.api_login,
                 })
                     .done(function (data) {
                         if(data.success){
@@ -62,6 +63,7 @@
                         }
                     });
             };
+
             this.setEmail = function (val){
                 this.email = val;
             }

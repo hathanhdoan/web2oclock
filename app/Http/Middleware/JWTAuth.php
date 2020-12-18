@@ -45,9 +45,9 @@ class JWTAuth
             $apy = Auth::guard('api')->getPayload($token)->toArray();
             return $next($request);
         } catch (TokenExpiredException $e) {
-            return response()->json(['error' => true, 'message' => __('token_is_expired'), 'status' => 401], 401);
+            return response()->json(['success' => false, 'message' => __('token_is_expired'), 'status' => 401], 401);
         } catch (\Exception $exception) {
-            return response()->json(['error' => true, 'message' => __('token_is_invalid'), 'status' => 401], 401);
+            return response()->json(['success' => false, 'message' => __('token_is_invalid'), 'status' => 401], 401);
         }
 
     }

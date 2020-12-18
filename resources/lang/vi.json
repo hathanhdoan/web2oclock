@@ -77,6 +77,8 @@
 
     "coupon_invalid": "Mã khuyến mãi không hợp lệ",
 
-    "coupon_limit": "Mã khuyễn mãi đã hết lượt sử dụng"
+    "coupon_limit": "Mã khuyễn mãi đã hết lượt sử dụng",
+
+    "nearest" : "Gần nhất"
 
 }

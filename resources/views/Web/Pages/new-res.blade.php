@@ -41,13 +41,13 @@
                     </div>
                     <div class="col-md-6">
                         <div>
-                            <label for="Latitude">Kinh độ</label>
+                            <label for="Latitude">Vĩ độ</label>
                             <input id="Latitude" name="Latitude" type="text" disabled="true" class="form-control">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div>
-                            <label for="Longitude">Vĩ độ</label>
+                            <label for="Longitude">Kinh độ</label>
                             <input id="Longitude" name="Longitude" type="text" disabled="true" class="form-control">
                         </div>
                     </div>

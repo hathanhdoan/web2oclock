@@ -2,7 +2,8 @@
 @section('content')
     <!-- Header Area End Here -->
     <!-- Begin Slider With Banner Area -->
-    <div class="slider-with-banner">
+    <button onclick="getLocation()">Try It</button>
+    <div id="index-obj" class="slider-with-banner" api-get-nearest="{{route('api.res.nearest')}}">
         <div class="container">
             <div class="row">
                 <!-- Begin Slider Area -->
@@ -2338,6 +2339,34 @@
 @endsection
 @section('script')
     <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                console.log("Geolocation is not supported by this browser.");
+            }
+        }
+
+        function showPosition(position) {
+            console.log('hehe');
+            console.log('Lat: '+ position.coords.latitude+ ' Lng: '+ position.coords.longitude);
+        }
+        function IndexObj(){
+            this.api_get_nearest = $('#index-obj').attr('api-get-nearest');
+            this.getLocation = function (){
+                if (navigator.geolocation){
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                }
+            }
+            return this;
+        }
+        $(document).ready(function (){
+            var indexObj = new IndexObj();
+            indexObj.getLocation();
+        })
+
+    </script>
+    <script>
         var customLabel = {
             restaurant: {
                 label: ''
@@ -2414,5 +2443,4 @@
     <script defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzlVX517mZWArHv4Dt3_JVG0aPmbSE5mE&callback=initMap">
     </script>
-
 @endsection
