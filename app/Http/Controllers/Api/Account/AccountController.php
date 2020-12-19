@@ -143,6 +143,12 @@ class AccountController extends Controller
     public function sendResetPasswordMail(Request $request)
     {
         try {
+            if(!isset($request->email)){
+                return [
+                    'message' => __('email_is_incorrect'),
+                    'success' =>false
+                ];
+            }
             DB::beginTransaction();
             if (!isset($request->email)) {
                 return response()->json([
@@ -163,13 +169,12 @@ class AccountController extends Controller
                 ]);
             }
             $new_password = Str::random(6);
-            $customer->update(['password' => Hash::make($new_password)]);
             $data = [];
             $data['view'] = 'Mail.resetPasswordMail';
             $data['subject'] = '2OCLOCK- RESET PASSWORD';
 //            $data['from'] = $setting['setting']['mail_username'];
 //            $data['to'] = $request->email;
-            $data['to'] = 'thanhdoan1411998@gmail.com';
+            $data['to'] = $request->email;
 //            $data['cc'] = [];
 //            $data['bcc'] = [];
 //            $sendMail = sendEmail('thanhdoan1411998@gmail.com', $data);
@@ -178,6 +183,10 @@ class AccountController extends Controller
             ];
             $sendMail = sendEmail($data);
             if($sendMail['success']){
+                $customer->update([
+                    'password' => Hash::make($new_password),
+                    'IsVerified' => 1
+                    ]);
                 DB::commit();
                 return response()->json([
                     'status' => 200,
