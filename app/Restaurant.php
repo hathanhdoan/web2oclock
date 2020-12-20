@@ -10,6 +10,20 @@ class Restaurant extends Model
     protected $primaryKey = 'Id';
     public $incrementing = true;
     public $timestamps = false;
-    protected $fillable = ['name', 'address'];
+    protected $fillable = [
+        'name',
+        'Address',
+        'AvgRating',
+        'Description',
+        'Distance',
+        'IsOpening',
+        'Latitude',
+        'Longitude',
+        'Name',
+        'Status',
+    ];
 
+    public function restaurantDetail(){
+        return $this->hasMany('App\RestaurantDetail','res_id','Id');
+    }
 }

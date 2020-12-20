@@ -47,17 +47,19 @@ class Crawl extends Command
             $res = Restaurant::get(['Id','Url'])->toArray();
             $category = Category::where('status','publish')->get()->keyBy('name')->toArray();
             $crawl = new Foody();
-
             $data_insert = [];
 //            $rs = $crawl->scrape( $res[150]['Url']);
 //            echo "<pre>";
-//             print_r($value = $rs);
+//             print_r($value = $res[0]);
 //            echo "</pre>";
 //            exit();
-            foreach ($res as $key=>$v ){
-                echo_now($key);
+//            foreach ($res as $key=>$v ){
+//                echo_now($key);
+            $v= $res[0];
                 if(!empty($v['Url'])){
                     $rs = $crawl->scrape($v['Url']);
+                    print_r($rs) ;
+                    exit();
                     if(count($rs)>0){
                         $rs['category'] = explode(',',$rs['category'])['0'];
                         $data_insert[] = [
@@ -74,7 +76,8 @@ class Crawl extends Command
                     }
                 }
 
-            }
+//            }
+            return
             RestaurantDetail::insert($data_insert);
             echo 'success';
             DB::commit();

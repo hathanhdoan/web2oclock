@@ -2,7 +2,7 @@
 @section('content')
     <!-- Header Area End Here -->
     <!-- Begin Slider With Banner Area -->
-    <div id="index-obj" class="slider-with-banner" api-get-nearest="{{route('api.res.nearest')}}">
+    <div id="index-obj" class="slider-with-banner" api-get-nearest="{{route('api.res.nearest')}}" api-get-saved-res="{{route('api.res.saved')}}">
         <div class="container">
             <div class="row">
                 <!-- Begin Slider Area -->
@@ -1092,7 +1092,7 @@
             <div class="tab-content">
                 <div id="li-new-product" class="tab-pane active show" role="tabpanel">
                     <div class="row">
-                        <div class="recommend-product-active product-active owl-carousel">
+                        <div id="saved-res-list" class="recommend-product-active product-active owl-carousel">
                             <section>
 
                                 <!-- Card -->
@@ -1219,822 +1219,6 @@
                                 <!-- Card -->
 
                             </section>
-                            <section>
-
-                                <!-- Card -->
-                                <div class="card booking-card" style="max-width: 22rem;">
-
-                                    <!-- Card image -->
-                                    <div class="view overlay">
-                                        <img class="card-img-top"
-                                             src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg"
-                                             alt="Card image cap">
-                                        <a href="#!">
-                                            <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                        </a>
-                                    </div>
-
-                                    <!-- Card content -->
-                                    <div class="card-body">
-
-                                        <!-- Title -->
-                                        <h4 class="card-title font-weight-bold"><a>Texas Chicken</a></h4>
-                                        <!-- Data -->
-                                        <ul class="list-unstyled list-inline rating mb-0">
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i>
-                                            </li>
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
-                                        </ul>
-                                        <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
-                                            quận....</a>
-                                        <p class="card-text">Đoàn: Đồ ăn rất ngon, nên thử</p>
-                                        <!-- Text -->
-                                        <p class="card-text"></p>
-                                        <hr class="my-1">
-                                        <ul class="add-actions-link">
-                                            <li><a data-toggle="tooltip" data-placement="top" title="Lưu"
-                                                   class="links-details" href="wishlist.html">
-                                                    <i class="fa fa-bookmark"></i>
-                                                </a>
-                                            </li>
-                                            <li><a data-toggle="tooltip" data-placement="top" title="Thích"
-                                                   class="links-details" href="wishlist.html">
-                                                    <i class="fa fa-heart-o"></i>
-                                                </a>
-                                            </li>
-                                            <li><a data-toggle="tooltip" data-placement="top" title="Xem nhanh"
-                                                   class="links-details" href="wishlist.html">
-                                                    <i class="fa fa-eye"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-                                <!-- Card -->
-
-                            </section>
-                            <section>
-
-                                <!-- Card -->
-                                <div class="card booking-card" style="max-width: 22rem;">
-
-                                    <!-- Card image -->
-                                    <div class="view overlay">
-                                        <img class="card-img-top"
-                                             src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg"
-                                             alt="Card image cap">
-                                        <a href="#!">
-                                            <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                        </a>
-                                    </div>
-
-                                    <!-- Card content -->
-                                    <div class="card-body">
-
-                                        <!-- Title -->
-                                        <h4 class="card-title font-weight-bold"><a>Texas Chicken</a></h4>
-                                        <!-- Data -->
-                                        <ul class="list-unstyled list-inline rating mb-0">
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i>
-                                            </li>
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
-                                        </ul>
-                                        <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
-                                            quận....</a>
-                                        <p class="card-text">Đoàn: Đồ ăn rất ngon, nên thử</p>
-                                        <!-- Text -->
-                                        <p class="card-text"></p>
-                                        <hr class="my-1">
-                                        <ul class="add-actions-link">
-                                            <li><a data-toggle="tooltip" data-placement="top" title="Lưu"
-                                                   class="links-details" href="wishlist.html">
-                                                    <i class="fa fa-bookmark"></i>
-                                                </a>
-                                            </li>
-                                            <li><a data-toggle="tooltip" data-placement="top" title="Thích"
-                                                   class="links-details" href="wishlist.html">
-                                                    <i class="fa fa-heart-o"></i>
-                                                </a>
-                                            </li>
-                                            <li><a data-toggle="tooltip" data-placement="top" title="Xem nhanh"
-                                                   class="links-details" href="wishlist.html">
-                                                    <i class="fa fa-eye"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-                                <!-- Card -->
-
-                            </section>
-                            <section>
-
-                                <!-- Card -->
-                                <div class="card booking-card" style="max-width: 22rem;">
-
-                                    <!-- Card image -->
-                                    <div class="view overlay">
-                                        <img class="card-img-top"
-                                             src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg"
-                                             alt="Card image cap">
-                                        <a href="#!">
-                                            <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                        </a>
-                                    </div>
-
-                                    <!-- Card content -->
-                                    <div class="card-body">
-
-                                        <!-- Title -->
-                                        <h4 class="card-title font-weight-bold"><a>Texas Chicken</a></h4>
-                                        <!-- Data -->
-                                        <ul class="list-unstyled list-inline rating mb-0">
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i>
-                                            </li>
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
-                                        </ul>
-                                        <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
-                                            quận....</a>
-                                        <p class="card-text">Đoàn: Đồ ăn rất ngon, nên thử</p>
-                                        <!-- Text -->
-                                        <p class="card-text"></p>
-                                        <hr class="my-1">
-                                        <ul class="add-actions-link">
-                                            <li><a data-toggle="tooltip" data-placement="top" title="Lưu"
-                                                   class="links-details" href="wishlist.html">
-                                                    <i class="fa fa-bookmark"></i>
-                                                </a>
-                                            </li>
-                                            <li><a data-toggle="tooltip" data-placement="top" title="Thích"
-                                                   class="links-details" href="wishlist.html">
-                                                    <i class="fa fa-heart-o"></i>
-                                                </a>
-                                            </li>
-                                            <li><a data-toggle="tooltip" data-placement="top" title="Xem nhanh"
-                                                   class="links-details" href="wishlist.html">
-                                                    <i class="fa fa-eye"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-                                <!-- Card -->
-
-                            </section>
-                            <section>
-
-                                <!-- Card -->
-                                <div class="card booking-card" style="max-width: 22rem;">
-
-                                    <!-- Card image -->
-                                    <div class="view overlay">
-                                        <img class="card-img-top"
-                                             src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg"
-                                             alt="Card image cap">
-                                        <a href="#!">
-                                            <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                        </a>
-                                    </div>
-
-                                    <!-- Card content -->
-                                    <div class="card-body">
-
-                                        <!-- Title -->
-                                        <h4 class="card-title font-weight-bold"><a>Texas Chicken</a></h4>
-                                        <!-- Data -->
-                                        <ul class="list-unstyled list-inline rating mb-0">
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i>
-                                            </li>
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
-                                        </ul>
-                                        <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
-                                            quận....</a>
-                                        <p class="card-text">Đoàn: Đồ ăn rất ngon, nên thử</p>
-                                        <!-- Text -->
-                                        <p class="card-text"></p>
-                                        <hr class="my-1">
-                                        <ul class="add-actions-link">
-                                            <li><a data-toggle="tooltip" data-placement="top" title="Lưu"
-                                                   class="links-details" href="wishlist.html">
-                                                    <i class="fa fa-bookmark"></i>
-                                                </a>
-                                            </li>
-                                            <li><a data-toggle="tooltip" data-placement="top" title="Thích"
-                                                   class="links-details" href="wishlist.html">
-                                                    <i class="fa fa-heart-o"></i>
-                                                </a>
-                                            </li>
-                                            <li><a data-toggle="tooltip" data-placement="top" title="Xem nhanh"
-                                                   class="links-details" href="wishlist.html">
-                                                    <i class="fa fa-eye"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-                                <!-- Card -->
-
-                            </section>
-                        </div>
-                    </div>
-                </div>
-                <div id="li-bestseller-product" class="tab-pane" role="tabpanel">
-                    <div class="row">
-                        <div class="product-active owl-carousel">
-                            <div class="col-lg-12">
-                                <!-- single-product-wrap start -->
-                                <div class="single-product-wrap">
-                                    <div class="product-image">
-                                        <a href="single-product">
-                                            <img src="images/product/large-size/12.jpg" alt="Li's Product Image">
-                                        </a>
-                                        <span class="sticker">New</span>
-                                    </div>
-                                    <div class="product_desc">
-                                        <div class="product_desc_info">
-                                            <div class="product-review">
-                                                <h5 class="manufacturer">
-                                                    <a href="shop-left-sidebar.html">Graphic Corner</a>
-                                                </h5>
-                                                <div class="rating-box">
-                                                    <ul class="rating">
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                        <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <h4><a class="product_name" href="single-product">Accusantium dolorem1</a>
-                                            </h4>
-                                            <div class="price-box">
-                                                <span class="new-price">$46.80</span>
-                                            </div>
-                                        </div>
-                                        <div class="add-actions">
-                                            <ul class="add-actions-link">
-                                                <li class="add-cart active"><a href="#">Add to cart</a></li>
-                                                <li><a class="links-details" href="wishlist.html"><i
-                                                            class="fa fa-heart-o"></i></a></li>
-                                                <li><a href="#" title="quick view" class="quick-view-btn"
-                                                       data-toggle="modal" data-target="#exampleModalCenter"><i
-                                                            class="fa fa-eye"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- single-product-wrap end -->
-                            </div>
-                            <div class="col-lg-12">
-                                <!-- single-product-wrap start -->
-                                <div class="single-product-wrap">
-                                    <div class="product-image">
-                                        <a href="single-product">
-                                            <img src="images/product/large-size/11.jpg" alt="Li's Product Image">
-                                        </a>
-                                        <span class="sticker">New</span>
-                                    </div>
-                                    <div class="product_desc">
-                                        <div class="product_desc_info">
-                                            <div class="product-review">
-                                                <h5 class="manufacturer">
-                                                    <a href="shop-left-sidebar.html">Studio Design</a>
-                                                </h5>
-                                                <div class="rating-box">
-                                                    <ul class="rating">
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                        <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <h4><a class="product_name" href="single-product">Mug Today is a good
-                                                    day</a></h4>
-                                            <div class="price-box">
-                                                <span class="new-price new-price-2">$71.80</span>
-                                                <span class="old-price">$77.22</span>
-                                                <span class="discount-percentage">-7%</span>
-                                            </div>
-                                        </div>
-                                        <div class="add-actions">
-                                            <ul class="add-actions-link">
-                                                <li class="add-cart active"><a href="#">Add to cart</a></li>
-                                                <li><a class="links-details" href="wishlist.html"><i
-                                                            class="fa fa-heart-o"></i></a></li>
-                                                <li><a href="#" title="quick view" class="quick-view-btn"
-                                                       data-toggle="modal" data-target="#exampleModalCenter"><i
-                                                            class="fa fa-eye"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- single-product-wrap end -->
-                            </div>
-                            <div class="col-lg-12">
-                                <!-- single-product-wrap start -->
-                                <div class="single-product-wrap">
-                                    <div class="product-image">
-                                        <a href="single-product">
-                                            <img src="images/product/large-size/10.jpg" alt="Li's Product Image">
-                                        </a>
-                                        <span class="sticker">New</span>
-                                    </div>
-                                    <div class="product_desc">
-                                        <div class="product_desc_info">
-                                            <div class="product-review">
-                                                <h5 class="manufacturer">
-                                                    <a href="shop-left-sidebar.html">Graphic Corner</a>
-                                                </h5>
-                                                <div class="rating-box">
-                                                    <ul class="rating">
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                        <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <h4><a class="product_name" href="single-product">Accusantium dolorem1</a>
-                                            </h4>
-                                            <div class="price-box">
-                                                <span class="new-price">$46.80</span>
-                                            </div>
-                                        </div>
-                                        <div class="add-actions">
-                                            <ul class="add-actions-link">
-                                                <li class="add-cart active"><a href="#">Add to cart</a></li>
-                                                <li><a class="links-details" href="wishlist.html"><i
-                                                            class="fa fa-heart-o"></i></a></li>
-                                                <li><a href="#" title="quick view" class="quick-view-btn"
-                                                       data-toggle="modal" data-target="#exampleModalCenter"><i
-                                                            class="fa fa-eye"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- single-product-wrap end -->
-                            </div>
-                            <div class="col-lg-12">
-                                <!-- single-product-wrap start -->
-                                <div class="single-product-wrap">
-                                    <div class="product-image">
-                                        <a href="single-product">
-                                            <img src="images/product/large-size/9.jpg" alt="Li's Product Image">
-                                        </a>
-                                        <span class="sticker">New</span>
-                                    </div>
-                                    <div class="product_desc">
-                                        <div class="product_desc_info">
-                                            <div class="product-review">
-                                                <h5 class="manufacturer">
-                                                    <a href="shop-left-sidebar.html">Studio Design</a>
-                                                </h5>
-                                                <div class="rating-box">
-                                                    <ul class="rating">
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                        <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <h4><a class="product_name" href="single-product">Mug Today is a good
-                                                    day</a></h4>
-                                            <div class="price-box">
-                                                <span class="new-price new-price-2">$71.80</span>
-                                                <span class="old-price">$77.22</span>
-                                                <span class="discount-percentage">-7%</span>
-                                            </div>
-                                        </div>
-                                        <div class="add-actions">
-                                            <ul class="add-actions-link">
-                                                <li class="add-cart active"><a href="#">Add to cart</a></li>
-                                                <li><a class="links-details" href="wishlist.html"><i
-                                                            class="fa fa-heart-o"></i></a></li>
-                                                <li><a href="#" title="quick view" class="quick-view-btn"
-                                                       data-toggle="modal" data-target="#exampleModalCenter"><i
-                                                            class="fa fa-eye"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- single-product-wrap end -->
-                            </div>
-                            <div class="col-lg-12">
-                                <!-- single-product-wrap start -->
-                                <div class="single-product-wrap">
-                                    <div class="product-image">
-                                        <a href="single-product">
-                                            <img src="images/product/large-size/8.jpg" alt="Li's Product Image">
-                                        </a>
-                                        <span class="sticker">New</span>
-                                    </div>
-                                    <div class="product_desc">
-                                        <div class="product_desc_info">
-                                            <div class="product-review">
-                                                <h5 class="manufacturer">
-                                                    <a href="shop-left-sidebar.html">Graphic Corner</a>
-                                                </h5>
-                                                <div class="rating-box">
-                                                    <ul class="rating">
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                        <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <h4><a class="product_name" href="single-product">Accusantium dolorem1</a>
-                                            </h4>
-                                            <div class="price-box">
-                                                <span class="new-price">$46.80</span>
-                                            </div>
-                                        </div>
-                                        <div class="add-actions">
-                                            <ul class="add-actions-link">
-                                                <li class="add-cart active"><a href="#">Add to cart</a></li>
-                                                <li><a class="links-details" href="wishlist.html"><i
-                                                            class="fa fa-heart-o"></i></a></li>
-                                                <li><a href="#" title="quick view" class="quick-view-btn"
-                                                       data-toggle="modal" data-target="#exampleModalCenter"><i
-                                                            class="fa fa-eye"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- single-product-wrap end -->
-                            </div>
-                            <div class="col-lg-12">
-                                <!-- single-product-wrap start -->
-                                <div class="single-product-wrap">
-                                    <div class="product-image">
-                                        <a href="single-product">
-                                            <img src="images/product/large-size/7.jpg" alt="Li's Product Image">
-                                        </a>
-                                        <span class="sticker">New</span>
-                                    </div>
-                                    <div class="product_desc">
-                                        <div class="product_desc_info">
-                                            <div class="product-review">
-                                                <h5 class="manufacturer">
-                                                    <a href="shop-left-sidebar.html">Studio Design</a>
-                                                </h5>
-                                                <div class="rating-box">
-                                                    <ul class="rating">
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                        <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <h4><a class="product_name" href="single-product">Mug Today is a good
-                                                    day</a></h4>
-                                            <div class="price-box">
-                                                <span class="new-price new-price-2">$71.80</span>
-                                                <span class="old-price">$77.22</span>
-                                                <span class="discount-percentage">-7%</span>
-                                            </div>
-                                        </div>
-                                        <div class="add-actions">
-                                            <ul class="add-actions-link">
-                                                <li class="add-cart active"><a href="#">Add to cart</a></li>
-                                                <li><a class="links-details" href="wishlist.html"><i
-                                                            class="fa fa-heart-o"></i></a></li>
-                                                <li><a href="#" title="quick view" class="quick-view-btn"
-                                                       data-toggle="modal" data-target="#exampleModalCenter"><i
-                                                            class="fa fa-eye"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- single-product-wrap end -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="li-featured-product" class="tab-pane" role="tabpanel">
-                    <div class="row">
-                        <div class="product-active owl-carousel">
-                            <div class="col-lg-12">
-                                <!-- single-product-wrap start -->
-                                <div class="single-product-wrap">
-                                    <div class="product-image">
-                                        <a href="single-product">
-                                            <img src="images/product/large-size/3.jpg" alt="Li's Product Image">
-                                        </a>
-                                        <span class="sticker">New</span>
-                                    </div>
-                                    <div class="product_desc">
-                                        <div class="product_desc_info">
-                                            <div class="product-review">
-                                                <h5 class="manufacturer">
-                                                    <a href="shop-left-sidebar.html">Graphic Corner</a>
-                                                </h5>
-                                                <div class="rating-box">
-                                                    <ul class="rating">
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                        <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <h4><a class="product_name" href="single-product">Accusantium dolorem1</a>
-                                            </h4>
-                                            <div class="price-box">
-                                                <span class="new-price">$46.80</span>
-                                            </div>
-                                        </div>
-                                        <div class="add-actions">
-                                            <ul class="add-actions-link">
-                                                <li class="add-cart active"><a href="#">Add to cart</a></li>
-                                                <li><a class="links-details" href="wishlist.html"><i
-                                                            class="fa fa-heart-o"></i></a></li>
-                                                <li><a href="#" title="quick view" class="quick-view-btn"
-                                                       data-toggle="modal" data-target="#exampleModalCenter"><i
-                                                            class="fa fa-eye"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- single-product-wrap end -->
-                            </div>
-                            <div class="col-lg-12">
-                                <!-- single-product-wrap start -->
-                                <div class="single-product-wrap">
-                                    <div class="product-image">
-                                        <a href="single-product">
-                                            <img src="images/product/large-size/5.jpg" alt="Li's Product Image">
-                                        </a>
-                                        <span class="sticker">New</span>
-                                    </div>
-                                    <div class="product_desc">
-                                        <div class="product_desc_info">
-                                            <div class="product-review">
-                                                <h5 class="manufacturer">
-                                                    <a href="shop-left-sidebar.html">Studio Design</a>
-                                                </h5>
-                                                <div class="rating-box">
-                                                    <ul class="rating">
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                        <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <h4><a class="product_name" href="single-product">Mug Today is a good
-                                                    day</a></h4>
-                                            <div class="price-box">
-                                                <span class="new-price new-price-2">$71.80</span>
-                                                <span class="old-price">$77.22</span>
-                                                <span class="discount-percentage">-7%</span>
-                                            </div>
-                                        </div>
-                                        <div class="add-actions">
-                                            <ul class="add-actions-link">
-                                                <li class="add-cart active"><a href="#">Add to cart</a></li>
-                                                <li><a class="links-details" href="wishlist.html"><i
-                                                            class="fa fa-heart-o"></i></a></li>
-                                                <li><a href="#" title="quick view" class="quick-view-btn"
-                                                       data-toggle="modal" data-target="#exampleModalCenter"><i
-                                                            class="fa fa-eye"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- single-product-wrap end -->
-                            </div>
-                            <div class="col-lg-12">
-                                <!-- single-product-wrap start -->
-                                <div class="single-product-wrap">
-                                    <div class="product-image">
-                                        <a href="single-product">
-                                            <img src="images/product/large-size/7.jpg" alt="Li's Product Image">
-                                        </a>
-                                        <span class="sticker">New</span>
-                                    </div>
-                                    <div class="product_desc">
-                                        <div class="product_desc_info">
-                                            <div class="product-review">
-                                                <h5 class="manufacturer">
-                                                    <a href="shop-left-sidebar.html">Graphic Corner</a>
-                                                </h5>
-                                                <div class="rating-box">
-                                                    <ul class="rating">
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                        <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <h4><a class="product_name" href="single-product">Accusantium dolorem1</a>
-                                            </h4>
-                                            <div class="price-box">
-                                                <span class="new-price">$46.80</span>
-                                            </div>
-                                        </div>
-                                        <div class="add-actions">
-                                            <ul class="add-actions-link">
-                                                <li class="add-cart active"><a href="#">Add to cart</a></li>
-                                                <li><a class="links-details" href="wishlist.html"><i
-                                                            class="fa fa-heart-o"></i></a></li>
-                                                <li><a href="#" title="quick view" class="quick-view-btn"
-                                                       data-toggle="modal" data-target="#exampleModalCenter"><i
-                                                            class="fa fa-eye"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- single-product-wrap end -->
-                            </div>
-                            <div class="col-lg-12">
-                                <!-- single-product-wrap start -->
-                                <div class="single-product-wrap">
-                                    <div class="product-image">
-                                        <a href="single-product">
-                                            <img src="images/product/large-size/9.jpg" alt="Li's Product Image">
-                                        </a>
-                                        <span class="sticker">New</span>
-                                    </div>
-                                    <div class="product_desc">
-                                        <div class="product_desc_info">
-                                            <div class="product-review">
-                                                <h5 class="manufacturer">
-                                                    <a href="shop-left-sidebar.html">Studio Design</a>
-                                                </h5>
-                                                <div class="rating-box">
-                                                    <ul class="rating">
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                        <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <h4><a class="product_name" href="single-product">Mug Today is a good
-                                                    day</a></h4>
-                                            <div class="price-box">
-                                                <span class="new-price new-price-2">$71.80</span>
-                                                <span class="old-price">$77.22</span>
-                                                <span class="discount-percentage">-7%</span>
-                                            </div>
-                                        </div>
-                                        <div class="add-actions">
-                                            <ul class="add-actions-link">
-                                                <li class="add-cart active"><a href="#">Add to cart</a></li>
-                                                <li><a class="links-details" href="wishlist.html"><i
-                                                            class="fa fa-heart-o"></i></a></li>
-                                                <li><a href="#" title="quick view" class="quick-view-btn"
-                                                       data-toggle="modal" data-target="#exampleModalCenter"><i
-                                                            class="fa fa-eye"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- single-product-wrap end -->
-                            </div>
-                            <div class="col-lg-12">
-                                <!-- single-product-wrap start -->
-                                <div class="single-product-wrap">
-                                    <div class="product-image">
-                                        <a href="single-product">
-                                            <img src="images/product/large-size/11.jpg" alt="Li's Product Image">
-                                        </a>
-                                        <span class="sticker">New</span>
-                                    </div>
-                                    <div class="product_desc">
-                                        <div class="product_desc_info">
-                                            <div class="product-review">
-                                                <h5 class="manufacturer">
-                                                    <a href="shop-left-sidebar.html">Graphic Corner</a>
-                                                </h5>
-                                                <div class="rating-box">
-                                                    <ul class="rating">
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                        <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <h4><a class="product_name" href="single-product">Accusantium dolorem1</a>
-                                            </h4>
-                                            <div class="price-box">
-                                                <span class="new-price">$46.80</span>
-                                            </div>
-                                        </div>
-                                        <div class="add-actions">
-                                            <ul class="add-actions-link">
-                                                <li class="add-cart active"><a href="#">Add to cart</a></li>
-                                                <li><a class="links-details" href="wishlist.html"><i
-                                                            class="fa fa-heart-o"></i></a></li>
-                                                <li><a href="#" title="quick view" class="quick-view-btn"
-                                                       data-toggle="modal" data-target="#exampleModalCenter"><i
-                                                            class="fa fa-eye"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- single-product-wrap end -->
-                            </div>
-                            <div class="col-lg-12">
-                                <!-- single-product-wrap start -->
-                                <div class="single-product-wrap">
-                                    <div class="product-image">
-                                        <a href="single-product">
-                                            <img src="images/product/large-size/12.jpg" alt="Li's Product Image">
-                                        </a>
-                                        <span class="sticker">New</span>
-                                    </div>
-                                    <div class="product_desc">
-                                        <div class="product_desc_info">
-                                            <div class="product-review">
-                                                <h5 class="manufacturer">
-                                                    <a href="shop-left-sidebar.html">Studio Design</a>
-                                                </h5>
-                                                <div class="rating-box">
-                                                    <ul class="rating">
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li><i class="fa fa-star-o"></i></li>
-                                                        <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                        <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <h4><a class="product_name" href="single-product">Mug Today is a good
-                                                    day</a></h4>
-                                            <div class="price-box">
-                                                <span class="new-price new-price-2">$71.80</span>
-                                                <span class="old-price">$77.22</span>
-                                                <span class="discount-percentage">-7%</span>
-                                            </div>
-                                        </div>
-                                        <div class="add-actions">
-                                            <ul class="add-actions-link">
-                                                <li class="add-cart active"><a href="#">Add to cart</a></li>
-                                                <li><a class="links-details" href="wishlist.html"><i
-                                                            class="fa fa-heart-o"></i></a></li>
-                                                <li><a href="#" title="quick view" class="quick-view-btn"
-                                                       data-toggle="modal" data-target="#exampleModalCenter"><i
-                                                            class="fa fa-eye"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- single-product-wrap end -->
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -2248,24 +1432,104 @@
         //     console.log('Lat: '+ position.coords.latitude+ ' Lng: '+ position.coords.longitude);
         // }
         function IndexObj() {
-            this.Latitude = '';
-            this.Longitude = '';
             this.api_get_nearest = $('#index-obj').attr('api-get-nearest');
+            this.api_get_saved_res = $('#index-obj').attr('api-get-saved-res');
 
-            this.showPosition = function (position) {
-                console.log('Lat: ' + position.coords.latitude + ' Lng: ' + position.coords.longitude);
-                this.Latitude = position.coords.latitude;
-                this.Longitude = position.coords.longitude;
-            }
-            this.getLocation = function () {
-                if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(this.showPosition);
-                }
+            this.get_saved_res = function (customer_id){
+                $.ajax({
+                    method: 'POST',
+                    data: {
+                        customer_id : customer_id
+                    },
+                    url : $('#index-obj').attr('api-get-saved-res')
+                }).done(function (data){
+
+                    var res_list = data.data;
+                    var xhtml = '';
+                    for(i in res_list ){
+                        if(i==10){
+                            break;
+                        }
+                        xhtml += '<section>\n' +
+                            '\n' +
+                            '                                <!-- Card -->\n' +
+                            '                                <div class="card booking-card" style="max-width: 22rem;">\n' +
+                            '\n' +
+                            '                                    <!-- Card image -->\n' +
+                            '                                    <div class="view overlay">\n' +
+                            '                                        <img class="card-img-top"\n' +
+                            '                                             src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg"\n' +
+                            '                                             alt="Card image cap">\n' +
+                            '                                        <a href="#!">\n' +
+                            '                                            <div class="mask rgba-white-slight waves-effect waves-light"></div>\n' +
+                            '                                        </a>\n' +
+                            '                                    </div>\n' +
+                            '\n' +
+                            '                                    <!-- Card content -->\n' +
+                            '                                    <div class="card-body">\n' +
+                            '\n' +
+                            '                                        <!-- Title -->\n' +
+                            '                                        <h4 class="card-title font-weight-bold"><a>Texas Chicken</a></h4>\n' +
+                            '                                        <!-- Data -->\n' +
+                            '                                        <ul class="list-unstyled list-inline rating mb-0">\n' +
+                            '                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i>\n' +
+                            '                                            </li>\n' +
+                            '                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>\n' +
+                            '                                            </li>\n' +
+                            '                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>\n' +
+                            '                                            </li>\n' +
+                            '                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>\n' +
+                            '                                            </li>\n' +
+                            '                                            <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>\n' +
+                            '                                            </li>\n' +
+                            '                                            <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>\n' +
+                            '                                        </ul>\n' +
+                            '                                        <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,\n' +
+                            '                                            quận....</a>\n' +
+                            '                                        <p class="card-text">Đoàn: Đồ ăn rất ngon, nên thử</p>\n' +
+                            '                                        <!-- Text -->\n' +
+                            '                                        <p class="card-text"></p>\n' +
+                            '                                        <hr class="my-1">\n' +
+                            '                                        <ul class="add-actions-link">\n' +
+                            '                                            <li><a data-toggle="tooltip" data-placement="top" title="Lưu"\n' +
+                            '                                                   class="links-details" href="wishlist.html">\n' +
+                            '                                                    <i class="fa fa-bookmark"></i>\n' +
+                            '                                                </a>\n' +
+                            '                                            </li>\n' +
+                            '                                            <li><a data-toggle="tooltip" data-placement="top" title="Thích"\n' +
+                            '                                                   class="links-details" href="wishlist.html">\n' +
+                            '                                                    <i class="fa fa-heart-o"></i>\n' +
+                            '                                                </a>\n' +
+                            '                                            </li>\n' +
+                            '                                            <li><a data-toggle="tooltip" data-placement="top" title="Xem nhanh"\n' +
+                            '                                                   class="links-details" href="wishlist.html">\n' +
+                            '                                                    <i class="fa fa-eye"></i>\n' +
+                            '                                                </a>\n' +
+                            '                                            </li>\n' +
+                            '                                        </ul>\n' +
+                            '                                    </div>\n' +
+                            '\n' +
+                            '                                </div>\n' +
+                            '                                <!-- Card -->\n' +
+                            '\n' +
+                            '                            </section>'
+                    }
+                    // console.log(xhtml);
+                    // $('#saved-res-list').html(xhtml);
+                })
             }
             return this;
         }
 
         $(document).ready(function () {
+            var indexObj = new IndexObj();
+            var user = localStorage.getItem('user');
+            if(user){
+                user = JSON.parse(user);
+                indexObj.get_saved_res(45);
+            }
+        })
+        function getNearest(){
             $.ajax({
                 method: 'POST',
                 data: {
@@ -2279,6 +1543,9 @@
                 var res_list = data.data;
                 var xhtml = '';
                 for(i in res_list ){
+                    if(i==5){
+                        break;
+                    }
                     xhtml += '<div>\n' +
                         '                                <section>\n' +
                         '                                    <div class="card booking-card" style="max-width: 22rem;">\n' +
@@ -2287,38 +1554,19 @@
                         '                                                alt="Card image cap" class="card-img-top"> <a href="#!">\n' +
                         '                                                <div class="mask rgba-white-slight waves-effect waves-light"></div>\n' +
                         '                                            </a></div>\n' +
-                        '                                        <div class="card-body"><p class="card-title font-weight-bold"><a>'+ (res_list[i]['Name']).slice(0,15)+'...</a>\n' +
+                        '                                        <div class="card-body"><p class="card-title font-weight-bold"><a>'+ (res_list[i]['Name']).slice(0,35)+'...</a>\n' +
                         '                                            </p>\n' +
-                        '                                            <ul class="list-unstyled list-inline rating mb-0">\n' +
-                        '                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>\n' +
-                        '                                                </li>\n' +
-                        '                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>\n' +
-                        '                                                </li>\n' +
-                        '                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>\n' +
-                        '                                                </li>\n' +
-                        '                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>\n' +
-                        '                                                </li>\n' +
-                        '                                                <li class="list-inline-item"><i\n' +
-                        '                                                        class="fas fa-star-half-alt amber-text"></i>\n' +
-                        '                                                </li>\n' +
-                        '                                                <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>\n' +
-                        '                                            </ul>\n' +
-                        '                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy\n' +
-                        '                                                Trâm,\n' +
-                        '                                                quận....</a>\n' +
+                        '                                            <p><i class="mr-10 fas fa-clock"></i><span>7:00 - 22:00</span></p>\n' +
+                        '                                            <a class="mb-2"><i class="mr-5 fas fa-map-marker-alt"></i>'+ res_list[i]['Address'].slice(0,40) +'...\n' +
                         '                                            <p class="card-text"></p>\n' +
                         '                                        </div>\n' +
                         '                                    </div>\n' +
                         '                                </section>\n' +
                         '                            </div>'
                 }
-                console.log(xhtml);
                 $('#nearest-list').html(xhtml);
             })
-            var indexObj = new IndexObj();
-            indexObj.getLocation();
-        })
-
+        }
     </script>
     <script>
         function createElement(name, text = '', css_string = null, attr_list = null) {

@@ -27,6 +27,7 @@ Route::group(['namespace' => 'Api'], function () {
         Route::put('/reset-password', 'AccountController@resetPassword')->name('api.account.reset_password');
     });
     Route::group(['namespace' => 'Restaurant', 'prefix' => 'res'], function () {
-        Route::post('/', 'RestaurantController@getNearestRes')->name('api.res.nearest');
+        Route::post('/get-nearest', 'RestaurantController@getNearestRes')->name('api.res.nearest');
+        Route::post('/get-saved-res', 'RestaurantController@getSavedRes')->name('api.res.saved');
     });
 });

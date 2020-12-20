@@ -7,8 +7,9 @@ Class Foody{
         $url = "https://www.foody.vn". $path;
         $client = new Client();
         $crawler = $client->request('GET',$url);
+//        return $crawler;
         $rs = [];
-
+        return  ($crawler->filter('div.img a img'));
         if(count($crawler->filter('div.res-common-add')->nodes)==0
         || count($crawler->filter('div.res-common-minmaxprice')->nodes)==0
         || count($crawler->filter('div.micro-timesopen')->nodes)==0){

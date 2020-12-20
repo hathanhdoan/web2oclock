@@ -74,7 +74,9 @@ b {
     -moz-box-shadow: -1px 1px 18px -10px rgba(0, 0, 0, 0.78);
     box-shadow: -1px 1px 18px -10px rgba(0, 0, 0, 0.78);
 }
-
+.booking-card {
+    height: 330px;
+}
 .my-card {
     -webkit-box-shadow: -1px 1px 18px -10px rgba(0, 0, 0, 0.78);
     -moz-box-shadow: -1px 1px 18px -10px rgba(0, 0, 0, 0.78);
@@ -113,10 +115,13 @@ b {
 }
 
 #menu-left-panel {
-    margin-left: 110px;
+    /*margin-left: 110px;*/
     z-index: 100;
     top : 45px;
     position: sticky;
+}
+.card-title {
+    font-size: initial;
 }
 @media (max-width: 800px) {
     #menu-left-panel {

@@ -25,7 +25,7 @@ class AccountController extends Controller
     {
         $data = $request->all();
         $data['CreateAt'] = $data['UpdateAt'] = time();
-        $data['Status'] = 'publish';
+        $data['Status'] = 1;
         $data['password'] = Hash::make($data['password']);
 
         $customer = Customer::create($data);
@@ -290,7 +290,7 @@ class AccountController extends Controller
                         'DisplayName' => $customer->name,
                         'email' => $customer->email,
                         'Google_Id' => $customer->id,
-                        'Status' => 'publish',
+                        'Status' => 1,
                         'CreateAt' => time(),
                         'UpdateAt' => time(),
                     ]);

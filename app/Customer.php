@@ -36,7 +36,8 @@ class Customer extends Model implements
         'Gender',
         'DateOfBirth',
         'CreateAt',
-        'UpdateAt'
+        'UpdateAt',
+        'SavedRes',
     ];
 
 
