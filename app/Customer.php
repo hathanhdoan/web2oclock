@@ -46,7 +46,9 @@ class Customer extends Model implements
     ];
 
     public $timestamps = false;
-
+    public function comments(){
+        return $this->hasMany('App\Comment','Owner_id','Id');
+    }
 
     public function getJWTIdentifier()
     {

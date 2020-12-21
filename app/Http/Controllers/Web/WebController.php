@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Web;
 
+use App\Comment;
 use App\Http\Controllers\Controller;
 use App\Restaurant;
 use App\RestaurantDetail;
@@ -30,8 +31,10 @@ class WebController extends Controller
         if(!$res){
             abort(404);
         }
+        $comments = Comment::where('ResId',$res['Id'])->with(['comment_pictures:CommentId,Url','customer:Id,DisplayName,Avatar'])->get();
         $args = [
-            'res' => $res
+            'res' => $res,
+            'comments' => $comments
         ];
         return view('Web.Pages.res-detail',$args);
     }

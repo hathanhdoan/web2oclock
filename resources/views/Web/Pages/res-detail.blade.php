@@ -126,41 +126,41 @@
                         </div>
                         <div id="reviews" class="tab-pane active show" role="tabpanel">
                             <div class="product-reviews">
+                                @foreach($comments as $comment)
                                 <div class="my-card comment-panel">
                                     <div class="comment-header">
                                         <div class="row">
                                             <div class="mt-10 mb-10 ml-20 mr-10">
-                                                <img class="avatar" src="/images/Screenshot_50.png">
+                                                <img class="avatar" src="{{$comment['customer']['Avatar'] ?? ''}}">
                                             </div>
                                             <div class="mt-10">
-                                                <p class="comment-user" style="margin-bottom: -5px !important;">Hà Thanh
-                                                    Đoàn</p>
-                                                <p class="comment-time">12/01/2021 10:20:21</p>
+                                                <p class="comment-user" style="margin-bottom: -5px !important;">{{$comment['customer']['DisplayName']}}</p>
+                                                <p class="comment-time">{{$comment['CreatedOnTimeDiff']}}</p>
                                             </div>
                                             <p class="rating-point">5</p>
                                         </div>
                                     </div>
                                     <div class="my-comment-body">
                                         <div class="comment-content">
-                                            <p style="color: black; margin-bottom: 0px !important;">sjflksd lkdsjfkl
-                                                jflksdkf jfklsdjf lsfjkdjl sjdflk
-                                                sjflksd lkdsjfkl jflksdkf jfklsdjf lsfjkdjl sjdflk
+                                            <p style="color: black; margin-bottom: 0px !important;">{{$comment['Description']}}
                                             </p>
                                             <a href="#">See more</a>
                                         </div>
                                         <div class="comment-picture">
                                             <div class="row" style="padding: 20px">
-                                                <div class="col-sm-4" style="text-align: center; padding: 2px !important; ">
-                                                    <img class="comment-image" style="text-align: center"
-                                                         src="/images/slider/foody-slider1.jpg">
-                                                </div>
-                                                <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
-                                                    <img class="comment-image" src="/images/slider/foody-slider1.jpg">
-                                                </div>
-                                                <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
-                                                    <p>+6</p>
-                                                    <img class="comment-image" src="/images/slider/foody-slider1.jpg">
-                                                </div>
+                                                @foreach($comment['comment_pictures'] as $key=>$pic)
+                                                    @if($key == 2 && count($comment['comment_pictures']) > 3)
+                                                        <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
+                                                            <p>+{{count($comment['comment_pictures']) - 3}}</p>
+                                                            <img class="comment-image last-comment-image" src="/images/slider/foody-slider1.jpg">
+                                                        </div>
+                                                        @break
+                                                    @endif
+                                                    <div class="col-sm-4" style="text-align: center; padding: 2px !important; ">
+                                                        <img class="comment-image" style="text-align: center"
+                                                             src="{{$pic['Url']}}">
+                                                    </div>
+                                                @endforeach
                                             </div>
                                         </div>
                                     </div>
@@ -224,86 +224,87 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="my-card comment-panel">
-                                    <div class="comment-header">
-                                        <div class="row">
-                                            <div class="mt-10 mb-10 ml-20 mr-10">
-                                                <img class="avatar" src="/images/Screenshot_50.png">
-                                            </div>
-                                            <div class="mt-10">
-                                                <p class="comment-user" style="margin-bottom: -5px !important;">Hà Thanh
-                                                    Đoàn</p>
-                                                <p class="comment-time">12/01/2021 10:20:21</p>
-                                            </div>
-                                            <p class="rating-point">5</p>
-                                        </div>
-                                    </div>
-                                    <div class="my-comment-body">
-                                        <div class="comment-content">
-                                            <p style="color: black; margin-bottom: 0px !important;">Quán phục vụ tốt Quán
-                                                phục vụ tốt </p>
-                                            <a href="#">See more</a>
-                                        </div>
-                                        <div class="comment-picture">
-                                            <div class="row" style="padding: 20px">
-                                                <div class="col-sm-4" style="text-align: center; padding: 2px !important; ">
-                                                    <img class="comment-image" style="text-align: center"
-                                                         src="images/slider/foody-slider1.jpg">
-                                                </div>
-                                                <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
-                                                    <img class="comment-image" src="images/slider/foody-slider1.jpg">
-                                                </div>
-                                                <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
-                                                    <p>+6</p>
-                                                    <img class="comment-image" src="images/slider/foody-slider1.jpg">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="comment-footer">
-                                        <div class="row mb-5">
-                                            <div class="mr-20">
-                                                <i style="color: blue" class="fa fa-heart mr-5"></i><span>van A và 10 người khác</span>
-                                            </div>
-                                        </div>
-                                        <hr class="my-hr">
-                                        <div class="row mb-5 action">
-                                            <div class="mr-20">
-                                                <i class="fa fa-heart mr-5"></i><span>Like</span>
-                                            </div>
-                                            <div class="mr-20">
-                                                <i class="fa fa-comment mr-5"></i><span>Comment</span>
-                                            </div>
-                                            <div class="mr-20">
-                                                <a data-toggle="modal" data-target="#report">
-                                                    <i class="fa fa-exclamation-triangle report-btn mr-5"></i>
-                                                    <span>report</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <hr class="my-hr">
-                                        <div class="pb-5 sub-comment">
-                                            <div class="row">
-                                                <div class="mt-10 mb-10 ml-20 mr-10">
-                                                    <img class="avatar" src="images/Screenshot_50.png">
-                                                </div>
-                                                <div class="mt-10">
-                                                    <p class="comment-user" style="margin-bottom: -5px !important;">Hà Thanh
-                                                        Đoàn</p>
-                                                    <p class="comment-time">12/01/2021 10:20:21</p>
-                                                </div>
-                                            </div>
-                                            <div class="comment-content" style="margin: -7px 10px 0px 52px">
-                                                <p>dasdsa</p>
-                                            </div>
-                                        </div>
-                                        <div class="see-more"><a href="#">Xem thêm<i style="margin-left: 3px" class="fas fa-angle-down"></i></a></div>
-                                        <div class="form-inline form-inline-custom">
-                                            <img class="avatar" src="images/Screenshot_50.png">
-                                            <input type="text" placeholder="Viết bình luận..." class="ml-10 my-comment"></input>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
+{{--                                <div class="my-card comment-panel">--}}
+{{--                                    <div class="comment-header">--}}
+{{--                                        <div class="row">--}}
+{{--                                            <div class="mt-10 mb-10 ml-20 mr-10">--}}
+{{--                                                <img class="avatar" src="/images/Screenshot_50.png">--}}
+{{--                                            </div>--}}
+{{--                                            <div class="mt-10">--}}
+{{--                                                <p class="comment-user" style="margin-bottom: -5px !important;">Hà Thanh--}}
+{{--                                                    Đoàn</p>--}}
+{{--                                                <p class="comment-time">12/01/2021 10:20:21</p>--}}
+{{--                                            </div>--}}
+{{--                                            <p class="rating-point">5</p>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="my-comment-body">--}}
+{{--                                        <div class="comment-content">--}}
+{{--                                            <p style="color: black; margin-bottom: 0px !important;">Quán phục vụ tốt Quán--}}
+{{--                                                phục vụ tốt </p>--}}
+{{--                                            <a href="#">See more</a>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="comment-picture">--}}
+{{--                                            <div class="row" style="padding: 20px">--}}
+{{--                                                <div class="col-sm-4" style="text-align: center; padding: 2px !important; ">--}}
+{{--                                                    <img class="comment-image" style="text-align: center"--}}
+{{--                                                         src="images/slider/foody-slider1.jpg">--}}
+{{--                                                </div>--}}
+{{--                                                <div class="col-sm-4" style="text-align: center; padding: 2px !important;">--}}
+{{--                                                    <img class="comment-image" src="images/slider/foody-slider1.jpg">--}}
+{{--                                                </div>--}}
+{{--                                                <div class="col-sm-4" style="text-align: center; padding: 2px !important;">--}}
+{{--                                                    <p>+6</p>--}}
+{{--                                                    <img class="comment-image" src="images/slider/foody-slider1.jpg">--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="comment-footer">--}}
+{{--                                        <div class="row mb-5">--}}
+{{--                                            <div class="mr-20">--}}
+{{--                                                <i style="color: blue" class="fa fa-heart mr-5"></i><span>van A và 10 người khác</span>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <hr class="my-hr">--}}
+{{--                                        <div class="row mb-5 action">--}}
+{{--                                            <div class="mr-20">--}}
+{{--                                                <i class="fa fa-heart mr-5"></i><span>Like</span>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="mr-20">--}}
+{{--                                                <i class="fa fa-comment mr-5"></i><span>Comment</span>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="mr-20">--}}
+{{--                                                <a data-toggle="modal" data-target="#report">--}}
+{{--                                                    <i class="fa fa-exclamation-triangle report-btn mr-5"></i>--}}
+{{--                                                    <span>report</span>--}}
+{{--                                                </a>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <hr class="my-hr">--}}
+{{--                                        <div class="pb-5 sub-comment">--}}
+{{--                                            <div class="row">--}}
+{{--                                                <div class="mt-10 mb-10 ml-20 mr-10">--}}
+{{--                                                    <img class="avatar" src="images/Screenshot_50.png">--}}
+{{--                                                </div>--}}
+{{--                                                <div class="mt-10">--}}
+{{--                                                    <p class="comment-user" style="margin-bottom: -5px !important;">Hà Thanh--}}
+{{--                                                        Đoàn</p>--}}
+{{--                                                    <p class="comment-time">12/01/2021 10:20:21</p>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="comment-content" style="margin: -7px 10px 0px 52px">--}}
+{{--                                                <p>dasdsa</p>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="see-more"><a href="#">Xem thêm<i style="margin-left: 3px" class="fas fa-angle-down"></i></a></div>--}}
+{{--                                        <div class="form-inline form-inline-custom">--}}
+{{--                                            <img class="avatar" src="images/Screenshot_50.png">--}}
+{{--                                            <input type="text" placeholder="Viết bình luận..." class="ml-10 my-comment"></input>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
                                 <div class="see-more"><a  href="#">Tải nhiều hơn<i
                                             class="ml-5 fas fa-angle-double-down"></i></a></div>
                             </div>

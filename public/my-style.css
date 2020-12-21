@@ -12,7 +12,9 @@ b {
     margin-bottom: 10px;
     margin-right: 10px;
 }
-
+.last-comment-image {
+    opacity: 0.3;
+}
 .mbI-0 {
     margin-bottom: 0px !important;
 }
@@ -451,9 +453,6 @@ ul.menu-sidebar-custom li:hover {
     margin-left: auto;
     margin-right: auto;
     position : absolute;
-}
-.comment-picture div div:last-child img {
-    opacity: 0.3;
 }
 
 .comment-picture div:hover {
