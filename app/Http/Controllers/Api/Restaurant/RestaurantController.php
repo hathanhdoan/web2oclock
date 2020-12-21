@@ -22,18 +22,18 @@ use Tymon\JWTAuth\Exceptions\TokenExpiredException;
 class RestaurantController extends Controller
 {
    public function getNearestRes(Request $request){
-       $user_location = $request->user_location;
+       return Restaurant::take(2)->inRandomOrder()->get();
+
+       $user_location = is_array($request->user_location) ? $request->user_location : json_decode($request->user_location);
        if(!isset($user_location)){
            return [
                'success' =>false,
                'message' => __('no_location_permission')
            ];
        }
-       if(isset($request->pagination)){
-           $pagination = is_array($request->pagination) ? $request->pagination : json_decode($request->pagination);
-       }
-       $limit = $pagination['limit'] ?? 10;
-       $page  = $pagination['page'] ?? 1;
+
+       $limit = $request->limit ?? 10;
+       $page  = $request->page ?? 1;
 
 //       $from_location = [
 //           'Latitude' => 10.8139,
@@ -50,11 +50,11 @@ class RestaurantController extends Controller
            return ($a['distance'] < $b['distance'])?-1:1;
        });
        $rs = array_slice($res, ($page*$limit - $limit), $limit);
-       return [
+       return \response()->json([
            'success' => true,
            'message' => __('success'),
            'data' => $rs
-       ];
+       ]);
    }
    public function getSavedRes(Request $request){
        $data = $request->all();

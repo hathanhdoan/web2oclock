@@ -176,13 +176,13 @@
                         </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img class="d-block w-100" src="images/new_logo.png" alt="First slide">
+                                <img class="d-block w-100" src="/images/new_logo.png" alt="First slide">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="images/slider/foody-slider1.jpg" alt="Second slide">
+                                <img class="d-block w-100" src="/images/slider/foody-slider1.jpg" alt="Second slide">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="images/slider/foody-slider1.jpg" alt="Third slide">
+                                <img class="d-block w-100" src="/images/slider/foody-slider1.jpg" alt="Third slide">
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -200,124 +200,124 @@
     </div>
     <!-- Quick View | Modal Area End Here -->
     <!-- Model comment -->
-    <div class="modal fade modal-wrapper" id="comment" >
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <div class="modal-inner-area row">
-                        <div class="col-lg-5 col-md-6 col-sm-6">
-                            <!-- Product Details Left -->
-                            <div class="product-details-left">
-                                <div class="product-details-images slider-navigation-1">
-                                    <div class="lg-image">
-                                        <img src="images/product/large-size/1.jpg" alt="product image">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-4" style="padding-right: 5px !important; text-align: right">
-                                        <p>Vị trí</p>
-                                        <p>Giá cả</p>
-                                        <p>Chất lượng</p>
-                                        <p>Dịch vụ</p>
-                                        <p>Không gian</p>
-                                    </div>
-                                    <div class="col-6" style=" padding-left: 5px !important; text-align: left">
-                                        <input class="custom-range" type="range" min="0" max="10">
-                                        <input class="custom-range" type="range" min="0" max="10">
-                                        <input class="custom-range" type="range" min="0" max="10">
-                                        <input class="custom-range" type="range" min="0" max="10">
-                                        <input class="custom-range" type="range" min="0" max="10">
-                                    </div>
-                                    <div class="col-2" style="padding-left: 5px !important; text-align: left">
-                                        <p style="color: #9c25b9!important;">25</p>
-                                        <p style="color: #00c851 !important;">7</p>
-                                        <p style="color: black!important;">7</p>
-                                        <p style="color: red!important;">2</p>
-                                        <p style="color: red!important;">2</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--// Product Details Left -->
-                        </div>
+{{--    <div class="modal fade modal-wrapper" id="comment" >--}}
+{{--        <div class="modal-dialog modal-dialog-centered" role="document">--}}
+{{--            <div class="modal-content">--}}
+{{--                <div class="modal-body">--}}
+{{--                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">--}}
+{{--                        <span aria-hidden="true">&times;</span>--}}
+{{--                    </button>--}}
+{{--                    <div class="modal-inner-area row">--}}
+{{--                        <div class="col-lg-5 col-md-6 col-sm-6">--}}
+{{--                            <!-- Product Details Left -->--}}
+{{--                            <div class="product-details-left">--}}
+{{--                                <div class="product-details-images slider-navigation-1">--}}
+{{--                                    <div class="lg-image">--}}
+{{--                                        <img src="/images/product/large-size/1.jpg" alt="product image">--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                                <div class="row">--}}
+{{--                                    <div class="col-4" style="padding-right: 5px !important; text-align: right">--}}
+{{--                                        <p>Vị trí</p>--}}
+{{--                                        <p>Giá cả</p>--}}
+{{--                                        <p>Chất lượng</p>--}}
+{{--                                        <p>Dịch vụ</p>--}}
+{{--                                        <p>Không gian</p>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="col-6" style=" padding-left: 5px !important; text-align: left">--}}
+{{--                                        <input class="custom-range" type="range" min="0" max="10">--}}
+{{--                                        <input class="custom-range" type="range" min="0" max="10">--}}
+{{--                                        <input class="custom-range" type="range" min="0" max="10">--}}
+{{--                                        <input class="custom-range" type="range" min="0" max="10">--}}
+{{--                                        <input class="custom-range" type="range" min="0" max="10">--}}
+{{--                                    </div>--}}
+{{--                                    <div class="col-2" style="padding-left: 5px !important; text-align: left">--}}
+{{--                                        <p style="color: #9c25b9!important;">25</p>--}}
+{{--                                        <p style="color: #00c851 !important;">7</p>--}}
+{{--                                        <p style="color: black!important;">7</p>--}}
+{{--                                        <p style="color: red!important;">2</p>--}}
+{{--                                        <p style="color: red!important;">2</p>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <!--// Product Details Left -->--}}
+{{--                        </div>--}}
 
-                        <div class="col-lg-7 col-md-6 col-sm-6">
-                            <div class="product-details-view-content pt-60">
-                                <div class="product-info">
-                                    <h2>Ahihi - Fruit & Yogurt - Shop Online</h2>
-                                    <span class="product-details-ref">55 Đặng Thùy Trâm, BÌnh Thạnh</span>
-                                    <div class="product-desc">
-                                        <textarea>
-                                                    100% cotton double printed dress. Black and white striped top and orange high waisted skater skirt bottom. Lorem ipsum dolor sit amet, consectetur adipisicing elit. quibusdam corporis, earum facilis et nostrum dolorum accusamus similique eveniet quia pariatur.
-                                        </textarea>
-                                    </div>
-                                    <p>Chọn hình</p>
-                                    <div class="row">
-                                        <div class="select-img-comment"><img class="img-comment" src="images/slider/foody-slider1.jpg"><i class="cancel far fa-times-circle"></i></div>
-                                        <div class="select-img-comment"><img class="img-comment" src="images/slider/foody-slider1.jpg"><i class="cancel far fa-times-circle"></i></div>
-                                        <div class="select-img-comment"><img class="img-comment" src="images/slider/foody-slider1.jpg"><i class="cancel far fa-times-circle"></i></div>
-                                        <div class="select-img-comment"><img class="img-comment" src="images/slider/foody-slider1.jpg"><i class="cancel far fa-times-circle"></i></div>
-                                        <div class="select-img-comment"> <input style="margin-top: -5px; opacity: 0; height: 140px" type="file"><i id="add-img-comment" class="fas fa-plus"></i></div>
-                                    </div>
+{{--                        <div class="col-lg-7 col-md-6 col-sm-6">--}}
+{{--                            <div class="product-details-view-content pt-60">--}}
+{{--                                <div class="product-info">--}}
+{{--                                    <h2>Ahihi - Fruit & Yogurt - Shop Online</h2>--}}
+{{--                                    <span class="product-details-ref">55 Đặng Thùy Trâm, BÌnh Thạnh</span>--}}
+{{--                                    <div class="product-desc">--}}
+{{--                                        <textarea>--}}
+{{--                                                    100% cotton double printed dress. Black and white striped top and orange high waisted skater skirt bottom. Lorem ipsum dolor sit amet, consectetur adipisicing elit. quibusdam corporis, earum facilis et nostrum dolorum accusamus similique eveniet quia pariatur.--}}
+{{--                                        </textarea>--}}
+{{--                                    </div>--}}
+{{--                                    <p>Chọn hình</p>--}}
+{{--                                    <div class="row">--}}
+{{--                                        <div class="select-img-comment"><img class="img-comment" src="/images/slider/foody-slider1.jpg"><i class="cancel far fa-times-circle"></i></div>--}}
+{{--                                        <div class="select-img-comment"><img class="img-comment" src="/images/slider/foody-slider1.jpg"><i class="cancel far fa-times-circle"></i></div>--}}
+{{--                                        <div class="select-img-comment"><img class="img-comment" src="/images/slider/foody-slider1.jpg"><i class="cancel far fa-times-circle"></i></div>--}}
+{{--                                        <div class="select-img-comment"><img class="img-comment" src="/images/slider/foody-slider1.jpg"><i class="cancel far fa-times-circle"></i></div>--}}
+{{--                                        <div class="select-img-comment"> <input style="margin-top: -5px; opacity: 0; height: 140px" type="file"><i id="add-img-comment" class="fas fa-plus"></i></div>--}}
+{{--                                    </div>--}}
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
     <!-- Quick View | Modal Area End Here -->
 
 </div>
 <!-- Body Wrapper End Here -->
 <!-- jQuery-V1.12.4 -->
-<script src="js/vendor/jquery-1.12.4.min.js"></script>
+<script src="/js/vendor/jquery-1.12.4.min.js"></script>
 <!-- Popper js -->
-<script src="js/vendor/popper.min.js"></script>
+<script src="/js/vendor/popper.min.js"></script>
 <!-- Bootstrap V4.1.3 Fremwork js -->
-<script src="js/bootstrap.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 <!-- Ajax Mail js -->
-<script src="js/ajax-mail.js"></script>
+<script src="/js/ajax-mail.js"></script>
 <!-- Meanmenu js -->
-<script src="js/jquery.meanmenu.min.js"></script>
+<script src="/js/jquery.meanmenu.min.js"></script>
 <!-- Wow.min js -->
-<script src="js/wow.min.js"></script>
+<script src="/js/wow.min.js"></script>
 <!-- Slick Carousel js -->
-<script src="js/slick.min.js"></script>
+<script src="/js/slick.min.js"></script>
 <!-- Owl Carousel-2 js -->
-<script src="js/owl.carousel.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
 <!-- Magnific popup js -->
-<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="/js/jquery.magnific-popup.min.js"></script>
 <!-- Isotope js -->
-<script src="js/isotope.pkgd.min.js"></script>
+<script src="/js/isotope.pkgd.min.js"></script>
 <!-- Imagesloaded js -->
-<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
 <!-- Mixitup js -->
-<script src="js/jquery.mixitup.min.js"></script>
+<script src="/js/jquery.mixitup.min.js"></script>
 <!-- Countdown -->
-<script src="js/jquery.countdown.min.js"></script>
+<script src="/js/jquery.countdown.min.js"></script>
 <!-- Counterup -->
-<script src="js/jquery.counterup.min.js"></script>
+<script src="/js/jquery.counterup.min.js"></script>
 <!-- Waypoints -->
-<script src="js/waypoints.min.js"></script>
+<script src="/js/waypoints.min.js"></script>
 <!-- Barrating -->
-<script src="js/jquery.barrating.min.js"></script>
+<script src="/js/jquery.barrating.min.js"></script>
 <!-- Jquery-ui -->
-<script src="js/jquery-ui.min.js"></script>
+<script src="/js/jquery-ui.min.js"></script>
 <!-- Venobox -->
-<script src="js/venobox.min.js"></script>
+<script src="/js/venobox.min.js"></script>
 <!-- Nice Select js -->
-<script src="js/jquery.nice-select.min.js"></script>
+<script src="/js/jquery.nice-select.min.js"></script>
 <!-- ScrollUp js -->
-<script src="js/scrollUp.min.js"></script>
+<script src="/js/scrollUp.min.js"></script>
 <!-- Main/Activator js -->
-<script src="js/main.js"></script>
-<script src="js/vue.js"></script>
-<script src="js/axios.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/vue.js"></script>
+<script src="/js/axios.min.js"></script>
 @yield('script')
 </body>
 <script>
@@ -348,7 +348,7 @@
             var user = localStorage.getItem('user');
             if(user){
                 user = JSON.parse(user);
-                var avatar = user['Avatar'] ? user['Avatar'] : 'images/menu/logo/avatar.jpg'
+                var avatar = user['Avatar'] ? user['Avatar'] : '/images/menu/logo/avatar.jpg'
                 var name = user['DisplayName'] ? user['DisplayName'] : user['email'];
                 $('#avatar').attr('src',avatar);
                 $('#display-name').text(name);

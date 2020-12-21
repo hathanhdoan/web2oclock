@@ -18,9 +18,9 @@
                 <div class="row single-product-area">
                     <div class="col-lg-5 col-md-6">
                         <div class="lg-image">
-                            <a class="popup-img venobox vbox-item" href="images/product/large-size/1.jpg"
+                            <a class="popup-img venobox vbox-item" href="/images/product/large-size/1.jpg"
                                data-gall="myGallery">
-                                <img id="detail-product-img" src="images/slider/foody-slider1.jpg" alt="product image">
+                                <img id="detail-product-img" src="/images/slider/foody-slider1.jpg" alt="product image">
                             </a>
                         </div>
                     </div>
@@ -28,13 +28,12 @@
                     <div class="col-lg-7 col-md-6">
                         <div class="product-details-view-content pt-20">
                             <div class="product-info">
-                                <span class="product-details-ref">Nhà hàng</span>
-                                <h2 class="pl-15" style="font-size: 25px !important; margin: 7px 0px 0px -17px;">Ahihi -
-                                    Fruit & Yogurt - Shop Online</h2>
+                                <span class="product-details-ref">{{!empty($res['restaurant_detail']['category'])? $res['restaurant_detail']['category']['name'] : ''}}</span>
+                                <h2 class="pl-15" style="font-size: 25px !important; margin: 7px 0px 0px -17px;">{{$res['Name']}}</h2>
                                 <div class="price-box pt-20">
                                     <div class="row">
                                         <div class="col-sm-1 haha-custom">
-                                            <span class="rating-point-main">5</span>
+                                            <span class="rating-point-main">{{$res['AvgRating']}}</span>
                                         </div>
                                         <div class="col-sm-11 form-inline">
                                             <div class="mr-20">
@@ -62,19 +61,19 @@
                                 </div>
                                 <div class="product-desc">
                                    <div class="mb-5">
-                                       <i class="mr-10 fas fa-location-arrow"></i>55 Đặng Thùy Trầm, P.13, Q.Bình Thạnh
+                                       <i class="mr-10 fas fa-location-arrow"></i>{{$res['Address']}}
                                    </div>
                                    <div class="mb-5">
-                                       <i class="mr-10 fas fa-clock"></i>7:00 - 20:00
+                                       <i class="mr-10 fas fa-clock"></i>{{$res['restaurant_detail']['open_time']}}
                                    </div>
                                     <div class="mb-5">
-                                        <i class=" mr-10 fas fa-tags"></i>20.000 - 100.000
+                                        <i class=" mr-10 fas fa-tags"></i>{{$res['restaurant_detail']['price']}}
                                     </div>
                                 </div>
                                 <div class="product-additional-info mb-20">
                                     <a class="wishlist-btn" style="color: blue" data-toggle="modal" data-target="#comment" href="wishlist.html">
                                         <i class="fa fa-comment"></i>Bình luận</a>
-                                    <a class="wishlist-btn  ml-20" href="wishlist.html"><i class="fa fa-heart-o"></i>Add to
+                                    <a class="wishlist-btn  ml-20" href="http://www.facebook.com/sharer.php?u={{asset('res-detail').'/'.$res['Id']}}"><i class="fa fa-heart-o"></i>Add to
                                         wishlist</a>
                                     <div class="product-social-sharing pt-15">
                                         <ul>
@@ -119,7 +118,7 @@
                         <div id="product-details" class="tab-pane" role="tabpanel">
                             <div class="product-details-manufacturer">
                                 <a href="#">
-                                    <img src="images/product-details/1.jpg" alt="Product Manufacturer Image">
+                                    <img src="/images/product-details/1.jpg" alt="Product Manufacturer Image">
                                 </a>
                                 <p><span>Reference</span> demo_7</p>
                                 <p><span>Reference</span> demo_7</p>
@@ -131,7 +130,7 @@
                                     <div class="comment-header">
                                         <div class="row">
                                             <div class="mt-10 mb-10 ml-20 mr-10">
-                                                <img class="avatar" src="images/Screenshot_50.png">
+                                                <img class="avatar" src="/images/Screenshot_50.png">
                                             </div>
                                             <div class="mt-10">
                                                 <p class="comment-user" style="margin-bottom: -5px !important;">Hà Thanh
@@ -153,14 +152,14 @@
                                             <div class="row" style="padding: 20px">
                                                 <div class="col-sm-4" style="text-align: center; padding: 2px !important; ">
                                                     <img class="comment-image" style="text-align: center"
-                                                         src="images/slider/foody-slider1.jpg">
+                                                         src="/images/slider/foody-slider1.jpg">
                                                 </div>
                                                 <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
-                                                    <img class="comment-image" src="images/slider/foody-slider1.jpg">
+                                                    <img class="comment-image" src="/images/slider/foody-slider1.jpg">
                                                 </div>
                                                 <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
                                                     <p>+6</p>
-                                                    <img class="comment-image" src="images/slider/foody-slider1.jpg">
+                                                    <img class="comment-image" src="/images/slider/foody-slider1.jpg">
                                                 </div>
                                             </div>
                                         </div>
@@ -190,7 +189,7 @@
                                         <div class="pb-5 sub-comment">
                                             <div class="row">
                                                 <div class="mt-10 mb-10 ml-20 mr-10">
-                                                    <img class="avatar" src="images/Screenshot_50.png">
+                                                    <img class="avatar" src="/images/Screenshot_50.png">
                                                 </div>
                                                 <div class="mt-10">
                                                     <p class="comment-user" style="margin-bottom: -5px !important;">Hà Thanh
@@ -206,7 +205,7 @@
                                         <div class="pb-5 sub-comment">
                                             <div class="row">
                                                 <div class="mt-10 mb-10 ml-20 mr-10">
-                                                    <img class="avatar" src="images/Screenshot_50.png">
+                                                    <img class="avatar" src="/images/Screenshot_50.png">
                                                 </div>
                                                 <div class="mt-10">
                                                     <p class="comment-user" style="margin-bottom: -5px !important;">Hà Thanh
@@ -220,7 +219,7 @@
                                         </div>
                                         <div class="see-more"><a href="#">Xem thêm<i style="margin-left: 3px" class="fas fa-angle-down"></i></a></div>
                                         <div class="form-inline form-inline-custom">
-                                            <img class="avatar" src="images/Screenshot_50.png">
+                                            <img class="avatar" src="/images/Screenshot_50.png">
                                             <input type="text" placeholder="Viết bình luận..." class="ml-10 my-comment"></input>
                                         </div>
                                     </div>
@@ -229,7 +228,7 @@
                                     <div class="comment-header">
                                         <div class="row">
                                             <div class="mt-10 mb-10 ml-20 mr-10">
-                                                <img class="avatar" src="images/Screenshot_50.png">
+                                                <img class="avatar" src="/images/Screenshot_50.png">
                                             </div>
                                             <div class="mt-10">
                                                 <p class="comment-user" style="margin-bottom: -5px !important;">Hà Thanh
@@ -838,7 +837,7 @@
                                 <div class="product-details-left">
                                     <div class="product-details-images slider-navigation-1">
                                         <div class="lg-image">
-                                            <img src="images/product/large-size/1.jpg" alt="product image">
+                                            <img src="/images/product/large-size/1.jpg" alt="product image">
                                         </div>
                                     </div>
                                     <div style="text-align: center;">
@@ -888,10 +887,10 @@
                                         </div>
                                         <p>Chọn hình</p>
                                         <div class="row">
-                                            <div  @click="cancelImage()" class="select-img-comment"><img class="img-comment" src="images/slider/foody-slider1.jpg"><i class="cancel far fa-times-circle"></i></div>
-                                            <div class="select-img-comment"><img class="img-comment" src="images/slider/foody-slider1.jpg"><i class="cancel far fa-times-circle"></i></div>
-                                            <div class="select-img-comment"><img class="img-comment" src="images/slider/foody-slider1.jpg"><i class="cancel far fa-times-circle"></i></div>
-                                            <div class="select-img-comment"><img class="img-comment" src="images/slider/foody-slider1.jpg"><i class="cancel far fa-times-circle"></i></div>
+                                            <div  @click="cancelImage()" class="select-img-comment"><img class="img-comment" src="/images/slider/foody-slider1.jpg"><i class="cancel far fa-times-circle"></i></div>
+                                            <div class="select-img-comment"><img class="img-comment" src="/images/slider/foody-slider1.jpg"><i class="cancel far fa-times-circle"></i></div>
+                                            <div class="select-img-comment"><img class="img-comment" src="/images/slider/foody-slider1.jpg"><i class="cancel far fa-times-circle"></i></div>
+                                            <div class="select-img-comment"><img class="img-comment" src="/images/slider/foody-slider1.jpg"><i class="cancel far fa-times-circle"></i></div>
                                             <div class="select-img-comment"> <input style="margin-top: -5px; opacity: 0; height: 140px" type="file"><i id="add-img-comment" class="fas fa-plus"></i></div>
                                         </div>
                                         <div><button class="btn btn-success" @click.stop.prevent="cancelImage">Gửi</button></div>

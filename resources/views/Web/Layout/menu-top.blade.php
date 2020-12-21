@@ -33,7 +33,7 @@
                             <!-- Begin Header Mini Cart Area -->
                             <li class="hm-minicart hide-elm" id="login-info">
                                 <div class="hm-minicart-trigger">
-                                    <div class="item-icon"><img id="avatar" src="{{asset('images/menu/logo/avatar.jpg')}}"></div>
+                                    <div class="item-icon"><img id="avatar" src="/images/menu/logo/avatar.jpg"></div>
                                     <span id="display-name" class="item-text">Đoàn &nbsp;<i class="fas fa-angle-down"></i></span>
                                 </div>
                                 <span></span>
