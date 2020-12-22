@@ -28,8 +28,10 @@
                     <div class="col-lg-7 col-md-6">
                         <div class="product-details-view-content pt-20">
                             <div class="product-info">
-                                <span class="product-details-ref">{{!empty($res['restaurant_detail']['category'])? $res['restaurant_detail']['category']['name'] : ''}}</span>
-                                <h2 class="pl-15" style="font-size: 25px !important; margin: 7px 0px 0px -17px;">{{$res['Name']}}</h2>
+                                <span
+                                    class="product-details-ref">{{!empty($res['restaurant_detail']['category'])? $res['restaurant_detail']['category']['name'] : ''}}</span>
+                                <h2 class="pl-15"
+                                    style="font-size: 25px !important; margin: 7px 0px 0px -17px;">{{$res['Name']}}</h2>
                                 <div class="price-box pt-20">
                                     <div class="row">
                                         <div class="col-sm-1 haha-custom">
@@ -60,28 +62,34 @@
                                     </div>
                                 </div>
                                 <div class="product-desc">
-                                   <div class="mb-5">
-                                       <i class="mr-10 fas fa-location-arrow"></i>{{$res['Address']}}
-                                   </div>
-                                   <div class="mb-5">
-                                       <i class="mr-10 fas fa-clock"></i>{{$res['restaurant_detail']['open_time']}}
-                                   </div>
+                                    <div class="mb-5">
+                                        <i class="mr-10 fas fa-location-arrow"></i>{{$res['Address']}}
+                                    </div>
+                                    <div class="mb-5">
+                                        <i class="mr-10 fas fa-clock"></i>{{$res['restaurant_detail']['open_time']}}
+                                    </div>
                                     <div class="mb-5">
                                         <i class=" mr-10 fas fa-tags"></i>{{$res['restaurant_detail']['price']}}
                                     </div>
                                 </div>
                                 <div class="product-additional-info mb-20">
-                                    <a class="wishlist-btn" style="color: blue" data-toggle="modal" data-target="#comment" href="wishlist.html">
+                                    <a class="wishlist-btn" style="color: blue" data-toggle="modal"
+                                       data-target="#comment" href="wishlist.html">
                                         <i class="fa fa-comment"></i>Bình luận</a>
-                                    <a class="wishlist-btn  ml-20" href="http://www.facebook.com/sharer.php?u={{asset('res-detail').'/'.$res['Id']}}"><i class="fa fa-heart-o"></i>Add to
+                                    <a class="wishlist-btn  ml-20"
+                                       href="http://www.facebook.com/sharer.php?u={{asset('res-detail').'/'.$res['Id']}}"><i
+                                            class="fa fa-heart-o"></i>Add to
                                         wishlist</a>
                                     <div class="product-social-sharing pt-15">
                                         <ul>
-                                            <li class="facebook"><a href="#"><i class="fa fa-facebook"></i>Facebook</a></li>
-                                            <li class="twitter"><a href="#"><i class="fa fa-twitter"></i>Twitter</a></li>
+                                            <li class="facebook"><a href="#"><i class="fa fa-facebook"></i>Facebook</a>
+                                            </li>
+                                            <li class="twitter"><a href="#"><i class="fa fa-twitter"></i>Twitter</a>
+                                            </li>
                                             <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i>Google
                                                     +</a></li>
-                                            <li class="instagram"><a href="#"><i class="fa fa-instagram"></i>Instagram</a>
+                                            <li class="instagram"><a href="#"><i
+                                                        class="fa fa-instagram"></i>Instagram</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -127,107 +135,119 @@
                         <div id="reviews" class="tab-pane active show" role="tabpanel">
                             <div id="review-list" class="product-reviews">
                                 @foreach($comments as $comment)
-                                <div class="my-card comment-panel">
-                                    <div class="comment-header">
-                                        <div class="row">
-                                            <div class="mt-10 mb-10 ml-20 mr-10">
-                                                <img class="avatar" src="{{$comment['customer']['Avatar'] ?? ''}}">
+                                    <div class="my-card comment-panel">
+                                        <div class="comment-header">
+                                            <div class="row">
+                                                <div class="mt-10 mb-10 ml-20 mr-10">
+                                                    <img class="avatar" src="{{$comment['customer']['Avatar'] ?? ''}}">
+                                                </div>
+                                                <div class="mt-10">
+                                                    <p class="comment-user"
+                                                       style="margin-bottom: -5px !important;">{{$comment['customer']['DisplayName']}}</p>
+                                                    <p class="comment-time">{{$comment['CreatedOnTimeDiff']}}</p>
+                                                </div>
+                                                <p class="rating-point">5</p>
                                             </div>
-                                            <div class="mt-10">
-                                                <p class="comment-user" style="margin-bottom: -5px !important;">{{$comment['customer']['DisplayName']}}</p>
-                                                <p class="comment-time">{{$comment['CreatedOnTimeDiff']}}</p>
+                                        </div>
+                                        <div class="my-comment-body">
+                                            <div class="comment-content">
+                                                <p style="color: black; margin-bottom: 0px !important;">{{$comment['Description']}}
+                                                </p>
+                                                <a href="#">See more</a>
                                             </div>
-                                            <p class="rating-point">5</p>
-                                        </div>
-                                    </div>
-                                    <div class="my-comment-body">
-                                        <div class="comment-content">
-                                            <p style="color: black; margin-bottom: 0px !important;">{{$comment['Description']}}
-                                            </p>
-                                            <a href="#">See more</a>
-                                        </div>
-                                        <div class="comment-picture">
-                                            <div class="row" style="padding: 20px">
-                                                @foreach($comment['comment_pictures'] as $key=>$pic)
-                                                    @if($key == 2 && count($comment['comment_pictures']) > 3)
-                                                        <div class="col-sm-4" style="text-align: center; padding: 2px !important;">
-                                                            <p>+{{count($comment['comment_pictures']) - 3}}</p>
-                                                            <img class="comment-image last-comment-image" urls="{{json_encode($comment['comment_pictures'])}}" src="{{$pic['Url']}}">
+                                            <div class="comment-picture">
+                                                <div class="row" style="padding: 20px">
+                                                    @foreach($comment['comment_pictures'] as $key=>$pic)
+                                                        @if($key == 2 && count($comment['comment_pictures']) > 3)
+                                                            <div class="col-sm-4"
+                                                                 style="text-align: center; padding: 2px !important;">
+                                                                <p>+{{count($comment['comment_pictures']) - 3}}</p>
+                                                                <img class="comment-image last-comment-image"
+                                                                     urls="{{json_encode($comment['comment_pictures'])}}"
+                                                                     src="{{$pic['Url']}}">
+                                                            </div>
+                                                            @break
+                                                        @endif
+                                                        <div class="col-sm-4"
+                                                             style="text-align: center; padding: 2px !important; ">
+                                                            <img class="comment-image " style="text-align: center"
+                                                                 urls="{{json_encode($comment['comment_pictures'])}}"
+                                                                 src="{{$pic['Url']}}">
                                                         </div>
-                                                        @break
-                                                    @endif
-                                                    <div class="col-sm-4" style="text-align: center; padding: 2px !important; ">
-                                                        <img class="comment-image" style="text-align: center"
-                                                             src="{{$pic['Url']}}">
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="comment-footer">
+                                            <div class="row mb-5">
+                                                <div class="mr-20">
+                                                    <i style="color: blue" class="fa fa-heart mr-5"></i><span>{{$comment['TotalLike']}} người đã thích</span>
+                                                </div>
+                                            </div>
+                                            <hr class="my-hr">
+                                            <div class="row mb-5 action">
+                                                <div class="mr-20">
+                                                    <i class="fa fa-heart mr-5"></i><span>Like</span>
+                                                </div>
+                                                <div class="mr-20">
+                                                    <i class="fa fa-comment mr-5"></i><span>Comment</span>
+                                                </div>
+                                                <div class="mr-20">
+                                                    <a data-toggle="modal" data-target="#report">
+                                                        <i class="fa fa-exclamation-triangle report-btn mr-5"></i>
+                                                        <span>report</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <hr class="my-hr">
+                                            <div class="pb-5 sub-comment">
+                                                <div class="row">
+                                                    <div class="mt-10 mb-10 ml-20 mr-10">
+                                                        <img class="avatar" src="/images/Screenshot_50.png">
                                                     </div>
-                                                @endforeach
+                                                    <div class="mt-10">
+                                                        <p class="comment-user" style="margin-bottom: -5px !important;">
+                                                            Hà Thanh
+                                                            Đoàn</p>
+                                                        <p class="comment-time">12/01/2021 10:20:21</p>
+                                                    </div>
+                                                </div>
+                                                <div class="comment-content" style="margin: -7px 10px 0px 52px">
+                                                    <p>Quán phục vụ tốt Quán phục vụ tốt Quán phục vụ tốt Quán phục vụ
+                                                        tốt</p>
+                                                </div>
+                                            </div>
+                                            <hr class="my-hr">
+                                            <div class="pb-5 sub-comment">
+                                                <div class="row">
+                                                    <div class="mt-10 mb-10 ml-20 mr-10">
+                                                        <img class="avatar" src="/images/Screenshot_50.png">
+                                                    </div>
+                                                    <div class="mt-10">
+                                                        <p class="comment-user" style="margin-bottom: -5px !important;">
+                                                            Hà Thanh
+                                                            Đoàn</p>
+                                                        <p class="comment-time">12/01/2021 10:20:21</p>
+                                                    </div>
+                                                </div>
+                                                <div class="comment-content" style="margin: -7px 10px 0px 52px">
+                                                    <p>Quán phục vụ tốt <a href="#">...See more</a></p>
+                                                </div>
+                                            </div>
+                                            <div class="see-more"><a href="#">Xem thêm<i style="margin-left: 3px"
+                                                                                         class="fas fa-angle-down"></i></a>
+                                            </div>
+                                            <div class="form-inline form-inline-custom">
+                                                <img class="avatar" src="/images/Screenshot_50.png">
+                                                <input type="text" placeholder="Viết bình luận..."
+                                                       class="ml-10 my-comment"></input>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="comment-footer">
-                                        <div class="row mb-5">
-                                            <div class="mr-20">
-                                                <i style="color: blue" class="fa fa-heart mr-5"></i><span>{{$comment['TotalLike']}} người đã thích</span>
-                                            </div>
-                                        </div>
-                                        <hr class="my-hr">
-                                        <div class="row mb-5 action">
-                                            <div class="mr-20">
-                                                <i class="fa fa-heart mr-5"></i><span>Like</span>
-                                            </div>
-                                            <div class="mr-20">
-                                                <i class="fa fa-comment mr-5"></i><span>Comment</span>
-                                            </div>
-                                            <div class="mr-20">
-                                                <a data-toggle="modal" data-target="#report">
-                                                    <i class="fa fa-exclamation-triangle report-btn mr-5"></i>
-                                                    <span>report</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <hr class="my-hr">
-                                        <div class="pb-5 sub-comment">
-                                            <div class="row">
-                                                <div class="mt-10 mb-10 ml-20 mr-10">
-                                                    <img class="avatar" src="/images/Screenshot_50.png">
-                                                </div>
-                                                <div class="mt-10">
-                                                    <p class="comment-user" style="margin-bottom: -5px !important;">Hà Thanh
-                                                        Đoàn</p>
-                                                    <p class="comment-time">12/01/2021 10:20:21</p>
-                                                </div>
-                                            </div>
-                                            <div class="comment-content" style="margin: -7px 10px 0px 52px">
-                                                <p>Quán phục vụ tốt Quán phục vụ tốt Quán phục vụ tốt Quán phục vụ tốt</p>
-                                            </div>
-                                        </div>
-                                        <hr class="my-hr">
-                                        <div class="pb-5 sub-comment">
-                                            <div class="row">
-                                                <div class="mt-10 mb-10 ml-20 mr-10">
-                                                    <img class="avatar" src="/images/Screenshot_50.png">
-                                                </div>
-                                                <div class="mt-10">
-                                                    <p class="comment-user" style="margin-bottom: -5px !important;">Hà Thanh
-                                                        Đoàn</p>
-                                                    <p class="comment-time">12/01/2021 10:20:21</p>
-                                                </div>
-                                            </div>
-                                            <div class="comment-content" style="margin: -7px 10px 0px 52px">
-                                                <p>Quán phục vụ tốt <a href="#">...See more</a></p>
-                                            </div>
-                                        </div>
-                                        <div class="see-more"><a href="#">Xem thêm<i style="margin-left: 3px" class="fas fa-angle-down"></i></a></div>
-                                        <div class="form-inline form-inline-custom">
-                                            <img class="avatar" src="/images/Screenshot_50.png">
-                                            <input type="text" placeholder="Viết bình luận..." class="ml-10 my-comment"></input>
-                                        </div>
-                                    </div>
-                                </div>
                                 @endforeach
-                                <div class="see-more"><a  href="#">Tải nhiều hơn<i
-                                            class="ml-5 fas fa-angle-double-down"></i></a></div>
-{{--                                    <div class="see-more">{{$comments->links('Web.Pagination.comment-pagination')}}</div>--}}
+{{--                                <div  id="load-more" class="see-more"><a>Tải nhiều hơn<i--}}
+{{--                                            class="ml-5 fas fa-angle-double-down"></i></a></div>--}}
+                                                                    <div style="text-align: center">{{$comments->links('Web.Pagination.comment-pagination')}}</div>
                             </div>
                         </div>
                     </div>
@@ -243,7 +263,7 @@
                                     <p style="color: green" class="point_rating_detail">25</p>
                                     <p style="color: red" class="point_rating_detail">7</p>
                                     <p style="color: blue" class="point_rating_detail">7</p>
-                                    <p style="color: purple"  class="point_rating_detail">2</p>
+                                    <p style="color: purple" class="point_rating_detail">2</p>
                                 </div>
                                 <div class="col-6" style=" padding-left: 5px !important; text-align: left">
                                     <p>Tuyệt vời</p>
@@ -330,7 +350,8 @@
                                 <b style="font-size: x-large; color: #03ae03">8.6</b> điểm
                             </div>
                             <div>
-                                <button style="margin-left: 0px; width: 100%" class="btn btn-primary"><a data-toggle="modal" data-target="#comment">Viết bình luận</a></button>
+                                <button style="margin-left: 0px; width: 100%" class="btn btn-primary"><a
+                                        data-toggle="modal" data-target="#comment">Viết bình luận</a></button>
                             </div>
                         </div>
                     </div>
@@ -380,7 +401,8 @@
                                             <h4 class="card-title font-weight-bold"><a>Texas Chicken</a></h4>
                                             <!-- Data -->
                                             <ul class="list-unstyled list-inline rating mb-0">
-                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i>
+                                                <li class="list-inline-item mr-0"><i
+                                                        class="fas fa-star amber-text"> </i>
                                                 </li>
                                                 <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
                                                 </li>
@@ -388,11 +410,13 @@
                                                 </li>
                                                 <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
                                                 </li>
-                                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                <li class="list-inline-item"><i
+                                                        class="fas fa-star-half-alt amber-text"></i>
                                                 </li>
                                                 <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
                                             </ul>
-                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
+                                                Trâm,
                                                 quận....</a>
                                             <p class="card-text">Đoàn: Đồ ăn rất ngon, nên thử</p>
                                             <!-- Text -->
@@ -444,7 +468,8 @@
                                             <h4 class="card-title font-weight-bold"><a>Texas Chicken</a></h4>
                                             <!-- Data -->
                                             <ul class="list-unstyled list-inline rating mb-0">
-                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i>
+                                                <li class="list-inline-item mr-0"><i
+                                                        class="fas fa-star amber-text"> </i>
                                                 </li>
                                                 <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
                                                 </li>
@@ -452,11 +477,13 @@
                                                 </li>
                                                 <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
                                                 </li>
-                                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                <li class="list-inline-item"><i
+                                                        class="fas fa-star-half-alt amber-text"></i>
                                                 </li>
                                                 <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
                                             </ul>
-                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
+                                                Trâm,
                                                 quận....</a>
                                             <p class="card-text">Đoàn: Đồ ăn rất ngon, nên thử</p>
                                             <!-- Text -->
@@ -508,7 +535,8 @@
                                             <h4 class="card-title font-weight-bold"><a>Texas Chicken</a></h4>
                                             <!-- Data -->
                                             <ul class="list-unstyled list-inline rating mb-0">
-                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i>
+                                                <li class="list-inline-item mr-0"><i
+                                                        class="fas fa-star amber-text"> </i>
                                                 </li>
                                                 <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
                                                 </li>
@@ -516,11 +544,13 @@
                                                 </li>
                                                 <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
                                                 </li>
-                                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                <li class="list-inline-item"><i
+                                                        class="fas fa-star-half-alt amber-text"></i>
                                                 </li>
                                                 <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
                                             </ul>
-                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
+                                                Trâm,
                                                 quận....</a>
                                             <p class="card-text">Đoàn: Đồ ăn rất ngon, nên thử</p>
                                             <!-- Text -->
@@ -571,7 +601,8 @@
                                             <h4 class="card-title font-weight-bold"><a>Texas Chicken</a></h4>
                                             <!-- Data -->
                                             <ul class="list-unstyled list-inline rating mb-0">
-                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i>
+                                                <li class="list-inline-item mr-0"><i
+                                                        class="fas fa-star amber-text"> </i>
                                                 </li>
                                                 <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
                                                 </li>
@@ -579,11 +610,13 @@
                                                 </li>
                                                 <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
                                                 </li>
-                                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                <li class="list-inline-item"><i
+                                                        class="fas fa-star-half-alt amber-text"></i>
                                                 </li>
                                                 <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
                                             </ul>
-                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
+                                                Trâm,
                                                 quận....</a>
                                             <p class="card-text">Đoàn: Đồ ăn rất ngon, nên thử</p>
                                             <!-- Text -->
@@ -634,7 +667,8 @@
                                             <h4 class="card-title font-weight-bold"><a>Texas Chicken</a></h4>
                                             <!-- Data -->
                                             <ul class="list-unstyled list-inline rating mb-0">
-                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i>
+                                                <li class="list-inline-item mr-0"><i
+                                                        class="fas fa-star amber-text"> </i>
                                                 </li>
                                                 <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
                                                 </li>
@@ -642,11 +676,13 @@
                                                 </li>
                                                 <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
                                                 </li>
-                                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                <li class="list-inline-item"><i
+                                                        class="fas fa-star-half-alt amber-text"></i>
                                                 </li>
                                                 <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
                                             </ul>
-                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
+                                                Trâm,
                                                 quận....</a>
                                             <p class="card-text">Đoàn: Đồ ăn rất ngon, nên thử</p>
                                             <!-- Text -->
@@ -697,7 +733,8 @@
                                             <h4 class="card-title font-weight-bold"><a>Texas Chicken</a></h4>
                                             <!-- Data -->
                                             <ul class="list-unstyled list-inline rating mb-0">
-                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i>
+                                                <li class="list-inline-item mr-0"><i
+                                                        class="fas fa-star amber-text"> </i>
                                                 </li>
                                                 <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
                                                 </li>
@@ -705,11 +742,13 @@
                                                 </li>
                                                 <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
                                                 </li>
-                                                <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
+                                                <li class="list-inline-item"><i
+                                                        class="fas fa-star-half-alt amber-text"></i>
                                                 </li>
                                                 <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
                                             </ul>
-                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
+                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy
+                                                Trâm,
                                                 quận....</a>
                                             <p class="card-text">Đoàn: Đồ ăn rất ngon, nên thử</p>
                                             <!-- Text -->
@@ -746,7 +785,7 @@
         </div>
 
         <!-- Model comment -->
-        <div class="modal fade modal-wrapper" id="comment" >
+        <div class="modal fade modal-wrapper" id="comment">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-body">
@@ -790,7 +829,8 @@
                                     </div>
                                     <div style="text-align: center;">
                                         <p style="font-size: large; font-weight: bold">Trung bình:
-                                            <span style="margin-left:5px; font-size: large; font-weight: bold; color: red">8</span>
+                                            <span
+                                                style="margin-left:5px; font-size: large; font-weight: bold; color: red">8</span>
                                         </p>
                                     </div>
                                 </div>
@@ -809,13 +849,26 @@
                                         </div>
                                         <p>Chọn hình</p>
                                         <div class="row">
-                                            <div  @click="cancelImage()" class="select-img-comment"><img class="img-comment" src="/images/slider/foody-slider1.jpg"><i class="cancel far fa-times-circle"></i></div>
-                                            <div class="select-img-comment"><img class="img-comment" src="/images/slider/foody-slider1.jpg"><i class="cancel far fa-times-circle"></i></div>
-                                            <div class="select-img-comment"><img class="img-comment" src="/images/slider/foody-slider1.jpg"><i class="cancel far fa-times-circle"></i></div>
-                                            <div class="select-img-comment"><img class="img-comment" src="/images/slider/foody-slider1.jpg"><i class="cancel far fa-times-circle"></i></div>
-                                            <div class="select-img-comment"> <input style="margin-top: -5px; opacity: 0; height: 140px" type="file"><i id="add-img-comment" class="fas fa-plus"></i></div>
+                                            <div @click="cancelImage()" class="select-img-comment"><img
+                                                    class="img-comment" src="/images/slider/foody-slider1.jpg"><i
+                                                    class="cancel far fa-times-circle"></i></div>
+                                            <div class="select-img-comment"><img class="img-comment"
+                                                                                 src="/images/slider/foody-slider1.jpg"><i
+                                                    class="cancel far fa-times-circle"></i></div>
+                                            <div class="select-img-comment"><img class="img-comment"
+                                                                                 src="/images/slider/foody-slider1.jpg"><i
+                                                    class="cancel far fa-times-circle"></i></div>
+                                            <div class="select-img-comment"><img class="img-comment"
+                                                                                 src="/images/slider/foody-slider1.jpg"><i
+                                                    class="cancel far fa-times-circle"></i></div>
+                                            <div class="select-img-comment"><input
+                                                    style="margin-top: -5px; opacity: 0; height: 140px" type="file"><i
+                                                    id="add-img-comment" class="fas fa-plus"></i></div>
                                         </div>
-                                        <div><button class="btn btn-success" @click.stop.prevent="cancelImage">Gửi</button></div>
+                                        <div>
+                                            <button class="btn btn-success" @click.stop.prevent="cancelImage">Gửi
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -845,156 +898,63 @@
     </div>
 @endsection
 @section('script')
-<script>
-    function DetailPage(){
-        this.limit = 10;
-        this.page = 2;
-        this.res_id = $('#detail-page').attr('res-id');
-        this.api_get_comment = $('#detail-page').attr('api-get-comment');
+    <script>
+        function DetailPage() {
+            this.limit = 10;
+            this.page = 2;
+            this.res_id = $('#detail-page').attr('res-id');
+            this.api_get_comment = $('#detail-page').attr('api-get-comment');
 
-        this.init = function (){
-            $('.last-comment-image').click(function (){
-                var pics = JSON.parse($(this).attr('urls'));
-                var xhtml = '';
-                for(i in pics){
-                    var is_active = '';
-                    if(i==0){
-                        is_active = 'active'
+            this.init = function () {
+                $('.comment-image').click(function () {
+                    var pics = JSON.parse($(this).attr('urls'));
+                    var xhtml = '';
+                    for (i in pics) {
+                        var is_active = '';
+                        if (i == 0) {
+                            is_active = 'active'
+                        }
+                        xhtml += ' <div class="carousel-item ' + is_active + '">\n' +
+                            '                                <img class="d-block w-100" src="' + pics[i]['Url'] + '" alt="First slide">\n' +
+                            '                            </div>';
                     }
-                    xhtml += ' <div class="carousel-item '+ is_active +'">\n' +
-                        '                                <img class="d-block w-100" src="'+ pics[i]['Url'] +'" alt="First slide">\n' +
-                        '                            </div>';
-                }
-                $("#list-comment-picture").html(xhtml);
-                $('#commentPictureModel').modal('show');
-            });
-        }
-        var ancestor = this;
-        this.getComment = function (){
-            $.ajax({
-                method : 'POST',
-                data : {
-                    limit : ancestor.limit,
-                    page : ancestor.page,
-                    res_id : ancestor.res_id
-                },
-                url : ancestor.api_get_comment
-            }).done(function (result){
-                if(result['success'] && result['data']['data'][0]){
-                    var comments = result['data']['data'];
-                    var xhtml = $('#review-list').html();
-                    for(i in comments){
-                        xhtml+=  ' <div class="my-card comment-panel">\n' +
-                            '                                    <div class="comment-header">\n' +
-                            '                                        <div class="row">\n' +
-                            '                                            <div class="mt-10 mb-10 ml-20 mr-10">\n' +
-                            '                                                <img class="avatar" src="'+ comments[i]['customer']['Avatar'] +'">\n' +
-                            '                                            </div>\n' +
-                            '                                            <div class="mt-10">\n' +
-                            '                                                <p class="comment-user" style="margin-bottom: -5px !important;">'+ comments[i]['customer']['DisplayName'] +'</p>\n' +
-                            '                                                <p class="comment-time">' + comments[i]['CreatedOnTimeDiff'] + '</p>\n' +
-                            '                                            </div>\n' +
-                            '                                            <p class="rating-point">5</p>\n' +
-                            '                                        </div>\n' +
-                            '                                    </div>\n' +
-                            '                                    <div class="my-comment-body">\n' +
-                            '                                        <div class="comment-content">\n' +
-                            '                                            <p style="color: black; margin-bottom: 0px !important;">{{$comment[\'Description\']}}\n' +
-                            '                                            </p>\n' +
-                            '                                            <a href="#">See more</a>\n' +
-                            '                                        </div>\n' +
-                            '                                        <div class="comment-picture">\n' +
-                            '                                            <div class="row" style="padding: 20px">\n' +
-                            '                                                @foreach($comment[\'comment_pictures\'] as $key=>$pic)\n' +
-                            '                                                    @if($key == 2 && count($comment[\'comment_pictures\']) > 3)\n' +
-                            '                                                        <div class="col-sm-4" style="text-align: center; padding: 2px !important;">\n' +
-                            '                                                            <p>+{{count($comment[\'comment_pictures\']) - 3}}</p>\n' +
-                            '                                                            <img class="comment-image last-comment-image" urls="{{json_encode($comment[\'comment_pictures\'])}}" src="{{$pic[\'Url\']}}">\n' +
-                            '                                                        </div>\n' +
-                            '                                                        @break\n' +
-                            '                                                    @endif\n' +
-                            '                                                    <div class="col-sm-4" style="text-align: center; padding: 2px !important; ">\n' +
-                            '                                                        <img class="comment-image" style="text-align: center"\n' +
-                            '                                                             src="{{$pic[\'Url\']}}">\n' +
-                            '                                                    </div>\n' +
-                            '                                                @endforeach\n' +
-                            '                                            </div>\n' +
-                            '                                        </div>\n' +
-                            '                                    </div>\n' +
-                            '                                    <div class="comment-footer">\n' +
-                            '                                        <div class="row mb-5">\n' +
-                            '                                            <div class="mr-20">\n' +
-                            '                                                <i style="color: blue" class="fa fa-heart mr-5"></i><span>{{$comment[\'TotalLike\']}} người đã thích</span>\n' +
-                            '                                            </div>\n' +
-                            '                                        </div>\n' +
-                            '                                        <hr class="my-hr">\n' +
-                            '                                        <div class="row mb-5 action">\n' +
-                            '                                            <div class="mr-20">\n' +
-                            '                                                <i class="fa fa-heart mr-5"></i><span>Like</span>\n' +
-                            '                                            </div>\n' +
-                            '                                            <div class="mr-20">\n' +
-                            '                                                <i class="fa fa-comment mr-5"></i><span>Comment</span>\n' +
-                            '                                            </div>\n' +
-                            '                                            <div class="mr-20">\n' +
-                            '                                                <a data-toggle="modal" data-target="#report">\n' +
-                            '                                                    <i class="fa fa-exclamation-triangle report-btn mr-5"></i>\n' +
-                            '                                                    <span>report</span>\n' +
-                            '                                                </a>\n' +
-                            '                                            </div>\n' +
-                            '                                        </div>\n' +
-                            '                                        <hr class="my-hr">\n' +
-                            '                                        <div class="pb-5 sub-comment">\n' +
-                            '                                            <div class="row">\n' +
-                            '                                                <div class="mt-10 mb-10 ml-20 mr-10">\n' +
-                            '                                                    <img class="avatar" src="/images/Screenshot_50.png">\n' +
-                            '                                                </div>\n' +
-                            '                                                <div class="mt-10">\n' +
-                            '                                                    <p class="comment-user" style="margin-bottom: -5px !important;">Hà Thanh\n' +
-                            '                                                        Đoàn</p>\n' +
-                            '                                                    <p class="comment-time">12/01/2021 10:20:21</p>\n' +
-                            '                                                </div>\n' +
-                            '                                            </div>\n' +
-                            '                                            <div class="comment-content" style="margin: -7px 10px 0px 52px">\n' +
-                            '                                                <p>Quán phục vụ tốt Quán phục vụ tốt Quán phục vụ tốt Quán phục vụ tốt</p>\n' +
-                            '                                            </div>\n' +
-                            '                                        </div>\n' +
-                            '                                        <hr class="my-hr">\n' +
-                            '                                        <div class="pb-5 sub-comment">\n' +
-                            '                                            <div class="row">\n' +
-                            '                                                <div class="mt-10 mb-10 ml-20 mr-10">\n' +
-                            '                                                    <img class="avatar" src="/images/Screenshot_50.png">\n' +
-                            '                                                </div>\n' +
-                            '                                                <div class="mt-10">\n' +
-                            '                                                    <p class="comment-user" style="margin-bottom: -5px !important;">Hà Thanh\n' +
-                            '                                                        Đoàn</p>\n' +
-                            '                                                    <p class="comment-time">12/01/2021 10:20:21</p>\n' +
-                            '                                                </div>\n' +
-                            '                                            </div>\n' +
-                            '                                            <div class="comment-content" style="margin: -7px 10px 0px 52px">\n' +
-                            '                                                <p>Quán phục vụ tốt <a href="#">...See more</a></p>\n' +
-                            '                                            </div>\n' +
-                            '                                        </div>\n' +
-                            '                                        <div class="see-more"><a href="#">Xem thêm<i style="margin-left: 3px" class="fas fa-angle-down"></i></a></div>\n' +
-                            '                                        <div class="form-inline form-inline-custom">\n' +
-                            '                                            <img class="avatar" src="/images/Screenshot_50.png">\n' +
-                            '                                            <input type="text" placeholder="Viết bình luận..." class="ml-10 my-comment"></input>\n' +
-                            '                                        </div>\n' +
-                            '                                    </div>\n' +
-                            '                                </div>'
+                    $("#list-comment-picture").html(xhtml);
+                    $('#commentPictureModel').modal('show');
+                });
+            }
+            var ancestor = this;
+            this.getComment = function () {
+                $.ajax({
+                    method: 'POST',
+                    data: {
+                        limit: ancestor.limit,
+                        page: ancestor.page,
+                        res_id: ancestor.res_id
+                    },
+                    url: ancestor.api_get_comment
+                }).done(function (result) {
+                    if (result['success'] && result['data']['data'][0]) {
+                        var comments = result['data']['data'];
+                        var xhtml = $('#review-list').html();
+                        for (i in comments) {
+                        }
+                        $('#review-list').html(xhtml);
                     }
-                }
-            });
+                });
+            }
+
+            this.setPage = function (val = 1) {
+                this.page = 1;
+            }
+            return this;
         }
 
-        this.setPage = function (val=1){
-            this.page = 1;
-        }
-        return this;
-    }
-   $(document).ready(function (){
-       var detail_page = new DetailPage();
-       detail_page.init();
-       detail_page.getComment();
-   });
-</script>
+        $(document).ready(function () {
+            var detail_page = new DetailPage();
+            // $('html, body').animate({
+            //     scrollTop: $('#review-list').offset().top
+            // }, 'slow');
+            detail_page.init();
+        });
+    </script>
 @endsection

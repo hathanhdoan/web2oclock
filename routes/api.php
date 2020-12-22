@@ -29,6 +29,8 @@ Route::group(['namespace' => 'Api'], function () {
     Route::group(['namespace' => 'Restaurant', 'prefix' => 'res'], function () {
         Route::post('/get-nearest', 'RestaurantController@getNearestRes')->name('api.res.nearest');
         Route::post('/get-saved-res', 'RestaurantController@getSavedRes')->name('api.res.saved');
+        Route::post('/save', 'RestaurantController@save')->name('api.res.save')->middleware('auth.jwt');
+        Route::post('/un-save', 'RestaurantController@unSave')->name('api.res.un_save')->middleware('auth.jwt');
     });
     Route::group(['namespace' => 'Comment', 'prefix' => 'comment'], function () {
         Route::post('/', 'CommentController@getList')->name('api.comment.get-list');

@@ -370,10 +370,10 @@ ul.menu-sidebar-custom li:hover {
     margin-top: 10px;
 }
 
-.see-more:last-child:hover {
-    background-color: #bbaaaa;
+/*.see-more:last-child:hover {*/
+/*    background-color: #bbaaaa;*/
 
-}
+/*}*/
 .see-more a{
     color: rgb(142, 192, 208);
 }
@@ -496,7 +496,33 @@ ul.menu-sidebar-custom li:hover {
 .menu-collap li a:hover{
     font-weight: bold;
 }
+.my-pagination {
+    display: inline-block;
+}
 
+@media (max-width: 800px) {
+    .my-pagination {
+        margin-top: 20px;
+    }
+}
+
+.my-pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 2px;
+}
+
+.my-pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+.my-pagination a:hover:not(.active) {background-color: #ddd;}
 .menu-collap li:nth-child(odd){
     background-color: #ecebeb;
 }

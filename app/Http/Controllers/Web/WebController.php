@@ -18,7 +18,7 @@ class WebController extends Controller
     }
 
     public function index(Request $request){
-        $new_res = Restaurant::with(['restaurant_detail:open_time'])->take(10)->get();
+        $new_res = Restaurant::with(['restaurant_detail'])->take(10)->get();
         $args = [
             'new_res' => $new_res
         ];

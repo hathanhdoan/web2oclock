@@ -82,4 +82,63 @@ class RestaurantController extends Controller
            'message' => 'Không tìm thấy'
        ];
    }
+
+   public function save(){
+       $res_id = \request()->res_id;
+       if(!isset($res_id)){
+           return [
+               'success' => false,
+               'message' => __('is_required',['name'=>'Res ID'])
+           ];
+       }
+       $res = Restaurant::find($res_id);
+       if($res){
+           $customer = Auth::guard('api')->user();
+           $saved_res = !empty($customer['SavedRes']) ? json_decode($customer['SavedRes']) : [];
+           if(!in_array($res_id, $saved_res)){
+              $saved_res[] = $res_id;
+//              $customer = Customer::find($cu)
+               $customer->update(['SavedRes'=>json_encode($saved_res)]);
+           }
+           return [
+               'success' => true,
+               'message' => __('success')
+           ];
+
+       }
+       return [
+           'success' => false,
+           'message' => 'Không tìm thấy'
+       ];
+   }
+
+   public function unSave(Request $request){
+       $res_id = \request()->res_id;
+       if(!isset($res_id)){
+           return [
+               'success' => false,
+               'message' => __('is_required',['name'=>'Res ID'])
+           ];
+       }
+       $res = Restaurant::find($res_id);
+       if($res){
+           $customer = Auth::guard('api')->user();
+           $saved_res = !empty($customer['SavedRes']) ? json_decode($customer['SavedRes']) : [];
+           if(in_array($res_id, $saved_res)){
+               $key = array_search($res_id,$saved_res);
+               array_splice($saved_res,$key,1);
+//              $customer = Customer::find($cu)
+               $customer->update(['SavedRes'=>json_encode($saved_res)]);
+           }
+           return [
+               'success' => true,
+               'message' => __('success')
+           ];
+
+       }
+       return [
+           'success' => false,
+           'message' => 'Không tìm thấy'
+       ];
+   }
 }
