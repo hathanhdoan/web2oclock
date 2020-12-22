@@ -31,7 +31,7 @@ class WebController extends Controller
         if(!$res){
             abort(404);
         }
-        $comments = Comment::where('ResId',$res['Id'])->with(['comment_pictures:CommentId,Url','customer:Id,DisplayName,Avatar'])->get();
+        $comments = Comment::where('ResId',$res['Id'])->with(['comment_pictures:CommentId,Url','customer:Id,DisplayName,Avatar'])->paginate(10);
         $args = [
             'res' => $res,
             'comments' => $comments

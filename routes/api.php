@@ -30,4 +30,7 @@ Route::group(['namespace' => 'Api'], function () {
         Route::post('/get-nearest', 'RestaurantController@getNearestRes')->name('api.res.nearest');
         Route::post('/get-saved-res', 'RestaurantController@getSavedRes')->name('api.res.saved');
     });
+    Route::group(['namespace' => 'Comment', 'prefix' => 'comment'], function () {
+        Route::post('/', 'CommentController@getList')->name('api.comment.get-list');
+    });
 });

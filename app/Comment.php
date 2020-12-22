@@ -20,6 +20,7 @@ class Comment extends Model
         'TotalLike',
         'TotalPictures',
         'TotalView',
+        'Parent_id',
     ];
 
     public function comment_pictures(){
