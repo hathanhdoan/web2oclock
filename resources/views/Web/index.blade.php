@@ -1427,7 +1427,7 @@
                 },
                 url : $('#index-obj').attr('api-get-nearest')
             }).done(function (data){
-                var res_list = data.data;
+                var res_list = data;
                 var xhtml = '';
                 for(i in res_list ){
                     if(i==5){
@@ -1481,7 +1481,7 @@
 
         function initMap() {
             if (navigator.geolocation) {
-                console.log('HEHEHE');
+                console.log('inital map.....');
                 navigator.geolocation.getCurrentPosition(function (position){
                     console.log('Lat: '+ position.coords.latitude+ ' Lng: '+ position.coords.longitude);
                     $.ajax({
