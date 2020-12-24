@@ -186,6 +186,22 @@
             window.location.href = '/login';
         });
     });
+    function startRecording() {
+        if (window.hasOwnProperty('webkitSpeechRecognition')) {
+            var recognition = new webkitSpeechRecognition();
+            recognition.continuous = false;
+            recognition.interimResults = false;
+            recognition.lang = "vi-VN";
+            recognition.start();
+            recognition.onresult = function(e) {
+                alert(e.results[0][0].transcript);
+                recognition.stop();
+            };
+            recognition.onerror = function(e) {
+                recognition.stop();
+            }
+        }
+    }
 </script>
 <!-- index30:23-->
 </html>

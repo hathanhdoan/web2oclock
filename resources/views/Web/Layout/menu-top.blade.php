@@ -25,8 +25,8 @@
                         <ul class="hm-menu">
                             <!-- Begin Header Middle Wishlist Area -->
                             <li class="hm-wishlist">
-                                <a style="border-radius: 55px" data-toggle="tooltip" data-placement="top" title="Tạo địa điểm " href="wishlist.html">
-                                    <i class="fas fa-plus"></i>
+                                <a onclick="startRecording()" style="border-radius: 55px" data-toggle="tooltip" data-placement="top" title="Điều khiển bằng giọng nói" >
+                                    <i class="fas fa-microphone"></i>
                                 </a>
                             </li>
                             <!-- Header Middle Wishlist Area End Here -->
