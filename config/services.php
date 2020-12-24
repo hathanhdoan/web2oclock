@@ -33,6 +33,7 @@ return [
         'client_id' => '134243171665-dk78i1urlusb58h9pvoln513s7lavnqs.apps.googleusercontent.com',
         'client_secret' => '42GhZh8WCF5tzULSRrFfU2Nq',
 //        'redirect' => 'http://web-2oclock.herokuapp.com/auth/google/callback',
-        'redirect' => 'http://dev.toang.com/auth/google/callback',
+//        'redirect' => 'http://dev.toang.com/auth/google/callback',
+        'redirect' => env('GOOGLE_REDIRECT')
     ],
 ];
