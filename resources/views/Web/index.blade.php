@@ -1490,6 +1490,8 @@
                             user_location: {
                                 Latitude : position.coords.latitude,
                                 Longitude: position.coords.longitude
+                                // Latitude : 10.8380621 ,
+                                // Longitude: 106.78649750000001
                             }
                         },
                         url : $('#index-obj').attr('api-get-nearest')
@@ -1595,7 +1597,7 @@
                                 var infowincontent = document.createElement('div');
                                 var res_name = createElement('a', name, null, {
                                     'id': 'res_name_gg_map',
-                                    'href': '#',
+                                    'href': '/res-detail/'+id,
                                     'target': '_blank'
                                 });
                                 infowincontent.appendChild(res_name);
