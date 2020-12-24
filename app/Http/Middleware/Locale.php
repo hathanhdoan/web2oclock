@@ -29,7 +29,7 @@ class Locale
 
         config(['app.locale' => $language]);
         // Chuyển ứng dụng sang ngôn ngữ được chọn
-
+        exec('php artisan config:cache');
         return $next($request);
 
     }

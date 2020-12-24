@@ -185,7 +185,12 @@ ul.menu-sidebar-custom li:hover {
     clear: both;
     display: table;
 }
-
+.more {
+    color: grey!important;
+}
+.more:hover {
+    color: #11e0e0 !important;
+}
 .rating-point {
     margin-top: 10px;
     position: absolute;

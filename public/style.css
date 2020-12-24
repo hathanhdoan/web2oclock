@@ -72,7 +72,7 @@
 /*  1.1 Basic
 /*----------------------------------------*/
 body {
-    background-image: url("images/background/bg-feature.png") !important;
+    /*background-image: url("images/background/bg-feature.png") !important;*/
 	color: #242424;
 	font-family: inherit;
 	font-size: 14px;

@@ -103,3 +103,57 @@ function haversine($from_location, $to_location ){
     $distance = ($distance * $earthRadius)/1000;
     return round($distance,3);
 }
+function uploadFile($data = [])
+{
+    try {
+        $path = isset($data['path']) ? $data['path'] : '/';
+        if (!is_dir(public_path($path))) {
+            mkdir(public_path($path), 0777, true);
+        }
+        if (!empty($data['file'])) {
+            $args['name'] = str_replace(" ", "_", $data['file']->getClientOriginalName());
+            $args['size'] = str_replace(" ", "_", $data['file']->getSize());
+            $args['ext'] = str_replace(" ", "_", $data['file']->getClientOriginalExtension());
+            $args['type'] = str_replace(" ", "_", $data['file']->getMimeType());
+            $filename = date('YmdHis') . '_' . $args['name'];
+            $args['path'] = $path . '/' . $filename;
+            $data['file']->move($path, $filename);
+            return [
+                'success' => true,
+                'data' => $args
+            ];
+        }
+        return [
+            'success' => false,
+            'message' => __('file_is_not_exist')
+        ];
+
+    } catch (Exception $e) {
+        return [
+            'success' => false,
+            'message' => $e->getMessage()
+        ];
+    }
+}
+
+function removeFile($data = [])
+{
+    try {
+        if (!empty($data['path']) && file_exists(public_path($data['path']))) {
+            unlink(public_path($data['path']));
+            return [
+                'success' => true,
+                'message' => 'Xóa file thành công'
+            ];
+        }
+        return [
+            'success' => false,
+            'message' => __('file_is_not_exist')
+        ];
+    } catch (Exception $e) {
+        return [
+            'success' => false,
+            'message' => $e->getMessage()
+        ];
+    }
+}

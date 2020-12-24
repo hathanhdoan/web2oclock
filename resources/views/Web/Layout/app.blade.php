@@ -163,8 +163,8 @@
             var user = localStorage.getItem('user');
             if(user){
                 user = JSON.parse(user);
-                var avatar = user['Avatar'] ? user['Avatar'] : '/images/menu/logo/avatar.jpg'
-                var name = user['DisplayName'] ? user['DisplayName'] : user['email'];
+                var avatar = user['Avatar'] ? '/'+ user['Avatar'] : '/images/menu/logo/avatar.jpg'
+                var name = user['DisplayName'] ? (user['DisplayName']).slice(0,8)+'...' : user['email'].slice(0,8)+'...';
                 $('#avatar').attr('src',avatar);
                 $('#display-name').text(name);
                 $('#login-info').removeClass('hide-elm');
@@ -183,7 +183,7 @@
             app.logout();
         });
         $('#btn-login-index').click(function (){
-            window.location.href = 'login';
+            window.location.href = '/login';
         });
     });
 </script>

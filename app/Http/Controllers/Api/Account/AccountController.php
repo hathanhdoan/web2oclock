@@ -26,6 +26,7 @@ class AccountController extends Controller
         $data = $request->all();
         $data['CreateAt'] = $data['UpdateAt'] = time();
         $data['Status'] = 1;
+        $data['Avatar'] = 'images/menu/logo/avatar.jpg';
         $data['password'] = Hash::make($data['password']);
 
         $customer = Customer::create($data);
@@ -291,6 +292,7 @@ class AccountController extends Controller
                         'email' => $customer->email,
                         'Google_Id' => $customer->id,
                         'Status' => 1,
+                        'Avatar' => 'images/menu/logo/avatar.jpg',
                         'CreateAt' => time(),
                         'UpdateAt' => time(),
                     ]);

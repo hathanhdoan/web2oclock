@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Api\Restaurant;
 
+use App\Comment;
+use App\CommentLike;
 use App\Customer;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Account\ChangePasswordRequest;
@@ -22,7 +24,7 @@ use Tymon\JWTAuth\Exceptions\TokenExpiredException;
 class RestaurantController extends Controller
 {
    public function getNearestRes(Request $request){
-       return Restaurant::take(2)->inRandomOrder()->get();
+//       return Restaurant::take(2)->inRandomOrder()->get();
 
        $user_location = is_array($request->user_location) ? $request->user_location : json_decode($request->user_location);
        if(!isset($user_location)){
@@ -39,7 +41,7 @@ class RestaurantController extends Controller
 //           'Latitude' => 10.8139,
 //           'Longitude' => 106.717
 //       ];
-       $res = Restaurant::with('restaurantDetail')->get()->toArray();
+       $res = Restaurant::with('restaurant_detail')->get()->toArray();
        foreach ($res as $key=>$value) {
            $res[$key]['distance'] = haversine($user_location, $value);
        }

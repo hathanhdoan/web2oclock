@@ -10,6 +10,6 @@ class CommentPicture extends Model
     protected $primaryKey = 'Id';
     public $incrementing = true;
     public $timestamps = false;
-    protected $fillable = ['Url','CommentId'];
+    protected $fillable = ['Url','CommentId','IsFoody'];
 
 }

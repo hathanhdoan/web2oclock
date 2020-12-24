@@ -18,6 +18,8 @@ Route::get('create-xml','CreateXmlController@create');
 Route::post('hehe','CreateXmlController@hehe');
 
 Route::group(['namespace' => 'Api'], function () {
+    Route::post('/upload-image', 'UtityController@uploadImage')->name('api.utity.upload_image');
+    Route::post('/remove-image', 'UtityController@removeImage')->name('api.utity.remove_image');
     Route::group(['namespace' => 'Account', 'prefix' => 'account'], function () {
         Route::post('/', 'AccountController@register')->name('api.account.regester');
         Route::get('/logout', 'AccountController@logout')->middleware('auth.jwt')->name('api.account.logout');
@@ -34,5 +36,7 @@ Route::group(['namespace' => 'Api'], function () {
     });
     Route::group(['namespace' => 'Comment', 'prefix' => 'comment'], function () {
         Route::post('/', 'CommentController@getList')->name('api.comment.get-list');
+        Route::post('/create', 'CommentController@create')->name('api.comment.create');
+        Route::post('/like', 'CommentController@like')->name('api.comment.like')->middleware('auth.jwt');
     });
 });

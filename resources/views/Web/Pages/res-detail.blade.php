@@ -1,6 +1,8 @@
 @extends('Web.Layout.app')
 @section('content')
-    <div id="detail-page" res-id="{{$res['Id']}}" api-get-comment="{{route('api.comment.get-list')}}">
+    <div id="detail-page" res-id="{{$res['Id']}}" api-get-comment="{{route('api.comment.get-list')}}"
+         api-like="{{route('api.comment.like')}}" api-upload-image="{{route('api.utity.upload_image')}}"
+         api-remove-image="{{route('api.utity.remove_image')}}" api-create-comment="{{route('api.comment.create')}}">
         <div class="breadcrumb-area">
             <div class="container">
                 <div class="breadcrumb-content">
@@ -18,10 +20,17 @@
                 <div class="row single-product-area">
                     <div class="col-lg-5 col-md-6">
                         <div class="lg-image">
-                            <a class="popup-img venobox vbox-item" href="/images/product/large-size/1.jpg"
-                               data-gall="myGallery">
-                                <img id="detail-product-img" src="/images/slider/foody-slider1.jpg" alt="product image">
-                            </a>
+                            @if($res['IsFoody'])
+                                <a class="popup-img venobox vbox-item" href="{{$res['PhotoUrl']}}"
+                                   data-gall="myGallery">
+                                    <img id="detail-product-img" src="{{$res['PhotoUrl']}}" alt="product image">
+                                </a>
+                            @else
+                                <a class="popup-img venobox vbox-item" href="/{{$res['PhotoUrl']}}"
+                                   data-gall="myGallery">
+                                    <img id="detail-product-img" src="/{{$res['PhotoUrl']}}" alt="product image">
+                                </a>
+                            @endif
                         </div>
                     </div>
 
@@ -39,23 +48,23 @@
                                         </div>
                                         <div class="col-sm-11 form-inline">
                                             <div class="mr-20">
-                                                <p class="point-rating-header">8.6</p>
+                                                <p class="point-rating-header">{{$res['QualityRating'] ?? $res['AvgRating']}}</p>
                                                 <p style="margin-top: -14px; color: #898989">Chất lượng</p>
                                             </div>
                                             <div class="mr-20" style="width: 58px">
-                                                <p class="point-rating-header">8.6</p>
+                                                <p class="point-rating-header">{{$res['ServiceRating'] ?? $res['AvgRating']}}</p>
                                                 <p style="margin-top: -14px; color: #898989">Dịch vụ</p>
                                             </div>
                                             <div class="mr-20" style="width: 58px">
-                                                <p class="point-rating-header">8.6</p>
+                                                <p class="point-rating-header">{{$res['PriceRating'] ?? $res['AvgRating']}}</p>
                                                 <p style="margin-top: -14px; color: #898989">Giá cả</p>
                                             </div>
                                             <div class="mr-20" style="width: 58px">
-                                                <p class="point-rating-header">8.6</p>
+                                                <p class="point-rating-header">{{$res['PositionRating'] ?? $res['AvgRating']}}</p>
                                                 <p style="margin-top: -14px; color: #898989">Vị trí</p>
                                             </div>
                                             <div class="mr-20" style="width: 72px">
-                                                <p class="point-rating-header">8.6</p>
+                                                <p class="point-rating-header">{{$res['SpaceRating'] ?? $res['AvgRating']}}</p>
                                                 <p style="margin-top: -14px; color: #898989">Không gian</p>
                                             </div>
                                         </div>
@@ -139,21 +148,20 @@
                                         <div class="comment-header">
                                             <div class="row">
                                                 <div class="mt-10 mb-10 ml-20 mr-10">
-                                                    <img class="avatar" src="{{$comment['customer']['Avatar'] ?? ''}}">
+                                                    <img class="avatar" src="{{$comment['customer']['Avatar'] ? ($comment['customer']['IsFoody'] ? $comment['customer']['Avatar'] : '/'.$comment['customer']['Avatar']) : '/images/menu/logo/avatar.jpg'}}">
                                                 </div>
                                                 <div class="mt-10">
                                                     <p class="comment-user"
                                                        style="margin-bottom: -5px !important;">{{$comment['customer']['DisplayName']}}</p>
                                                     <p class="comment-time">{{$comment['CreatedOnTimeDiff']}}</p>
                                                 </div>
-                                                <p class="rating-point">5</p>
+                                                <p class="rating-point">{{$comment['AvgRating']}}</p>
                                             </div>
                                         </div>
                                         <div class="my-comment-body">
                                             <div class="comment-content">
-                                                <p style="color: black; margin-bottom: 0px !important;">{{$comment['Description']}}
+                                                <p style="color: black; margin-bottom: 0px !important;">{{$comment['Description']}}</span>
                                                 </p>
-                                                <a href="#">See more</a>
                                             </div>
                                             <div class="comment-picture">
                                                 <div class="row" style="padding: 20px">
@@ -163,16 +171,18 @@
                                                                  style="text-align: center; padding: 2px !important;">
                                                                 <p>+{{count($comment['comment_pictures']) - 3}}</p>
                                                                 <img class="comment-image last-comment-image"
+                                                                     is-foody="{{$pic['IsFoody']}}"
                                                                      urls="{{json_encode($comment['comment_pictures'])}}"
-                                                                     src="{{$pic['Url']}}">
+                                                                     src="{{$pic['IsFoody'] ? $pic['Url'] : '/'.$pic['Url']}}">
                                                             </div>
                                                             @break
                                                         @endif
                                                         <div class="col-sm-4"
                                                              style="text-align: center; padding: 2px !important; ">
                                                             <img class="comment-image " style="text-align: center"
+                                                                 is-foody="{{$pic['IsFoody']}}"
                                                                  urls="{{json_encode($comment['comment_pictures'])}}"
-                                                                 src="{{$pic['Url']}}">
+                                                                 src="{{$pic['IsFoody'] ? $pic['Url'] : '/'.$pic['Url']}}">
                                                         </div>
                                                     @endforeach
                                                 </div>
@@ -181,16 +191,15 @@
                                         <div class="comment-footer">
                                             <div class="row mb-5">
                                                 <div class="mr-20">
-                                                    <i style="color: blue" class="fa fa-heart mr-5"></i><span>{{$comment['TotalLike']}} người đã thích</span>
+                                                    <i style="color: blue" class="fa fa-heart mr-5"></i><span
+                                                        id="{{$comment['Id']}}">{{$comment['TotalLike']}} </span>người
+                                                    đã thích
                                                 </div>
                                             </div>
                                             <hr class="my-hr">
                                             <div class="row mb-5 action">
-                                                <div class="mr-20">
+                                                <div class="mr-20 like" comment_id="{{$comment['Id']}}">
                                                     <i class="fa fa-heart mr-5"></i><span>Like</span>
-                                                </div>
-                                                <div class="mr-20">
-                                                    <i class="fa fa-comment mr-5"></i><span>Comment</span>
                                                 </div>
                                                 <div class="mr-20">
                                                     <a data-toggle="modal" data-target="#report">
@@ -199,62 +208,20 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                            <hr class="my-hr">
-                                            <div class="pb-5 sub-comment">
-                                                <div class="row">
-                                                    <div class="mt-10 mb-10 ml-20 mr-10">
-                                                        <img class="avatar" src="/images/Screenshot_50.png">
-                                                    </div>
-                                                    <div class="mt-10">
-                                                        <p class="comment-user" style="margin-bottom: -5px !important;">
-                                                            Hà Thanh
-                                                            Đoàn</p>
-                                                        <p class="comment-time">12/01/2021 10:20:21</p>
-                                                    </div>
-                                                </div>
-                                                <div class="comment-content" style="margin: -7px 10px 0px 52px">
-                                                    <p>Quán phục vụ tốt Quán phục vụ tốt Quán phục vụ tốt Quán phục vụ
-                                                        tốt</p>
-                                                </div>
-                                            </div>
-                                            <hr class="my-hr">
-                                            <div class="pb-5 sub-comment">
-                                                <div class="row">
-                                                    <div class="mt-10 mb-10 ml-20 mr-10">
-                                                        <img class="avatar" src="/images/Screenshot_50.png">
-                                                    </div>
-                                                    <div class="mt-10">
-                                                        <p class="comment-user" style="margin-bottom: -5px !important;">
-                                                            Hà Thanh
-                                                            Đoàn</p>
-                                                        <p class="comment-time">12/01/2021 10:20:21</p>
-                                                    </div>
-                                                </div>
-                                                <div class="comment-content" style="margin: -7px 10px 0px 52px">
-                                                    <p>Quán phục vụ tốt <a href="#">...See more</a></p>
-                                                </div>
-                                            </div>
-                                            <div class="see-more"><a href="#">Xem thêm<i style="margin-left: 3px"
-                                                                                         class="fas fa-angle-down"></i></a>
-                                            </div>
-                                            <div class="form-inline form-inline-custom">
-                                                <img class="avatar" src="/images/Screenshot_50.png">
-                                                <input type="text" placeholder="Viết bình luận..."
-                                                       class="ml-10 my-comment"></input>
-                                            </div>
                                         </div>
                                     </div>
                                 @endforeach
-{{--                                <div  id="load-more" class="see-more"><a>Tải nhiều hơn<i--}}
-{{--                                            class="ml-5 fas fa-angle-double-down"></i></a></div>--}}
-                                                                    <div style="text-align: center">{{$comments->links('Web.Pagination.comment-pagination')}}</div>
+                                {{--                                <div  id="load-more" class="see-more"><a>Tải nhiều hơn<i--}}
+                                {{--                                            class="ml-5 fas fa-angle-double-down"></i></a></div>--}}
+                                <div
+                                    style="text-align: center">{{$comments->links('Web.Pagination.comment-pagination')}}</div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="my-card mt-25 rating-card" style="box-shadow: 0px 0px 10px 0px #4285f4 !important;">
                             <div>
-                                <p style="color: black!important; text-align: center; font-size: initial"><b>45 </b>người
+                                <p style="color: black!important; text-align: center; font-size: initial"><b>{{$res['TotalReviews']}} </b>người
                                     dùng đã chia sẻ</p>
                             </div>
                             <hr style="margin: 10px 0px">
@@ -278,76 +245,76 @@
                                     <div class="col-4" style="padding-right: 5px !important; text-align: right">
                                         <p class="mbI-0" style="color: black!important;">Vị trí</p>
                                     </div>
-                                    <div class="col-7" style=" padding-left: 5px !important; text-align: left">
+                                    <div class="col-6" style=" padding-left: 5px !important; text-align: left">
                                         <div class="progress" style="border-radius: 0; height: 15px; margin-top: 3px">
                                             <div class="progress-bar" role="progressbar" aria-valuenow="70"
-                                                 aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                                 aria-valuemin="10" aria-valuemax="100" style="width:{{($res['PostionRating'] ?? $res['AvgRating']) *10}}%">
                                                 <span class="sr-only">70% Complete</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-1 plI-0 prI-0">7</div>
+                                    <div class="col-2 plI-0 prI-0">{{$res['PostionRating'] ?? $res['AvgRating']}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-4" style="padding-right: 5px !important; text-align: right">
                                         <p class="mbI-0" style="color: black!important;">Giá cả</p>
                                     </div>
-                                    <div class="col-7" style=" padding-left: 5px !important; text-align: left">
+                                    <div class="col-6" style=" padding-left: 5px !important; text-align: left">
                                         <div class="progress" style="border-radius: 0; height: 15px; margin-top: 3px">
                                             <div class="progress-bar" role="progressbar" aria-valuenow="70"
-                                                 aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                                 aria-valuemin="10" aria-valuemax="100" style="width:{{($res['PriceRating'] ?? $res['AvgRating']) *10}}%">
                                                 <span class="sr-only">70% Complete</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-1 plI-0 prI-0">7</div>
+                                    <div class="col-2 plI-0 prI-0">{{$res['PriceRating'] ?? $res['AvgRating']}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-4" style="padding-right: 5px !important; text-align: right">
                                         <p class="mbI-0" style="color: black!important;">Chất lượng</p>
                                     </div>
-                                    <div class="col-7" style=" padding-left: 5px !important; text-align: left">
+                                    <div class="col-6" style=" padding-left: 5px !important; text-align: left">
                                         <div class="progress" style="border-radius: 0; height: 15px; margin-top: 3px">
                                             <div class="progress-bar" role="progressbar" aria-valuenow="70"
-                                                 aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                                 aria-valuemin="10" aria-valuemax="100" style="width:{{($res['QualityRating'] ?? $res['AvgRating']) *10}}%">
                                                 <span class="sr-only">70% Complete</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-1 plI-0 prI-0">7</div>
+                                    <div class="col-2 plI-0 prI-0">{{$res['QualityRating'] ?? $res['AvgRating']}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-4" style="padding-right: 5px !important; text-align: right">
-                                        <p class="mbI-0" style="color: black!important;">Phục vụ</p>
+                                        <p class="mbI-0" style="color: black!important;">Dịch vụ</p>
                                     </div>
-                                    <div class="col-7" style=" padding-left: 5px !important; text-align: left">
+                                    <div class="col-6" style=" padding-left: 5px !important; text-align: left">
                                         <div class="progress" style="border-radius: 0; height: 15px; margin-top: 3px">
                                             <div class="progress-bar" role="progressbar" aria-valuenow="70"
-                                                 aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                                 aria-valuemin="10" aria-valuemax="100" style="width:{{($res['ServiceRating'] ?? $res['AvgRating']) *10}}%">
                                                 <span class="sr-only">70% Complete</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-1 plI-0 prI-0">7</div>
+                                    <div class="col-2 plI-0 prI-0">{{$res['ServiceRating'] ?? $res['AvgRating']}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-4" style="padding-right: 5px !important; text-align: right">
                                         <p class="mbI-0" style="color: black!important;">Không gian</p>
                                     </div>
-                                    <div class="col-7" style=" padding-left: 5px !important; text-align: left">
+                                    <div class="col-6" style=" padding-left: 5px !important; text-align: left">
                                         <div class="progress" style="border-radius: 0; height: 15px; margin-top: 3px">
                                             <div class="progress-bar" role="progressbar" aria-valuenow="70"
-                                                 aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                                 aria-valuemin="10" aria-valuemax="100" style="width:{{($res['SpaceRating'] ?? $res['AvgRating']) *10}}%">
                                                 <span class="sr-only">70% Complete</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-1 plI-0 prI-0">7</div>
+                                    <div class="col-2 plI-0 prI-0">{{$res['SpaceRating'] ?? $res['AvgRating']}}</div>
                                 </div>
                             </div>
                             <hr style="margin: 10px 0px">
                             <div style="text-align: center">
-                                <b style="font-size: x-large; color: #03ae03">8.6</b> điểm
+                                <b style="font-size: x-large; color: #03ae03">{{$res['AvgRating']}}</b> điểm
                             </div>
                             <div>
                                 <button style="margin-left: 0px; width: 100%" class="btn btn-primary"><a
@@ -798,10 +765,14 @@
                                 <div class="product-details-left">
                                     <div class="product-details-images slider-navigation-1">
                                         <div class="lg-image">
-                                            <img src="/images/product/large-size/1.jpg" alt="product image">
+                                            @if($res['IsFoody'])
+                                                <img src="{{$res['PhotoUrl']}}" alt="product image">
+                                            @else
+                                                <img src="/{{$res['PhotoUrl']}}" alt="product image">
+                                            @endif
                                         </div>
                                     </div>
-                                    <div style="text-align: center;">
+                                    <div style="text-align: center; margin-top: 10px">
                                         <p style="font-size: large; font-weight: bold; color: chocolate">Đánh giá</p>
                                     </div>
                                     <div class="row">
@@ -813,24 +784,24 @@
                                             <p>Không gian</p>
                                         </div>
                                         <div class="col-6" style=" padding-left: 5px !important; text-align: left">
-                                            <input class="custom-range" type="range" min="0" max="10">
-                                            <input class="custom-range" type="range" min="0" max="10">
-                                            <input class="custom-range" type="range" min="0" max="10">
-                                            <input class="custom-range" type="range" min="0" max="10">
-                                            <input class="custom-range" type="range" min="0" max="10">
+                                            <input id="PositionRating" class="custom-range" type="range" min="1" max="10">
+                                            <input id="PriceRating" class="custom-range" type="range" min="1" max="10">
+                                            <input id="QualityRating" class="custom-range" type="range" min="1" max="10">
+                                            <input id="ServiceRating" class="custom-range" type="range" min="1" max="10">
+                                            <input id="SpaceRating" class="custom-range" type="range" min="1" max="10">
                                         </div>
                                         <div class="col-2" style="padding-left: 5px !important; text-align: left">
-                                            <p style="color: #9c25b9!important;">25</p>
-                                            <p style="color: #00c851 !important;">7</p>
-                                            <p style="color: black!important;">7</p>
-                                            <p style="color: red!important;">2</p>
-                                            <p style="color: red!important;">2</p>
+                                            <p id="PositionRatingLabel" style="color: #9c25b9!important;">5</p>
+                                            <p id="PriceRatingLabel" style="color: #00c851 !important;">5</p>
+                                            <p id="QualityRatingLabel" style="color: black!important;">5</p>
+                                            <p id="ServiceRatingLabel" style="color: red!important;">5</p>
+                                            <p id="SpaceRatingLabel" style="color: red!important;">5</p>
                                         </div>
                                     </div>
                                     <div style="text-align: center;">
                                         <p style="font-size: large; font-weight: bold">Trung bình:
-                                            <span
-                                                style="margin-left:5px; font-size: large; font-weight: bold; color: red">8</span>
+                                            <span id="AvgRatingLabel"
+                                                style="margin-left:5px; font-size: large; font-weight: bold; color: red">5</span>
                                         </p>
                                     </div>
                                 </div>
@@ -838,35 +809,25 @@
                             </div>
 
                             <div class="col-lg-7 col-md-6 col-sm-6">
-                                <div class="product-details-view-content pt-60">
+                                <div class="product-details-view-content">
                                     <div class="product-info">
-                                        <h2>Ahihi - Fruit & Yogurt - Shop Online</h2>
-                                        <span class="product-details-ref"><i class="mr-10 fas fa-location-arrow"></i>55 Đặng Thùy Trâm, BÌnh Thạnh</span>
+                                        <h2>{{$res['Name']}}</h2>
+                                        <span class="product-details-ref"><i class="mr-10 fas fa-location-arrow"></i>{{$res['Address']}}</span>
                                         <div class="product-desc">
-                                        <textarea placeholder="Nhập bình luận">
-                                                    100% cotton double printed dress. Black and white striped top and orange high waisted skater skirt bottom. Lorem ipsum dolor sit amet, consectetur adipisicing elit. quibusdam corporis, earum facilis et nostrum dolorum accusamus similique eveniet quia pariatur.
+                                        <textarea id="discription_ta" placeholder="Nhập bình luận">
                                         </textarea>
                                         </div>
                                         <p>Chọn hình</p>
                                         <div class="row">
-                                            <div @click="cancelImage()" class="select-img-comment"><img
-                                                    class="img-comment" src="/images/slider/foody-slider1.jpg"><i
-                                                    class="cancel far fa-times-circle"></i></div>
-                                            <div class="select-img-comment"><img class="img-comment"
-                                                                                 src="/images/slider/foody-slider1.jpg"><i
-                                                    class="cancel far fa-times-circle"></i></div>
-                                            <div class="select-img-comment"><img class="img-comment"
-                                                                                 src="/images/slider/foody-slider1.jpg"><i
-                                                    class="cancel far fa-times-circle"></i></div>
-                                            <div class="select-img-comment"><img class="img-comment"
-                                                                                 src="/images/slider/foody-slider1.jpg"><i
-                                                    class="cancel far fa-times-circle"></i></div>
-                                            <div class="select-img-comment"><input
+                                            <div class="row ml-10" id="temp-images">
+
+                                            </div>
+                                            <div style="margin-left: 14px" class="select-img-comment"><input id="image"
                                                     style="margin-top: -5px; opacity: 0; height: 140px" type="file"><i
                                                     id="add-img-comment" class="fas fa-plus"></i></div>
                                         </div>
                                         <div>
-                                            <button class="btn btn-success" @click.stop.prevent="cancelImage">Gửi
+                                            <button class="btn btn-success" id="btn-create-comment">Gửi
                                             </button>
                                         </div>
                                     </div>
@@ -902,27 +863,51 @@
         function DetailPage() {
             this.limit = 10;
             this.page = 2;
+            this.token = localStorage.getItem('token');
+            this.user = localStorage.getItem('user');
+            if(this.user){
+                this.user = JSON.parse(this.user);
+            }
             this.res_id = $('#detail-page').attr('res-id');
             this.api_get_comment = $('#detail-page').attr('api-get-comment');
+            this.api_like = $('#detail-page').attr('api-like');
+            this.api_create_comment = $('#detail-page').attr('api-create-comment');
 
+            this.comment = {
+                ResId : this.res_id,
+                PositionRating : 5,
+                PriceRating : 5,
+                QualityRating : 5,
+                ServiceRating : 5,
+                SpaceRating : 5,
+                AvgRating : 5,
+                Description : '',
+                pictures : []
+        };
+
+            var ancestor = this;
             this.init = function () {
                 $('.comment-image').click(function () {
                     var pics = JSON.parse($(this).attr('urls'));
+                    var is_foody = parseInt($(this).attr('is-foody'));
                     var xhtml = '';
                     for (i in pics) {
                         var is_active = '';
                         if (i == 0) {
                             is_active = 'active'
                         }
+                        var url = pics[i]['Url'];
+                        if(!is_foody){
+                            url = '/' + url;
+                        }
                         xhtml += ' <div class="carousel-item ' + is_active + '">\n' +
-                            '                                <img class="d-block w-100" src="' + pics[i]['Url'] + '" alt="First slide">\n' +
+                            '                                <img class="d-block w-100" src="' + url + '" alt="First slide">\n' +
                             '                            </div>';
                     }
                     $("#list-comment-picture").html(xhtml);
                     $('#commentPictureModel').modal('show');
                 });
             }
-            var ancestor = this;
             this.getComment = function () {
                 $.ajax({
                     method: 'POST',
@@ -942,19 +927,151 @@
                     }
                 });
             }
-
+            this.like = function (comment_id) {
+                if (!ancestor.token) {
+                    helper.showNotification('Vui lòng đăng nhập', 'danger');
+                    return;
+                }
+                $.ajax({
+                    headers: {
+                        "Authorization": "Bearer " + ancestor.token
+                    },
+                    method: 'POST',
+                    data: {
+                        comment_id: comment_id,
+                    },
+                    url: ancestor.api_like
+                }).done(function (result) {
+                    if (result.success) {
+                        $('#' + comment_id).html(result.data + ' ');
+                    }
+                })
+            }
             this.setPage = function (val = 1) {
                 this.page = 1;
+            }
+            this.setComment = function ($key,$val){
+                this.comment[$key] = $val;
+            }
+            this.calculateAvgRating = function (){
+                this.comment.AvgRating = (this.comment.PositionRating + this.comment.PriceRating + this.comment.QualityRating
+                + this.comment.ServiceRating + this.comment.SpaceRating)/5;
+            }
+            this.createComment = function (){
+                if(!this.token){
+                    helper.showNotification('Vui lòng đăng nhập','danger');
+                    return
+                }
+                this.comment.Owner_id = this.user['Id'];
+                $.ajax({
+                    method : 'POST',
+                    data : ancestor.comment,
+                    url: ancestor.api_create_comment
+                }).done(function (result){
+                    if(result.success){
+                        helper.showNotification(result.message,'success');
+                        location.reload(true);
+                        $('#comment').modal('hide');
+                    }else{
+                        helper.showNotification(result.message,'danger')
+                    }
+                })
             }
             return this;
         }
 
         $(document).ready(function () {
             var detail_page = new DetailPage();
+            detail_page.init();
+            $('.like').click(function () {
+                var comment_id = $(this).attr('comment_id')
+                detail_page.like(comment_id);
+            });
+            $('#PositionRating').change(function (){
+                var val = $(this).val();
+                detail_page.setComment('PositionRating',parseInt(val));
+                detail_page.calculateAvgRating();
+                $('#PositionRatingLabel').html(val);
+                $('#AvgRatingLabel').html(detail_page.comment.AvgRating);
+            });
+            $('#PriceRating').change(function (){
+                var val = $(this).val();
+                detail_page.setComment('PriceRating',parseInt(val));
+                detail_page.calculateAvgRating();
+                $('#PriceRatingLabel').html(val);
+                $('#AvgRatingLabel').html(detail_page.comment.AvgRating);
+            });
+            $('#QualityRating').change(function (){
+                var val = $(this).val();
+                detail_page.setComment('QualityRating',parseInt(val));
+                detail_page.calculateAvgRating();
+                $('#QualityRatingLabel').html(val);
+                $('#AvgRatingLabel').html(detail_page.comment.AvgRating);
+            });
+            $('#ServiceRating').change(function (){
+                var val = $(this).val();
+                detail_page.setComment('ServiceRating',parseInt(val));
+                detail_page.calculateAvgRating();
+                $('#ServiceRatingLabel').html(val);
+                $('#AvgRatingLabel').html(detail_page.comment.AvgRating);
+            });
+            $('#SpaceRating').change(function (){
+                var val = $(this).val();
+                detail_page.setComment('SpaceRating',parseInt(val));
+                detail_page.calculateAvgRating();
+                $('#ServiceRatingLabel').html(val);
+                $('#AvgRatingLabel').html(detail_page.comment.AvgRating);
+            });
+            $('#discription_ta').on('change keyup paste',function (){
+                detail_page.setComment('Description',$(this).val());
+
+            })
+            $('#image').change(function (){
+                var fd = new FormData();
+                fd.append('image',$('#image')[0].files[0])
+                $.ajax({
+                    url : $('#detail-page').attr('api-upload-image'),
+                    method : 'POST',
+                    data: fd,
+                    contentType : false,
+                    processData : false
+                }).done(function (result){
+                    if(result.success){
+                        detail_page.comment.pictures.push(result.data.path);
+                        var xhtml = $('#temp-images').html();
+                        xhtml += '<div  class="select-img-comment"> \n' +
+                            '<img class="img-comment" src="/'+ result.data.path +'"> \n' +
+                            '<i data-path="'+result.data.path +'" onclick="deleteImage(this)" class="cancel far fa-times-circle"></i> \n' +
+                            '</div>';
+                        $('#temp-images').html(xhtml);
+                    }else{
+                        helper.showNotification(result.message,'danger')
+                    }
+                    $('#image').val(null);
+                })
+            })
+            $('#btn-create-comment').click(function (){
+                detail_page.createComment();
+            })
             // $('html, body').animate({
             //     scrollTop: $('#review-list').offset().top
             // }, 'slow');
-            detail_page.init();
         });
+        function deleteImage(el){
+            var api_remove_image = $('#detail-page').attr('api-remove-image');
+            $.ajax({
+                method: 'POST',
+                data : {
+                    path : $(el).attr('data-path'),
+                },
+                url : api_remove_image
+            }).done(function (result){
+                if(result.success){
+                   $(el).parent().remove();
+                }else {
+                    helper.showNotification(result.message,'danger')
+                }
+            })
+        }
     </script>
 @endsection

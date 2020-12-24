@@ -25,6 +25,8 @@ class Customer extends Model implements
     protected $primaryKey = 'Id';
     public $incrementing = true;
 
+    protected $appends = ['liked'];
+
     protected $fillable = [
         'Avatar',
         'DisplayName',
@@ -46,6 +48,12 @@ class Customer extends Model implements
     ];
 
     public $timestamps = false;
+
+    public function getLikedAttribute(){
+        $comment_likes = CommentLike::where('IdOwner',$this->Id)->pluck('IdComment');
+        return !empty($comment_likes) ? $comment_likes->toArray() : [];
+    }
+
     public function comments(){
         return $this->hasMany('App\Comment','Owner_id','Id');
     }

@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Restaurant;
 use App\RestaurantDetail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
 class WebController extends Controller
@@ -31,10 +32,11 @@ class WebController extends Controller
         if(!$res){
             abort(404);
         }
-        $comments = Comment::where('ResId',$res['Id'])->with(['comment_pictures:CommentId,Url','customer:Id,DisplayName,Avatar'])->paginate(10);
+
+        $comments = Comment::where('ResId',$res['Id'])->with(['comment_pictures:CommentId,Url,IsFoody','customer:Id,DisplayName,Avatar,IsFoody'])->paginate(10);
         $args = [
             'res' => $res,
-            'comments' => $comments
+            'comments' => $comments,
         ];
         return view('Web.Pages.res-detail',$args);
     }

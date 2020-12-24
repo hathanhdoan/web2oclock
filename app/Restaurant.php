@@ -21,6 +21,12 @@ class Restaurant extends Model
         'Longitude',
         'Name',
         'Status',
+        'IsFoody',
+        'PositionRating',
+        'PriceRating',
+        'QualityRating',
+        'ServiceRating',
+        'SpaceRating',
     ];
 
     public function restaurant_detail(){

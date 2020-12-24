@@ -1427,7 +1427,7 @@
                 },
                 url : $('#index-obj').attr('api-get-nearest')
             }).done(function (data){
-                var res_list = data;
+                var res_list = data.data;
                 var xhtml = '';
                 for(i in res_list ){
                     if(i==5){
