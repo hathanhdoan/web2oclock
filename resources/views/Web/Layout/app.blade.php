@@ -194,7 +194,16 @@
             recognition.lang = "vi-VN";
             recognition.start();
             recognition.onresult = function(e) {
-                alert(e.results[0][0].transcript);
+                // alert(e.results[0][0].transcript);
+                $.ajax({
+                    method : "GET",
+                    data : {
+                        query : "Thoát tài khoản ra khỏi website"
+                    },
+                    url: 'https://recommender-2oclock.herokuapp.com/polls/go'
+                }).done(function (result){
+                    console.log(result)
+                })
                 recognition.stop();
             };
             recognition.onerror = function(e) {
