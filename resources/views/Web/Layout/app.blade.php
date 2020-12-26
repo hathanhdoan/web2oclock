@@ -176,6 +176,16 @@
         return this;
     }
     $(document).ready(function (){
+        $.ajax({
+            method : "GET",
+            data : {
+                query : "Thoát tài khoản ra khỏi website"
+            },
+            // url: 'http://127.0.0.1:8000/polls/go'
+            url: 'https://recommender-2oclock.herokuapp.com/polls/go'
+        }).done(function (result){
+            console.log(result)
+        })
         $(document).trigger('vue-loaded');
         var app = new App();
         app.initial();

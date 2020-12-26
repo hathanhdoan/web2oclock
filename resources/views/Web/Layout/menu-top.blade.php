@@ -77,11 +77,11 @@
                     <div class="hb-menu">
                         <nav>
                             <ul>
-                                <li><a href="index.html">Đề xuất</a></li>
+                                <li><a href="index.html">{{__('suggest')}}</a></li>
                                 <li><a href="index.html">{{__('nearest')}}</a></li>
-                                <li><a href="shop-left-sidebar.html">Đã lưu</a>
+                                <li><a href="shop-left-sidebar.html">{{__('saved')}}</a>
                                 </li>
-                                <li><a href="blog-left-sidebar.html">Mới nhất</a>
+                                <li><a href="blog-left-sidebar.html">{{__('newest')}}</a>
                                 </li>
                                 <li style="position: absolute;right: 40px; top: 2px">
                                     <a data-toggle="tooltip" data-placement="top" data-original-title="Việt Nam" href="{!! route('user.change-language', ['vi']) !!}">
