@@ -52,6 +52,16 @@ class RestaurantController extends Controller
            return ($a['distance'] < $b['distance'])?-1:1;
        });
        $rs = array_slice($res, ($page*$limit - $limit), $limit);
+
+       $origin = urlencode($user_location['Latitude'].','.$user_location['Longitude']);
+       $destination = '';
+       foreach ($rs as $value){
+           $destination.= $value['Latitude'].','.$value['Longitude'].'|';
+       }
+       $destination = urlencode($destination);
+       $url = 'https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins='.$origin.'&destinations='.$destination.'&key=AIzaSyCzlVX517mZWArHv4Dt3_JVG0aPmbSE5mE';
+//       return ($url);
+       return curlApi($url,[],'GET');
        return \response()->json([
            'success' => true,
            'message' => __('success'),

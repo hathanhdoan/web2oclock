@@ -157,3 +157,23 @@ function removeFile($data = [])
         ];
     }
 }
+function curlApi($url, $param = [], $method = 'POST')
+{
+    $curl = curl_init();
+    curl_setopt_array($curl, array(
+        CURLOPT_URL => $url,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => $method,
+        CURLOPT_SSL_VERIFYHOST => 0,
+        CURLOPT_SSL_VERIFYPEER => false,
+        CURLOPT_POSTFIELDS => json_encode($param),
+        CURLOPT_HTTPHEADER => array(
+            "Content-Type: application/json"
+        ),
+    ));
+    $response = curl_exec($curl);
+    curl_close($curl);
+//    return $response;
+    return json_decode($response, true);
+}
