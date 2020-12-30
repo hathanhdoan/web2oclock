@@ -85,21 +85,20 @@
                                     <a class="wishlist-btn" style="color: blue" data-toggle="modal"
                                        data-target="#comment" href="wishlist.html">
                                         <i class="fa fa-comment"></i>Bình luận</a>
-                                    <a class="wishlist-btn  ml-20"
-                                       href="http://www.facebook.com/sharer.php?u={{asset('res-detail').'/'.$res['Id']}}"><i
-                                            class="fa fa-heart-o"></i>Add to
-                                        wishlist</a>
+                                    <a class="wishlist-btn  ml-20">
+                                        <i class="fa fa-bookmark"></i>Lưu
+                                    </a>
                                     <div class="product-social-sharing pt-15">
                                         <ul>
-                                            <li class="facebook"><a href="#"><i class="fa fa-facebook"></i>Facebook</a>
+                                            <li class="facebook"><a href="http://www.facebook.com/sharer.php?u={{asset('res-detail').'/'.$res['Id']}}"><i class="fa fa-facebook"></i>Facebook</a>
                                             </li>
-                                            <li class="twitter"><a href="#"><i class="fa fa-twitter"></i>Twitter</a>
-                                            </li>
-                                            <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i>Google
-                                                    +</a></li>
-                                            <li class="instagram"><a href="#"><i
-                                                        class="fa fa-instagram"></i>Instagram</a>
-                                            </li>
+{{--                                            <li class="twitter"><a href="#"><i class="fa fa-twitter"></i>Twitter</a>--}}
+{{--                                            </li>--}}
+{{--                                            <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i>Google--}}
+{{--                                                    +</a></li>--}}
+{{--                                            <li class="instagram"><a href="#"><i--}}
+{{--                                                        class="fa fa-instagram"></i>Instagram</a>--}}
+{{--                                            </li>--}}
                                         </ul>
                                     </div>
                                 </div>
