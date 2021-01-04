@@ -111,7 +111,7 @@ class RestaurantController extends Controller
         if (!isset($data['customer_id'])) {
             return [
                 'success' => false,
-                'message' => 'Customer ID lả bắt buộc'
+                'message' => 'Customer ID là bắt buộc'
             ];
         }
         $customer = Customer::find($data['customer_id']);
@@ -150,10 +150,16 @@ class RestaurantController extends Controller
                 $saved_res[] = $res_id;
 //              $customer = Customer::find($cu)
                 $customer->update(['SavedRes' => json_encode($saved_res)]);
+                $msg = 'Đã lưu';
+            }else{
+                $key = array_search($res_id, $saved_res);
+                array_splice($saved_res, $key, 1);
+                $customer->update(['SavedRes' => json_encode($saved_res)]);
+                $msg = 'Đã bỏ lưu';
             }
             return [
                 'success' => true,
-                'message' => __('success')
+                'message' => $msg
             ];
 
         }
@@ -192,5 +198,10 @@ class RestaurantController extends Controller
             'success' => false,
             'message' => 'Không tìm thấy'
         ];
+    }
+
+    public function create(Request $request){
+        $data = $request->all();
+
     }
 }

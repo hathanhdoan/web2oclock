@@ -39,4 +39,7 @@ Route::group(['namespace' => 'Api'], function () {
         Route::post('/create', 'CommentController@create')->name('api.comment.create');
         Route::post('/like', 'CommentController@like')->name('api.comment.like')->middleware('auth.jwt');
     });
+    Route::group(['namespace' => 'Report', 'prefix' => 'report'], function () {
+        Route::post('/create', 'ReportController@create')->name('api.report.create')->middleware('auth.jwt');
+    });
 });

@@ -23,9 +23,7 @@ Route::group(['middleware'=>'locale'],function (){
 
         Route::get('res-detail/{id}', 'WebController@getDetail');
 
-        Route::get('/profile', function () {
-            return view('Web.Pages.profile');
-        });
+        Route::get('/profile', 'WebController@profile');
 
         Route::get('/new-res', function () {
             return view('Web.Pages.new-res');

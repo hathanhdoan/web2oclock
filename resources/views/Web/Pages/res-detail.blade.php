@@ -2,7 +2,9 @@
 @section('content')
     <div id="detail-page" res-id="{{$res['Id']}}" api-get-comment="{{route('api.comment.get-list')}}"
          api-like="{{route('api.comment.like')}}" api-upload-image="{{route('api.utity.upload_image')}}"
-         api-remove-image="{{route('api.utity.remove_image')}}" api-create-comment="{{route('api.comment.create')}}">
+         api-remove-image="{{route('api.utity.remove_image')}}" api-create-comment="{{route('api.comment.create')}}"
+         api-save="{{route('api.res.save')}}" api-get-saved-res="{{route('api.res.saved')}}"
+         api-report="{{route('api.report.create')}}">
         <div class="breadcrumb-area">
             <div class="container">
                 <div class="breadcrumb-content">
@@ -85,7 +87,7 @@
                                     <a class="wishlist-btn" style="color: blue" data-toggle="modal"
                                        data-target="#comment" href="wishlist.html">
                                         <i class="fa fa-comment"></i>Bình luận</a>
-                                    <a class="wishlist-btn  ml-20">
+                                    <a id="btn-save" class="wishlist-btn  ml-20">
                                         <i class="fa fa-bookmark"></i>Lưu
                                     </a>
                                     <div class="product-social-sharing pt-15">
@@ -200,7 +202,7 @@
                                                 <div class="mr-20 like" comment_id="{{$comment['Id']}}">
                                                     <i class="fa fa-heart mr-5"></i><span>Like</span>
                                                 </div>
-                                                <div class="mr-20">
+                                                <div class="mr-20 btn-report-comment" comment_id="{{$comment['Id']}}">
                                                     <a data-toggle="modal" data-target="#report">
                                                         <i class="fa fa-exclamation-triangle report-btn mr-5"></i>
                                                         <span>report</span>
@@ -850,8 +852,8 @@
                 </div>
                 <div class="modal-body">
                     <b>Nội dung: </b>
-                    <textarea placeholder="Nhập nội dung"></textarea>
-                    <button class="btn btn-success">Gửi</button>
+                    <textarea id="ta-report" placeholder="Nhập nội dung"></textarea>
+                    <button id="btn-submit-report" class="btn btn-success">Gửi</button>
                 </div>
             </div>
         </div>
@@ -871,6 +873,9 @@
             this.api_get_comment = $('#detail-page').attr('api-get-comment');
             this.api_like = $('#detail-page').attr('api-like');
             this.api_create_comment = $('#detail-page').attr('api-create-comment');
+            this.api_save = $('#detail-page').attr('api-save');
+            this.api_get_saved_res = $('#detail-page').attr('api-get-saved-res');
+            this.api_report = $('#detail-page').attr('api-report');
 
             this.comment = {
                 ResId : this.res_id,
@@ -883,6 +888,12 @@
                 Description : '',
                 pictures : []
         };
+            this.report = {
+                object_id : null,
+                type : null,
+                content : null,
+                owner_id : null,
+            }
 
             var ancestor = this;
             this.init = function () {
@@ -946,11 +957,82 @@
                     }
                 })
             }
+            this.createReport = function () {
+                if (!ancestor.token) {
+                    helper.showNotification('Vui lòng đăng nhập', 'danger');
+                    return;
+                }
+                this.report.content = $('#ta-report').val();
+                this.report.owner_id = ancestor.user['Id'];
+
+                $.ajax({
+                    headers: {
+                        "Authorization": "Bearer " + ancestor.token
+                    },
+                    method: 'POST',
+                    data: ancestor.report,
+                    url: ancestor.api_report
+                }).done(function (result) {
+                    if (result.success) {
+                        helper.showNotification(result.message,'success');
+
+                    }
+                })
+            }
+            this.save = function () {
+                if (!ancestor.token) {
+                    helper.showNotification('Vui lòng đăng nhập', 'danger');
+                    return;
+                }
+                $.ajax({
+                    headers: {
+                        "Authorization": "Bearer " + ancestor.token
+                    },
+                    method: 'POST',
+                    data: {
+                        res_id: ancestor.res_id,
+                    },
+                    url: ancestor.api_save
+                }).done(function (result) {
+                    if (result.success) {
+                        // $('#btn-save').css('color','blue');
+                        ancestor.get_saved_res();
+                        helper.showNotification(result.message,'success')
+                    }
+                })
+            }
+            this.get_saved_res = function (){
+                if (!ancestor.token) {
+                    return;
+                }
+                $.ajax({
+                    method: 'POST',
+                    data: {
+                        customer_id : ancestor.user['Id']
+                    },
+                    url : ancestor.api_get_saved_res
+                }).done(function (result){
+                    var res_list = result.data;
+                    if(res_list[0]){
+                        for (i in res_list){
+                            if(res_list[i]['Id'] == ancestor.res_id){
+                                $('#btn-save').css('color','blue');
+                                return;
+                            }
+                        }
+                        $('#btn-save').css('color','black');
+                    }
+                })
+            }
+
             this.setPage = function (val = 1) {
                 this.page = 1;
             }
             this.setComment = function ($key,$val){
                 this.comment[$key] = $val;
+            }
+            this.setReport = function ($key,$val){
+                this.report[$key] = $val;
             }
             this.calculateAvgRating = function (){
                 this.comment.AvgRating = (this.comment.PositionRating + this.comment.PriceRating + this.comment.QualityRating
@@ -982,10 +1064,24 @@
         $(document).ready(function () {
             var detail_page = new DetailPage();
             detail_page.init();
+            detail_page.get_saved_res();
             $('.like').click(function () {
                 var comment_id = $(this).attr('comment_id')
                 detail_page.like(comment_id);
             });
+            $('.btn-report-comment').click(function () {
+                var comment_id = $(this).attr('comment_id')
+                detail_page.setReport('object_id',comment_id);
+                detail_page.setReport('type','comment');
+            });
+            $('#btn-save').click(function () {
+                detail_page.save();
+            });
+
+            $('#btn-submit-report').click(function () {
+                detail_page.createReport();
+            });
+
             $('#PositionRating').change(function (){
                 var val = $(this).val();
                 detail_page.setComment('PositionRating',parseInt(val));

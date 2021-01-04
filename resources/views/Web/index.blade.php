@@ -1074,157 +1074,27 @@
     </div>
     <!-- banner End Here -->
     <!-- Begin saved Product Area -->
-    <div class="product-area pt-60 pb-50">
+    <section class="product-area li-laptop-product pt-60 pb-45">
         <div class="container">
             <div class="row">
+                <!-- Begin Li's Section Area -->
                 <div class="col-lg-12">
-                    <div class="li-product-tab">
-                        <ul class="nav li-product-menu">
-                            <li><a class="active" data-toggle="tab"
-                                   href="#li-new-product"><span>Đã lưu</span></a></li>
-                            {{--                            <li><a data-toggle="tab" href="#li-bestseller-product"><span>Bestseller</span></a></li>--}}
-                            {{--                            <li><a data-toggle="tab" href="#li-featured-product"><span>Featured Products</span></a></li>--}}
-                        </ul>
+                    <div class="li-section-title">
+                        <h2>
+                            <span>Đã lưu</span>
+                        </h2>
                     </div>
-                    <!-- Begin Li's Tab Menu Content Area -->
-                </div>
-            </div>
-            <div class="tab-content">
-                <div id="li-new-product" class="tab-pane active show" role="tabpanel">
-                    <div class="row">
-                        <div id="saved-res-list" class="recommend-product-active product-active owl-carousel">
-                            <section>
+                    <div class="product-container">
+                        <div class="row" id="saved-res-list">
 
-                                <!-- Card -->
-                                <div class="card booking-card" style="max-width: 22rem;">
-
-                                    <!-- Card image -->
-                                    <div class="view overlay">
-                                        <img class="card-img-top"
-                                             src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg"
-                                             alt="Card image cap">
-                                        <a href="#!">
-                                            <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                        </a>
-                                    </div>
-
-                                    <!-- Card content -->
-                                    <div class="card-body">
-
-                                        <!-- Title -->
-                                        <h4 class="card-title font-weight-bold"><a>Texas Chicken</a></h4>
-                                        <!-- Data -->
-                                        <ul class="list-unstyled list-inline rating mb-0">
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i>
-                                            </li>
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
-                                        </ul>
-                                        <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
-                                            quận....</a>
-                                        <p class="card-text">Đoàn: Đồ ăn rất ngon, nên thử</p>
-                                        <!-- Text -->
-                                        <p class="card-text"></p>
-                                        <hr class="my-1">
-                                        <ul class="add-actions-link">
-                                            <li><a data-toggle="tooltip" data-placement="top" title="Lưu"
-                                                   class="links-details" href="wishlist.html">
-                                                    <i class="fa fa-bookmark"></i>
-                                                </a>
-                                            </li>
-                                            <li><a data-toggle="tooltip" data-placement="top" title="Thích"
-                                                   class="links-details" href="wishlist.html">
-                                                    <i class="fa fa-heart-o"></i>
-                                                </a>
-                                            </li>
-                                            <li><a data-toggle="tooltip" data-placement="top" title="Xem nhanh"
-                                                   class="links-details" href="wishlist.html">
-                                                    <i class="fa fa-eye"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-                                <!-- Card -->
-
-                            </section>
-                            <section>
-
-                                <!-- Card -->
-                                <div class="card booking-card" style="max-width: 22rem;">
-
-                                    <!-- Card image -->
-                                    <div class="view overlay">
-                                        <img class="card-img-top"
-                                             src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg"
-                                             alt="Card image cap">
-                                        <a href="#!">
-                                            <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                        </a>
-                                    </div>
-
-                                    <!-- Card content -->
-                                    <div class="card-body">
-
-                                        <!-- Title -->
-                                        <h4 class="card-title font-weight-bold"><a>Texas Chicken</a></h4>
-                                        <!-- Data -->
-                                        <ul class="list-unstyled list-inline rating mb-0">
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i>
-                                            </li>
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
-                                        </ul>
-                                        <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
-                                            quận....</a>
-                                        <p class="card-text">Đoàn: Đồ ăn rất ngon, nên thử</p>
-                                        <!-- Text -->
-                                        <p class="card-text"></p>
-                                        <hr class="my-1">
-                                        <ul class="add-actions-link">
-                                            <li><a data-toggle="tooltip" data-placement="top" title="Lưu"
-                                                   class="links-details" href="wishlist.html">
-                                                    <i class="fa fa-bookmark"></i>
-                                                </a>
-                                            </li>
-                                            <li><a data-toggle="tooltip" data-placement="top" title="Thích"
-                                                   class="links-details" href="wishlist.html">
-                                                    <i class="fa fa-heart-o"></i>
-                                                </a>
-                                            </li>
-                                            <li><a data-toggle="tooltip" data-placement="top" title="Xem nhanh"
-                                                   class="links-details" href="wishlist.html">
-                                                    <i class="fa fa-eye"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-                                <!-- Card -->
-
-                            </section>
                         </div>
                     </div>
+
                 </div>
+                <!-- Li's Section Area End Here -->
             </div>
         </div>
-    </div>
+    </section>
     <!-- saved ProductEnd Here -->
     <!-- Begin new Products Area -->
     <section class="product-area li-laptop-product pt-60 pb-45">
@@ -1336,72 +1206,26 @@
                         if(i==10){
                             break;
                         }
-                        xhtml += '<section>\n' +
-                            '\n' +
-                            '                                <!-- Card -->\n' +
-                            '                                <div class="card booking-card" style="max-width: 22rem;">\n' +
-                            '\n' +
-                            '                                    <!-- Card image -->\n' +
-                            '                                    <div class="view overlay">\n' +
-                            '                                        <img class="card-img-top"\n' +
-                            '                                             src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg"\n' +
-                            '                                             alt="Card image cap">\n' +
-                            '                                        <a href="#!">\n' +
-                            '                                            <div class="mask rgba-white-slight waves-effect waves-light"></div>\n' +
-                            '                                        </a>\n' +
+                        xhtml += '<div>\n' +
+                            '                                <section>\n' +
+                            '                                    <div class="card booking-card" style="max-width: 22rem;">\n' +
+                            '                                        <div class="view overlay"><img\n' +
+                            '                                                src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg"\n' +
+                            '                                                alt="Card image cap" class="card-img-top"> <a href="#!">\n' +
+                            '                                                <div class="mask rgba-white-slight waves-effect waves-light"></div>\n' +
+                            '                                            </a></div>\n' +
+                            '                                        <div class="card-body"><p class="card-title font-weight-bold"><a>'+ (res_list[i]['name_summary']) +'</a>\n' +
+                            '                                            </p>\n' +
+                            '                                            <p><i class="mr-10 fas fa-clock"></i><span>7:00 - 22:00</span></p>\n' +
+                            '                                            <a class="mb-2"><i class="mr-5 fas fa-map-marker-alt"></i>'+ res_list[i]['address_summary']+'\n' +
+                            '                                            <p class="card-text"></p>\n' +
+                            '                                        </div>\n' +
                             '                                    </div>\n' +
-                            '\n' +
-                            '                                    <!-- Card content -->\n' +
-                            '                                    <div class="card-body">\n' +
-                            '\n' +
-                            '                                        <!-- Title -->\n' +
-                            '                                        <h4 class="card-title font-weight-bold"><a>Texas Chicken</a></h4>\n' +
-                            '                                        <!-- Data -->\n' +
-                            '                                        <ul class="list-unstyled list-inline rating mb-0">\n' +
-                            '                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i>\n' +
-                            '                                            </li>\n' +
-                            '                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>\n' +
-                            '                                            </li>\n' +
-                            '                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>\n' +
-                            '                                            </li>\n' +
-                            '                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>\n' +
-                            '                                            </li>\n' +
-                            '                                            <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>\n' +
-                            '                                            </li>\n' +
-                            '                                            <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>\n' +
-                            '                                        </ul>\n' +
-                            '                                        <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,\n' +
-                            '                                            quận....</a>\n' +
-                            '                                        <p class="card-text">Đoàn: Đồ ăn rất ngon, nên thử</p>\n' +
-                            '                                        <!-- Text -->\n' +
-                            '                                        <p class="card-text"></p>\n' +
-                            '                                        <hr class="my-1">\n' +
-                            '                                        <ul class="add-actions-link">\n' +
-                            '                                            <li><a data-toggle="tooltip" data-placement="top" title="Lưu"\n' +
-                            '                                                   class="links-details" href="wishlist.html">\n' +
-                            '                                                    <i class="fa fa-bookmark"></i>\n' +
-                            '                                                </a>\n' +
-                            '                                            </li>\n' +
-                            '                                            <li><a data-toggle="tooltip" data-placement="top" title="Thích"\n' +
-                            '                                                   class="links-details" href="wishlist.html">\n' +
-                            '                                                    <i class="fa fa-heart-o"></i>\n' +
-                            '                                                </a>\n' +
-                            '                                            </li>\n' +
-                            '                                            <li><a data-toggle="tooltip" data-placement="top" title="Xem nhanh"\n' +
-                            '                                                   class="links-details" href="wishlist.html">\n' +
-                            '                                                    <i class="fa fa-eye"></i>\n' +
-                            '                                                </a>\n' +
-                            '                                            </li>\n' +
-                            '                                        </ul>\n' +
-                            '                                    </div>\n' +
-                            '\n' +
-                            '                                </div>\n' +
-                            '                                <!-- Card -->\n' +
-                            '\n' +
-                            '                            </section>'
+                            '                                </section>\n' +
+                            '                            </div>'
+
                     }
-                    // console.log(xhtml);
-                    // $('#saved-res-list').html(xhtml);
+                    $('#saved-res-list').html(xhtml);
                 })
             }
             return this;

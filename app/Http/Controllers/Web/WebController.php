@@ -18,6 +18,9 @@ class WebController extends Controller
         return redirect()->back();
     }
 
+    public function profile(){
+        return view('Web.Pages.profile');
+    }
     public function index(Request $request){
         $new_res = Restaurant::with(['restaurant_detail'])->take(10)->get();
         $args = [
