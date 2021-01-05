@@ -22,13 +22,13 @@
                     </div>
                     <div class="card-body">
                         <ul class="nav nav-pills flex-column">
-                            <a href="#" class="nav-link active"><i class="fa fa-plus-square-o"></i> Thêm nhà hàng</a>
+                            <a href="{{route('admin.add_location')}}" class="nav-link active"><i class="fa fa-plus-square-o"></i> Thêm nhà hàng</a>
                             {{--<a href="customer-wishlist.html" class="nav-link"><i class="fa fa-heart"></i> My wishlist</a>--}}
-                            <a href="#" class="nav-link"><i class="fa fa-check-square-o"></i> Duyệt nhà hàng</a>
+                            <a href="{{route('admin.list_location_approval')}}" class="nav-link"><i class="fa fa-check-square-o"></i> Duyệt nhà hàng</a>
                             <li><a href="{{route('admin.list_location')}}" class="nav-link"><i class="fa fa fa-list-ul"></i> Danh sách nhà hàng</a></li>
-                            <li><a href="#" class="nav-link"><i class="fa fa-bar-chart"></i> Thống kê</a></li>
-                            <li><a href="#" class="nav-link"><i class="fa fa-user"></i> Tài khoản</a></li>
-                            <a href="#" class="nav-link"><i class="fa fa-sign-out"></i> Đăng xuất</a>
+                            <li><a href="{{route('admin.list_user_get')}}" class="nav-link"><i class="fa fa-user"></i> Tài khoản người dùng</a></li>
+                            <a href="{{route('admin.list_admin_get')}}" class="nav-link"><i class="fa fa-user"></i> Tài khoản admin</a></li>
+                            <li><a href="{{route('admin.statistic')}}" class="nav-link"><i class="fa fa-bar-chart"></i> Thống kê</a></li>
                         </ul>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                 <div id="product" class="box">
                     <h1>Thêm nhà hàng mới</h1>
                     <hr>
-                    <form action="#" enctype="multipart/form-data"  method="post">
+                    <form action="{{route('admin.add_location_post')}}" enctype="multipart/form-data"  method="post">
                         {{----}}
                         {{ csrf_field() }}
                         <div class="row">
@@ -76,19 +76,25 @@
                             <div class="col-md-6">
                                 <div>
                                     <label for="Latitude">Kinh độ</label>
-                                    <input id="Latitude" name="Latitude" type="text" disabled="true" class="form-control">
+                                    <input id="Latitude" name="Latitude" type="text" readonly class="form-control">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div>
                                     <label for="Longitude">Vĩ độ</label>
-                                    <input id="Longitude" name="Longitude" type="text" disabled="true" class="form-control">
+                                    <input id="Longitude" name="Longitude" type="text" readonly class="form-control">
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div>
                                     <label for="Categories">Loại hình</label>
-                                    <select id="Categories" name="Categories" class="form-control"></select>
+                                    <select id="Categories" name="Categories" class="form-control">
+                                        <option value="1" selected>Ăn uống</option>
+                                        <option value="2">Sang trọng</option>
+                                        <option value="3">Buffet</option>
+                                        <option value="4">Nhà hàng</option>
+                                        <option value="5">Ăn vặt/vỉa hè</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="col-md-6">
