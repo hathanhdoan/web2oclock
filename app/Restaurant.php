@@ -27,6 +27,9 @@ class Restaurant extends Model
         'QualityRating',
         'ServiceRating',
         'SpaceRating',
+        'PriceMax',
+        'PriceMin',
+        'PhotoUrl',
     ];
 
     public function restaurant_detail(){

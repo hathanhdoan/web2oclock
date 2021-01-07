@@ -16,6 +16,7 @@ class RestaurantDetail extends Model
         'res_id',
         'street_address',
         'district',
+        'city',
         'price',
         'category_id',
         'open_time',

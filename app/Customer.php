@@ -40,6 +40,8 @@ class Customer extends Model implements
         'CreateAt',
         'UpdateAt',
         'SavedRes',
+        'CreateDate',
+        'Role',
     ];
 
 

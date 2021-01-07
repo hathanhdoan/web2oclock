@@ -1,6 +1,6 @@
 @extends('Web.Layout.adminindex')
 @section('content')
-    <div class="container" id="list_location" path="{{url('/')}}" api-get-list="{{route('admin.list_location_get')}}">
+    <div class="container" id="list_location" path="{{url('/')}}" api-get-list="{{route('admin.list_location_approval_get')}}">
         <div class="row">
             <div class="col-lg-12">
                 <!-- breadcrumb-->
@@ -24,8 +24,8 @@
                         <ul class="nav nav-pills flex-column">
                             <a href="{{route('admin.add_location')}}" class="nav-link"><i class="fa fa-plus-square-o"></i> Thêm nhà hàng</a>
                             {{--<a href="customer-wishlist.html" class="nav-link"><i class="fa fa-heart"></i> My wishlist</a>--}}
-                            <a href="{{route('admin.list_location_approval')}}" class="nav-link"><i class="fa fa-check-square-o"></i> Duyệt nhà hàng</a>
-                            <li><a href="{{route('admin.list_location')}}" class="nav-link active"><i class="fa fa fa-list-ul"></i> Danh sách nhà hàng</a></li>
+                            <a href="{{route('admin.list_location_approval')}}" class="nav-link active"><i class="fa fa-check-square-o"></i> Duyệt nhà hàng</a>
+                            <li><a href="{{route('admin.list_location')}}" class="nav-link"><i class="fa fa fa-list-ul"></i> Danh sách nhà hàng</a></li>
                             <li><a href="{{route('admin.list_user_get')}}" class="nav-link"><i class="fa fa-user"></i> Tài khoản người dùng</a></li>
                             <a href="{{route('admin.list_admin_get')}}" class="nav-link"><i class="fa fa-user"></i> Tài khoản admin</a></li>
                             <li><a href="{{route('admin.statistic')}}" class="nav-link"><i class="fa fa-bar-chart"></i> Thống kê</a></li>
@@ -110,7 +110,7 @@
 
     <script>
 
-        $('#District').change(function () {
+        $('#District').click(function () {
             // console.log($('#District').val());
             var path = $('#list_location').attr('path');
             {{--console.log('heheheh' + {{route('admin.list_location_get')}})--}}
@@ -133,8 +133,7 @@
                     "       <th>Mã nhà hàng</th>\n" +
                     "       <th>Tên nhà hàng</th>\n" +
                     "       <th>Địa chỉ</th>\n" +
-                    "       <th>Sửa</th>\n" +
-                    "       <th>Xóa</th>\n" +
+                    "       <th>Chi tiét</th>\n" +
                     "  </tr>\n" +
                     "  </thead>\n" +
                     "  <tbody>";
@@ -145,13 +144,9 @@
                             "<td>"+ list[i]['Id'] +"</td>"+
                             "<td>"+ list[i]['Name'] +"</td>"+
                             "<td>"+ list[i]['Address'] +"</td>"+
-                            "<td class=\"btnEdit\">"+
-                            "<a  class=\"btn btn-primary btn-sm\" href="+ path + '/admin/detail_location/'+ list[i]['Id'] +" >"+
-                            "Sửa"+
-                            "</a>"+"</td>"+
-                            "<td class=\"btnDelete\">"+
-                            "<a  class=\"btn btn-primary btn-sm\" href="+ path + '/admin/delete_location/'+ list[i]['Id'] +" >"+
-                            "Xóa"+
+                            "<td class=\"btnDetail\">"+
+                            "<a  class=\"btn btn-primary btn-sm\" href="+ path + '/admin/detail_location_approval/'+ list[i]['Id'] +" >"+
+                            "Chi tiết"+
                             "</a>"+"</td>"+
                         "</tr>";
                 }
@@ -159,27 +154,6 @@
                 $('#list').html(str);
             });
         })
-        {{--function getTable(obj) {--}}
-        {{--    return 222;--}}
-        {{--    --}}{{--console.log('heheheh' + {{route('admin.list_location_get')}})--}}
-        {{--    let objective = $(obj).parent().parent();--}}
-        {{--    let id_product = objective.find("District").val();--}}
-        {{--    console.log(id_product);--}}
 
-        {{--    $.ajax({--}}
-        {{--        url:"{{route('admin.list_location_get')}}",--}}
-        {{--        type:'GET',--}}
-        {{--        async: true,--}}
-        {{--        data: {"_id_type":id_product},--}}
-        {{--        success: function (result) {--}}
-        {{--            var str = '';--}}
-        {{--            var list = result.res_list;--}}
-        {{--            for (i in list){--}}
-        {{--                str += '<p>' + list[i]['Name'] + '</p>';--}}
-        {{--            }--}}
-        {{--            $('#list').html(str);--}}
-        {{--        }--}}
-        {{--    });--}}
-        {{--}--}}
     </script>
 @endsection
