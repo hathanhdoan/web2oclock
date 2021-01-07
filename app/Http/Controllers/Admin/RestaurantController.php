@@ -125,7 +125,7 @@ class RestaurantController extends BaseController
 
     public function list_user_get()
     {
-        $cus = Customer::where('Status',0)->paginate(20);
+        $cus = Customer::where('Role',0)->paginate(20);
 
         return view('admin.list_user', ['cus_list' => $cus]);
     }
@@ -169,17 +169,24 @@ class RestaurantController extends BaseController
 
     public function add_user_post()
     {
-        $data = request()->all();
-        Customer::create(['DisplayName'=>$data['DisplayName'], 'Email'=>$data['Email'],
-            'Password'=>$data['Password'], 'Role'=>0, 'CreateDate' => date("Y-m-d")]);
-        echo '<script>alert("Thêm thành công!")</script>';
-
-        return redirect()->route('admin.list_user_get');
+        $email = $_POST['email'];
+        $displayname = $_POST['displayname'];
+        $password = $_POST['password'];
+        $user = Customer::where('email',$email)->first();
+        if ($user) {
+            return ['success'=>0];
+        }
+        if (!$user) {
+            Customer::create(['DisplayName' => $displayname, 'Email' => $email,
+                'Password' => $password, 'Role' => 0, 'CreateDate' => date("Y-m-d")]);
+            return ['success' => 1];
+        }
+        return ['success' => 1];
     }
 
     public function list_admin_get()
     {
-        $cus = Customer::where('Status',1)->paginate(20);
+        $cus = Customer::where('Role',1)->paginate(20);
 
         return view('admin.list_admin', ['cus_list' => $cus]);
     }
@@ -223,12 +230,19 @@ class RestaurantController extends BaseController
 
     public function add_admin_post()
     {
-        $data = request()->all();
-        Customer::create(['DisplayName'=>$data['DisplayName'], 'Email'=>$data['Email'], '
-        Password'=>$data['Password'], 'Role'=>1, 'CreateDate' => date("Y-m-d")]);
-        echo '<script>alert("Thêm thành công!")</script>';
-
-        return redirect()->route('admin.list_admin_get');
+        $email = $_POST['email'];
+        $displayname = $_POST['displayname'];
+        $password = $_POST['password'];
+        $user = Customer::where('email',$email)->first();
+        if ($user) {
+            return ['success'=>0];
+        }
+        if (!$user) {
+            Customer::create(['DisplayName' => $displayname, 'Email' => $email,
+                'Password' => $password, 'Role' => 1, 'CreateDate' => date("Y-m-d")]);
+            return ['success' => 1];
+        }
+        return ['success' => 1];
     }
 
     public function list_location_approval(){
