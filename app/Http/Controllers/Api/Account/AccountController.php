@@ -28,7 +28,14 @@ class AccountController extends Controller
         $data['Status'] = 1;
         $data['Avatar'] = 'images/menu/logo/avatar.jpg';
         $data['password'] = Hash::make($data['password']);
-
+        $check = Customer::where('email',$data['email'])->first();
+        if($check){
+            return response()->json([
+                'success' => false,
+                'message' => __('email_is_exist'),
+                'data' => []
+            ], 200);
+        }
         $customer = Customer::create($data);
 
         $args['customer'] = $customer;
@@ -150,6 +157,7 @@ class AccountController extends Controller
                     'success' =>false
                 ];
             }
+
             DB::beginTransaction();
             if (!isset($request->email)) {
                 return response()->json([
@@ -186,7 +194,6 @@ class AccountController extends Controller
             if($sendMail['success']){
                 $customer->update([
                     'password' => Hash::make($new_password),
-                    'IsVerified' => 1
                     ]);
                 DB::commit();
                 return response()->json([

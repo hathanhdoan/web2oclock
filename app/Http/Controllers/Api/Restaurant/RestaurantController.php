@@ -202,6 +202,38 @@ class RestaurantController extends Controller
 
     public function create(Request $request){
         $data = $request->all();
-
+    }
+    public function getSuggestedRes(Request $request){
+        try {
+            $data = $request->all();
+            if(!isset($data['user_id'])){
+                return [
+                    'success' => false,
+                    'message' => 'User ID bắt buộc phải có'
+                ];
+            }
+            $url = config('suggest.python_host').'get-sim?user_id='.$data['user_id'];
+            $rs = curlApi($url,[],'GET');
+            if($rs['success']==1) {
+                $res_ids = [];
+                foreach ($rs['data'] as $val){
+                    $res_ids[] = $val[0];
+                }
+                $res = Restaurant::whereIn('Id',$res_ids)->with(['restaurant_detail:res_id,open_time'])->get();
+                return [
+                    'success' => true,
+                    'data' => $res
+                ];
+            }
+            return [
+                'success' => false,
+                'message' => __('fail')
+            ];
+        }catch (\Exception $e){
+            return [
+                'success' => false,
+                'message' => $e->getMessage()
+            ];
+        }
     }
 }

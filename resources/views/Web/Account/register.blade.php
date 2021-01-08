@@ -1,52 +1,31 @@
-@extends('Web.Layouts.app')
+@extends('Web.Layout.app')
 @section('content')
-    <div class="wrap">
-        <div class="register" id='register' api-register="{{route('api.account.register')}}">
+    <div class="row" id="registerObj" api-register="{{route('api.account.register')}}">
+        <div class="col-md-6">
+            <img id="img-login" style="width: 100%" src="{{asset('images/background/hihihi-1.jpg')}}">
+        </div>
+        <div class="col-md-6 col-sm-12 panel-login-right">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <img class="w-100 images d-none d-sm-block" data-src="../assets/images/profile/dang-ky.png"
-                             alt="">
+                <h4 class="mb-20">ĐĂNG KÝ</h4>
+                <div class="my-card" style="padding: 20px;border-radius: 15px; box-shadow: -1px 1px 9px 0px #00c851">
+                    <div class="login-form-group">
+                        <b>Email:</b>
+                        <input id="txb-email" type="email" value="b@gmail.com" placeholder="Email" class="form-control">
+                        <p class="error"></p>
                     </div>
-                    <div class="col-md-6">
-                        <form>
-                            <div class="form-group register-form">
-                                <label class="register-label" for="name">Tên tài khoản</label>
-                                <input v-validate="'required'" data-vv-as="Tên" name="name"
-                                    v-model="data_register.name" type="text" class="form-control register-input" id="name"
-                                       placeholder="Nhập tên tài khoản">
-                                <div v-cloak v-show="errors.has('name')" class="error">
-                                    <i class="fas fa-exclamation-circle error-icon"></i>
-                                    <span class="error-text">@{{ errors.first('name') }}</span>
-                                </div>
-                            </div>
-                            <div class="form-group register-form">
-                                <label class="register-label" for="email">Email</label>
-                                <input v-validate="'required|email'" data-vv-as="Email" name="email"
-                                       v-model="data_register.email" type="email" class="form-control register-input" id="email"
-                                       placeholder="Nhập email">
-                                <div v-cloak v-show="errors.has('email')" class="error">
-                                    <i class="fas fa-exclamation-circle error-icon"></i>
-                                    <span class="error-text">@{{ errors.first('email') }}</span>
-                                </div>
-                            </div>
-                            <div class="form-group register-form">
-                                <label class="register-label" for="exampleInputPassword1">Mật khẩu</label>
-                                <input v-validate="'required|min:6'" data-vv-as="Mật khẩu" name="password"
-                                       v-model="data_register.password" type="password" class="form-control register-input" id="exampleInputPassword1"
-                                       placeholder="Nhập mật khẩu">
-                                <div v-cloak v-show="errors.has('password')" class="error">
-                                    <i class="fas fa-exclamation-circle error-icon"></i>
-                                    <span class="error-text">@{{ errors.first('password') }}</span>
-                                </div>
-                            </div>
-
-                            <button v-if="!loading" @click.stop.prevent="register()" type="submit" class="button button-register">Đăng ký</button>
-                            <button  v-if="loading"  type="submit" class="button button-register d-none"><i
-                                    class="fas fa-spinner fa-spin mr-3"></i>Đăng ký
-                            </button>
-                        </form>
-                        <a class="register-link" href="/login">Đã có tài khoản ĐĂNG NHẬP</a>
+                    <div class="login-form-group">
+                        <b>Mật khẩu:</b>
+                        <input id="txb-password" value="1" type="password" placeholder="Mật khẩu" class="form-control">
+                    </div>
+                    <div class="login-form-group">
+                        <b>Nhập lại mật khẩu:</b>
+                        <input id="txb-re-password" value="1" type="password" placeholder="Nhập lại mật khẩu" class="form-control">
+                    </div>
+                    <div class="login-form-group form-inline">
+                        <a style="text-decoration: underline" href="/login">Đã có tài khoản</a>
+                    </div>
+                    <div class="login-form-group">
+                        <button id="btn-register" type="submit" class="btn btn-primary">Đăng ký</button>
                     </div>
                 </div>
             </div>
@@ -55,68 +34,73 @@
 @endsection
 @section('script')
     <script>
-        var register = new objectRegister('#register');
+        function RegisterObject() {
+            this.email = $('#txb-email').val();
+            this.password = $('#txb-password').val();
+            this.re_password = $('#txb-re-password').val();
+            this.api_register = $('#registerObj').attr('api-register');
 
-        function objectRegister(element) {
-            var timeout = null;
-            Vue.use(VeeValidate, {
-                locale: 'vi',
-                fieldsBagName: 'vvFields'
-            });
-            this.vm = new Vue({
-                el: element,
-                data: {
-                    loading: false,
-                    api_register: $(element).attr('api-register'),
-                    token: '',
-                    data_register: {
-                        name: '',
-                        email: '',
-                        password: '',
-                        confirm_password: '',
+            this.register = function () {
+                if(this.password != this.re_password){
+                    helper.showNotification('Mật khẩu không khớp','danger')
+                    return;
+                }
+                $.ajax({
+                    method: "POST",
+                    data : {
+                        email : this.email,
+                        password : this.password
                     },
+                    url:  this.api_register,
+                })
+                    .done(function (data) {
+                        if(data.success){
+                            window.location.href = '/login';
+                        }else{
+                            helper.showNotification(data['message'],'danger');
+                        }
+                    });
+            };
 
-                },
-                methods: {
-                    register: function () {
-                        var vm = this;
-
-                        vm.loading = true;
-                        this.$validator.validate().then(valid => {
-                            if (valid) {
-                                axios.post(vm.api_register, vm.data_register).then(function (response) {
-                                    vm.loading = false;
-                                    var data = response.data;
-                                    if (data.error) {
-                                        var message = data.message;
-                                        if(data.message[0]){
-                                            message = '<ul style="list-style-type: none">';
-                                            for(index in data.message){
-                                                message += '<li>- '+ data.message[index] + '</li>'
-                                            }
-                                            message += '</ul>'
-                                        }
-                                        helper.showNotification(message, 'danger');
-                                        return;
-                                    }
-                                    helper.showNotification(data.message, 'success');
-                                    var t = setTimeout(function () {
-                                        window.location = '/login'
-                                    },2000)
-                                })
-                            }else{
-                                vm.loading = false;
-                            }
-                        })
-                    },
-                },
-
-                created: function () {
-                },
-                watch: {}
-            });
+            this.setEmail = function (val){
+                this.email = val;
+            }
+            this.setPassword = function (val){
+                this.password = val;
+            }
+            this.setRePassword = function (val){
+                this.re_password = val;
+            }
             return this;
-        }
+        };
+        $(document).ready(function () {
+            var registerObj = new RegisterObject();
 
+            $("#txb-email").change(function (){
+                registerObj.setEmail($(this).val());
+            });
+            $("#txb-password").change(function (){
+                registerObj.setPassword($(this).val());
+            });
+            $("#txb-re-password").change(function (){
+                registerObj.setRePassword($(this).val());
+            });
+            $("#btn-register").click(function () {
+                registerObj.register()
+            });
+        });
+        function initial(){
+            var token = localStorage.getItem('token');
+            if(token){
+                window.location.href = '/';
+            }
+            var data_login_gg = $('#registerObj').attr('data-login-google');
+            if(data_login_gg){
+                data_login_gg = JSON.parse(data_login_gg);
+                localStorage.setItem('token',data_login_gg['token']);
+                localStorage.setItem('user',JSON.stringify(data_login_gg['user']));
+                window.location.href = '/';
+            }
+        }
     </script>
 @endsection

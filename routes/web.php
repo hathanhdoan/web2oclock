@@ -18,6 +18,12 @@ Route::group(['middleware'=>'locale'],function (){
         Route::get('/login', function () {
             return view('Web.Account.login');
         });
+        Route::get('/register', function () {
+            return view('Web.Account.register');
+        });
+        Route::get('/forget', function () {
+            return view('Web.Account.forget');
+        });
 
         Route::get('/', 'WebController@index');
 

@@ -174,7 +174,6 @@ function curlApi($url, $param = [], $method = 'POST')
     ));
     $response = curl_exec($curl);
     curl_close($curl);
-    return $response;
     return json_decode($response, true);
 }
 

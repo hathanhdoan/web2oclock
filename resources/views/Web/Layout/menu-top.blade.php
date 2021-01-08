@@ -41,12 +41,12 @@
                                     <ul class="minicart-product-list">
                                         <li>
                                             <div class="minicart-product-details">
-                                                <h6><a href="single-product.html"><i style="color: blue" class="icon-menu-user fas fa-chalkboard-teacher"></i>Hồ sơ cá nhân</a></h6>
+                                                <h6><a href="/profile"><i style="color: blue" class="icon-menu-user fas fa-chalkboard-teacher"></i>Hồ sơ cá nhân</a></h6>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="minicart-product-details">
-                                                <h6><a href="single-product.html"><i style="color: greenyellow" class="icon-menu-user far fa-calendar-minus"></i>Hoạt động cá nhân</a></h6>
+                                                <h6><a href="/profile"><i style="color: greenyellow" class="icon-menu-user far fa-calendar-minus"></i>Hoạt động cá nhân</a></h6>
                                             </div>
                                         </li>
                                     </ul>
