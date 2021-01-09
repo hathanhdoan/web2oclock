@@ -996,7 +996,12 @@
                 }).done(function (result) {
                     if (result.success) {
                         // $('#btn-save').css('color','blue');
-                        ancestor.get_saved_res();
+                        // ancestor.get_saved_res();
+                        if(result.type=='save'){
+                            $('#btn-save').css('color','blue');
+                        }else {
+                            $('#btn-save').css('color','black');
+                        }
                         helper.showNotification(result.message,'success')
                     }
                 })
@@ -1119,13 +1124,12 @@
             });
             $('#discription_ta').on('change keyup paste',function (){
                 detail_page.setComment('Description',$(this).val());
-
             })
             $('#image').change(function (){
                 var fd = new FormData();
                 fd.append('image',$('#image')[0].files[0])
                 $.ajax({
-                    url : $('#detail-page').attr('api-upload-image'),
+                        url : $('#detail-page').attr('api-upload-image'),
                     method : 'POST',
                     data: fd,
                     contentType : false,

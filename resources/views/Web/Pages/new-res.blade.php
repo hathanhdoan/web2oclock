@@ -23,7 +23,8 @@
                     <div class="col-md-12">
                         <div>
                             <label for="PhotoUrl">Địa chỉ ảnh</label>
-                            <input id="PhotoUrl" name="PhotoUrl" type="text" class="form-control">
+                            <input type="file" id="image" class="m"
+                                   style="border: unset !important; background: white">
                         </div>
                     </div>
                     <div class="col-md-12">

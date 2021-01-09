@@ -135,4 +135,16 @@ class CommentController extends Controller
             'message' => 'Không tìm thấy'
         ];
     }
+
+    public function getCommentImage(){
+       $data = \request()->all();
+       $user = Auth::guard('api')->user();
+       $rs = CommentPicture::whereHas('comment',function ($q) use($user){
+           $q->where('Owner_id',$user['Id']);
+       })->pluck('Url');
+       return [
+           'success' =>true,
+           'data' => $rs
+       ];
+    }
 }

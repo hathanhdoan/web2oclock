@@ -46,7 +46,7 @@
                                         </li>
                                         <li>
                                             <div class="minicart-product-details">
-                                                <h6><a href="/profile"><i style="color: greenyellow" class="icon-menu-user far fa-calendar-minus"></i>Hoạt động cá nhân</a></h6>
+                                                <h6><a href="/new-res"><i style="color: greenyellow" class="icon-menu-user far fa-calendar-minus"></i>Thêm mới địa điểm</a></h6>
                                             </div>
                                         </li>
                                     </ul>

@@ -27,6 +27,7 @@ Route::group(['namespace' => 'Api'], function () {
         Route::post('/register', 'AccountController@register')->name('api.account.register');
         Route::post('/send-mail', 'AccountController@sendResetPasswordMail')->name('api.account.send_mail');
         Route::put('/reset-password', 'AccountController@resetPassword')->name('api.account.reset_password');
+        Route::post('/update-profile', 'AccountController@updateProfile')->name('api.account.update_profile')->middleware('auth.jwt');
     });
     Route::group(['namespace' => 'Restaurant', 'prefix' => 'res'], function () {
         Route::post('/get-nearest', 'RestaurantController@getNearestRes')->name('api.res.nearest');
@@ -37,6 +38,7 @@ Route::group(['namespace' => 'Api'], function () {
     });
     Route::group(['namespace' => 'Comment', 'prefix' => 'comment'], function () {
         Route::post('/', 'CommentController@getList')->name('api.comment.get-list');
+        Route::post('/get-comment-image', 'CommentController@getCommentImage')->name('api.comment.get_comment_image')->middleware('auth.jwt');
         Route::post('/create', 'CommentController@create')->name('api.comment.create');
         Route::post('/like', 'CommentController@like')->name('api.comment.like')->middleware('auth.jwt');
     });

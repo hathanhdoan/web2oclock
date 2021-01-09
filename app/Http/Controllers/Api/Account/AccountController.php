@@ -77,25 +77,44 @@ class AccountController extends Controller
     }
     public function updateProfile(Request $request)
     {
-        $data = $request->except(['email', 'password']);
-        $data['update_at'] = time();
+        $data = $request->all();
+        $data_update = [];
         $user = Auth::guard('api')->user();
-        if ($user) {
-            $user->update($data);
-            return response()->json([
-                'status' => 200,
-                'message' => _trans('Cập nhật thành công'),
-                'data' => $user,
-                'success' => true
-            ]);
+        if(!empty($data['image'])){
+            $user->Avatar = $data['image'];
         }
-
+        if(!empty($data['new_password'])){
+            if(empty($user->password)){
+                $user->password = bcrypt($data['new_password']);
+            }else{
+                if(!isset($data['old_password'])){
+                    return response()->json([
+                        'status' => 200,
+                        'message' => 'Vui lòng nhập mật khẩu cũ',
+                        'data' => [],
+                        'success' => false
+                    ]);
+                }
+                if(Hash::check($data['old_password'],$user->password)){
+                    $user->password = bcrypt($data['new_password']);
+                }else{
+                    return response()->json([
+                        'status' => 200,
+                        'message' => 'Mật khẩu cũ không đúng',
+                        'data' => [],
+                        'success' => false
+                    ]);
+                }
+            }
+        }
+        $user->save();
         return response()->json([
             'status' => 200,
-            'message' => _trans('Không tìm thấy'),
-            'data' => [],
-            'success' => false
+            'message' => _trans('success'),
+            'data' => $user,
+            'success' => true
         ]);
+
     }
 
     public function getMe(Request $request)

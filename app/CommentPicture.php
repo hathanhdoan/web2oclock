@@ -12,4 +12,8 @@ class CommentPicture extends Model
     public $timestamps = false;
     protected $fillable = ['Url','CommentId','IsFoody'];
 
+    public function comment(){
+        return $this->belongsTo('App\Comment','CommentId','Id');
+    }
+
 }

@@ -330,7 +330,7 @@
             var user = localStorage.getItem('user');
             if(user){
                 user = JSON.parse(user);
-                indexObj.get_saved_res(45);
+                indexObj.get_saved_res(user['Id']); //45
                 indexObj.get_suggest_res(user['Id']);
             }
         })

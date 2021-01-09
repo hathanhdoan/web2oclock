@@ -119,7 +119,7 @@ class RestaurantController extends Controller
             $limit = $data['limit'] ?? 10;
             $page = $data['page'] ?? 1;
             $saved_res = !empty($customer['SavedRes']) ? json_decode($customer['SavedRes']) : [];
-            $rs = Restaurant::whereIn('Id', $saved_res)->get();
+            $rs = Restaurant::whereIn('Id', $saved_res)->with(['restaurant_detail'])->get();
             return [
                 'success' => true,
                 'message' => __('success'),
@@ -151,14 +151,17 @@ class RestaurantController extends Controller
 //              $customer = Customer::find($cu)
                 $customer->update(['SavedRes' => json_encode($saved_res)]);
                 $msg = 'Đã lưu';
+                $type = 'save';
             }else{
                 $key = array_search($res_id, $saved_res);
                 array_splice($saved_res, $key, 1);
                 $customer->update(['SavedRes' => json_encode($saved_res)]);
                 $msg = 'Đã bỏ lưu';
+                $type = 'unsave';
             }
             return [
                 'success' => true,
+                'type' => $type,
                 'message' => $msg
             ];
 
@@ -202,6 +205,7 @@ class RestaurantController extends Controller
 
     public function create(Request $request){
         $data = $request->all();
+
     }
     public function getSuggestedRes(Request $request){
         try {
