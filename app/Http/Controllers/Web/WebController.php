@@ -9,6 +9,7 @@ use App\RestaurantDetail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use function GuzzleHttp\Psr7\str;
 
 class WebController extends Controller
 {
@@ -20,6 +21,41 @@ class WebController extends Controller
 
     public function profile(){
         return view('Web.Pages.profile');
+    }
+    public function moreRes(){
+        $current_time=  date('H:i');
+        $data = \request()->all();
+        $args = [
+            'data' => []
+        ];
+        switch (\request()->type){
+            case 'nearest':
+                $rs = $this->getNearest($data['long'],$data['lat'],20);
+                $args['data'] = $rs['success'] == true ? $rs['data'] : [];
+            case 'open':
+                $rs = $this->getNearest($data['long'],$data['lat'],20);
+                $open_res =[];
+                if($rs['success']==true){
+                    foreach ($rs['data'] as $res){
+                        $res_detail = $res['restaurant_detail'];
+                        if(!empty($res_detail['open_time_am']) && !empty($res_detail['close_time_am'])){
+                            if(strtotime($current_time)<$res_detail['open_time_am']){
+                                continue;
+                            }
+                            if(strtotime($current_time)>$res_detail['close_time_am']){
+                                if(!empty($res_detail['open_time_pm'])){
+                                    if(strtotime($current_time) < $res_detail['open_time_pm'] || strtotime($current_time) > $res_detail['close_time_pm']){
+                                        continue;
+                                    }
+                                }
+                            }
+                            $open_res[] = $res;
+                        }
+                    }
+                }
+                $args['data'] = $open_res;
+        }
+        return view('Web.Pages.more-res',$args);
     }
     public function index(Request $request){
         $new_res = Restaurant::with(['restaurant_detail'])->take(10)->get();
@@ -42,5 +78,78 @@ class WebController extends Controller
             'comments' => $comments,
         ];
         return view('Web.Pages.res-detail',$args);
+    }
+    public function getNearest($long='',$lat='',$limit=20){
+        try {
+           $user_location = [
+               'Latitude' => (float)$lat,
+               'Longitude' => (float)$long,
+           ];
+
+            $page = \request()->page ?? 1;
+
+            $rs = [];
+            $res = Restaurant::with('restaurant_detail')->get()->toArray();
+            if(!empty($res)){
+                foreach ($res as $key => $value) {
+                    $res[$key]['distance'] = haversine($user_location, $value);
+                }
+                usort($res, function ($a, $b) {
+                    if ($a['distance'] == $b['distance']) {
+                        return 0;
+                    }
+                    return ($a['distance'] < $b['distance']) ? -1 : 1;
+                });
+                $rs = array_slice($res, ($page * $limit - $limit), $limit);
+                $origin = ($user_location['Latitude'] . ',' . $user_location['Longitude']);
+                $destination = '';
+                foreach ($rs as $value) {
+                    $destination .= $value['Latitude'] . ',' . $value['Longitude'] . '|';
+                }
+                $url = 'https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=' . $origin . '&destinations=' . $destination . '&key=AIzaSyCzlVX517mZWArHv4Dt3_JVG0aPmbSE5mE';
+                $curl = curl_init();
+
+                curl_setopt_array($curl, array(
+                    CURLOPT_URL => $url,
+                    CURLOPT_RETURNTRANSFER => true,
+                    CURLOPT_ENCODING => '',
+                    CURLOPT_MAXREDIRS => 10,
+                    CURLOPT_TIMEOUT => 0,
+                    CURLOPT_FOLLOWLOCATION => true,
+                    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                    CURLOPT_CUSTOMREQUEST => 'GET',
+                ));
+
+                $response = curl_exec($curl);
+                curl_close($curl);
+                $response = json_decode($response);
+                if (!empty($response)) {
+                    $response = (array)$response;
+                }
+                if (!empty($response['rows'][0])) {
+                    $elm = $response['rows'][0]->elements;
+                    foreach ($rs as $key => $value) {
+                        $rs[$key]['distance_gg'] = $elm[$key]->distance->value;
+                    }
+                }
+                usort($rs, function ($a, $b) {
+                    if ($a['distance_gg'] == $b['distance_gg']) {
+                        return 0;
+                    }
+                    return ($a['distance_gg'] < $b['distance_gg']) ? -1 : 1;
+                });
+            }
+
+            return [
+                'success' => true,
+                'message' => __('success'),
+                'data' => $rs
+            ];
+        } catch (\Exception $e) {
+            return [
+                'success' => false,
+                'message' => $e->getMessage(),
+            ];
+        }
     }
 }

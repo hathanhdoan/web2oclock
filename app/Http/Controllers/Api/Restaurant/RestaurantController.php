@@ -240,4 +240,14 @@ class RestaurantController extends Controller
             ];
         }
     }
+
+    public function getMoreRes(){
+        $type = \request()->type;
+        return Restaurant::with(['restaurant_detail'])->take(10)->get();
+//        switch ($type){
+//            case 'nearest':
+//                return $this->getNearestRes(\request());
+//            case ''
+//        }
+    }
 }

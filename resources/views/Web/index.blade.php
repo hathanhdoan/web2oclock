@@ -167,11 +167,11 @@
                                 <div>
                                     <section>
                                         <div class="card booking-card" style="max-width: 22rem;">
-                                            <div class="view overlay"><img src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg" alt="Card image cap" class="card-img-top"> <a href="#!">
+                                            <div class="view overlay"><img src="{{$res['PhotoUrl']}}" alt="Card image cap" class="card-img-top"> <a href="#!">
                                                     <div class="mask rgba-white-slight waves-effect waves-light"></div>
                                                 </a></div>
-                                            <div class="card-body"><p class="card-title font-weight-bold"><a>{{$res['name_summary']}}</a>
-                                                </p>
+                                            <div class="card-body"><h4 class="card-title font-weight-bold"><a>{{$res['name_summary']}}</a>
+                                                </h4>
                                                 <p><i class="mr-10 fas fa-clock"></i><span>7:00 - 22:00</span></p>
                                                 <a class="mb-2"><i class="mr-5 fas fa-map-marker-alt"></i>{{$res['address_summary']}}
                                                     <p class="card-text"></p>
@@ -180,40 +180,6 @@
                                         </a></section><a class="mb-2">
                                     </a></div>
                             @endforeach
-
-{{--                            <div>--}}
-{{--                                <section>--}}
-{{--                                    <div class="card booking-card" style="max-width: 22rem;">--}}
-{{--                                        <div class="view overlay"><img--}}
-{{--                                                src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg"--}}
-{{--                                                alt="Card image cap" class="card-img-top"> <a href="#!">--}}
-{{--                                                <div class="mask rgba-white-slight waves-effect waves-light"></div>--}}
-{{--                                            </a></div>--}}
-{{--                                        <div class="card-body"><h4 class="card-title font-weight-bold"><a>Texas--}}
-{{--                                                    Chicken</a>--}}
-{{--                                            </h4>--}}
-{{--                                            <ul class="list-unstyled list-inline rating mb-0">--}}
-{{--                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>--}}
-{{--                                                </li>--}}
-{{--                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>--}}
-{{--                                                </li>--}}
-{{--                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>--}}
-{{--                                                </li>--}}
-{{--                                                <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>--}}
-{{--                                                </li>--}}
-{{--                                                <li class="list-inline-item"><i--}}
-{{--                                                        class="fas fa-star-half-alt amber-text"></i>--}}
-{{--                                                </li>--}}
-{{--                                                <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>--}}
-{{--                                            </ul>--}}
-{{--                                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy--}}
-{{--                                                Trâm,--}}
-{{--                                                quận....</a>--}}
-{{--                                            <p class="card-text"></p>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </section>--}}
-{{--                            </div>--}}
                         </div>
                     </div>
 
@@ -228,19 +194,6 @@
 @endsection
 @section('script')
     <script>
-        // function getLocation() {
-        //     if (navigator.geolocation) {
-        //         console.log('HERE');
-        //         navigator.geolocation.getCurrentPosition(showPosition);
-        //     } else {
-        //         console.log("Geolocation is not supported by this browser.");
-        //     }
-        // }
-        //
-        // function showPosition(position) {
-        //     console.log('hehe');
-        //     console.log('Lat: '+ position.coords.latitude+ ' Lng: '+ position.coords.longitude);
-        // }
         function IndexObj() {
             this.api_get_nearest = $('#index-obj').attr('api-get-nearest');
             this.api_get_suggest = $('#index-obj').attr('api-get-suggest');
@@ -670,7 +623,7 @@
                                 var time_label = createElement('strong', 'Giờ mở cửa: ', 'font-style:italic', null);
                                 infowincontent.appendChild(time_label);
 
-                                var time = createElement('text', '5:00 -16h:00', 'color:green; font-weight:bold', null);
+                                var time = createElement('text', open_time, 'color:green; font-weight:bold', null);
                                 infowincontent.appendChild(time);
                                 var icon = customLabel[type] || {};
                                 var marker = new google.maps.Marker({

@@ -29,13 +29,12 @@ Route::group(['middleware'=>'locale'],function (){
 
         Route::get('res-detail/{id}', 'WebController@getDetail');
 
+        Route::get('more-res/{type}', 'WebController@moreRes');
+
         Route::get('/profile', 'WebController@profile');
 
         Route::get('/new-res', function () {
             return view('Web.Pages.new-res');
-        });
-        Route::get('/more-res', function () {
-            return view('Web.Pages.more-res');
         });
     });
     Route::get('/create-xml', 'CreateXmlController@create');
