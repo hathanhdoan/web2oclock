@@ -77,21 +77,25 @@
                     <div class="hb-menu">
                         <nav>
                             <ul>
-                                <li><a href="index.html">{{__('suggest')}}</a></li>
+                                <li><a href="index.html">{{__('open')}}</a></li>
                                 <li><a href="index.html">{{__('nearest')}}</a></li>
                                 <li><a href="shop-left-sidebar.html">{{__('saved')}}</a>
                                 </li>
                                 <li><a href="blog-left-sidebar.html">{{__('newest')}}</a>
                                 </li>
-                                <li style="position: absolute;right: 40px; top: 2px">
-                                    <a data-toggle="tooltip" data-placement="top" data-original-title="Việt Nam" href="{!! route('user.change-language', ['vi']) !!}">
-                                        <img style="width: 34px; height: 34px" src="{{asset('images/vietnam.png')}}">
-                                    </a>
+                                <li >
+                                    <div class="form-inline">
+                                        <a class="mr-10" data-toggle="tooltip" data-placement="top" data-original-title="Việt Nam" href="{!! route('user.change-language', ['vi']) !!}">
+                                            <img style="width: 34px; height: 34px" src="{{asset('images/vietnam.png')}}">
+                                        </a>
+                                        <a data-toggle="tooltip" data-placement="top" data-original-title="English" href="{!! route('user.change-language', ['en']) !!}">
+                                            <img style="width: 30px; height: 30px" src="{{asset('images/united-kingdom.png')}}">
+                                        </a>
+                                    </div>
+
                                 </li>
                                 <li style="position: absolute;right: 0px; top: 4px">
-                                    <a data-toggle="tooltip" data-placement="top" data-original-title="English" href="{!! route('user.change-language', ['en']) !!}">
-                                        <img style="width: 30px; height: 30px" src="{{asset('images/united-kingdom.png')}}">
-                                    </a>
+
                                 </li>
                             </ul>
                         </nav>

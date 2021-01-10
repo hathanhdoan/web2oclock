@@ -4,20 +4,19 @@
         <div id="new-product" class="box">
             <h1>Thêm nhà hàng mới</h1>
             <hr>
-            <form action="#" enctype="multipart/form-data"  method="post">
                 {{----}}
                 {{ csrf_field() }}
                 <div class="row">
                     <div class="col-md-12">
                         <div>
                             <label for="Name">Tên nhà hàng</label>
-                            <input id="Name" name="Name" type="text" class="form-control">
+                            <input id="name" name="Name" type="text" class="form-control">
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div>
                             <label for="Address">Địa chỉ</label>
-                            <input id="Address" name="Address" type="text" class="form-control">
+                            <input id="address" name="Address" type="text" class="form-control">
                         </div>
                     </div>
                     <div class="col-md-12">
@@ -43,13 +42,13 @@
                     <div class="col-md-6">
                         <div>
                             <label for="Latitude">Vĩ độ</label>
-                            <input id="Latitude" name="Latitude" type="text" disabled="true" class="form-control">
+                            <input id="latitude" name="Latitude" type="text" disabled="true" class="form-control">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div>
                             <label for="Longitude">Kinh độ</label>
-                            <input id="Longitude" name="Longitude" type="text" disabled="true" class="form-control">
+                            <input id="longitude" name="Longitude" type="text" disabled="true" class="form-control">
                         </div>
                     </div>
                     <div class="col-md-12">
@@ -309,15 +308,11 @@
                         <label name="space2"></label>
                     </div>
                     <div class="col-md-12 text-center">
-                        <button id="submit" name="submit" type="submit" value="Submit" class="btn btn-primary">
-                            <i class="fa fa-save	"></i> Lưu
-
-                        </button>
+                        <button id="btn-create" class="btn btn-success">Gửi</button>
                     </div>
 
                 </div>
                 <!-- /.row-->
-            </form>
             <div class="col-lg-12">
                 <label name="space3"></label>
             </div>
@@ -372,5 +367,12 @@
 
             { name: 'links',  items:[ 'Link','Unlink','Anchor' ] }
         ];
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#btn-create').click(function (){
+                helper.showNotification('Thêm thành công, đang đợi duyệt','success');
+            })
+        })
     </script>
 @endsection

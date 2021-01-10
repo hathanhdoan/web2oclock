@@ -216,22 +216,17 @@
                         if((result.data)[1]['sim'] > 0){
                             var action = (result.data)[1]['action'];
                             switch (action){
-                                case 'NEAR':
-                                    if (navigator.geolocation) {
-                                        console.log('inital map.....');
-                                        navigator.geolocation.getCurrentPosition(function (position){
-                                            window.location.href = '/more-res/nearest?long='+ position.coords.longitude +'&lat='+position.coords.latitude
-                                            console.log('Lat: '+ position.coords.latitude+ ' Lng: '+ position.coords.longitude);
-
-                                        });
-                                    }else{
-                                        helper.showNotification('Vui lòng cho phép truy cập vị trí');
-                                        return;
-                                    }
+                                case 'NEAREST':
+                                    window.location.href = '/more-res/nearest'
+                                case 'OPEN':
+                                    window.location.href = '/more-res/open'
                                 case 'LOGIN' :
                                     window.location.href = '/login'
+                                case 'SUGGEST' :
+                                    window.location.href = '/suggest'
                                 case 'LOGOUT' :
-                                    window.location.href = '/logout'
+                                    var app = new App();
+                                    app.logout();
                             }
                         }
                     }

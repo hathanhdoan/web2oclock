@@ -23,6 +23,7 @@ class WebController extends Controller
         return view('Web.Pages.profile');
     }
     public function moreRes(){
+        return view('Web.Pages.more-res');
         $current_time=  date('H:i');
 //        return $current_time;
         $data = \request()->all();

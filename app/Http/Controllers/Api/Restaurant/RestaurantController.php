@@ -23,10 +23,10 @@ use Tymon\JWTAuth\Exceptions\TokenExpiredException;
 
 class RestaurantController extends Controller
 {
-    public function getNearestRes(Request $request)
+    public function getNearestRes()
     {
         try {
-            $user_location = is_array($request->user_location) ? $request->user_location : json_decode($request->user_location);
+            $user_location = is_array(\request()->user_location) ? \request()->user_location : json_decode(\request()->user_location);
             if (!isset($user_location)) {
                 return [
                     'success' => false,
@@ -90,16 +90,16 @@ class RestaurantController extends Controller
                 });
             }
 
-            return \response()->json([
+            return [
                 'success' => true,
                 'message' => __('success'),
                 'data' => $rs
-            ]);
+            ];
         } catch (\Exception $e) {
-            return \response()->json([
+            return [
                 'success' => false,
                 'message' => __('fail'),
-            ]);
+            ];
         }
 
 
@@ -249,5 +249,41 @@ class RestaurantController extends Controller
 //                return $this->getNearestRes(\request());
 //            case ''
 //        }
+    }
+
+    public function getOpenRes(){
+        $current_time=  date('H:i');
+        $data = \request()->all();
+        $args = [
+            'success' =>true,
+            'data' => []
+        ];
+        $rs = $this->getNearestRes();
+        if($rs['success'] == true){
+            $open_res =[];
+            if($rs['success']==true){
+                foreach ($rs['data'] as $res){
+                    $res_detail = $res['restaurant_detail'];
+                    if(!empty($res_detail['open_time_am']) && !empty($res_detail['close_time_am'])){
+                        if(strtotime($current_time)<strtotime($res_detail['open_time_am'])){
+                            continue;
+                        }
+                        if(strtotime($current_time)>strtotime($res_detail['close_time_am'])){
+                            if(!empty($res_detail['open_time_pm'])){
+                                if(strtotime($current_time) <strtotime($res_detail['open_time_pm']) || strtotime($current_time) > strtotime($res_detail['close_time_pm'])){
+                                    continue;
+                                }else{
+                                    $open_res[] = $res;
+                                }
+                            }
+                            continue;
+                        }
+                        $open_res[] = $res;
+                    }
+                }
+            }
+            $args['data'] = $open_res;
+        }
+        return $args;
     }
 }
