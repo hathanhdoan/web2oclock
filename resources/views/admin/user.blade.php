@@ -1,6 +1,6 @@
 @extends('Web.Layout.adminindex')
 @section('content')
-    <div class="container">
+    <div class="container" id="user" path="{{url('/')}}" api-create-user="{{route('admin.add_user_post')}}">
         <div class="row">
             <div class="col-lg-12">
                 <!-- breadcrumb-->
@@ -38,43 +38,41 @@
                 <div id="product" class="box">
                     <h1>Thêm mới người dùng</h1>
                     <hr>
-                    <form action="{{route('admin.add_user_post')}}" enctype="multipart/form-data"  method="post">
-                        {{----}}
-                        {{ csrf_field() }}
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div>
-                                    <label for="Name">Tên người dùng</label>
-                                    <input id="DisplayName" name="DisplayName" type="text" class="form-control">
-                                </div>
+                    {{----}}
+                    {{ csrf_field() }}
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div>
+                                <label for="Name">Tên người dùng</label>
+                                <input id="DisplayName" name="DisplayName" type="text" class="form-control">
                             </div>
-                            <div class="col-md-6">
-                                <div>
-                                    <label for="Email">Email</label>
-                                    <input id="Email" name="Email" type="text"
-                                           class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div>
-                                    <label for="Password">Password</label>
-                                    <input id="Password" name="Password" type="text"
-                                           class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <label name="space2"></label>
-                            </div>
-                            <div class="col-md-12 text-center">
-                                <button id="submit" name="submit" type="submit" value="Submit" class="btn btn-primary">
-                                    <i class="fa fa-save	"></i> Lưu
-
-                                </button>
-                            </div>
-
                         </div>
-                        <!-- /.row-->
-                    </form>
+                        <div class="col-md-6">
+                            <div>
+                                <label for="Email">Email</label>
+                                <input id="Email" name="Email" type="text"
+                                       class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div>
+                                <label for="Password">Password</label>
+                                <input id="Password" name="Password" type="text"
+                                       class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <label name="space2"></label>
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <button id="submit" name="submit" value="Submit" class="btn btn-primary">
+                                <i class="fa fa-save	"></i> Lưu
+
+                            </button>
+                        </div>
+
+                    </div>
+                    <!-- /.row-->
                     <div class="col-lg-12">
                         <label name="space3"></label>
                     </div>
@@ -85,5 +83,35 @@
 
     </div>
 
+    <script type="text/javascript">
+        $('#submit').click(function (){
+            console.log($('#Email').val());
+            var email = $('#Email').val();
+            var password = $('#Password').val();
+            var displayname = $('#DisplayName').val();
+            var path = $('#user').attr('path');
+            console.log($('#user').attr('api-create-user'));
+            $.ajax({
+                url: $('#user').attr('api-create-user'),
+                type: 'POST',
+                async: true,
+                data: {
+                    "email": email,
+                    "password": password,
+                    "displayname": displayname,
+                }
+            }).done(function (result){
+                var ok = result.success;
+                if(!ok){
+                    window.alert('Email đã trùng!!');
+                }
+                else{
+                    window.alert('Thành công!!');
+                    window.location.href = 'list_user_get';
+                }
+            });
+        })
+
+    </script>
 
 @endsection
