@@ -57,7 +57,8 @@
             }
         };
 
-        function initMap() {
+        function initMap2() {
+            console.log('initial map 2........');
             var res_list = $('#moreObj').attr('res-list');
             res_list = JSON.parse(res_list);
             var long = $('#moreObj').attr('long');
@@ -118,6 +119,6 @@
 
     </script>
     <script defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzlVX517mZWArHv4Dt3_JVG0aPmbSE5mE&callback=initMap">
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzlVX517mZWArHv4Dt3_JVG0aPmbSE5mE&callback=initMap2">
     </script>
 @endsection

@@ -205,15 +205,36 @@
             recognition.start();
             recognition.onresult = function(e) {
                 console.log(e.results[0][0].transcript);
-                // alert(e.results[0][0].transcript);
                 $.ajax({
                     method : "GET",
                     data : {
-                        query : "Gần tôi nhất"
+                        query : e.results[0][0].transcript
                     },
                     url: 'https://recommender-2oclock.herokuapp.com/polls/go'
                 }).done(function (result){
-                    console.log(result)
+                    if(result.success ==1){
+                        if((result.data)[1]['sim'] > 0){
+                            var action = (result.data)[1]['action'];
+                            switch (action){
+                                case 'NEAR':
+                                    if (navigator.geolocation) {
+                                        console.log('inital map.....');
+                                        navigator.geolocation.getCurrentPosition(function (position){
+                                            window.location.href = '/more-res/nearest?long='+ position.coords.longitude +'&lat='+position.coords.latitude
+                                            console.log('Lat: '+ position.coords.latitude+ ' Lng: '+ position.coords.longitude);
+
+                                        });
+                                    }else{
+                                        helper.showNotification('Vui lòng cho phép truy cập vị trí');
+                                        return;
+                                    }
+                                case 'LOGIN' :
+                                    window.location.href = '/login'
+                                case 'LOGOUT' :
+                                    window.location.href = '/logout'
+                            }
+                        }
+                    }
                 })
                 recognition.stop();
             };

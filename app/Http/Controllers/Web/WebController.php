@@ -24,6 +24,7 @@ class WebController extends Controller
     }
     public function moreRes(){
         $current_time=  date('H:i');
+//        return $current_time;
         $data = \request()->all();
         $args = [
             'data' => []
@@ -32,6 +33,7 @@ class WebController extends Controller
             case 'nearest':
                 $rs = $this->getNearest($data['long'],$data['lat'],20);
                 $args['data'] = $rs['success'] == true ? $rs['data'] : [];
+                break;
             case 'open':
                 $rs = $this->getNearest($data['long'],$data['lat'],20);
                 $open_res =[];
@@ -39,21 +41,25 @@ class WebController extends Controller
                     foreach ($rs['data'] as $res){
                         $res_detail = $res['restaurant_detail'];
                         if(!empty($res_detail['open_time_am']) && !empty($res_detail['close_time_am'])){
-                            if(strtotime($current_time)<$res_detail['open_time_am']){
+                            if(strtotime($current_time)<strtotime($res_detail['open_time_am'])){
                                 continue;
                             }
-                            if(strtotime($current_time)>$res_detail['close_time_am']){
+                            if(strtotime($current_time)>strtotime($res_detail['close_time_am'])){
                                 if(!empty($res_detail['open_time_pm'])){
-                                    if(strtotime($current_time) < $res_detail['open_time_pm'] || strtotime($current_time) > $res_detail['close_time_pm']){
+                                    if(strtotime($current_time) <strtotime($res_detail['open_time_pm']) || strtotime($current_time) > strtotime($res_detail['close_time_pm'])){
                                         continue;
+                                    }else{
+                                        $open_res[] = $res;
                                     }
                                 }
+                                continue;
                             }
                             $open_res[] = $res;
                         }
                     }
                 }
                 $args['data'] = $open_res;
+                break;
         }
         return view('Web.Pages.more-res',$args);
     }
