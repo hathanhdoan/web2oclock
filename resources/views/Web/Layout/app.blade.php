@@ -223,7 +223,7 @@
                                 case 'LOGIN' :
                                     window.location.href = '/login'
                                 case 'SUGGEST' :
-                                    window.location.href = '/suggest'
+                                    window.location.href = '/more-res/suggest'
                                 case 'LOGOUT' :
                                     var app = new App();
                                     app.logout();
