@@ -33,9 +33,8 @@ Route::group(['middleware'=>'locale'],function (){
 
         Route::get('/profile', 'WebController@profile');
 
-        Route::get('/new-res', function () {
-            return view('Web.Pages.new-res');
-        });
+        Route::get('/new-res', 'WebController@newRes');
+
     });
     Route::get('/create-xml', 'CreateXmlController@create');
     Route::get('/test', function (){

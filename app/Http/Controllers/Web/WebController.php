@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Web;
 
+use App\Category;
 use App\Comment;
 use App\Http\Controllers\Controller;
 use App\Restaurant;
@@ -24,45 +25,13 @@ class WebController extends Controller
     }
     public function moreRes(){
         return view('Web.Pages.more-res');
-        $current_time=  date('H:i');
-//        return $current_time;
-        $data = \request()->all();
+    }
+    public function newRes(){
         $args = [
-            'data' => []
+            'categories' => Category::where('status',1)->get(),
+            'districts' => config('address.district')
         ];
-        switch (\request()->type){
-            case 'nearest':
-                $rs = $this->getNearest($data['long'],$data['lat'],20);
-                $args['data'] = $rs['success'] == true ? $rs['data'] : [];
-                break;
-            case 'open':
-                $rs = $this->getNearest($data['long'],$data['lat'],20);
-                $open_res =[];
-                if($rs['success']==true){
-                    foreach ($rs['data'] as $res){
-                        $res_detail = $res['restaurant_detail'];
-                        if(!empty($res_detail['open_time_am']) && !empty($res_detail['close_time_am'])){
-                            if(strtotime($current_time)<strtotime($res_detail['open_time_am'])){
-                                continue;
-                            }
-                            if(strtotime($current_time)>strtotime($res_detail['close_time_am'])){
-                                if(!empty($res_detail['open_time_pm'])){
-                                    if(strtotime($current_time) <strtotime($res_detail['open_time_pm']) || strtotime($current_time) > strtotime($res_detail['close_time_pm'])){
-                                        continue;
-                                    }else{
-                                        $open_res[] = $res;
-                                    }
-                                }
-                                continue;
-                            }
-                            $open_res[] = $res;
-                        }
-                    }
-                }
-                $args['data'] = $open_res;
-                break;
-        }
-        return view('Web.Pages.more-res',$args);
+        return view('Web.Pages.new-res',$args);
     }
     public function index(Request $request){
         $new_res = Restaurant::with(['restaurant_detail'])->take(10)->get();

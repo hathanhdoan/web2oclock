@@ -1,318 +1,152 @@
 @extends('Web.Layout.app')
 @section('content')
     <div class="container">
-        <div id="new-product" class="box">
+        <div id="newObj" api-upload-image="{{route('api.utity.upload_image')}}" api-create-res="{{route('api.res.create')}}" class="box">
             <h1>Thêm nhà hàng mới</h1>
             <hr>
-                {{----}}
-                {{ csrf_field() }}
-                <div class="row">
-                    <div class="col-md-12">
-                        <div>
-                            <label for="Name">Tên nhà hàng</label>
-                            <input id="name" name="Name" type="text" class="form-control">
-                        </div>
+            {{----}}
+            {{ csrf_field() }}
+            <div class="row">
+                <div class="col-md-12">
+                    <div>
+                        <label for="Name">Tên nhà hàng</label>
+                        <input id="name" value="Nhà Hàng A" name="Name" type="text" class="form-control">
                     </div>
-                    <div class="col-md-12">
-                        <div>
-                            <label for="Address">Địa chỉ</label>
-                            <input id="address" name="Address" type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div>
-                            <label for="PhotoUrl">Địa chỉ ảnh</label>
-                            <input type="file" id="image" class="m"
-                                   style="border: unset !important; background: white">
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div>
-                            <label for="Address">Tọa độ nhà hàng</label>
-                        </div>
-                    </div>
-                    <div class="col-md-12" >
-                        <div style="width:100%;height:400px;" id="map" class="form-control">
-
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <label name="space1"></label>
-                    </div>
-                    <div class="col-md-6">
-                        <div>
-                            <label for="Latitude">Vĩ độ</label>
-                            <input id="latitude" name="Latitude" type="text" disabled="true" class="form-control">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div>
-                            <label for="Longitude">Kinh độ</label>
-                            <input id="longitude" name="Longitude" type="text" disabled="true" class="form-control">
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div>
-                            <label for="Categories">Loại hình</label>
-                            <select id="Categories" name="Categories" class="form-control"></select>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div>
-                            <label for="District">Quận</label>
-                            <select id="District" name="District" class="form-control">
-                                <option value="Quận 1" selected>Quận 1</option>
-                                <option value="Quận 2">Quận 2</option>
-                                <option value="Quận 3">Quận 3</option>
-                                <option value="Quận 4">Quận 4</option>
-                                <option value="Quận 5">Quận 5</option>
-                                <option value="Quận 6">Quận 6</option>
-                                <option value="Quận 7">Quận 7</option>
-                                <option value="Quận 8">Quận 8</option>
-                                <option value="Quận 9">Quận 9</option>
-                                <option value="Quận 10">Quận 10</option>
-                                <option value="Quận 11">Quận 11</option>
-                                <option value="Quận 12">Quận 12</option>
-                                <option value="Quận Thủ Đức">Quận Thủ Đức</option>
-                                <option value="Quận Gò Vấp">Quận Gò Vấp</option>
-                                <option value="Quận Bình Thạnh">Quận Bình Thạnh</option>
-                                <option value="Quận Tân Phú">Quận Tân Phú</option>
-                                <option value="Quận Phú Nhuận">Quận Phú Nhuận</option>
-                                <option value="Quận Bình Tân">Quận Bình Tân</option>
-                                <option value="Huyện Củ Chi">Huyện Củ Chi</option>
-                                <option value="Huyện Hóc Môn">Huyện Hóc Môn</option>
-                                <option value="Huyện Bình Chánh">Huyện Bình Chánh</option>
-                                <option value="Huyện Nhà Bè">Huyện Nhà Bè</option>
-                                <option value="Huyện Cần Giờ">Huyện Cần Giờ</option>
-                            </select>
-
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div>
-                            <label for="City">Thành phố</label>
-                            <select id="City" name="City" class="form-control">
-                                <option value="Tp.HCM">Tp.HCM</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div>
-                            <label for="OpenHour">Giờ mở cửa</label>
-                            <select id="OpenHour" name="OpenHour" class="form-control">
-                                <option value="00">00</option>
-                                <option value="01">01</option>
-                                <option value="02">02</option>
-                                <option value="03">03</option>
-                                <option value="04">04</option>
-                                <option value="05">05</option>
-                                <option value="06">06</option>
-                                <option value="07">07</option>
-                                <option value="08">08</option>
-                                <option value="09">09</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                                <option value="13">13</option>
-                                <option value="14">14</option>
-                                <option value="15">15</option>
-                                <option value="16">16</option>
-                                <option value="17">17</option>
-                                <option value="18">18</option>
-                                <option value="19">19</option>
-                                <option value="20">20</option>
-                                <option value="21">21</option>
-                                <option value="22">22</option>
-                                <option value="23">23</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div>
-                            <label for="OpenMinute">Phút mở cửa</label>
-                            <select id="OpenMinute" name="OpenMinute" class="form-control">
-                                <option value="00">00</option>
-                                <option value="01">01</option>
-                                <option value="02">02</option>
-                                <option value="03">03</option>
-                                <option value="04">04</option>
-                                <option value="05">05</option>
-                                <option value="06">06</option>
-                                <option value="07">07</option>
-                                <option value="08">08</option>
-                                <option value="09">09</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                                <option value="13">13</option>
-                                <option value="14">14</option>
-                                <option value="15">15</option>
-                                <option value="16">16</option>
-                                <option value="17">17</option>
-                                <option value="18">18</option>
-                                <option value="19">19</option>
-                                <option value="20">20</option>
-                                <option value="21">21</option>
-                                <option value="22">22</option>
-                                <option value="23">23</option>
-                                <option value="24">24</option>
-                                <option value="25">25</option>
-                                <option value="26">26</option>
-                                <option value="27">27</option>
-                                <option value="28">28</option>
-                                <option value="29">29</option>
-                                <option value="30">30</option>
-                                <option value="31">31</option>
-                                <option value="32">32</option>
-                                <option value="33">33</option>
-                                <option value="34">34</option>
-                                <option value="35">35</option>
-                                <option value="36">36</option>
-                                <option value="37">37</option>
-                                <option value="38">38</option>
-                                <option value="39">39</option>
-                                <option value="40">40</option>
-                                <option value="41">41</option>
-                                <option value="42">42</option>
-                                <option value="43">43</option>
-                                <option value="44">44</option>
-                                <option value="45">45</option>
-                                <option value="46">46</option>
-                                <option value="47">47</option>
-                                <option value="48">48</option>
-                                <option value="49">49</option>
-                                <option value="50">50</option>
-                                <option value="51">51</option>
-                                <option value="52">52</option>
-                                <option value="53">53</option>
-                                <option value="54">54</option>
-                                <option value="55">55</option>
-                                <option value="56">56</option>
-                                <option value="57">57</option>
-                                <option value="58">58</option>
-                                <option value="59">59</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div>
-                            <label for="CloseHour">Giờ đóng cửa</label>
-                            <select id="CloseHour" name="CloseHour" class="form-control">
-                                <option value="00">00</option>
-                                <option value="01">01</option>
-                                <option value="02">02</option>
-                                <option value="03">03</option>
-                                <option value="04">04</option>
-                                <option value="05">05</option>
-                                <option value="06">06</option>
-                                <option value="07">07</option>
-                                <option value="08">08</option>
-                                <option value="09">09</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                                <option value="13">13</option>
-                                <option value="14">14</option>
-                                <option value="15">15</option>
-                                <option value="16">16</option>
-                                <option value="17">17</option>
-                                <option value="18">18</option>
-                                <option value="19">19</option>
-                                <option value="20">20</option>
-                                <option value="21">21</option>
-                                <option value="22">22</option>
-                                <option value="23" selected>23</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div>
-                            <label for="CloseMinute">Phút đóng cửa</label>
-                            <select id="CloseMinute" name="CloseMinute" class="form-control">
-                                <option value="00">00</option>
-                                <option value="01">01</option>
-                                <option value="02">02</option>
-                                <option value="03">03</option>
-                                <option value="04">04</option>
-                                <option value="05">05</option>
-                                <option value="06">06</option>
-                                <option value="07">07</option>
-                                <option value="08">08</option>
-                                <option value="09">09</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                                <option value="13">13</option>
-                                <option value="14">14</option>
-                                <option value="15">15</option>
-                                <option value="16">16</option>
-                                <option value="17">17</option>
-                                <option value="18">18</option>
-                                <option value="19">19</option>
-                                <option value="20">20</option>
-                                <option value="21">21</option>
-                                <option value="22">22</option>
-                                <option value="23">23</option>
-                                <option value="24">24</option>
-                                <option value="25">25</option>
-                                <option value="26">26</option>
-                                <option value="27">27</option>
-                                <option value="28">28</option>
-                                <option value="29">29</option>
-                                <option value="30">30</option>
-                                <option value="31">31</option>
-                                <option value="32">32</option>
-                                <option value="33">33</option>
-                                <option value="34">34</option>
-                                <option value="35">35</option>
-                                <option value="36">36</option>
-                                <option value="37">37</option>
-                                <option value="38">38</option>
-                                <option value="39">39</option>
-                                <option value="40">40</option>
-                                <option value="41">41</option>
-                                <option value="42">42</option>
-                                <option value="43">43</option>
-                                <option value="44">44</option>
-                                <option value="45">45</option>
-                                <option value="46">46</option>
-                                <option value="47">47</option>
-                                <option value="48">48</option>
-                                <option value="49">49</option>
-                                <option value="50">50</option>
-                                <option value="51">51</option>
-                                <option value="52">52</option>
-                                <option value="53">53</option>
-                                <option value="54">54</option>
-                                <option value="55">55</option>
-                                <option value="56">56</option>
-                                <option value="57">57</option>
-                                <option value="58">58</option>
-                                <option value="59" selected>59</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div>
-                            <label for="MinPrice">Giá tiền thấp nhất</label>
-                            <input id="MinPrice" name="MinPrice" type="number" step="1000" class="form-control">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div>
-                            <label for="MaxPrice">Giá tiền cao nhất</label>
-                            <input id="MaxPrice" name="MaxPrice" type="number" step="1000" class="form-control">
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <label name="space2"></label>
-                    </div>
-                    <div class="col-md-12 text-center">
-                        <button id="btn-create" class="btn btn-success">Gửi</button>
-                    </div>
-
                 </div>
-                <!-- /.row-->
+                <div class="col-md-12">
+                    <div>
+                        <label for="Name">Mô tả</label>
+                        <textarea id="description" class="form-control">hehe</textarea>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div>
+                        <label for="Address">Địa chỉ</label>
+                        <input id="address" value="hcm" name="Address" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div>
+                        <label for="PhotoUrl">Địa chỉ ảnh</label>
+                        <input type="file" id="image" class="m"
+                               style="border: unset !important; background: white">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div>
+                        <label for="Address">Tọa độ nhà hàng</label>
+                    </div>
+                </div>
+                <div class="col-md-12" >
+                    <div style="width:100%;height:400px;" id="map" class="form-control">
+
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label name="space1"></label>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <label for="Latitude">Vĩ độ</label>
+                        <input id="latitude" name="Latitude" type="text" disabled="true" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <label for="Longitude">Kinh độ</label>
+                        <input id="longitude" name="Longitude" type="text" disabled="true" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div>
+                        <label for="Categories">Loại hình</label>
+                        <select id="category" name="Categories" class="form-control">
+                            @foreach($categories as $key=>$category)
+                                <option value="{{$category['id']}}" {{$key==0 ? 'selected' : ''}}>{{$category['name']}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <label for="District">Quận</label>
+                        <select id="district" name="District" class="form-control">
+                            @foreach($districts as $key=>$district)
+                                <option value="{{$district}}" {{$key==0 ? 'selected' : ''}}>{{$district}}</option>
+                            @endforeach
+                        </select>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <label for="City">Thành phố</label>
+                        <select id="city" name="City" class="form-control">
+                            <option value="Tp.HCM">Tp.HCM</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div>
+                        <label for="OpenHour">Giờ mở cửa</label>
+                        <select id="open-hour" name="OpenHour" class="form-control">
+                            @for($i=0 ; $i<24; $i ++)
+                                <option {{$i==0 ? 'selected' : ''}} value="{{$i}}">{{$i}}</option>
+                            @endfor
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div>
+                        <label for="OpenMinute">Phút mở cửa</label>
+                        <select id="open-minute" name="OpenMinute" class="form-control">
+                            @for($i=0 ; $i<60; $i ++)
+                                <option {{$i==0 ? 'selected' : ''}} value="{{$i}}">{{$i}}</option>
+                            @endfor
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div>
+                        <label for="CloseHour">Giờ đóng cửa</label>
+                        <select id="close-hour" name="CloseHour" class="form-control">
+                            @for($i=0 ; $i<24; $i ++)
+                                <option {{$i==0 ? 'selected' : ''}} value="{{$i}}">{{$i}}</option>
+                            @endfor
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div>
+                        <label for="CloseMinute">Phút đóng cửa</label>
+                        <select id="close-minute" name="CloseMinute" class="form-control">
+                            @for($i=0 ; $i<60; $i ++)
+                                <option {{$i==0 ? 'selected' : ''}} value="{{$i}}">{{$i}}</option>
+                            @endfor
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <label for="min-price">Giá tiền thấp nhất</label>
+                        <input id="min-price" value="10000" name="MinPrice" type="number" step="1000" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <label for="min-price">Giá tiền cao nhất</label>
+                        <input id="max-price" value="20000" name="MaxPrice" type="number" step="1000" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label name="space2"></label>
+                </div>
+                <div class="col-md-12 text-center">
+                    <button id="btn-create" class="btn btn-success">Gửi</button>
+                </div>
+
+            </div>
+            <!-- /.row-->
             <div class="col-lg-12">
                 <label name="space3"></label>
             </div>
@@ -348,8 +182,8 @@
                     JSON.stringify(mapsMouseEvent.latLng.toJSON(), null, 2)
                 );
                 let location = mapsMouseEvent.latLng.toJSON();
-                document.getElementById('Latitude').value = location.lat;
-                document.getElementById('Longitude').value = location.lng;
+                document.getElementById('latitude').value = location.lat;
+                document.getElementById('longitude').value = location.lng;
                 infoWindow.open(map);
 
 
@@ -369,9 +203,85 @@
         ];
     </script>
     <script>
+        function NewObject(){
+            this.api_create_res = $('#newObj').attr('api-create-res');
+            this.api_upload_image = $('#newObj').attr('api-upload-image');
+            this.description = '';
+            this.token = localStorage.getItem('token');
+            var pr = this;
+            this.uploadImage = function () {
+                if(!$('#image')[0].files[0]){
+                    helper.showNotification('Vui lòng chọn ảnh','danger');
+                    return;
+                }
+                var fd = new FormData();
+                fd.append('image', $('#image')[0].files[0])
+                $.ajax({
+                    url: pr.api_upload_image,
+                    method: 'POST',
+                    data: fd,
+                    contentType: false,
+                    processData: false
+                }).done(function (result) {
+                    if (result.success) {
+                        pr.createRes(result.data.path);
+                    } else {
+                        helper.showNotification(result.message, 'danger')
+                    }
+                })
+            }
+            this.createRes = function (image){
+                var data_create = {
+                    name : $('#name').val(),
+                    description :this.description,
+                    address : $('#address').val(),
+                    image : image,
+                    longitude : $('#longitude').val(),
+                    latitude : $('#latitude').val(),
+                    category_id : $('#category').val(),
+                    district : $('#district').val(),
+                    city : $('#city').val(),
+                    open_hour : $('#open-hour').val(),
+                    open_minute : $('#open-minute').val(),
+                    close_hour : $('#close-hour').val(),
+                    close_minute : $('#close-minute').val(),
+                    min_price : $('#min-price').val(),
+                    max_price : $('#max-price').val(),
+                };
+                for(i in data_create){
+                    if(!data_create[i]){
+                        helper.showNotification(i + ' bắt buộc phải có','danger');
+                        return ;
+                    }
+                }
+                $.ajax({
+                    headers: {
+                        "Authorization": "Bearer " + pr.token
+                    },
+                    method: 'POST',
+                    data : data_create,
+                    url : pr.api_create_res
+                }).done(function (result) {
+                    if(result.success){
+                        helper.showNotification(result.message,'success');
+                    }else {
+                        helper.showNotification(result.message,'danger');
+                    }
+                })
+            }
+        }
         $(document).ready(function () {
+            var newObj = new NewObject();
+            var user = localStorage.getItem('user');
+            if (!user) {
+                window.location.href = "/"
+            }
+            $('#description').on('change keyup paste',function (){
+                console.log('a: '+ $(this).val())
+                newObj.description = $(this).val()
+            })
             $('#btn-create').click(function (){
-                helper.showNotification('Thêm thành công, đang đợi duyệt','success');
+                newObj.uploadImage();
             })
         })
     </script>

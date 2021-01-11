@@ -27,6 +27,7 @@ class RestaurantController extends Controller
     {
         try {
             $user_location = is_array(\request()->user_location) ? \request()->user_location : json_decode(\request()->user_location);
+            $user_location = is_array(\request()->user_location) ? \request()->user_location : json_decode(\request()->user_location);
             if (!isset($user_location)) {
                 return [
                     'success' => false,
@@ -205,6 +206,46 @@ class RestaurantController extends Controller
 
     public function create(Request $request){
         $data = $request->all();
+        $user = Auth::guard('api')->user();
+        $price = number_format( $data['min_price'],0,',','.').'đ - '.number_format( $data['max_price'],0,',','.').'đ';
+        $open_time = $data['open_hour'].':'.((int)$data['open_minute']/10 < 1 ? '0'.$data['open_minute'] : $data['open_minute']).' - '.$data['close_hour'].':'.((int)$data['close_minute']/10 < 1 ? '0'.$data['close_minute'] : $data['close_minute']);
+        $data_create = [
+            'Name' => $data['name'],
+            'Description' => $data['description'],
+            'street_address' => $data['address'],
+            'district' => $data['district'],
+            'city' => (int)$data['city'],
+            'price' => $price,
+            'open_time' => $open_time,
+            'Address' => $data['address'],
+            'Owner_id' => $user['Id'],
+            'Latitude' => $data['latitude'],
+            'Longitude' => $data['longitude'],
+            'PositionRating' => 8,
+            'PriceRating' => 8,
+            'QualityRating' => 8,
+            'ServiceRating' => 8,
+            'SpaceRating' => 8,
+            'AvgRating' => 8,
+            'Status' => 2,
+            'PhotoUrl' => $data['image'],
+            'category_id' => (int)$data['category_id'],
+            'ResCreatedOn' => date('d-m-Y',time()),
+        ];
+        $res = Restaurant::create($data);
+        if($res){
+            $data_create['res_id'] = $res['Id'];
+            return [
+                'success' => true,
+                'data' => [],
+                'message' => __('success')
+            ];
+        }
+        return [
+            'success' => false,
+            'data' => [],
+            'message' => __('fail')
+        ];
 
     }
     public function getSuggestedRes(Request $request){
