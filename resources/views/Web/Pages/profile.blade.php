@@ -1,7 +1,8 @@
 @extends('Web.Layout.app')
 @section('content')
     <div id="objProfile" api-upload-image="{{route('api.utity.upload_image')}}" api-get-saved-res="{{route('api.res.saved')}}"
-         api-update-profile="{{route('api.account.update_profile')}}" api-get-comment-image="{{route('api.comment.get_comment_image')}}">
+         api-update-profile="{{route('api.account.update_profile')}}" api-get-comment-image="{{route('api.comment.get_comment_image')}}"
+         api-get-res="{{route('api.res.get-list')}}">
         <div id="accordion" style="margin:0px 12px 20px 12px">
             <div class="card">
                 <div id="headingOne">
@@ -182,68 +183,7 @@
                     </div>
                 </div>
                 <div id="owner-res" style="padding-left: 10px" class="tab-pane fade">
-                    <div class="row">
-                        <div class="saved-res">
-                            <section>
-                                <div class="card booking-card" style="max-width: 22rem;">
-                                    <div class="view overlay"><img
-                                            src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg"
-                                            alt="Card image cap" class="card-img-top"> <a href="#!">
-                                            <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                        </a></div>
-                                    <div class="card-body"><h4 class="card-title font-weight-bold"><a href="#">Texas
-                                                Chicken</a>
-                                        </h4>
-                                        <ul class="list-unstyled list-inline rating mb-0">
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
-                                        </ul>
-                                        <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
-                                            quận....</a>
-                                        <p class="card-text"></p>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                        <div class="saved-res">
-                            <section>
-                                <div class="card booking-card" style="max-width: 22rem;">
-                                    <div class="view overlay"><img
-                                            src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg"
-                                            alt="Card image cap" class="card-img-top"> <a href="#!">
-                                            <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                        </a></div>
-                                    <div class="card-body"><h4 class="card-title font-weight-bold"><a>Texas Chicken</a>
-                                        </h4>
-                                        <ul class="list-unstyled list-inline rating mb-0">
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
-                                        </ul>
-                                        <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
-                                            quận....</a>
-                                        <p class="card-text"></p>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
+                    <div class="row" id="owner-res-list">
                         <div class="saved-res">
                             <section>
                                 <div class="card booking-card" style="max-width: 22rem;">
@@ -361,7 +301,9 @@
             this.api_update_profile = $('#objProfile').attr('api-update-profile');
             this.api_get_comment_image = $('#objProfile').attr('api-get-comment-image');
             this.api_get_saved_res = $('#objProfile').attr('api-get-saved-res');
+            this.api_get_res = $('#objProfile').attr('api-get-res');
             this.token = localStorage.getItem('token');
+            this.user = JSON.parse(localStorage.getItem('user'));
             this.data_update = {
                 image: '',
                 old_password: $('#old-password').val(),
@@ -441,6 +383,42 @@
                     }
                 })
             }
+            this.getOwnerRes = function () {
+                $.ajax({
+                    url: pr.api_get_res,
+                    method: 'POST',
+                    data: {
+                        owner_id : pr.user.Id
+                    }
+                }).done(function (result) {
+                    if (result.success) {
+                        $xhtml = $('#owner-res-list');
+                        $res = result.data;
+                        for(i in $images){
+                            xhtml += '<div class="saved-res">\n' +
+                                '                                <section>\n' +
+                                '                                    <div class="card booking-card" style="max-width: 22rem;">\n' +
+                                '                                        <div class="view overlay"><img\n' +
+                                '                                                src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg"\n' +
+                                '                                                alt="Card image cap" class="card-img-top"> <a href="#!">\n' +
+                                '                                                <div class="mask rgba-white-slight waves-effect waves-light"></div>\n' +
+                                '                                            </a></div>\n' +
+                                '                                        <div class="card-body"><p class="card-title font-weight-bold"><a>'+ (res_list[i]['name_summary']) +'</a>\n' +
+                                '                                            </p>\n' +
+                                '                                            <p><i class="mr-10 fas fa-clock"></i><span>'+ res_list[i]['restaurant_detail']['open_time'] +'</span></p>\n' +
+                                '                                            <a class="mb-2"><i class="mr-5 fas fa-map-marker-alt"></i>'+ res_list[i]['address_summary']+'\n' +
+                                '                                            <p class="card-text"></p>\n' +
+                                '                                        </div>\n' +
+                                '                                    </div>\n' +
+                                '                                </section>\n' +
+                                '                            </div>'
+                        }
+                        $('#owner-res-list').html($xhtml);
+                    } else {
+                        helper.showNotification(result.message, 'danger')
+                    }
+                })
+            }
             this.getSavedRes = function (customer_id){
                 $.ajax({
                     method: 'POST',
@@ -486,6 +464,7 @@
             }
             user = JSON.parse(user)
             profileObj.getSavedRes(user['Id']);
+            profileObj.getOwnerRes();
             var avatar = user['Avatar'] ? '/' + user['Avatar'] : '/images/menu/logo/avatar.jpg';
             $('#avatar-profile').attr('src', avatar);
             $('#new-password').change(function (){

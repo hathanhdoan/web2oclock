@@ -10,6 +10,7 @@ use App\Http\Requests\Account\ChangePasswordRequest;
 use App\Http\Requests\Account\LoginRequest;
 use App\Http\Requests\Account\RegisterRequest;
 use App\Restaurant;
+use App\RestaurantDetail;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -227,17 +228,23 @@ class RestaurantController extends Controller
             'ServiceRating' => 8,
             'SpaceRating' => 8,
             'AvgRating' => 8,
-            'Status' => 2,
+            'Status' => 0,
+            'IsFoody' => 0,
             'PhotoUrl' => $data['image'],
             'category_id' => (int)$data['category_id'],
             'ResCreatedOn' => date('d-m-Y',time()),
         ];
-        $res = Restaurant::create($data);
+        $res = Restaurant::create($data_create);
+
         if($res){
             $data_create['res_id'] = $res['Id'];
+            $res_detail = RestaurantDetail::create($data_create);
             return [
                 'success' => true,
-                'data' => [],
+                'data' => [
+                    'res' => $res,
+                    'res_detail' => $res_detail
+                ],
                 'message' => __('success')
             ];
         }
@@ -326,5 +333,19 @@ class RestaurantController extends Controller
             $args['data'] = $open_res;
         }
         return $args;
+    }
+
+    public function getList(){
+        $data = \request()->all();
+        $res = new Restaurant();
+        if(isset($data['owner_id'])){
+            $res = $res->where('Owner_id',$data['owner_id']);
+        }
+        $limit = $data['limit'] ?? 10;
+        $res = $res->with(['restaurant_detail'])->paginate($limit);
+        return [
+            'success' => true,
+            'data' => $res
+        ];
     }
 }

@@ -30,6 +30,7 @@ class Restaurant extends Model
         'PriceMax',
         'PriceMin',
         'PhotoUrl',
+        'Owner_id',
     ];
 
     public function restaurant_detail(){

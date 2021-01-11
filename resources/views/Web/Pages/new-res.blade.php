@@ -277,7 +277,6 @@
                 window.location.href = "/"
             }
             $('#description').on('change keyup paste',function (){
-                console.log('a: '+ $(this).val())
                 newObj.description = $(this).val()
             })
             $('#btn-create').click(function (){

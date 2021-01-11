@@ -38,6 +38,7 @@ Route::group(['middleware'=>'locale'],function () {
             Route::post('/get-more', 'RestaurantController@getMoreRes')->name('api.res.get_more');
             Route::post('/get-open-res', 'RestaurantController@getOpenRes')->name('api.res.get_open_res');
             Route::post('/create', 'RestaurantController@create')->name('api.res.create')->middleware('auth.jwt');
+            Route::post('/get-list', 'RestaurantController@getlist')->name('api.res.get-list');
         });
         Route::group(['namespace' => 'Comment', 'prefix' => 'comment'], function () {
             Route::post('/', 'CommentController@getList')->name('api.comment.get-list');

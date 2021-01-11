@@ -14,7 +14,6 @@ class RestaurantDetail extends Model
 
     protected $fillable =[
         'res_id',
-        'res_id',
         'street_address',
         'district',
         'city',
