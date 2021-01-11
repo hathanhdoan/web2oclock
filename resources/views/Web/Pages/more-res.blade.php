@@ -50,6 +50,7 @@
                                 '            </div>'
                         }
                         $('#moreObj').html($xhtml);
+                        renderMap(res_list);
                     } else {
 
                     }
@@ -89,6 +90,7 @@
                             '            </div>'
                     }
                     $('#moreObj').html($xhtml);
+                    renderMap(res_list);
                 })
             }
             this.get_suggest_res = function (customer_id) {
@@ -121,6 +123,7 @@
                             '            </div>'
                     }
                     $('#moreObj').html($xhtml);
+                    renderMap(res_list);
                 })
             }
             this.setPage = function (val){
@@ -129,37 +132,55 @@
             return this;
         }
 
-        $(document).ready(function () {
-            var type = $('#moreObj').attr('type');
-            var moreObj = new MoreObject();
-            var long = 106.7864965;
-            var lat = 10.8380984;
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function (position) {
-                    long = position.coords.longitude;
-                    lat = position.coords.latitude;
-                    console.log('Lat: ' + position.coords.latitude + ' Lng: ' + position.coords.longitude);
+        function renderMap(res_list){
+            var map = new google.maps.Map(document.getElementById('map2'), {
+                // center: new google.maps.LatLng(10.8139, 106.717),
+                center: new google.maps.LatLng(lat, long),
+                zoom: 15
+            });
+            var infoWindow = new google.maps.InfoWindow;
+            Array.prototype.forEach.call(res_list, function (res) {
+                var id = res['Id'];
+                var name = res['Name'];
+                var address = res['Address'];
+                var type = 'restaurant';
+                var open_time = res['restaurant_detail'] ? res['restaurant_detail']['open_time'] : 'Chưa có dữ liệu'
+                var point = new google.maps.LatLng(
+                    parseFloat(res['Latitude']),
+                    parseFloat(res['Longitude']));
+
+                var infowincontent = document.createElement('div');
+                var res_name = createElement('a', name, null, {
+                    'id': 'res_name_gg_map',
+                    'href': '/res-detail/'+id,
+                    'target': '_blank'
                 });
-            }
-            // moreObj.getOpenRes(long,lat);
-            // moreObj.getNearest();
-            var user = localStorage.getItem('user');
-            switch (type) {
-                case 'nearest':
-                    moreObj.getNearest();
-                    break;
-                case 'open':
-                    moreObj.getOpenRes(long,lat);
-                    break;
-                case 'suggest':
-                    if (user) {
-                        user = JSON.parse(user);
-                        moreObj.get_suggest_res(user['Id']);
-                    } else {
-                        helper.showNotification('Vui lòng đăng nhập', 'danger')
-                    }
-                    break
-            }
+                infowincontent.appendChild(res_name);
+                infowincontent.appendChild(document.createElement('br'));
+
+                var text = createElement('text', address, null, null, null);
+                infowincontent.appendChild(text);
+                infowincontent.appendChild(document.createElement('br'));
+
+                var time_label = createElement('strong', 'Giờ mở cửa: ', 'font-style:italic', null);
+                infowincontent.appendChild(time_label);
+
+                var time = createElement('text', open_time, 'color:green; font-weight:bold', null);
+                infowincontent.appendChild(time);
+                var icon = customLabel[type] || {};
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: point,
+                    label: icon.label
+                });
+                marker.addListener('click', function () {
+                    infoWindow.setContent(infowincontent);
+                    infoWindow.open(map, marker);
+                });
+            });
+        }
+        $(document).ready(function () {
+
 
         });
     </script>
@@ -187,64 +208,37 @@
                 }
             };
 
+            var type = $('#moreObj').attr('type');
+            var moreObj = new MoreObject();
+            var long = 106.7864965;
+            var lat = 10.8380984;
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    long = position.coords.longitude;
+                    lat = position.coords.latitude;
+                    console.log('Lat: ' + position.coords.latitude + ' Lng: ' + position.coords.longitude);
+                });
+            }
+            var user = localStorage.getItem('user');
+
             function initMap2() {
                 console.log('initial map 2........');
-                var res_list = $('#moreObj').attr('res-list');
-                res_list = JSON.parse(res_list);
-                var long = $('#moreObj').attr('long');
-                var lat = $('#moreObj').attr('lat');
-                if(!long){
-                    long = res_list[0]['Longitude'];
+                switch (type) {
+                    case 'nearest':
+                        moreObj.getNearest();
+                        break;
+                    case 'open':
+                        moreObj.getOpenRes(long,lat);
+                        break;
+                    case 'suggest':
+                        if (user) {
+                            user = JSON.parse(user);
+                            moreObj.get_suggest_res(user['Id']);
+                        } else {
+                            helper.showNotification('Vui lòng đăng nhập', 'danger')
+                        }
+                        break
                 }
-                if(!lat){
-                    lat = res_list[0]['Latitude'];
-                }
-                var map = new google.maps.Map(document.getElementById('map2'), {
-                    // center: new google.maps.LatLng(10.8139, 106.717),
-                    center: new google.maps.LatLng(lat, long),
-                    zoom: 15
-                });
-                var infoWindow = new google.maps.InfoWindow;
-                console.log(res_list);
-                Array.prototype.forEach.call(res_list, function (res) {
-                    var id = res['Id'];
-                    var name = res['Name'];
-                    var address = res['Address'];
-                    var type = 'restaurant';
-                    var open_time = res['restaurant_detail'] ? res['restaurant_detail']['open_time'] : 'Chưa có dữ liệu'
-                    var point = new google.maps.LatLng(
-                        parseFloat(res['Latitude']),
-                        parseFloat(res['Longitude']));
-
-                    var infowincontent = document.createElement('div');
-                    var res_name = createElement('a', name, null, {
-                        'id': 'res_name_gg_map',
-                        'href': '/res-detail/'+id,
-                        'target': '_blank'
-                    });
-                    infowincontent.appendChild(res_name);
-                    infowincontent.appendChild(document.createElement('br'));
-
-                    var text = createElement('text', address, null, null, null);
-                    infowincontent.appendChild(text);
-                    infowincontent.appendChild(document.createElement('br'));
-
-                    var time_label = createElement('strong', 'Giờ mở cửa: ', 'font-style:italic', null);
-                    infowincontent.appendChild(time_label);
-
-                    var time = createElement('text', open_time, 'color:green; font-weight:bold', null);
-                    infowincontent.appendChild(time);
-                    var icon = customLabel[type] || {};
-                    var marker = new google.maps.Marker({
-                        map: map,
-                        position: point,
-                        label: icon.label
-                    });
-                    marker.addListener('click', function () {
-                        infoWindow.setContent(infowincontent);
-                        infoWindow.open(map, marker);
-                    });
-                });
             }
 
         </script>
