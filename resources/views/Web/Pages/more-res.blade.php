@@ -195,7 +195,6 @@
             });
         }
         $(document).ready(function () {
-            var moreObj = new MoreObject();
             $('#btn-load-more').click(function () {
                 var type = $('#moreObj').attr('type');
                 switch (type) {
