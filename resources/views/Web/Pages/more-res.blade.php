@@ -1,5 +1,7 @@
 @extends('Web.Layout.app')
 @section('content')
+    <div id="map2" style="overflow: hidden;height: 275px;max-width: 1135px; margin-top: 150px;margin: auto;
+    border-radius: 10px;"></div>
     <div class="row" style="margin-left: 15px" id="moreObj" style="margin: 0px 0px 10px"
          type="{{\request()->type}}" api-get-open-res="{{route('api.res.get_open_res')}}"
          api-get-nearest="{{route('api.res.nearest')}}"
@@ -8,8 +10,6 @@
     <div style="text-align: center">
         <button style="width: 150px" id="btn-load-more" class="btn btn-primary">Tải thêm</button>
     </div>
-    <div id="map2" style="overflow: hidden;height: 275px;max-width: 1135px; margin-top: 150px;margin: auto;
-    border-radius: 10px;"></div>
 @endsection
 @section('script')
     <script>
