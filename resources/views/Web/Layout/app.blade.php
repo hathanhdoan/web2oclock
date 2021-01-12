@@ -196,6 +196,23 @@
             window.location.href = '/login';
         });
     });
+    function getCategory(query){
+        $.ajax({
+            method : "GET",
+            data : {
+                query : query
+            },
+            url: 'https://recommender-2oclock.herokuapp.com/polls/category'
+        }).done(function (result){
+            if(result.success ==1){
+                if((result.data)[1]['sim'] > 2.5){
+                    return (result.data)[1]['sim']['name'];
+                }
+                return false;
+            }
+            return false;
+        })
+    }
     function startRecording() {
         if (window.hasOwnProperty('webkitSpeechRecognition')) {
             var recognition = new webkitSpeechRecognition();
@@ -211,13 +228,16 @@
                         query : e.results[0][0].transcript
                     },
                     url: 'https://recommender-2oclock.herokuapp.com/polls/go'
-                }).done(function (result){
+                }).done(async function (result){
                     if(result.success ==1){
                         if((result.data)[1]['sim'] > 0){
                             var action = (result.data)[1]['action'];
                             switch (action){
                                 case 'NEAREST':
-                                    window.location.href = '/more-res/nearest'
+                                    var rs = await getCategory(e.results[0][0].transcript);
+                                    console.log(rs);
+                                    break;
+                                    // window.location.href = '/more-res/nearest'
                                 case 'OPEN':
                                     window.location.href = '/more-res/open'
                                 case 'LOGIN' :

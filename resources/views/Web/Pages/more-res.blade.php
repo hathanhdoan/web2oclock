@@ -2,10 +2,11 @@
 @section('content')
     <div id="map2" style="overflow: hidden;height: 275px;max-width: 1135px; margin-top: 150px;margin: auto;
     border-radius: 10px;"></div>
-    <div class="row" style="margin-left: 15px" id="moreObj" style="margin: 0px 0px 10px"
+    <div class="row" style="margin-left: 15px; margin-top: 20px" id="moreObj" style="margin: 0px 0px 10px"
          type="{{\request()->type}}" api-get-open-res="{{route('api.res.get_open_res')}}"
          api-get-nearest="{{route('api.res.nearest')}}"
-         api-get-suggest="{{route('api.res.suggest')}}">
+         api-get-suggest="{{route('api.res.suggest')}}"
+         category="{{\request()->category??''}}">
     </div>
     <div style="text-align: center">
         <button style="width: 150px" id="btn-load-more" class="btn btn-primary">Tải thêm</button>
@@ -195,6 +196,7 @@
             });
         }
         $(document).ready(function () {
+            console.log($('#moreObj').attr('category'));
             $('#btn-load-more').click(function () {
                 var type = $('#moreObj').attr('type');
                 switch (type) {
@@ -252,7 +254,7 @@
                         long = position.coords.longitude;
                         lat = position.coords.latitude;
                         console.log('Lat: ' + position.coords.latitude + ' Lng: ' + position.coords.longitude);
-                        console.log('initial map 2........');
+                        console.log('initial map 2 with user location........');
                         switch (type) {
                             case 'nearest':
                                 moreObj.getNearest(long,lat);
@@ -268,6 +270,40 @@
                                     helper.showNotification('Vui lòng đăng nhập', 'danger')
                                 }
                                 break
+                        }
+                    }, function (error) {
+                        switch(error.code) {
+                            case error.PERMISSION_DENIED:
+                                long = 106.7864965;
+                                lat = 10.8380984;
+                                console.log('initial map 2 without user location........');
+                                switch (type) {
+                                    case 'nearest':
+                                        moreObj.getNearest(long,lat);
+                                        break;
+                                    case 'open':
+                                        moreObj.getOpenRes(long,lat);
+                                        break;
+                                    case 'suggest':
+                                        if (user) {
+                                            user = JSON.parse(user);
+                                            moreObj.get_suggest_res(user['Id']);
+                                        } else {
+                                            helper.showNotification('Vui lòng đăng nhập', 'danger')
+                                        }
+                                        break
+                                }
+                                console.log("User denied the request for Geolocation.")
+                                break;
+                            case error.POSITION_UNAVAILABLE:
+                                alert("Location information is unavailable.")
+                                break;
+                            case error.TIMEOUT:
+                                alert("The request to get user location timed out.")
+                                break;
+                            case error.UNKNOWN_ERROR:
+                                alert("An unknown error occurred.")
+                                break;
                         }
                     });
                 }else{
