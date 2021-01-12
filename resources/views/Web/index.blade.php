@@ -278,7 +278,7 @@
         }
 
         $(document).ready(function () {
-            getNearest();
+            // getNearest();
             var indexObj = new IndexObj();
             var user = localStorage.getItem('user');
             if(user){

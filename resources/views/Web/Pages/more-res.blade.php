@@ -244,16 +244,16 @@
             var moreObj = new MoreObject();
             var long = 106.7864965;
             var lat = 10.8380984;
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function (position) {
-                    long = position.coords.longitude;
-                    lat = position.coords.latitude;
-                    console.log('Lat: ' + position.coords.latitude + ' Lng: ' + position.coords.longitude);
-                });
-            }
             var user = localStorage.getItem('user');
 
             function initMap2() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function (position) {
+                        long = position.coords.longitude;
+                        lat = position.coords.latitude;
+                        console.log('Lat: ' + position.coords.latitude + ' Lng: ' + position.coords.longitude);
+                    });
+                }
                 console.log('initial map 2........');
                 switch (type) {
                     case 'nearest':
