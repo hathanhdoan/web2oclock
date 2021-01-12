@@ -1,10 +1,12 @@
 @extends('Web.Layout.app')
 @section('content')
-    <div class="row" id="moreObj" style="margin: 0px 0px 10px"
+    <div class="row" style="margin-left: 15px" id="moreObj" style="margin: 0px 0px 10px"
          type="{{\request()->type}}" api-get-open-res="{{route('api.res.get_open_res')}}"
          api-get-nearest="{{route('api.res.nearest')}}"
          api-get-suggest="{{route('api.res.suggest')}}">
-
+    </div>
+    <div style="text-align: center">
+        <button style="width: 150px" id="btn-load-more" class="btn btn-primary">Tải thêm</button>
     </div>
     <div id="map2" style="overflow: hidden;height: 275px;max-width: 1135px; margin-top: 150px;margin: auto;
     border-radius: 10px;"></div>
@@ -14,6 +16,7 @@
         function MoreObject() {
             this.api_get_open_res = $('#moreObj').attr('api-get-open-res');
             this.page=1;
+            this.res_list = [];
             var pr = this;
             this.getOpenRes = function (long, lat) {
                 $.ajax({
@@ -29,6 +32,12 @@
                 }).done(function (result) {
                     if (result.success) {
                         var res_list = result.data;
+                        if(res_list[0]){
+                            pr.res_list = (pr.res_list).concat(res_list);
+                            pr.page = pr.page + 1;
+                        }else{
+                            $('#btn-load-more').css('display','none');
+                        }
                         $xhtml = $('#moreObj').html();
                         for (i in res_list) {
                             $xhtml += '<div class="saved-res">\n' +
@@ -40,7 +49,7 @@
                                 '                                <div class="mask rgba-white-slight waves-effect waves-light"></div>\n' +
                                 '                            </a></div>\n' +
                                 '                        <div class="card-body"><h4 class="card-title font-weight-bold"><a href="res-detail/' + res_list[i]['Id'] + '">' + res_list[i]['Name'] + '</a>\n' +
-                                '                                <p class="mt-10"><i class="mr-10 fas fa-clock"></i><span>' + res_list[i]['restaurant_detail']['open_time'] + '</span></p>\n' +
+                                '                                <p class="mt-10"><i class="mr-10 fas fa-clock"></i><span>' + (res_list[i]['restaurant_detail'] !=null ? res_list[i]['restaurant_detail']['open_time'] : 'Chưa có dữ liệu') + '</span></p>\n' +
                                 '                            </h4>\n' +
                                 '                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp;' + res_list[i]['address_summary'] + '</a>\n' +
                                 '                            <p class="card-text"></p>\n' +
@@ -50,25 +59,31 @@
                                 '            </div>'
                         }
                         $('#moreObj').html($xhtml);
-                        renderMap(res_list);
+                        renderMap(pr.res_list);
                     } else {
 
                     }
                 })
             }
-            this.getNearest = function () {
+            this.getNearest = function (long,lat) {
                 $.ajax({
                     method: 'POST',
                     data: {
                         user_location: {
-                            Latitude: 10.8380621,
-                            Longitude: 106.78649750000001
+                            Latitude: lat,
+                            Longitude: long
                         },
                         page : pr.page
                     },
                     url: $('#moreObj').attr('api-get-nearest')
                 }).done(function (data) {
                     var res_list = data.data;
+                    if(res_list[0]){
+                        pr.res_list = (pr.res_list).concat(res_list);
+                        pr.page = pr.page + 1;
+                    }else{
+                        $('#btn-load-more').css('display','none');
+                    }
                     $xhtml = $('#moreObj').html();
                     for (i in res_list) {
                         $xhtml += '<div class="saved-res">\n' +
@@ -80,7 +95,7 @@
                             '                                <div class="mask rgba-white-slight waves-effect waves-light"></div>\n' +
                             '                            </a></div>\n' +
                             '                        <div class="card-body"><h4 class="card-title font-weight-bold"><a href="res-detail/' + res_list[i]['Id'] + '">' + res_list[i]['Name'] + '</a>\n' +
-                            '                                <p class="mt-10"><i class="mr-10 fas fa-clock"></i><span>' + res_list[i]['restaurant_detail']['open_time'] + '</span></p>\n' +
+                            '                                <p class="mt-10"><i class="mr-10 fas fa-clock"></i><span>' + (res_list[i]['restaurant_detail'] !=null ? res_list[i]['restaurant_detail']['open_time'] : 'Chưa có dữ liệu') + '</span></p>\n' +
                             '                            </h4>\n' +
                             '                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp;' + res_list[i]['address_summary'] + '</a>\n' +
                             '                            <p class="card-text"></p>\n' +
@@ -90,7 +105,7 @@
                             '            </div>'
                     }
                     $('#moreObj').html($xhtml);
-                    renderMap(res_list);
+                    renderMap(pr.res_list);
                 })
             }
             this.get_suggest_res = function (customer_id) {
@@ -113,7 +128,7 @@
                             '                                <div class="mask rgba-white-slight waves-effect waves-light"></div>\n' +
                             '                            </a></div>\n' +
                             '                        <div class="card-body"><h4 class="card-title font-weight-bold"><a href="res-detail/' + res_list[i]['Id'] + '">' + res_list[i]['Name'] + '</a>\n' +
-                            '                                <p class="mt-10"><i class="mr-10 fas fa-clock"></i><span>' + res_list[i]['restaurant_detail']['open_time'] + '</span></p>\n' +
+                            '                                <p class="mt-10"><i class="mr-10 fas fa-clock"></i><span>' + (res_list[i]['restaurant_detail'] !=null ? res_list[i]['restaurant_detail']['open_time'] : 'Chưa có dữ liệu') + '</span></p>\n' +
                             '                            </h4>\n' +
                             '                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp;' + res_list[i]['address_summary'] + '</a>\n' +
                             '                            <p class="card-text"></p>\n' +
@@ -180,8 +195,26 @@
             });
         }
         $(document).ready(function () {
-
-
+            var moreObj = new MoreObject();
+            $('#btn-load-more').click(function () {
+                var type = $('#moreObj').attr('type');
+                switch (type) {
+                    case 'nearest':
+                        moreObj.getNearest(long, lat);
+                        break;
+                    case 'open':
+                        moreObj.getOpenRes(long, lat);
+                        break;
+                    case 'suggest':
+                        if (user) {
+                            user = JSON.parse(user);
+                            moreObj.get_suggest_res(user['Id']);
+                        } else {
+                            helper.showNotification('Vui lòng đăng nhập', 'danger')
+                        }
+                        break;
+                }
+            });
         });
     </script>
         <script>
@@ -225,7 +258,7 @@
                 console.log('initial map 2........');
                 switch (type) {
                     case 'nearest':
-                        moreObj.getNearest();
+                        moreObj.getNearest(long,lat);
                         break;
                     case 'open':
                         moreObj.getOpenRes(long,lat);

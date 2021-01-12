@@ -36,9 +36,8 @@ class RestaurantController extends Controller
                 ];
             }
 
-            $limit = $request->limit ?? 20;
-            $page = $request->page ?? 1;
-
+            $limit = \request()->limit ?? 20;
+            $page = \request()->page ?? 1;
             $rs = [];
             $res = Restaurant::with('restaurant_detail')->get()->toArray();
             if(!empty($res)){
@@ -103,8 +102,6 @@ class RestaurantController extends Controller
                 'message' => __('fail'),
             ];
         }
-
-
     }
 
     public function getSavedRes(Request $request)
