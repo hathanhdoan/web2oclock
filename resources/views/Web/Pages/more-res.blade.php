@@ -252,24 +252,26 @@
                         long = position.coords.longitude;
                         lat = position.coords.latitude;
                         console.log('Lat: ' + position.coords.latitude + ' Lng: ' + position.coords.longitude);
-                    });
-                }
-                console.log('initial map 2........');
-                switch (type) {
-                    case 'nearest':
-                        moreObj.getNearest(long,lat);
-                        break;
-                    case 'open':
-                        moreObj.getOpenRes(long,lat);
-                        break;
-                    case 'suggest':
-                        if (user) {
-                            user = JSON.parse(user);
-                            moreObj.get_suggest_res(user['Id']);
-                        } else {
-                            helper.showNotification('Vui lòng đăng nhập', 'danger')
+                        console.log('initial map 2........');
+                        switch (type) {
+                            case 'nearest':
+                                moreObj.getNearest(long,lat);
+                                break;
+                            case 'open':
+                                moreObj.getOpenRes(long,lat);
+                                break;
+                            case 'suggest':
+                                if (user) {
+                                    user = JSON.parse(user);
+                                    moreObj.get_suggest_res(user['Id']);
+                                } else {
+                                    helper.showNotification('Vui lòng đăng nhập', 'danger')
+                                }
+                                break
                         }
-                        break
+                    });
+                }else{
+                    alert('Trình duyệt của bạn không hỗ trợ định vị')
                 }
             }
 
