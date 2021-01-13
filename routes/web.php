@@ -25,7 +25,7 @@ Route::group(['middleware'=>'locale'],function (){
             return view('Web.Account.forget');
         });
 
-        Route::get('/', 'WebController@index');
+        Route::get('/', 'WebController@index')->name('user.index');
 
         Route::get('res-detail/{id}', 'WebController@getDetail');
 

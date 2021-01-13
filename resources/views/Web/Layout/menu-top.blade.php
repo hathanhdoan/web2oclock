@@ -6,7 +6,7 @@
                 <!-- Begin Header Logo Area -->
                 <div class="col-lg-3">
                     <div class="logo pb-sm-30 pb-xs-30">
-                        <a href="#">
+                        <a href="{{route('user.index')}}">
                             <img src={{asset("images/new_logo2.png")}}  alt="">
                         </a>
                     </div>
