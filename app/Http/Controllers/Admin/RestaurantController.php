@@ -52,7 +52,7 @@ class RestaurantController extends BaseController
     public function list_location_get()
     {
         $var = $_GET['district'];
-        $res = Restaurant::whereHas('restaurant_detail', function ($q) use ($var) {
+        $res = Restaurant::where('Status',1)->whereHas('restaurant_detail', function ($q) use ($var) {
             $q->where('district', $var);
         })->get();
         return ['res_list' => $res];
