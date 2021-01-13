@@ -232,12 +232,10 @@
                     if(result.success ==1){
                         if((result.data)[1]['sim'] > 0){
                             var action = (result.data)[1]['action'];
+                            console.log(action)
                             switch (action){
                                 case 'NEAREST':
-                                    var rs = await getCategory(e.results[0][0].transcript);
-                                    console.log(rs);
-                                    break;
-                                    // window.location.href = '/more-res/nearest'
+                                    window.location.href = '/more-res/nearest'
                                 case 'OPEN':
                                     window.location.href = '/more-res/open'
                                 case 'LOGIN' :
