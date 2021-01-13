@@ -51,7 +51,7 @@ class RestaurantController extends BaseController
     public function list_location_get()
     {
         $var = $_GET['district'];
-        $res = Restaurant::whereHas('restaurantDetail', function ($q) use ($var) {
+        $res = Restaurant::whereHas('restaurant_detail', function ($q) use ($var) {
             $q->where('district', $var);
         })->get();
         return ['res_list' => $res];
@@ -59,7 +59,7 @@ class RestaurantController extends BaseController
 
     public function detail_location_get($id)
     {
-        $location = Restaurant::where('id', $id)->with(['restaurantDetail'])->first();
+        $location = Restaurant::where('id', $id)->with(['restaurant_detail'])->first();
         $categories = Category::all();
         $address = config('address');
         $districts = [
@@ -252,7 +252,7 @@ class RestaurantController extends BaseController
     public function list_location_approval_get()
     {
         $var = $_GET['district'];
-        $res = Restaurant::where('Status',0)->whereHas('restaurantDetail', function ($q) use ($var) {
+        $res = Restaurant::where('Status',0)->whereHas('restaurant_detail', function ($q) use ($var) {
             $q->where('district', $var);
         })->get();
         return ['res_list' => $res];
@@ -260,7 +260,7 @@ class RestaurantController extends BaseController
 
     public function detail_location_approval_get($id)
     {
-        $location = Restaurant::where('id', $id)->with(['restaurantDetail'])->first();
+        $location = Restaurant::where('id', $id)->with(['restaurant_detail'])->first();
         $categories = Category::all();
         $address = config('address');
         $districts = [
