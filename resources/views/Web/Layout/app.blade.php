@@ -236,12 +236,17 @@
                             switch (action){
                                 case 'NEAREST':
                                     window.location.href = '/more-res/nearest'
+                                    break;
                                 case 'OPEN':
                                     window.location.href = '/more-res/open'
+                                    break;
                                 case 'LOGIN' :
+                                    console.log('herere');
                                     window.location.href = '/login'
+                                    break;
                                 case 'SUGGEST' :
                                     window.location.href = '/more-res/suggest'
+                                    break;
                                 case 'LOGOUT' :
                                     var app = new App();
                                     app.logout();
