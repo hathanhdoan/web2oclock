@@ -27,6 +27,7 @@ class RestaurantController extends BaseController
     {
         $data = request()->all();
         $Address = $data['Address'] . ', ' . $data['District'] . ', ' . $data['City'];
+        $open = $data['OpenHour'] . ':' . $data['OpenMinute'].' - '.$data['CloseHour'] . ':' . $data['CloseMinute'];
         $open_time = $data['OpenHour'] . ':' . $data['OpenMinute'];
         $close_time = $data['CloseHour'] . ':' . $data['CloseMinute'];
         $price = ($data['MinPrice']/1000).'.000' . 'đ - ' . ($data['MaxPrice']/1000) . '.000đ';
@@ -36,8 +37,7 @@ class RestaurantController extends BaseController
 
         $id = $item['Id'];
         $item1 = RestaurantDetail::create(['res_id' => $id, 'street_address' => $data['Address'], 'district' => $data['District']
-            , 'city' => $data['City'], 'category_id' => $data['Categories'], 'open_time' => $open_time,
-            'close_time' => $close_time, 'min_price' => $data['MinPrice'], 'max_price' => $data['MaxPrice'], 'price' => $price]);
+            , 'city' => $data['City'], 'category_id' => $data['Categories'], 'open_time' => $open, 'min_price' => $data['MinPrice'], 'max_price' => $data['MaxPrice'], 'price' => $price]);
         echo '<script>alert("Thêm thành công!")</script>';
         return view('admin.location');
     }
@@ -86,6 +86,7 @@ class RestaurantController extends BaseController
     {
         $data = request()->all();
         $Address = $data['Address'] . ', ' . $data['District'] . ', ' . $data['City'];
+        $open = $data['OpenHour'] . ':' . $data['OpenMinute'].' - '.$data['CloseHour'] . ':' . $data['CloseMinute'];
         $open_time = $data['OpenHour'] . ':' . $data['OpenMinute'];
         $close_time = $data['CloseHour'] . ':' . $data['CloseMinute'];
         $price = ($data['MinPrice']/1000).'.000' . 'đ - ' . ($data['MaxPrice']/1000) . '.000đ';
@@ -105,8 +106,7 @@ class RestaurantController extends BaseController
         $res_detail->district = $data['District'];
         $res_detail->city = $data['City'];
         $res_detail->category_id = $data['Categories'];
-        $res_detail->open_time = $open_time;
-        $res_detail->close_time = $close_time;
+        $res_detail->open_time = $open;
         $res_detail->min_price = $data['MinPrice'];
         $res_detail->max_price = $data['MaxPrice'];
         $res_detail->price = $price;
@@ -287,6 +287,7 @@ class RestaurantController extends BaseController
     {
         $data = request()->all();
         $Address = $data['Address'] . ', ' . $data['District'] . ', ' . $data['City'];
+        $open = $data['OpenHour'] . ':' . $data['OpenMinute'].' - '.$data['CloseHour'] . ':' . $data['CloseMinute'];
         $open_time = $data['OpenHour'] . ':' . $data['OpenMinute'];
         $close_time = $data['CloseHour'] . ':' . $data['CloseMinute'];
         $price = ($data['MinPrice']/1000).'.000' . 'đ - ' . ($data['MaxPrice']/1000) . '.000đ';
@@ -307,8 +308,7 @@ class RestaurantController extends BaseController
         $res_detail->district = $data['District'];
         $res_detail->city = $data['City'];
         $res_detail->category_id = $data['Categories'];
-        $res_detail->open_time = $open_time;
-        $res_detail->close_time = $close_time;
+        $res_detail->open_time = $open;
         $res_detail->min_price = $data['MinPrice'];
         $res_detail->max_price = $data['MaxPrice'];
         $res_detail->price = $price;
