@@ -30,7 +30,7 @@
                     </div>
                     <div style="text-align: center; margin-top: 5px">
                         <p>Bạn chưa có tài khoản? <a href="/register">ĐĂNG KÝ</a> ngay</p>
-                        <a href="#">Quên mật khẩu</a>
+                        <a href="/forget">Quên mật khẩu</a>
                     </div>
                 </div>
             </div>
