@@ -228,7 +228,7 @@
                         query : e.results[0][0].transcript
                     },
                     url: 'https://recommender-2oclock.herokuapp.com/polls/go'
-                }).done(async function (result){
+                }).done(function (result){
                     if(result.success ==1){
                         if((result.data)[1]['sim'] > 0){
                             var action = (result.data)[1]['action'];
