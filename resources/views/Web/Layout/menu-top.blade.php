@@ -6,11 +6,7 @@
                 <!-- Begin Header Logo Area -->
                 <div class="col-lg-3">
                     <div class="logo pb-sm-30 pb-xs-30">
-<<<<<<< HEAD
                         <a href="/">
-=======
-                        <a href="{{route('user.index')}}">
->>>>>>> 52767b12f44bfc838cbeaabe392f95e61f0b2e90
                             <img src={{asset("images/new_logo2.png")}}  alt="">
                         </a>
                     </div>
