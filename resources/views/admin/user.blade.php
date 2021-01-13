@@ -1,4 +1,4 @@
-@extends('Web.Layout.adminindex')
+@extends('Web.Layout.app')
 @section('content')
     <div class="container" id="user" path="{{url('/')}}" api-create-user="{{route('admin.add_user_post')}}">
         <div class="row">

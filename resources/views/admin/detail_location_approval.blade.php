@@ -1,4 +1,4 @@
-@extends('Web.Layout.adminindex')
+@extends('Web.Layout.app')
 @section('content')
     <div class="container" id="list_location" path="{{url('/')}}" api-disapprove="{{route('admin.delete_location_approval',[$location->Id])}}"
          api-approve="{{route('admin.update_location_approval_post',[$location->Id])}}" api_reload="{{route('admin.list_location_approval')}}">

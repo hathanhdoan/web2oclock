@@ -1,4 +1,4 @@
-@extends('Web.Layout.adminindex')
+@extends('Web.Layout.app')
 @section('content')
     <div class="container" id="list_location" path="{{url('/')}}" api-get-list="{{route('admin.list_location_approval_get')}}">
         <div class="row">

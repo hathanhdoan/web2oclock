@@ -1,4 +1,4 @@
-@extends('Web.Layout.adminindex')
+@extends('Web.Layout.app')
 @section('content')
     <div class="container">
         <div class="row">

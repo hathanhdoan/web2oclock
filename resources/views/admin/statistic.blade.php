@@ -1,4 +1,4 @@
-@extends('Web.Layout.adminindex')
+@extends('Web.Layout.app')
 @section('content')
     <div class="container" id="chart" path="{{url('/')}}" api-get-admin="{{route('admin.statistic_get')}}">
         <div class="row">
