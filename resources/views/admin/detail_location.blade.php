@@ -97,7 +97,7 @@
                                     <label for="Categories">Loại hình</label>
                                     <select id="Categories" name="Categories" class="form-control">
                                         @foreach($categories as $category)
-                                            @if($location['restaurantDetail']['category_id'] == $category['id'])
+                                            @if($location['restaurant_detail']['category_id'] == $category['id'])
                                                 <option value="{{$category['id']}}" selected>{{$category['name']}}</option>
                                             @else
                                                 <option value="{{$category['id']}}">{{$category['name']}}</option>
@@ -111,7 +111,7 @@
                                     <label for="District">Quận</label>
                                     <select id="District" name="District" class="form-control">
                                         @foreach($districts as $name)
-                                            @if($location['restaurantDetail']['district'] == $name)
+                                            @if($location['restaurant_detail']['district'] == $name)
                                                 <option value="{{$name}}" selected>{{$name}}</option>
                                             @else
                                                 <option value="{{$name}}" >{{$name}}</option>
@@ -136,7 +136,7 @@
                                     <label for="OpenHour">Giờ mở cửa</label>
                                     <select id="OpenHour" name="OpenHour" class="form-control">
                                         @foreach($hours as $key=>$name)
-                                            @if(substr($location['restaurantDetail']['open_time'],0,4)==$key)
+                                            @if(substr($location['restaurant_detail']['open_time'],0,4)==$key)
                                                 <option value="{{$key}}" selected>{{$name}}</option>
                                             @else
                                                 <option value="{{$key}}">{{$name}}</option>
@@ -150,7 +150,7 @@
                                     <label for="OpenMinute">Phút mở cửa</label>
                                     <select id="OpenMinute" name="OpenMinute" class="form-control">
                                         @foreach($minutes as $key=>$name)
-                                            @if(substr($location['restaurantDetail']['open_time'],5,2)==$key)
+                                            @if(substr($location['restaurant_detail']['open_time'],5,2)==$key)
                                                 <option value="{{$key}}" selected>{{$name}}</option>
                                             @else
                                                 <option value="{{$key}}">{{$name}}</option>
@@ -164,7 +164,7 @@
                                     <label for="CloseHour">Giờ đóng cửa</label>
                                     <select id="CloseHour" name="CloseHour" class="form-control">
                                         @foreach($hours as $key=>$name)
-                                            @if(substr($location['restaurantDetail']['close_time'],0,4)==$key)
+                                            @if(substr($location['restaurant_detail']['close_time'],0,4)==$key)
                                                 <option value="{{$key}}" selected>{{$name}}</option>
                                             @else
                                                 <option value="{{$key}}">{{$name}}</option>
@@ -178,7 +178,7 @@
                                     <label for="CloseMinute">Phút đóng cửa</label>
                                     <select id="CloseMinute" name="CloseMinute" class="form-control">
                                         @foreach($minutes as $key=>$name)
-                                            @if(substr($location['restaurantDetail']['close_time'],5,2)==$key)
+                                            @if(substr($location['restaurant_detail']['close_time'],5,2)==$key)
                                                 <option value="{{$key}}" selected>{{$name}}</option>
                                             @else
                                                 <option value="{{$key}}">{{$name}}</option>
@@ -190,9 +190,9 @@
                             <div class="col-md-6">
                                 <div>
                                     <label for="MinPrice">Giá tiền thấp nhất</label>
-                                    <input id="MinPrice" name="MinPrice" type="number" step="1000" @if(strlen($location['restaurantDetail']['price'])==19)
-                                        value="{{substr($location['restaurantDetail']['price'],0,2)*1000}}"
-                                          @else  value="{{substr($location['restaurantDetail']['price'],0,3)*1000}}"
+                                    <input id="MinPrice" name="MinPrice" type="number" step="1000" @if(strlen($location['restaurant_detail']['price'])==19)
+                                        value="{{substr($location['restaurant_detail']['price'],0,2)*1000}}"
+                                          @else  value="{{substr($location['restaurant_detail']['price'],0,3)*1000}}"
                                            @endif
                                            class="form-control">
                                 </div>
@@ -200,9 +200,9 @@
                             <div class="col-md-6">
                                 <div>
                                     <label for="MaxPrice">Giá tiền cao nhất</label>
-                                    <input id="MaxPrice" name="MaxPrice" type="number" step="1000" @if(strlen($location['restaurantDetail']['price'])==19)
-                                    value="{{substr($location['restaurantDetail']['price'],11,2)*1000}}"
-                                           @else  value="{{substr($location['restaurantDetail']['price'],12,3)*1000}}"
+                                    <input id="MaxPrice" name="MaxPrice" type="number" step="1000" @if(strlen($location['restaurant_detail']['price'])==19)
+                                    value="{{substr($location['restaurant_detail']['price'],11,2)*1000}}"
+                                           @else  value="{{substr($location['restaurant_detail']['price'],12,3)*1000}}"
                                            @endif
                                            class="form-control">
                                 </div>
