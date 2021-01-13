@@ -64,7 +64,7 @@
                             <div class="col-md-6">
                                 <div>
                                     <label for="Password">Password</label>
-                                    <input id="Password" name="Password" type="text" value="{{$user['password']}}"
+                                    <input id="Password" name="Password" type="text" value=""
                                            class="form-control">
                                 </div>
                             </div>

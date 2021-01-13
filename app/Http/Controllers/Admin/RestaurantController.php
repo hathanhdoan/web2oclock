@@ -153,8 +153,8 @@ class RestaurantController extends BaseController
         $data = request()->all();
         $cus = Customer::find($id);
         $cus->DisplayName = $data['DisplayName'];
-        $cus->Email = $data['Email'];
-        $cus->Password = $data['Password'];
+        $cus->email = $data['Email'];
+        $cus->password = Hash::make($data['Password']);
         $cus -> save();
 
         echo '<script>alert("Sửa thành công!")</script>';
@@ -171,7 +171,7 @@ class RestaurantController extends BaseController
     {
         $email = $_POST['email'];
         $displayname = $_POST['displayname'];
-        $password = $_POST['password'];
+        $password = Hash::make($_POST['password']);
         $user = Customer::where('email',$email)->first();
         if ($user) {
             return ['success'=>0];
@@ -215,7 +215,7 @@ class RestaurantController extends BaseController
         $cus = Customer::find($id);
         $cus->DisplayName = $data['DisplayName'];
         $cus->email = $data['Email'];
-        $cus->password = $data['Password'];
+        $cus->password = Hash::make($data['Password']);
         $cus -> save();
 
         echo '<script>alert("Sửa thành công!")</script>';
@@ -232,7 +232,7 @@ class RestaurantController extends BaseController
     {
         $email = $_POST['email'];
         $displayname = $_POST['displayname'];
-        $password = $_POST['password'];
+        $password = Hash::make($_POST['password']);
         $user = Customer::where('email',$email)->first();
         if ($user) {
             return ['success'=>0];
