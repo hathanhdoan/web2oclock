@@ -177,8 +177,8 @@ class RestaurantController extends BaseController
             return ['success'=>0];
         }
         if (!$user) {
-            Customer::create(['DisplayName' => $displayname, 'Email' => $email,
-                'Password' => $password, 'Role' => 0, 'CreateDate' => date("Y-m-d")]);
+            Customer::create(['DisplayName' => $displayname, 'email' => $email,
+                'password' => $password, 'Role' => 0, 'CreateDate' => date("Y-m-d")]);
             return ['success' => 1];
         }
         return ['success' => 1];
@@ -214,8 +214,8 @@ class RestaurantController extends BaseController
         $data = request()->all();
         $cus = Customer::find($id);
         $cus->DisplayName = $data['DisplayName'];
-        $cus->Email = $data['Email'];
-        $cus->Password = $data['Password'];
+        $cus->email = $data['Email'];
+        $cus->password = $data['Password'];
         $cus -> save();
 
         echo '<script>alert("Sửa thành công!")</script>';
@@ -238,8 +238,8 @@ class RestaurantController extends BaseController
             return ['success'=>0];
         }
         if (!$user) {
-            Customer::create(['DisplayName' => $displayname, 'Email' => $email,
-                'Password' => $password, 'Role' => 1, 'CreateDate' => date("Y-m-d")]);
+            Customer::create(['DisplayName' => $displayname, 'email' => $email,
+                'password' => $password, 'Role' => 1, 'CreateDate' => date("Y-m-d")]);
             return ['success' => 1];
         }
         return ['success' => 1];

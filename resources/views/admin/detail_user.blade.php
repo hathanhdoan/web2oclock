@@ -57,14 +57,14 @@
                             <div class="col-md-6">
                                 <div>
                                     <label for="Email">Email</label>
-                                    <input id="Email" name="Email" type="text" value="{{$user['Email']}}"
+                                    <input id="Email" name="Email" type="text" value="{{$user['email']}}"
                                            class="form-control">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div>
                                     <label for="Password">Password</label>
-                                    <input id="Password" name="Password" type="text" value="{{$user['Password']}}"
+                                    <input id="Password" name="Password" type="text" value="{{$user['password']}}"
                                            class="form-control">
                                 </div>
                             </div>
