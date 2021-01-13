@@ -46,10 +46,10 @@
                                 '                    <div class="card booking-card" style="max-width: 22rem;">\n' +
                                 '                        <div class="view overlay"><img\n' +
                                 '                                src="' + res_list[i]['PhotoUrl'] + '"\n' +
-                                '                                alt="Card image cap" class="card-img-top"> <a href="res-detail/' + res_list[i]['Id'] + '">\n' +
+                                '                                alt="Card image cap" class="card-img-top"> <a href="/res-detail/' + res_list[i]['Id'] + '">\n' +
                                 '                                <div class="mask rgba-white-slight waves-effect waves-light"></div>\n' +
                                 '                            </a></div>\n' +
-                                '                        <div class="card-body"><h4 class="card-title font-weight-bold"><a href="res-detail/' + res_list[i]['Id'] + '">' + res_list[i]['Name'] + '</a>\n' +
+                                '                        <div class="card-body"><h4 class="card-title font-weight-bold"><a href="/res-detail/' + res_list[i]['Id'] + '">' + res_list[i]['Name'] + '</a>\n' +
                                 '                                <p class="mt-10"><i class="mr-10 fas fa-clock"></i><span>' + (res_list[i]['restaurant_detail'] !=null ? res_list[i]['restaurant_detail']['open_time'] : 'Chưa có dữ liệu') + '</span></p>\n' +
                                 '                            </h4>\n' +
                                 '                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp;' + res_list[i]['address_summary'] + '</a>\n' +
@@ -92,10 +92,10 @@
                             '                    <div class="card booking-card" style="max-width: 22rem;">\n' +
                             '                        <div class="view overlay"><img\n' +
                             '                                src="' + res_list[i]['PhotoUrl'] + '"\n' +
-                            '                                alt="Card image cap" class="card-img-top"> <a href="res-detail/' + res_list[i]['Id'] + '">\n' +
+                            '                                alt="Card image cap" class="card-img-top"> <a href="/res-detail/' + res_list[i]['Id'] + '">\n' +
                             '                                <div class="mask rgba-white-slight waves-effect waves-light"></div>\n' +
                             '                            </a></div>\n' +
-                            '                        <div class="card-body"><h4 class="card-title font-weight-bold"><a href="res-detail/' + res_list[i]['Id'] + '">' + res_list[i]['Name'] + '</a>\n' +
+                            '                        <div class="card-body"><h4 class="card-title font-weight-bold"><a href="/res-detail/' + res_list[i]['Id'] + '">' + res_list[i]['Name'] + '</a>\n' +
                             '                                <p class="mt-10"><i class="mr-10 fas fa-clock"></i><span>' + (res_list[i]['restaurant_detail'] !=null ? res_list[i]['restaurant_detail']['open_time'] : 'Chưa có dữ liệu') + '</span></p>\n' +
                             '                            </h4>\n' +
                             '                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp;' + res_list[i]['address_summary'] + '</a>\n' +
@@ -125,10 +125,10 @@
                             '                    <div class="card booking-card" style="max-width: 22rem;">\n' +
                             '                        <div class="view overlay"><img\n' +
                             '                                src="' + res_list[i]['PhotoUrl'] + '"\n' +
-                            '                                alt="Card image cap" class="card-img-top"> <a href="res-detail/' + res_list[i]['Id'] + '">\n' +
+                            '                                alt="Card image cap" class="card-img-top"> <a href="/res-detail/' + res_list[i]['Id'] + '">\n' +
                             '                                <div class="mask rgba-white-slight waves-effect waves-light"></div>\n' +
                             '                            </a></div>\n' +
-                            '                        <div class="card-body"><h4 class="card-title font-weight-bold"><a href="res-detail/' + res_list[i]['Id'] + '">' + res_list[i]['Name'] + '</a>\n' +
+                            '                        <div class="card-body"><h4 class="card-title font-weight-bold"><a href="/res-detail/' + res_list[i]['Id'] + '">' + res_list[i]['Name'] + '</a>\n' +
                             '                                <p class="mt-10"><i class="mr-10 fas fa-clock"></i><span>' + (res_list[i]['restaurant_detail'] !=null ? res_list[i]['restaurant_detail']['open_time'] : 'Chưa có dữ liệu') + '</span></p>\n' +
                             '                            </h4>\n' +
                             '                            <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp;' + res_list[i]['address_summary'] + '</a>\n' +

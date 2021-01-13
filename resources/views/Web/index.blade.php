@@ -224,7 +224,7 @@
                             '                                                alt="Card image cap" class="card-img-top"> <a href="#!">\n' +
                             '                                                <div class="mask rgba-white-slight waves-effect waves-light"></div>\n' +
                             '                                            </a></div>\n' +
-                            '                                        <div class="card-body"><p class="card-title font-weight-bold"><a>'+ (res_list[i]['name_summary']) +'</a>\n' +
+                            '                                        <div class="card-body"><p class="card-title font-weight-bold"><a style="color: black" href="/res-detail/'+ res_list[i]['Id'] +'">'+ (res_list[i]['name_summary']) +'</a>\n' +
                             '                                            </p>\n' +
                             '                                            <p><i class="mr-10 fas fa-clock"></i><span>7:00 - 22:00</span></p>\n' +
                             '                                            <a class="mb-2"><i class="mr-5 fas fa-map-marker-alt"></i>'+ res_list[i]['address_summary']+'\n' +
@@ -256,11 +256,11 @@
                             '                                <section>\n' +
                             '                                    <div class="card booking-card" style="max-width: 22rem;">\n' +
                             '                                        <div class="view overlay"><img\n' +
-                            '                                                src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg"\n' +
+                            '                                                src="'+ res_list[i]['PhotoUrl'] +'"\n' +
                             '                                                alt="Card image cap" class="card-img-top"> <a href="#!">\n' +
                             '                                                <div class="mask rgba-white-slight waves-effect waves-light"></div>\n' +
                             '                                            </a></div>\n' +
-                            '                                        <div class="card-body"><p class="card-title font-weight-bold"><a>'+ (res_list[i]['name_summary']) +'</a>\n' +
+                            '                                        <div class="card-body"><p class="card-title font-weight-bold"><a style="color: black" href="/res-detail/'+ res_list[i]['Id'] +'">'+ (res_list[i]['name_summary']) +'</a>\n' +
                             '                                            </p>\n' +
                             '                                            <p><i class="mr-10 fas fa-clock"></i><span>'+ (res_list[i]['restaurant_detail'] ? res_list[i]['restaurant_detail']['open_time'] : 'Chưa cập nhật') +'</span></p>\n' +
                             '                                            <a class="mb-2"><i class="mr-5 fas fa-map-marker-alt"></i>'+ res_list[i]['address_summary']+'\n' +
@@ -312,7 +312,7 @@
                         '                                                alt="Card image cap" class="card-img-top"> <a href="#!">\n' +
                         '                                                <div class="mask rgba-white-slight waves-effect waves-light"></div>\n' +
                         '                                            </a></div>\n' +
-                        '                                        <div class="card-body"><p class="card-title font-weight-bold"><a>'+ (res_list[i]['name_summary']) +'</a>\n' +
+                        '                                        <div class="card-body"><p class="card-title font-weight-bold"><a style="color: black" href="/res-detail/'+ res_list[i]['Id'] +'">'+ (res_list[i]['name_summary']) +'</a>\n' +
                         '                                            </p>\n' +
                         '                                            <p><i class="mr-10 fas fa-clock"></i><span>7:00 - 22:00</span></p>\n' +
                         '                                            <a class="mb-2"><i class="mr-5 fas fa-map-marker-alt"></i>'+ res_list[i]['address_summary']+'\n' +

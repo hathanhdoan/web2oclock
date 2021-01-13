@@ -77,11 +77,11 @@
                     <div class="hb-menu">
                         <nav>
                             <ul>
-                                <li><a href="index.html">{{__('open')}}</a></li>
-                                <li><a href="index.html">{{__('nearest')}}</a></li>
-                                <li><a href="shop-left-sidebar.html">{{__('saved')}}</a>
+                                <li><a href="/more-res/open">{{__('open')}}</a></li>
+                                <li><a href="/more-res/nearest">{{__('nearest')}}</a></li>
+                                <li><a href="/more-res/suggest">{{__('suggest')}}</a>
                                 </li>
-                                <li><a href="blog-left-sidebar.html">{{__('newest')}}</a>
+{{--                                <li><a href="blog-left-sidebar.html">{{__('newest')}}</a>--}}
                                 </li>
                                 <li >
                                     <div class="form-inline">
