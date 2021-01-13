@@ -1119,7 +1119,7 @@
                 var val = $(this).val();
                 detail_page.setComment('SpaceRating',parseInt(val));
                 detail_page.calculateAvgRating();
-                $('#ServiceRatingLabel').html(val);
+                $('#SpaceRatingLabel').html(val);
                 $('#AvgRatingLabel').html(detail_page.comment.AvgRating);
             });
             $('#discription_ta').on('change keyup paste',function (){
