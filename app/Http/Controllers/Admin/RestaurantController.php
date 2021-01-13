@@ -7,6 +7,7 @@ use App\Comment;
 use App\Customer;
 use App\Restaurant;
 use App\RestaurantDetail;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
