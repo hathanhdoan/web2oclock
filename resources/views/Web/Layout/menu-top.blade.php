@@ -6,7 +6,7 @@
                 <!-- Begin Header Logo Area -->
                 <div class="col-lg-3">
                     <div class="logo pb-sm-30 pb-xs-30">
-                        <a href="#">
+                        <a href="/">
                             <img src={{asset("images/new_logo2.png")}}  alt="">
                         </a>
                     </div>
@@ -47,6 +47,11 @@
                                         <li>
                                             <div class="minicart-product-details">
                                                 <h6><a href="/new-res"><i style="color: greenyellow" class="icon-menu-user far fa-calendar-minus"></i>Thêm mới địa điểm</a></h6>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="minicart-product-details">
+                                                <h6><a href="/admin"><i style="color: blueviolet" class="icon-menu-user far fa-calendar-minus"></i>Admin</a></h6>
                                             </div>
                                         </li>
                                     </ul>
