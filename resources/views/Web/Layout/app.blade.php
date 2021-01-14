@@ -232,20 +232,25 @@
                     if(result.success ==1){
                         if((result.data)[1]['sim'] > 0){
                             var action = (result.data)[1]['action'];
+                            var category_id = '';
+                            if(result.category){
+                                console.log(result.category.name)
+                                category_id = result.category
+                            }
                             console.log(action)
+
                             switch (action){
                                 case 'NEAREST':
-                                    window.location.href = '/more-res/nearest'
+                                    window.location.href = '/more-res/nearest?category_id=' + category_id
                                     break;
                                 case 'OPEN':
-                                    window.location.href = '/more-res/open'
+                                    window.location.href = '/more-res/open?category_id=' + category_id
                                     break;
                                 case 'LOGIN' :
-                                    console.log('herere');
                                     window.location.href = '/login'
                                     break;
                                 case 'SUGGEST' :
-                                    window.location.href = '/more-res/suggest'
+                                    window.location.href = '/more-res/suggest?category_id=' + category_id
                                     break;
                                 case 'LOGOUT' :
                                     var app = new App();
