@@ -6,7 +6,7 @@
          type="{{\request()->type}}" api-get-open-res="{{route('api.res.get_open_res')}}"
          api-get-nearest="{{route('api.res.nearest')}}"
          api-get-suggest="{{route('api.res.suggest')}}"
-         category="{{\request()->category??''}}">
+         category-id="{{\request()->category_id??''}}">
     </div>
     <div style="text-align: center">
         <button style="width: 150px" id="btn-load-more" class="btn btn-primary">Tải thêm</button>
@@ -28,6 +28,7 @@
                             Latitude: lat,
                             Longitude: long
                         },
+                        category_id: $('#moreObj').attr('category-id'),
                         page : pr.page
                     }
                 }).done(function (result) {
@@ -74,7 +75,8 @@
                             Latitude: lat,
                             Longitude: long
                         },
-                        page : pr.page
+                        page : pr.page,
+                        category_id: $('#moreObj').attr('category-id'),
                     },
                     url: $('#moreObj').attr('api-get-nearest')
                 }).done(function (data) {
@@ -113,7 +115,8 @@
                 $.ajax({
                     method: 'POST',
                     data: {
-                        user_id: customer_id
+                        user_id: customer_id,
+                        category_id: $('#moreObj').attr('category-id'),
                     },
                     url: $('#moreObj').attr('api-get-suggest')
                 }).done(function (data) {

@@ -235,7 +235,7 @@
                             var category_id = '';
                             if(result.category){
                                 console.log(result.category.name)
-                                category_id = result.category
+                                category_id = result.category.id
                             }
                             console.log(action)
 
