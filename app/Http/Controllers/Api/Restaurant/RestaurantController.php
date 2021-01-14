@@ -39,8 +39,18 @@ class RestaurantController extends Controller
             $limit = \request()->limit ?? 20;
             $page = \request()->page ?? 1;
             $rs = [];
-            $res = Restaurant::with('restaurant_detail')->get()->toArray();
+
+            $res = Restaurant::with(['restaurant_detail']);
+            if(!empty(\request()->category_id)){
+                $res= $res->whereHas('restaurant_detail',function ($q1){
+                    $q1->whereHas('category',function ($q2){
+                        $q2->where('id',\request()->category_id);
+                    });
+                });
+            }
+            $res = $res->get();
             if(!empty($res)){
+                $res = $res->toArray();
                 foreach ($res as $key => $value) {
                     $res[$key]['distance'] = haversine($user_location, $value);
                 }
@@ -268,7 +278,15 @@ class RestaurantController extends Controller
                 foreach ($rs['data'] as $val){
                     $res_ids[] = $val[0];
                 }
-                $res = Restaurant::whereIn('Id',$res_ids)->with(['restaurant_detail:res_id,open_time'])->get();
+                $res = Restaurant::whereIn('Id',$res_ids)->with(['restaurant_detail:res_id,open_time'])->where('status',1);
+                if(!empty(\request()->category_id)){
+                    $res= $res->whereHas('restaurant_detail',function ($q1){
+                        $q1->whereHas('category',function ($q2){
+                            $q2->where('id',\request()->category_id);
+                        });
+                    });
+                }
+                $res=$res->get();
                 return [
                     'success' => true,
                     'data' => $res
