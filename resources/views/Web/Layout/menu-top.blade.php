@@ -41,12 +41,12 @@
                                     <ul class="minicart-product-list">
                                         <li>
                                             <div class="minicart-product-details">
-                                                <h6><a href="/profile"><i style="color: blue" class="icon-menu-user fas fa-chalkboard-teacher"></i>Hồ sơ cá nhân</a></h6>
+                                                <h6><a href="/profile"><i style="color: blue" class="icon-menu-user fas fa-chalkboard-teacher"></i>{{__('profile')}}</a></h6>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="minicart-product-details">
-                                                <h6><a href="/new-res"><i style="color: greenyellow" class="icon-menu-user far fa-calendar-minus"></i>Thêm mới địa điểm</a></h6>
+                                                <h6><a href="/new-res"><i style="color: greenyellow" class="icon-menu-user far fa-calendar-minus"></i>{{__('new_location')}}</a></h6>
                                             </div>
                                         </li>
                                         <li>
@@ -57,14 +57,14 @@
                                     </ul>
                                     <div class="minicart-button" id="btn-logout">
                                         <a class="li-button li-button-fullwidth li-button-red">
-                                            <span>Đăng xuất</span>
+                                            <span>{{__('logout')}}</span>
                                         </a>
                                     </div>
                                 </div>
                             </li>
                             <!-- Header Mini Cart Area End Here -->
                         </ul>
-                        <button class="btn btn-primary hide-elm" id="btn-login-index">Đăng nhâp</button>
+                        <button class="btn btn-primary hide-elm" id="btn-login-index">{{__('login')}}</button>
                     </div>
                     <!-- Header Middle Right Area End Here -->
                 </div>

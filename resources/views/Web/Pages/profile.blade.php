@@ -51,25 +51,24 @@
                                     <img class="avatar" src="images/Screenshot_50.png">
                                 </div>
                                 <div style="padding: 8px 0px">
-                                    <h5 class="card-title font-weight-bold"><a>Khám phá</a></h5>
+                                    <h5 class="card-title font-weight-bold"><a>{{__('discover')}}</a></h5>
                                 </div>
                             </div>
                             <!-- Data -->
                             <ul class="menu-sidebar-custom nav nav-tabs" style="border-bottom: none">
                                 <li><a href="#collection" data-toggle="tab" class="mb-2">
-                                        <i style="color: blue" class="mr-10 fa fa-history" aria-hidden="true"></i>Bộ sưu tập
+                                        <i style="color: blue" class="mr-10 fa fa-history" aria-hidden="true"></i>{{__('collection')}}
                                         <i class="fas fa-angle-right arrow-menu-left"></i>
                                     </a>
                                 </li>
                                 <li><a href="#saved" data-toggle="tab" class="mb-2">
-                                        <i style="color: red" class="mr-10 fas fa-save"></i>Nhà hàng đã lưu
+                                        <i style="color: red" class="mr-10 fas fa-save"></i>{{__('saved')}}
                                         <i class="fas fa-angle-right arrow-menu-left"></i></a></li>
                                 <li><a href="#owner-res" data-toggle="tab" class="mb-2">
-                                        <i style="color: lawngreen" class="mr-10 fas fa-location-arrow"></i>Địa điểm của
-                                        bạn
+                                        <i style="color: lawngreen" class="mr-10 fas fa-location-arrow"></i>{{__('own_res')}}
                                         <i class="fas fa-angle-right arrow-menu-left"></i></a></li>
                                 <li><a href="#profile" data-toggle="tab" class="mb-2">
-                                        <i style="color: purple" class="mr-10 fas fa-user"></i>Thông tin cá nhân
+                                        <i style="color: purple" class="mr-10 fas fa-user"></i>{{__('info')}}
                                         <i class="fas fa-angle-right arrow-menu-left"></i></a>
                                 </li>
                             </ul>
@@ -184,67 +183,6 @@
                 </div>
                 <div id="owner-res" style="padding-left: 10px" class="tab-pane fade">
                     <div class="row" id="owner-res-list">
-                        <div class="saved-res">
-                            <section>
-                                <div class="card booking-card" style="max-width: 22rem;">
-                                    <div class="view overlay"><img
-                                            src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg"
-                                            alt="Card image cap" class="card-img-top"> <a href="#!">
-                                            <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                        </a></div>
-                                    <div class="card-body"><h4 class="card-title font-weight-bold"><a>Texas Chicken</a>
-                                        </h4>
-                                        <ul class="list-unstyled list-inline rating mb-0">
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
-                                        </ul>
-                                        <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
-                                            quận....</a>
-                                        <p class="card-text"></p>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                        <div class="saved-res">
-                            <p class="wait-for-accept"><i class="fas fa-clock"></i>Đang chờ duyệt</p>
-                            <section style="opacity: 0.3">
-                                <div class="card booking-card" style="max-width: 22rem;">
-                                    <div class="view overlay"><img
-                                            src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg"
-                                            alt="Card image cap" class="card-img-top"> <a href="#!">
-                                            <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                                        </a></div>
-                                    <div class="card-body"><h4 class="card-title font-weight-bold"><a>Texas Chicken</a>
-                                        </h4>
-                                        <ul class="list-unstyled list-inline rating mb-0">
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item"><i class="fas fa-star-half-alt amber-text"></i>
-                                            </li>
-                                            <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
-                                        </ul>
-                                        <a class="mb-2"><i class="fas fa-map-marker-alt"></i>&nbsp; 55 Đặng Thùy Trâm,
-                                            quận....</a>
-                                        <p class="card-text"></p>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
                     </div>
                 </div>
                 <div id="profile" style="padding-left: 10px" class="tab-pane fade">
@@ -367,17 +305,17 @@
                     data: {}
                 }).done(function (result) {
                     if (result.success) {
-                        $xhtml = '';
-                        $images = result.data;
-                        for(i in $images){
-                            $xhtml += '<div class="saved-res">\n' +
+                        var xhtml = '';
+                        var images = result.data;
+                        for(i in images){
+                            xhtml += '<div class="saved-res">\n' +
                                 '                            <section>\n' +
                                 '                                <img class="comment-image"\n' +
-                                '                                     src="'+ $images[i] +'">\n' +
+                                '                                     src="'+ images[i] +'">\n' +
                                 '                            </section>\n' +
                                 '                        </div>'
                         }
-                        $('#collection-list').html($xhtml);
+                        $('#collection-list').html(xhtml);
                     } else {
                         helper.showNotification(result.message, 'danger')
                     }
@@ -392,20 +330,20 @@
                     }
                 }).done(function (result) {
                     if (result.success) {
-                        $xhtml = $('#owner-res-list');
-                        $res = result.data;
-                        for(i in $images){
+                        var xhtml = $('#owner-res-list').html();
+                        var res_list = result.data.data;
+                        for(i in res_list){
                             xhtml += '<div class="saved-res">\n' +
                                 '                                <section>\n' +
                                 '                                    <div class="card booking-card" style="max-width: 22rem;">\n' +
                                 '                                        <div class="view overlay"><img\n' +
-                                '                                                src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg"\n' +
+                                '                                                src="'+ res_list[i]['PhotoUrl'] +'"\n' +
                                 '                                                alt="Card image cap" class="card-img-top"> <a href="#!">\n' +
                                 '                                                <div class="mask rgba-white-slight waves-effect waves-light"></div>\n' +
                                 '                                            </a></div>\n' +
-                                '                                        <div class="card-body"><p class="card-title font-weight-bold"><a>'+ (res_list[i]['name_summary']) +'</a>\n' +
+                                '                                        <div class="card-body"><p class="card-title font-weight-bold"><a style="color: black" href="/res-detail/'+ res_list[i]['Id'] +'">'+ (res_list[i]['name_summary']) +'</a>\n' +
                                 '                                            </p>\n' +
-                                '                                            <p><i class="mr-10 fas fa-clock"></i><span>'+ res_list[i]['restaurant_detail']['open_time'] +'</span></p>\n' +
+                                '                                            <p><i class="mr-10 fas fa-clock"></i><span>'+ (res_list[i]['restaurant_detail'] ? res_list[i]['restaurant_detail']['open_time'] :'') +'</span></p>\n' +
                                 '                                            <a class="mb-2"><i class="mr-5 fas fa-map-marker-alt"></i>'+ res_list[i]['address_summary']+'\n' +
                                 '                                            <p class="card-text"></p>\n' +
                                 '                                        </div>\n' +
@@ -413,7 +351,7 @@
                                 '                                </section>\n' +
                                 '                            </div>'
                         }
-                        $('#owner-res-list').html($xhtml);
+                        $('#owner-res-list').html(xhtml);
                     } else {
                         helper.showNotification(result.message, 'danger')
                     }
@@ -435,11 +373,11 @@
                             '                                <section>\n' +
                             '                                    <div class="card booking-card" style="max-width: 22rem;">\n' +
                             '                                        <div class="view overlay"><img\n' +
-                            '                                                src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg"\n' +
+                            '                                                src="'+ res_list[i]['PhotoUrl'] +'"\n' +
                             '                                                alt="Card image cap" class="card-img-top"> <a href="#!">\n' +
                             '                                                <div class="mask rgba-white-slight waves-effect waves-light"></div>\n' +
                             '                                            </a></div>\n' +
-                            '                                        <div class="card-body"><p class="card-title font-weight-bold"><a>'+ (res_list[i]['name_summary']) +'</a>\n' +
+                            '                                        <div class="card-body"><p class="card-title font-weight-bold"><a style="color: black" href="/res-detail/'+ res_list[i]['Id']+'">'+ (res_list[i]['name_summary']) +'</a>\n' +
                             '                                            </p>\n' +
                             '                                            <p><i class="mr-10 fas fa-clock"></i><span>'+ res_list[i]['restaurant_detail']['open_time'] +'</span></p>\n' +
                             '                                            <a class="mb-2"><i class="mr-5 fas fa-map-marker-alt"></i>'+ res_list[i]['address_summary']+'\n' +

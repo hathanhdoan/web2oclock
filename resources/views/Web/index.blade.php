@@ -58,7 +58,7 @@
                 <div class="col-lg-12">
                     <div class="li-section-title">
                         <h2>
-                            <span>Gợi ý dành cho bạn</span>
+                            <span>{{__('suggest')}}</span>
                         </h2>
                     </div>
                     <div class="product-container">
@@ -83,7 +83,7 @@
                 <div class="col-lg-12">
                     <div class="li-section-title">
                         <h2>
-                            <span>Gần đây</span>
+                            <span>{{__('nearest')}}</span>
                         </h2>
                     </div>
                     <div class="product-container">
@@ -135,7 +135,7 @@
                 <div class="col-lg-12">
                     <div class="li-section-title">
                         <h2>
-                            <span>Đã lưu</span>
+                            <span>{{__('saved')}}</span>
                         </h2>
                     </div>
                     <div class="product-container">
@@ -158,7 +158,7 @@
                 <div class="col-lg-12">
                     <div class="li-section-title">
                         <h2>
-                            <span>Mới nhất</span>
+                            <span>{{__('newest')}}</span>
                         </h2>
                     </div>
                     <div class="product-container">

@@ -2,39 +2,39 @@
 @section('content')
     <div class="container">
         <div id="newObj" api-upload-image="{{route('api.utity.upload_image')}}" api-create-res="{{route('api.res.create')}}" class="box">
-            <h1>Thêm nhà hàng mới</h1>
+            <h1>{{__('new_res')}}</h1>
             <hr>
             {{----}}
             {{ csrf_field() }}
             <div class="row">
                 <div class="col-md-12">
                     <div>
-                        <label for="Name">Tên nhà hàng</label>
+                        <label for="Name">{{__('res_name')}}</label>
                         <input id="name" value="Nhà Hàng A" name="Name" type="text" class="form-control">
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div>
-                        <label for="Name">Mô tả</label>
+                        <label for="Name">{{__('description')}}</label>
                         <textarea id="description" class="form-control">hehe</textarea>
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div>
-                        <label for="Address">Địa chỉ</label>
+                        <label for="Address">{{__('address')}}̉</label>
                         <input id="address" value="hcm" name="Address" type="text" class="form-control">
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div>
-                        <label for="PhotoUrl">Địa chỉ ảnh</label>
+                        <label for="PhotoUrl">{{__('image')}}</label>
                         <input type="file" id="image" class="m"
                                style="border: unset !important; background: white">
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div>
-                        <label for="Address">Tọa độ nhà hàng</label>
+                        <label for="Address">{{__('coordination')}}</label>
                     </div>
                 </div>
                 <div class="col-md-12" >
@@ -47,19 +47,19 @@
                 </div>
                 <div class="col-md-6">
                     <div>
-                        <label for="Latitude">Vĩ độ</label>
+                        <label for="Latitude">{{__('Latitude')}}</label>
                         <input id="latitude" name="Latitude" type="text" disabled="true" class="form-control">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div>
-                        <label for="Longitude">Kinh độ</label>
+                        <label for="Longitude">{{__('Longitude')}}</label>
                         <input id="longitude" name="Longitude" type="text" disabled="true" class="form-control">
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div>
-                        <label for="Categories">Loại hình</label>
+                        <label for="Categories">{{__('category')}}</label>
                         <select id="category" name="Categories" class="form-control">
                             @foreach($categories as $key=>$category)
                                 <option value="{{$category['id']}}" {{$key==0 ? 'selected' : ''}}>{{$category['name']}}</option>
@@ -69,7 +69,7 @@
                 </div>
                 <div class="col-md-6">
                     <div>
-                        <label for="District">Quận</label>
+                        <label for="District">{{__('district')}}</label>
                         <select id="district" name="District" class="form-control">
                             @foreach($districts as $key=>$district)
                                 <option value="{{$district}}" {{$key==0 ? 'selected' : ''}}>{{$district}}</option>
@@ -80,7 +80,7 @@
                 </div>
                 <div class="col-md-6">
                     <div>
-                        <label for="City">Thành phố</label>
+                        <label for="City">{{__('city')}}</label>
                         <select id="city" name="City" class="form-control">
                             <option value="Tp.HCM">Tp.HCM</option>
                         </select>
@@ -88,7 +88,7 @@
                 </div>
                 <div class="col-md-3">
                     <div>
-                        <label for="OpenHour">Giờ mở cửa</label>
+                        <label for="OpenHour">{{__('open_hour')}}</label>
                         <select id="open-hour" name="OpenHour" class="form-control">
                             @for($i=0 ; $i<24; $i ++)
                                 <option {{$i==0 ? 'selected' : ''}} value="{{$i}}">{{$i}}</option>
@@ -98,7 +98,7 @@
                 </div>
                 <div class="col-md-3">
                     <div>
-                        <label for="OpenMinute">Phút mở cửa</label>
+                        <label for="OpenMinute">{{__('open_minute')}}</label>
                         <select id="open-minute" name="OpenMinute" class="form-control">
                             @for($i=0 ; $i<60; $i ++)
                                 <option {{$i==0 ? 'selected' : ''}} value="{{$i}}">{{$i}}</option>
@@ -108,7 +108,7 @@
                 </div>
                 <div class="col-md-3">
                     <div>
-                        <label for="CloseHour">Giờ đóng cửa</label>
+                        <label for="CloseHour">{{__('close_hour')}}</label>
                         <select id="close-hour" name="CloseHour" class="form-control">
                             @for($i=0 ; $i<24; $i ++)
                                 <option {{$i==0 ? 'selected' : ''}} value="{{$i}}">{{$i}}</option>
@@ -118,7 +118,7 @@
                 </div>
                 <div class="col-md-3">
                     <div>
-                        <label for="CloseMinute">Phút đóng cửa</label>
+                        <label for="CloseMinute">{{__('close_minuter')}}</label>
                         <select id="close-minute" name="CloseMinute" class="form-control">
                             @for($i=0 ; $i<60; $i ++)
                                 <option {{$i==0 ? 'selected' : ''}} value="{{$i}}">{{$i}}</option>
@@ -128,13 +128,13 @@
                 </div>
                 <div class="col-md-6">
                     <div>
-                        <label for="min-price">Giá tiền thấp nhất</label>
+                        <label for="min-price">{{__('min_price')}}</label>
                         <input id="min-price" value="10000" name="MinPrice" type="number" step="1000" class="form-control">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div>
-                        <label for="min-price">Giá tiền cao nhất</label>
+                        <label for="min-price">{{__('max_price')}}</label>
                         <input id="max-price" value="20000" name="MaxPrice" type="number" step="1000" class="form-control">
                     </div>
                 </div>
@@ -142,7 +142,7 @@
                     <label name="space2"></label>
                 </div>
                 <div class="col-md-12 text-center">
-                    <button id="btn-create" class="btn btn-success">Gửi</button>
+                    <button id="btn-create" class="btn btn-success">{{__('submit')}}</button>
                 </div>
 
             </div>

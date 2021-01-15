@@ -45,7 +45,7 @@
     @yield('content')
     <!-- Li's Trendding Products Area End Here -->
     <!-- Begin Footer Area -->
-    @include('Web.Layout.footer')
+{{--    @include('Web.Layout.footer')--}}
     <div class="system_message">
         <div class="title"></div>
     </div>
