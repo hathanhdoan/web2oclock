@@ -195,6 +195,7 @@
         $('#btn-login-index').click(function (){
             window.location.href = '/login';
         });
+
     });
     function getCategory(query){
         $.ajax({
@@ -212,6 +213,11 @@
             }
             return false;
         })
+    }
+    function search(){
+        var search_val = $('#search-input').val();
+        console.log(222222);
+        window.location.href = '/search?value=';
     }
     function startRecording() {
         if (window.hasOwnProperty('webkitSpeechRecognition')) {
