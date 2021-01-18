@@ -1,4 +1,4 @@
 <?php
 return [
-    'python_host' => env('PYTHON_HOST','http://127.0.0.1:8000/polls/')
+    'python_host' => env('PYTHON_HOST','https://recommender-2oclock.herokuapp.com/polls/')
 ];

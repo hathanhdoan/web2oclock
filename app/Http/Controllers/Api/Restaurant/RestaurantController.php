@@ -263,7 +263,7 @@ class RestaurantController extends Controller
 
     }
     public function getSuggestedRes(Request $request){
-        try {
+//        try {
             $data = $request->all();
             if(!isset($data['user_id'])){
                 return [
@@ -273,7 +273,7 @@ class RestaurantController extends Controller
             }
             $url = config('suggest.python_host').'get-sim?user_id='.$data['user_id'];
             $rs = curlApi($url,[],'GET');
-            if($rs['success']==1) {
+            if(isset($rs['success']) && $rs['success']==1) {
                 $res_ids = [];
                 foreach ($rs['data'] as $val){
                     $res_ids[] = $val[0];
@@ -296,12 +296,12 @@ class RestaurantController extends Controller
                 'success' => false,
                 'message' => __('fail')
             ];
-        }catch (\Exception $e){
-            return [
-                'success' => false,
-                'message' => $e->getMessage()
-            ];
-        }
+//        }catch (\Exception $e){
+//            return [
+//                'success' => false,
+//                'message' => $e->getMessage()
+//            ];
+//        }
     }
 
     public function getMoreRes(){

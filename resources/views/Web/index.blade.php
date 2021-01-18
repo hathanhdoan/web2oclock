@@ -170,9 +170,9 @@
                                             <div class="view overlay"><img src="{{$res['PhotoUrl']}}" alt="Card image cap" class="card-img-top"> <a href="#!">
                                                     <div class="mask rgba-white-slight waves-effect waves-light"></div>
                                                 </a></div>
-                                            <div class="card-body"><h4 class="card-title font-weight-bold"><a>{{$res['name_summary']}}</a>
+                                            <div class="card-body"><h4 class="card-title font-weight-bold"><a href="/res-detail/{{$res['Id']}}" style="color: black">{{$res['name_summary']}}</a>
                                                 </h4>
-                                                <p><i class="mr-10 fas fa-clock"></i><span>7:00 - 22:00</span></p>
+                                                <p><i class="mr-10 fas fa-clock"></i><span>{{$res['restaurant_detail'] ? ($res['restaurant_detail']['open_time'] ?? '') : ''}}</span></p>
                                                 <a class="mb-2"><i class="mr-5 fas fa-map-marker-alt"></i>{{$res['address_summary']}}
                                                     <p class="card-text"></p>
                                                 </a></div><a class="mb-2">

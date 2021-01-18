@@ -235,7 +235,7 @@
                     },
                     url: 'https://recommender-2oclock.herokuapp.com/polls/go'
                 }).done(function (result){
-                    if(result.success ==1){
+                    if(result.success && result.success ==1){
                         if((result.data)[1]['sim'] > 0){
                             var action = (result.data)[1]['action'];
                             var category_id = '';
