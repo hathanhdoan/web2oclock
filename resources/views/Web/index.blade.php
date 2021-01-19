@@ -226,7 +226,7 @@
                             '                                            </a></div>\n' +
                             '                                        <div class="card-body"><p class="card-title font-weight-bold"><a style="color: black" href="/res-detail/'+ res_list[i]['Id'] +'">'+ (res_list[i]['name_summary']) +'</a>\n' +
                             '                                            </p>\n' +
-                            '                                            <p><i class="mr-10 fas fa-clock"></i><span>7:00 - 22:00</span></p>\n' +
+                            '                                            <p><i class="mr-10 fas fa-clock"></i><span>'+ (res_list[i]['restaurant_detail'] ? res_list[i]['restaurant_detail']['open_time'] : 'Chưa cập nhật') +'</span></p>\n' +
                             '                                            <a class="mb-2"><i class="mr-5 fas fa-map-marker-alt"></i>'+ res_list[i]['address_summary']+'\n' +
                             '                                            <p class="card-text"></p>\n' +
                             '                                        </div>\n' +
@@ -287,43 +287,31 @@
                 indexObj.get_suggest_res(user['Id']);
             }
         })
-        function getNearest(){
-            $.ajax({
-                method: 'POST',
-                data: {
-                    user_location: {
-                        Latitude : 10.8380621 ,
-                        Longitude: 106.78649750000001
-                    }
-                },
-                url : $('#index-obj').attr('api-get-nearest')
-            }).done(function (data){
-                var res_list = data.data;
-                var xhtml = '';
-                for(i in res_list ){
-                    if(i==5){
-                        break;
-                    }
-                    xhtml += '<div>\n' +
-                        '                                <section>\n' +
-                        '                                    <div class="card booking-card" style="max-width: 22rem;">\n' +
-                        '                                        <div class="view overlay"><img\n' +
-                        '                                                src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg"\n' +
-                        '                                                alt="Card image cap" class="card-img-top"> <a href="#!">\n' +
-                        '                                                <div class="mask rgba-white-slight waves-effect waves-light"></div>\n' +
-                        '                                            </a></div>\n' +
-                        '                                        <div class="card-body"><p class="card-title font-weight-bold"><a style="color: black" href="/res-detail/'+ res_list[i]['Id'] +'">'+ (res_list[i]['name_summary']) +'</a>\n' +
-                        '                                            </p>\n' +
-                        '                                            <p><i class="mr-10 fas fa-clock"></i><span>7:00 - 22:00</span></p>\n' +
-                        '                                            <a class="mb-2"><i class="mr-5 fas fa-map-marker-alt"></i>'+ res_list[i]['address_summary']+'\n' +
-                        '                                            <p class="card-text"></p>\n' +
-                        '                                        </div>\n' +
-                        '                                    </div>\n' +
-                        '                                </section>\n' +
-                        '                            </div>'
+        function showNearst(rest_list){
+            var xhtml = '';
+            for(i in res_list ){
+                if(i==10){
+                    break;
                 }
-                $('#nearest-list').html(xhtml);
-            })
+                xhtml += '<div>\n' +
+                    '                                <section>\n' +
+                    '                                    <div class="card booking-card" style="max-width: 22rem;">\n' +
+                    '                                        <div class="view overlay"><img\n' +
+                    '                                                src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg"\n' +
+                    '                                                alt="Card image cap" class="card-img-top"> <a href="#!">\n' +
+                    '                                                <div class="mask rgba-white-slight waves-effect waves-light"></div>\n' +
+                    '                                            </a></div>\n' +
+                    '                                        <div class="card-body"><p class="card-title font-weight-bold"><a style="color: black" href="/res-detail/'+ res_list[i]['Id'] +'">'+ (res_list[i]['name_summary']) +'</a>\n' +
+                    '                                            </p>\n' +
+                    '                                            <p><i class="mr-10 fas fa-clock"></i><span>'+ (res_list[i]['restaurant_detail'] ? res_list[i]['restaurant_detail']['open_time'] : 'Chưa cập nhật') +'</span></p>\n' +
+                    '                                            <a class="mb-2"><i class="mr-5 fas fa-map-marker-alt"></i>'+ res_list[i]['address_summary']+'\n' +
+                    '                                            <p class="card-text"></p>\n' +
+                    '                                        </div>\n' +
+                    '                                    </div>\n' +
+                    '                                </section>\n' +
+                    '                            </div>'
+            }
+            $('#nearest-list').html(xhtml);
         }
     </script>
     <script>
@@ -368,6 +356,8 @@
                         url : $('#index-obj').attr('api-get-nearest')
                     }).done(function (data){
                         if(data.success){
+                            var res_list = data.data
+                            showNearst(res_list);
                             var map = new google.maps.Map(document.getElementById('map'), {
                                 // center: new google.maps.LatLng(10.8139, 106.717),
                                 center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
@@ -375,7 +365,6 @@
                             });
                             var infoWindow = new google.maps.InfoWindow;
 
-                            var res_list = data.data
                             Array.prototype.forEach.call(res_list, function (res) {
                                 var id = res['Id'];
                                 var name = res['Name'];

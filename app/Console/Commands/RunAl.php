@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Similarity;
 use Illuminate\Console\Command;
 
 class RunAl extends Command
@@ -37,6 +38,15 @@ class RunAl extends Command
      */
     public function handle()
     {
+        $create_date = Similarity::first();
+        $create_date = strtotime($create_date['created']);
+        $current_date = date('Y-m-d',time());
+        $sub = (time() - $create_date);
+//        echo $sub;
+        echo $sub/(86400);
+        exit();
+//        echo $create_date->diff($current_date);
+
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
@@ -53,7 +63,7 @@ class RunAl extends Command
         $response = curl_exec($curl);
 
         curl_close($curl);
-        echo 123;
+//        echo 123;
 
     }
 }

@@ -11,6 +11,7 @@ use App\Http\Requests\Account\LoginRequest;
 use App\Http\Requests\Account\RegisterRequest;
 use App\Restaurant;
 use App\RestaurantDetail;
+use App\Similarity;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;

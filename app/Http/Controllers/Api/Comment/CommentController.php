@@ -12,6 +12,7 @@ use App\Http\Requests\Account\LoginRequest;
 use App\Http\Requests\Account\RegisterRequest;
 use App\Http\Requests\Comment\CreateCommentRequest;
 use App\Restaurant;
+use App\Similarity;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -83,6 +84,7 @@ class CommentController extends Controller
                }
                CommentPicture::insert($data_insert);
                $pictures = CommentPicture::where('CommentId',$comment['Id'])->get(['Url'])->toArray();
+               $this->runAl();
            }
            return [
                'success' => true,
@@ -146,5 +148,37 @@ class CommentController extends Controller
            'success' =>true,
            'data' => $rs
        ];
+    }
+
+    public function runAl(){
+        $create_date = Similarity::first();
+        if(isset($create_date)){
+            $create_date = strtotime($create_date['created']);
+            $current_date = date('Y-m-d',time());
+            $sub = (time() - $create_date)/86400;
+            if($sub>1){
+                return $this->curlRunAl();
+            }
+        }else{
+            $this->curlRunAl();
+        }
+    }
+    public function curlRunAl(){
+        $curl = curl_init();
+        $host = config('suggest.python_host');
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => $host.'runalgorithm',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'GET',
+        ));
+
+        $response = curl_exec($curl);
+        return $response;
+        curl_close($curl);
     }
 }

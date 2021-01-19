@@ -45,6 +45,7 @@ Route::group(['middleware'=>'locale'],function () {
             Route::post('/get-comment-image', 'CommentController@getCommentImage')->name('api.comment.get_comment_image')->middleware('auth.jwt');
             Route::post('/create', 'CommentController@create')->name('api.comment.create');
             Route::post('/like', 'CommentController@like')->name('api.comment.like')->middleware('auth.jwt');
+            Route::post('/run-al', 'CommentController@runAl')->name('api.comment.runal');
         });
         Route::group(['namespace' => 'Report', 'prefix' => 'report'], function () {
             Route::post('/create', 'ReportController@create')->name('api.report.create')->middleware('auth.jwt');
