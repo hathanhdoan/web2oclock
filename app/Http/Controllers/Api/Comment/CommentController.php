@@ -84,8 +84,8 @@ class CommentController extends Controller
                }
                CommentPicture::insert($data_insert);
                $pictures = CommentPicture::where('CommentId',$comment['Id'])->get(['Url'])->toArray();
-               $this->runAl();
            }
+           $this->runAl();
            return [
                'success' => true,
                'message' => __('success'),
