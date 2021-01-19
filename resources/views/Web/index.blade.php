@@ -287,7 +287,7 @@
                 indexObj.get_suggest_res(user['Id']);
             }
         })
-        function showNearst(rest_list){
+        function showNearst(res_list){
             var xhtml = '';
             for(i in res_list ){
                 if(i==10){
