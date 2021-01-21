@@ -195,6 +195,11 @@
         $('#btn-login-index').click(function (){
             window.location.href = '/login';
         });
+        $('#btn-search').click(function (event) {
+            event.preventDefault();
+            var search_val = $('#search-input').val();
+            window.location.href ='search/'+search_val;
+        })
 
     });
     function getCategory(query){
@@ -215,9 +220,9 @@
         })
     }
     function search(){
-        var search_val = $('#search-input').val();
-        console.log(222222);
-        window.location.href = '/search?value=';
+        // var search_val = $('#search-input').val();
+        // console.log(222222);
+        // window.location.href = '/search?value=';
     }
     function startRecording() {
         if (window.hasOwnProperty('webkitSpeechRecognition')) {

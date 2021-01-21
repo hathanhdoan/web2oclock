@@ -15,10 +15,10 @@
                 <!-- Begin Header Middle Right Area -->
                 <div class="col-lg-9 pl-0 ml-sm-15 ml-xs-15">
                     <!-- Begin Header Middle Searchbox Area -->
-                    <form action="#" class="hm-searchbox">
+                    <div class="hm-searchbox">
                         <input type="text" id="search-input" placeholder="Enter your search key ...">
-                        <button class="li-btn" onclick="search()" id="btn-search"><i class="fa fa-search"></i></button>
-                    </form>
+                        <button class="li-btn" id="btn-search"><i class="fa fa-search"></i></button>
+                    </div>
                     <!-- Header Middle Searchbox Area End Here -->
                     <!-- Begin Header Middle Right Area -->
                     <div class="header-middle-right">

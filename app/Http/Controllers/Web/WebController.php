@@ -26,6 +26,13 @@ class WebController extends Controller
     public function moreRes(){
         return view('Web.Pages.more-res');
     }
+
+    public function search(){
+        $search_val = \request()->value;
+        $res = Restaurant::where('name','like', '%'.$search_val.'%')->with(['restaurant_detail'])->take(40)->paginate(20);
+        return view('Web.Pages.search-res',['res_list'=>$res]);
+    }
+
     public function newRes(){
         $args = [
             'categories' => Category::where('status',1)->get(),

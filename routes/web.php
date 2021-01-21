@@ -31,6 +31,8 @@ Route::group(['middleware'=>'locale'],function (){
 
         Route::get('more-res/{type}', 'WebController@moreRes');
 
+        Route::get('search/{value}', 'WebController@search');
+
         Route::get('/profile', 'WebController@profile');
 
         Route::get('/new-res', 'WebController@newRes');
