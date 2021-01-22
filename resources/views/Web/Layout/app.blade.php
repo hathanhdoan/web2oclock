@@ -225,6 +225,7 @@
         // window.location.href = '/search?value=';
     }
     function startRecording() {
+        console.log('Start recording......');
         if (window.hasOwnProperty('webkitSpeechRecognition')) {
             var recognition = new webkitSpeechRecognition();
             recognition.continuous = false;
