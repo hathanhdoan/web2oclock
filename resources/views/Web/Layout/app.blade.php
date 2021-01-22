@@ -266,6 +266,16 @@
                                 case 'LOGOUT' :
                                     var app = new App();
                                     app.logout();
+                                    break
+                                default:
+                                    alert('Xin lỗi tôi không hiểu ý ban!')
+                            }
+                        }else{
+                            var category_id = '';
+                            if(result.category && result.category!=''){
+                                console.log(result.category.name)
+                                category_id = result.category.id;
+                                window.location.href = '/more-res/nearest?category_id=' + category_id
                             }
                         }
                     }
