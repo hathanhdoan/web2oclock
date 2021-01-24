@@ -191,6 +191,8 @@
                 var id = res['Id'];
                 var name = res['Name'];
                 var address = res['Address'];
+                var distance_haversine = (res['distance']);
+                var distance_gg_api = (res['distance_gg'])/1000;
                 var type = 'restaurant';
                 var open_time = res['restaurant_detail'] ? res['restaurant_detail']['open_time'] : 'Chưa có dữ liệu'
                 var point = new google.maps.LatLng(
@@ -215,6 +217,21 @@
 
                 var time = createElement('text', open_time, 'color:green; font-weight:bold', null);
                 infowincontent.appendChild(time);
+                infowincontent.appendChild(document.createElement('br'));
+
+                var haversine_label = createElement('strong', 'Harversine: ', '', null);
+                infowincontent.appendChild(haversine_label);
+
+                var haversine = createElement('text', distance_haversine + ' km', 'color:blue; font-weight:bold', null);
+                infowincontent.appendChild(haversine);
+                infowincontent.appendChild(document.createElement('br'));
+
+                var distance_gg_label = createElement('strong', 'Google Map API: ', '', null);
+                infowincontent.appendChild(distance_gg_label);
+
+                var distance_gg = createElement('text', distance_gg_api + ' km', 'color:blue; font-weight:bold', null);
+                infowincontent.appendChild(distance_gg);
+
                 var icon = customLabel[type] || {};
                 var marker = new google.maps.Marker({
                     map: map,
@@ -377,6 +394,7 @@
                             long = 106.7864965;
                             lat = 10.83809844;
                             console.log('initial map 2 without user location........');
+                            moreObj = new MoreObject();
                             switch (type) {
                                 case 'nearest':
                                     moreObj.getNearest(long, lat);
