@@ -59,7 +59,12 @@ class CommentController extends Controller
        $data['CreatedOnTimeDiff'] = date('d-m-Y',time());
        $data['AvgRating'] = $data['PositionRating'] + $data['PriceRating'] + $data['QualityRating'] + $data['ServiceRating'] + $data['SpaceRating'];
        $data['AvgRating'] = round($data['AvgRating']/5,1);
-       $comment = Comment::create($data);
+       $comment = Comment::where('Owner_id',$data['Owner_id'])->where('ResId',$data['ResId'])->first();
+       if($comment){
+           $comment->update($data);
+       }else{
+           $comment = Comment::create($data);
+       }
        if($comment){
            $res = Restaurant::find($data['ResId']);
            if($res){
