@@ -264,12 +264,20 @@ class RestaurantController extends Controller
 
     }
     public function getSuggestedRes(Request $request){
-//        try {
+        try {
             $data = $request->all();
             if(!isset($data['user_id'])){
                 return [
                     'success' => false,
                     'message' => 'User ID bắt buộc phải có'
+                ];
+            }
+            $total_review = Comment::where('Owner_id',$data['user_id'])->count();
+            if($data['user_id'] == -2 || $total_review==0){
+                $res= Restaurant::where('status',1)->with(['restaurant_detail:res_id,open_time'])->orderBy('AvgRating','DESC')->take(10)->get();
+                return [
+                    'success' => true,
+                    'data' => $res
                 ];
             }
             $url = config('suggest.python_host').'get-sim?user_id='.$data['user_id'];
@@ -297,12 +305,12 @@ class RestaurantController extends Controller
                 'success' => false,
                 'message' => __('fail')
             ];
-//        }catch (\Exception $e){
-//            return [
-//                'success' => false,
-//                'message' => $e->getMessage()
-//            ];
-//        }
+        }catch (\Exception $e){
+            return [
+                'success' => false,
+                'message' => $e->getMessage()
+            ];
+        }
     }
 
     public function getMoreRes(){

@@ -285,6 +285,8 @@
                 user = JSON.parse(user);
                 indexObj.get_saved_res(user['Id']); //45
                 indexObj.get_suggest_res(user['Id']);
+            }else{
+                indexObj.get_suggest_res(-2);
             }
         })
         function showNearst(res_list){
@@ -297,7 +299,7 @@
                     '                                <section>\n' +
                     '                                    <div class="card booking-card" style="max-width: 22rem;">\n' +
                     '                                        <div class="view overlay"><img\n' +
-                    '                                                src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg"\n' +
+                    '                                                src="'+ res_list[i]['PhotoUrl'] +'"\n' +
                     '                                                alt="Card image cap" class="card-img-top"> <a href="#!">\n' +
                     '                                                <div class="mask rgba-white-slight waves-effect waves-light"></div>\n' +
                     '                                            </a></div>\n' +

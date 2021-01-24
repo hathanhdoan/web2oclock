@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api\Account;
 
+use App\Comment;
 use App\Customer;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Account\ChangePasswordRequest;
