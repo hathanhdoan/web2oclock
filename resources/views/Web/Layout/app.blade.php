@@ -255,6 +255,9 @@
                                 case 'NEAREST':
                                     window.location.href = '/more-res/nearest?category_id=' + category_id
                                     break;
+                                case 'NEAR':
+                                    window.location.href = '/more-res/nearest?category_id=' + category_id
+                                    break;
                                 case 'OPEN':
                                     window.location.href = '/more-res/open?category_id=' + category_id
                                     break;
