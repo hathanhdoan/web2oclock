@@ -93,13 +93,13 @@ class RestaurantController extends Controller
                     foreach ($rs as $key => $value) {
                         $rs[$key]['distance_gg'] = $elm[$key]->distance->value;
                     }
+                    usort($rs, function ($a, $b) {
+                        if ($a['distance_gg'] == $b['distance_gg']) {
+                            return 0;
+                        }
+                        return ($a['distance_gg'] < $b['distance_gg']) ? -1 : 1;
+                    });
                 }
-                usort($rs, function ($a, $b) {
-                    if ($a['distance_gg'] == $b['distance_gg']) {
-                        return 0;
-                    }
-                    return ($a['distance_gg'] < $b['distance_gg']) ? -1 : 1;
-                });
             }
 
             return [
